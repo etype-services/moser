@@ -1,0 +1,2 @@
+[19-Apr-2015 10:42:55 America/Denver] PHP Fatal error:  Class 'ViewsUiBaseViewsWizard' not found in /home4/etypese7/public_html/backroadsnews-washingtonco/sites/all/modules/views/plugins/views_wizard/views_ui_file_managed_views_wizard.class.php on line 3
+[22-Apr-2015 09:48:48 America/Denver] PHP Fatal error:  Class 'ViewsUiBaseViewsWizard' not found in /home4/etypese8/public_html/DrupalMultisite/sites/all/modules/views/plugins/views_wizard/views_ui_taxonomy_term_views_wizard.class.php on line 3
