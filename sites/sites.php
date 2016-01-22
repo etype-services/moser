@@ -28,6 +28,11 @@ $sites['www.yorktownnews-view.com'] = 'dewittcountytoday.com';
 $sites['prod.yorktownnews-view.com'] = 'dewittcountytoday.com';
 $sites['dev.yorktownnews-view.com'] = 'dewittcountytoday.com';
 
+$sites['yorktownnewsview.com'] = 'dewittcountytoday.com';
+$sites['www.yorktownnewsview.com'] = 'dewittcountytoday.com';
+$sites['prod.yorktownnewsview.com'] = 'dewittcountytoday.com';
+$sites['dev.yorktownnewsview.com'] = 'dewittcountytoday.com';
+
 $sites['cuerorecord.com'] = 'dewittcountytoday.com';
 $sites['www.cuerorecord.com'] = 'dewittcountytoday.com';
 $sites['prod.cuerorecord.com'] = 'dewittcountytoday.com';
