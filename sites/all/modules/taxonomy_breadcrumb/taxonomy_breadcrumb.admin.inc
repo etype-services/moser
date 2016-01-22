@@ -22,13 +22,6 @@ function taxonomy_breadcrumb_admin_settings($form, &$form_state) {
     '#description' => t('Text to display at top of breadcrumb trail. Typically home or your site name. Leave blank to have no home breadcrumb.'),
   );
 
-  $form['settings']['taxonomy_breadcrumb_show_current_term'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Show current term in breadcrumb trail'),
-    '#default_value' => variable_get('taxonomy_breadcrumb_show_current_term', TRUE),
-    '#description' => t('If enabled, the lightest term associated with the node is shown as the last item in the breadcrumb trail. If disabled, the only terms shown in the breadcrumb trail are parent terms (if any parents exist). The recommended setting is enabled.'),
-  );
-
 /*
   // TODO - this functionality has been removed from DRUPAL 7.
   // TODO - is there still a way to do this?
@@ -40,11 +33,11 @@ function taxonomy_breadcrumb_admin_settings($form, &$form_state) {
   );
 */
 
-  $form['settings']['taxonomy_breadcrumb_include_node_title'] = array(
+  $form['settings']['taxonomy_breadcrumb_page_title'] = array(
     '#type' => 'checkbox',
-    '#title' => t('Show current node title in breadcrumb trail'),
-    '#default_value' => variable_get('taxonomy_breadcrumb_include_node_title', FALSE),
-    '#description' => t("If enabled and if viewing a node, the node's title will be shown as the last item in the breadcrumb trail."),
+    '#title' => t('Show current page title in breadcrumb trail'),
+    '#default_value' => variable_get('taxonomy_breadcrumb_page_title', FALSE),
+    '#description' => t("If enabled, the page title will be added as the last item in the breadcrumb trail."),
     '#weight' => 30,
   );
 

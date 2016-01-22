@@ -3,14 +3,18 @@
 
 /**
  * @file
- * Admin page callback for the socialmedia module.
+ * Setup wizard
  */
 
 /*
  * 
  */
 function socialmedia_admin_setup($step = 0) {
-  if (!$step) {
+  if (!module_exists('block')) {
+  	drupal_set_message(t('The Block module must be enabled before using this wizard.', 'error'));
+  	return '';
+  }
+	if (!$step) {
     $step = 0;
   }
   $form = drupal_get_form('socialmedia_setup_' . $step . '_form');
@@ -86,6 +90,7 @@ function socialmedia_setup_1_form_submit($form, $form_state) {
 //dsm($values);
   $platforms = socialmedia_socialmedia_platform_info();
   $platforms_site = variable_get('socialmedia_platforms_site' , array());
+//dsm($platforms);
   foreach ($platforms AS $key => $platform) {
     if (!isset($values['input_' . $key . '_url'])) {
       continue;
@@ -180,6 +185,7 @@ function socialmedia_setup_4_form($form, $form_state) {
   );
   $set_name = 'socialmedia_profile-default';
   $set = widgets_set_load($set_name);
+//dsm($set);
   $form['profile_set_name'] = array(
     '#type' => 'value',
     '#value' => $set_name,
@@ -268,7 +274,7 @@ function socialmedia_setup_4_form($form, $form_state) {
   foreach ($types AS $typename => $type) {
     $form['share_set']['share_content_types']['contenttype_' . $typename] = array(
       '#type' => 'checkboxes',
-      '#title' => $type->name,
+      '#title' => filter_xss($type->name),
       '#options' => $options,
       '#default_value' => isset($set['data']['visibility']['content_types'][$typename]) ? $set['data']['visibility']['content_types'][$typename] : array(),
     ); 

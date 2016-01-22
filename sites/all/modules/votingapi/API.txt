@@ -1,4 +1,3 @@
-$Id: API.txt,v 1.6.4.7.2.1 2010/01/27 01:38:45 eaton Exp $
 
 What's this, now?
 =================
@@ -96,36 +95,6 @@ function mymodule_votingapi_results_alter(&$results, $entity_type, $entity_id) {
   while ($result = db_fetch_array($results)) {
     $cache[$result['tag']]['percent']['standard_deviation'] = $result['standard_deviation'];
   }
-}
-
-An example of advanced Views integration
-========================================
-VotingAPI provides Views Relationship connections for votes cast on nodes and comments. If your module casts other types of votes that should be made available via Views, it needs to implement hook_votingapi_relationships().
-
-
-function mymodule_votingapi_relationships() {
-  $relationships[] = array(
-    // 'description' is used to construct the field description in the Views UI.
-    'description' => t('nodes'),
-    // 'entity_type' contain the value that your module stores in the voting
-    // api 'entity_type' column. 'node', 'comment', etc.
-    'entity_type' => 'node',
-    // 'base_table' contain the name of the Views base table that stores the
-    // data your votes apply to.
-    'base_table' => 'node',
-    // 'entity_id_column' contains the name of the views field that represents
-    // your base_table's primary key. This column will be joined against the
-    // voting api 'entity_id' column.
-    'entity_id_column' => 'nid',
-    // VotingAPI constructs pseudo-tables so that multiple relationships can
-    // point to the same base table (normal and translation-based votes nodes
-    // for example. These two columns allow you to override the names of the
-    // pseudo-tables. You probably don't need to change this part unless you're
-    // nedjo.
-    'pseudo_vote' => 'votingapi_vote',
-    'pseudo_cache' => 'votingapi_cache',
-  );
-  return $relationships;
 }
 
 An example of a custom Views value formatter

@@ -108,14 +108,6 @@ function uc_product_menu() {
     'file' => 'uc_product.admin.inc',
   );
 
-  // Define an autocomplete path for products using the title or SKU.
-  $items['autocomplete/uc_product_title_sku'] = array(
-    'page callback' => 'uc_product_title_sku_autocomplete',
-    'access arguments' => array('access content'),
-    'type' => MENU_CALLBACK,
-    'file' => 'uc_product.pages.inc',
-  );
-
   return $items;
 }
 
@@ -162,39 +154,11 @@ function uc_product_permission() {
 }
 
 /**
- * Implements hook_access().
- */
-function uc_product_node_access($op, $node, $account) {
-  $type = is_string($node) ? $node : (is_array($node) ? $node['type'] : $node->type);
-
-  if ($type == 'product') {
-    $type = '';
-  }
-  else {
-    $type .= ' ';
-  }
-  switch ($op) {
-    case 'create':
-      return user_access('create ' . $type . 'products', $account);
-    case 'update':
-      if (user_access('edit all ' . $type . 'products', $account) || (user_access('edit own ' . $type . 'products', $account) && ($account->uid == $node->uid))) {
-        return NODE_ACCESS_ALLOW;
-      }
-      break;
-    case 'delete':
-      if (user_access('delete all ' . $type . 'products', $account) || (user_access('delete own ' . $type . 'products', $account) && ($account->uid == $node->uid))) {
-        return NODE_ACCESS_ALLOW;
-      }
-      break;
-  }
-}
-
-/**
  * Menu access callback for 'node/%node/edit/features'.
  */
 function uc_product_feature_access($node) {
   global $user;
-  return uc_product_is_product($node) &&
+  return uc_product_is_product($node) && $node->type != 'product_kit' &&
     ((user_access('administer product features') || (user_access('administer own product features') && ($user->uid == $node->uid))));
 }
 
@@ -204,7 +168,7 @@ function uc_product_feature_access($node) {
 function uc_product_theme() {
   return array(
     'uc_product_model' => array(
-      'variables' => array('model' => '', 'view_mode' => 'full'),
+      'variables' => array('model' => '', 'view_mode' => 'full', 'attributes' => array()),
       'file' => 'uc_product.theme.inc',
     ),
     'uc_product_add_to_cart' => array(
@@ -220,7 +184,7 @@ function uc_product_theme() {
       'file' => 'uc_product.theme.inc',
     ),
     'uc_product_dimensions' => array(
-      'variables' => array('length' => 0, 'width' => 0, 'height' => 0, 'units' => NULL, 'view_mode' => 'full'),
+      'variables' => array('length' => 0, 'width' => 0, 'height' => 0, 'units' => NULL, 'view_mode' => 'full', 'attributes' => array()),
       'file' => 'uc_product.theme.inc',
     ),
     'uc_product_image' => array(
@@ -303,14 +267,20 @@ function uc_product_node_info($reset = FALSE) {
  * Ensure product class names and descriptions are synchronised if the
  * content type is updated.
  */
-function uc_product_node_type_update($type) {
+function uc_product_node_type_update($info) {
+  $existing_type = !empty($info->old_type) ? $info->old_type : $info->type;
+
   db_update('uc_product_classes')
     ->fields(array(
-      'name' => $type->name,
-      'description' => $type->description,
+      'pcid' => $info->type,
+      'name' => $info->name,
+      'description' => $info->description,
     ))
-    ->condition('pcid', $type->type)
+    ->condition('pcid', $existing_type)
     ->execute();
+
+  // Reset static variable data and load new info.
+  uc_product_node_info(TRUE);
 }
 
 /**
@@ -320,7 +290,7 @@ function uc_product_node_type_update($type) {
  */
 function uc_product_forms($form_id, $args) {
   $forms = array();
-  if (isset($args[0]) && isset($args[0]->nid) && isset($args[0]->type)) {
+  if (isset($args[0]->nid) && isset($args[0]->type)) {
     $product = $args[0];
     if (in_array($product->type, array_keys(uc_product_node_info()))) {
       $forms['uc_product_add_to_cart_form_' . $product->nid] = array('callback' => 'uc_product_add_to_cart_form');
@@ -571,10 +541,6 @@ function uc_product_insert($node) {
     $node->height = $node->dim_height;
   }
 
-  if (!isset($node->unique_hash)) {
-    $node->unique_hash = md5($node->vid . $node->nid . $node->model . $node->list_price . $node->cost . $node->sell_price . $node->weight . $node->weight_units . $node->length . $node->width . $node->height . $node->length_units . $node->pkg_qty . $node->default_qty . $node->shippable . REQUEST_TIME);
-  }
-
   drupal_write_record('uc_products', $node);
 }
 
@@ -609,7 +575,7 @@ function uc_product_load($nodes) {
     $vids[$node->nid] = $node->vid;
   }
 
-  $result = db_query('SELECT nid, model, list_price, cost, sell_price, weight, weight_units, length, width, height, length_units, pkg_qty, default_qty, unique_hash, ordering, shippable FROM {uc_products} WHERE vid IN (:vids)', array(':vids' => $vids));
+  $result = db_query('SELECT nid, model, list_price, cost, sell_price, weight, weight_units, length, width, height, length_units, pkg_qty, default_qty, ordering, shippable FROM {uc_products} WHERE vid IN (:vids)', array(':vids' => $vids));
   foreach ($result as $node) {
     foreach ($node as $field => $value) {
       $nodes[$node->nid]->$field = $value;
@@ -631,8 +597,11 @@ function uc_product_load($nodes) {
  * @param $data
  *   Optional data to add to the product before invoking the alter hooks.
  *
- * @return
+ * @return object
  *   An variant of the product, altered based on the provided data.
+ *
+ * @throws \Exception
+ *   If the caller tries to create a variant of a variant.
  */
 function _uc_product_get_variant($node, $data = FALSE) {
   if (!empty($node->variant)) {
@@ -748,12 +717,15 @@ function uc_product_view($node, $view_mode) {
   // be sure not to alter twice -- cf. entity_prepare_view().
   $variant = empty($node->variant) ? _uc_product_get_variant($node) : $node;
 
-  // Build the 'add to cart' form, and use the updated variant based on data
-  // provided by the form (e.g. attribute default options).
-  if (module_exists('uc_cart') && $variant->nid && empty($variant->data['display_only'])) {
-    $add_to_cart_form = drupal_get_form('uc_product_add_to_cart_form_' . $variant->nid, $variant);
-    if (variable_get('uc_product_update_node_view', FALSE)) {
-      $variant = $add_to_cart_form['node']['#value'];
+  // Skip the add to cart form in comment reply forms.
+  if (arg(0) != 'comment' && arg(1) != 'reply') {
+    // Build the 'add to cart' form, and use the updated variant based on data
+    // provided by the form (e.g. attribute default options).
+    if (module_exists('uc_cart') && $variant->nid && empty($variant->data['display_only'])) {
+      $add_to_cart_form = drupal_get_form('uc_product_add_to_cart_form_' . $variant->nid, $variant);
+      if (variable_get('uc_product_update_node_view', FALSE)) {
+        $variant = $add_to_cart_form['node']['#value'];
+      }
     }
   }
 
@@ -1073,9 +1045,14 @@ function uc_product_uc_cart_display($item) {
   $element['module'] = array('#type' => 'value', '#value' => 'uc_product');
   $element['remove'] = array('#type' => 'submit', '#value' => t('Remove'));
 
-  $element['title'] = array(
-    '#markup' => node_access('view', $node) ? l($item->title, 'node/' . $node->nid) : check_plain($item->title),
-  );
+  if (node_access('view', $node) && $uri = entity_uri('node', $node)) {
+    $element['title'] = array(
+      '#markup' => l($item->title, $uri['path'], $uri['options']),
+    );
+  }
+  else {
+    $element['title'] = array('#markup' => $item->title);
+  }
 
   $element['#total'] = $item->price * $item->qty;
   $element['#suffixes'] = array();
@@ -1102,19 +1079,20 @@ function uc_product_uc_cart_display($item) {
 function uc_product_uc_update_cart_item($nid, $data = array(), $qty, $cid = NULL) {
   if (!$nid) return NULL;
   $cid = !(is_null($cid) || empty($cid)) ? $cid : uc_cart_get_id();
-  if ($qty < 1) {
-    uc_cart_remove_item($nid, $cid, $data);
-  }
-  else {
-    db_update('uc_cart_products')
-      ->fields(array(
-        'qty' => $qty,
-        'changed' => REQUEST_TIME,
-      ))
-      ->condition('nid', $nid)
-      ->condition('cart_id', $cid)
-      ->condition('data', serialize($data))
-      ->execute();
+
+  $efq = new EntityFieldQuery();
+  $result = $efq->entityCondition('entity_type', 'uc_cart_item')
+    ->propertyCondition('cart_id', $cid)
+    ->propertyCondition('nid', $nid)
+    ->propertyCondition('data', serialize($data))
+    ->execute();
+
+  if (!empty($result['uc_cart_item'])) {
+    $item_entity = entity_load_single('uc_cart_item', current(array_keys($result['uc_cart_item'])));
+    if ($item_entity->qty != $qty) {
+      $item_entity->qty = $qty;
+      entity_save('uc_cart_item', $item_entity);
+    }
   }
 }
 
@@ -1150,16 +1128,14 @@ function uc_product_uc_product_class($pcid, $op) {
         ))
         ->condition('type', $pcid)
         ->execute();
-      $result = db_query("SELECT n.vid, n.nid, p.unique_hash FROM {node} AS n LEFT JOIN {uc_products} AS p ON n.vid = p.vid WHERE n.type = :pcid", array(':pcid' => $pcid));
+      $result = db_query("SELECT n.vid, n.nid FROM {node} n LEFT JOIN {uc_products} p ON n.vid = p.vid WHERE n.type = :pcid AND p.vid IS NULL", array(':pcid' => $pcid));
       foreach ($result as $node) {
-        if (!$node->unique_hash) {
-          $node->weight_units = variable_get('uc_weight_unit', 'lb');
-          $node->length_units = variable_get('uc_length_unit', 'in');
-          $node->pkg_qty = 1;
-          $node->default_qty = 1;
-          $node->shippable = 1;
-          uc_product_insert($node);
-        }
+        $node->weight_units = variable_get('uc_weight_unit', 'lb');
+        $node->length_units = variable_get('uc_length_unit', 'in');
+        $node->pkg_qty = 1;
+        $node->default_qty = 1;
+        $node->shippable = 1;
+        uc_product_insert($node);
       }
     break;
   }
@@ -1250,6 +1226,12 @@ function uc_product_add_to_cart_form($form, &$form_state, $node) {
     ),
   );
 
+  // Ajax forms may have no form state when triggered from a cached page, so
+  // ensure the variant is available for form alter functions to use.
+  if (!empty($form_state['rebuild']) && empty($form_state['storage']['variant'])) {
+    $form_state['storage']['variant'] = uc_product_load_variant($form_state['values']['nid'], module_invoke_all('uc_add_to_cart_data', $form_state['values']));
+  }
+
   $form['node'] = array(
     '#type' => 'value',
     '#value' => isset($form_state['storage']['variant']) ? $form_state['storage']['variant'] : $node,
@@ -1311,7 +1293,7 @@ function uc_product_type_names() {
  */
 function uc_product_is_product($node) {
   // Load the node object if we received an integer as an argument.
-  if (is_int($node)) {
+  if (is_numeric($node)) {
     $node = node_load($node);
   }
 
@@ -1696,7 +1678,7 @@ function uc_product_feature_delete($pfid) {
   // Call the delete function for this product feature if it exists.
   $func = uc_product_feature_data($feature['fid'], 'delete');
   if (function_exists($func)) {
-    $func($feature);
+    $func($pfid);
   }
   db_delete('uc_product_features')
     ->condition('pfid', $pfid)
@@ -1870,6 +1852,7 @@ function uc_product_action_info() {
       'label' => t('Add to cart'),
       'type' => 'node',
       'configurable' => FALSE,
+      'triggers' => array('any'),
     ),
   );
 }

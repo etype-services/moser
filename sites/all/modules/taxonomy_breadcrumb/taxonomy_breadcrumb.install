@@ -29,7 +29,7 @@ function taxonomy_breadcrumb_uninstall() {
 
   // Remove global variables.
   variable_del('taxonomy_breadcrumb_home');
-  variable_del('taxonomy_breadcrumb_show_current_term');
+  variable_del('taxonomy_breadcrumb_page_title');
   variable_del('taxonomy_breadcrumb_include_nodes');
   variable_del('taxonomy_breadcrumb_node_types');
 }
@@ -104,4 +104,15 @@ function taxonomy_breadcrumb_update_6100() {
   else {
     variable_set('taxonomy_breadcrumb_include_nodes', 0);
   }
+}
+
+/**
+ * Implements hook_update_N().
+ *
+ * Refactor variables.
+ */
+function taxonomy_breadcrumb_update_7100() {
+  variable_set('taxonomy_breadcrumb_page_title', variable_get('taxonomy_breadcrumb_include_node_title', FALSE));
+  variable_del('taxonomy_breadcrumb_show_current_term');
+  variable_del('taxonomy_breadcrumb_include_node_title');
 }

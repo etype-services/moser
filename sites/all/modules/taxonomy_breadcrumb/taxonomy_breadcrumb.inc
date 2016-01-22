@@ -5,80 +5,55 @@
  * helper functions for taxonomy_breadcrumb
  */
 
-
 /**
- * Finds all terms associated with a node.
- * This is a D7 Replacement for Drupal 6 taxonomy_node_get_terms.
+ * Returns the lightest term for a given node.
+ *
+ * @param $nid
+ *   A node id.
+ *
+ * @return
+ *   The lightest term id associated with the node.
  */
-function taxonomy_breadcrumb_node_get_terms($node, $key = 'tid') {
-  static $terms;
-  if (!isset($terms[$node->vid][$key])) {
-    $query = db_select('taxonomy_index', 'r');
-    $t_alias = $query->join('taxonomy_term_data', 't', 'r.tid = t.tid');
-    $v_alias = $query->join('taxonomy_vocabulary', 'v', 't.vid = v.vid');
-    $query->fields( $t_alias );
-    $query->condition("r.nid", $node->nid);
-    $result = $query->execute();
-    $terms[$node->vid][$key] = array();
-    foreach ($result as $term) {
-      $terms[$node->vid][$key][$term->$key] = $term;
-    }
-  }
-  return $terms[$node->vid][$key];
-}
+function _taxonomy_breadcrumb_node_get_lightest_term($nid) {
+  // Get the lightest vocabulary id.
+  $query = db_select('node', 'n');
+  $query->distinct();
+  $query->join('taxonomy_index', 'ti', 'n.nid = ti.nid');
+  $query->join('taxonomy_term_data', 'ttd', 'ti.tid = ttd.tid');
+  $query->join('taxonomy_vocabulary', 'tv', 'ttd.vid = tv.vid');
+  $query->fields('tv', array('vid'));
+  $query->condition('n.nid', $nid, '=');
+  $query->orderBy('tv.weight');
+  $query->orderBy('tv.name');
+  $query->range(0, 1);
+  $vid = $query->execute()->fetchField();
 
-/**
- * Return lightest term for a given node.
- *
- * @param $node
- *   The node object.
- *
- * @ return
- *   The lightest term object associated with the node.
- */
-function _taxonomy_breadcrumb_node_get_lightest_term($node) {
-  $terms = taxonomy_breadcrumb_node_get_terms($node);
-  if (!empty($terms)) {
-    if (count($terms) > 1) {
-      foreach ($terms as $term) {
-        // Only consider terms in the lightest vocabulary.
-        if (!isset($vid)) {
-          $vid = $term->vid;
-        }
-        elseif ($term->vid != $vid) {
-          continue;
-        }
-        // If the term has parents, the weight of the term is the weight of the lightest parent.
-        $parents = taxonomy_get_parents_all($term->tid);
-        $depth = count($parents);
-        if ($depth > 0) {
-          $parent = array_pop($parents);
-          $weight = $parent->weight;
-        }
-        else {
-          $weight = $term->weight;
-        }
-        if ((isset($lweight) && ($weight < $lweight)) || !isset($lweight)) {
-          $lterm = $term;
-          $lweight = $weight;
-          $ldepth = $depth;
-        }
-        elseif (isset($lweight) && ($weight == $lweight)) {
-          // If the node has multiple child terms with the same parent, choose the child with the greatest depth.
-          if ($depth > $ldepth) {
-            $lterm = $term;
-            $ldepth = $depth;
-          }
-          elseif ($depth == $ldepth) {
-            // If the terms have the same depth, pick the term with the lightest weight.
-            $lterm = ($lterm->weight < $term->weight) ? $lterm : $term;
-          }
-        }
-      }
-      return $lterm;
+  // If a vocabulary was successfully retrieved.
+  if ($vid) {
+    // Retrieve the vocabularies terms associated with the node.
+    $query = db_select('node', 'n');
+    $query->distinct();
+    $query->join('taxonomy_index', 'ti', 'n.nid = ti.nid');
+    $query->join('taxonomy_term_data', 'ttd', 'ti.tid = ttd.tid');
+    $query->join('taxonomy_vocabulary', 'tv', 'ttd.vid = tv.vid');
+    $query->fields('ti', array('tid'));
+    $query->condition('n.nid', $nid, '=');
+    $query->condition('tv.vid', $vid, '=');
+    $tids = $query->execute()->fetchCol();
+
+    // If only a single term is associated with this node.
+    if (count($tids) == 1) {
+      return $tids[0];
     }
     else {
-      return array_pop($terms);
+      // Get the vocabulary tree.
+      $vtree = taxonomy_get_tree($vid);
+      // Return the first associated term found.
+      foreach ($vtree as $term) {
+        if (in_array($term->tid, $tids)) {
+          return $term->tid;
+        }
+      }
     }
   }
 }
@@ -152,10 +127,11 @@ function _taxonomy_breadcrumb_generate_breadcrumb($tid, $is_term_page = FALSE) {
     }
   }
 
-  // Optionally remove the current TERM from end of breadcrumb trail.
-  if (!variable_get('taxonomy_breadcrumb_show_current_term', TRUE) && !is_null($breadcrumb)) {
+  // Remove the breadcrumb for the term currently being viewed.
+  if (!is_null($breadcrumb) && $is_term_page) {
     array_pop($breadcrumb);
   }
+
   return $breadcrumb;
 }
 

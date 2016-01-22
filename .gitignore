@@ -1,11 +1,6 @@
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php
 
-# Ignore paths that contain generated content.
+# Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
-
-# Ignore default files
-favicon.ico
-
-# Odds and sods

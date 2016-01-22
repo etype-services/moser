@@ -11,7 +11,7 @@
  */
 function socialmedia_admin_settings() {
   drupal_add_css(drupal_get_path('module', 'socialmedia') . '/socialmedia.admin.css');
-	
+  
   $form = array();
   
   $form['platforms'] = array(
@@ -24,8 +24,9 @@ function socialmedia_admin_settings() {
   
   $platforms = socialmedia_socialmedia_platform_info();
   $options = array();
+  $extra = array();
   foreach ($platforms AS $platform_name => $platform) {
-  	$options[$platform_name] = $platform['title'];
+    $options[$platform_name] = $platform['title'];
   }
   $defaults = array_keys($options);
   $form['platforms']['socialmedia_platforms_site'] = array(
@@ -34,7 +35,7 @@ function socialmedia_admin_settings() {
     '#default_value' => variable_get('socialmedia_platforms_site', $defaults),
     '#description' => t('Select the platforms you want active for site wide profiles.'),
     '#options' => $options,
-    '#multicolumn' => array('width' => 2),  // multi colunms the checkboxes if multicolumnchecdkboxesradio.module installed
+    //'#multicolumn' => array('width' => 2),  // multi colunms the checkboxes if multicolumnchecdkboxesradio.module installed
   );
   
   $form['platforms']['socialmedia_platforms_user'] = array(
@@ -43,7 +44,7 @@ function socialmedia_admin_settings() {
     '#default_value' => variable_get('socialmedia_platforms_user', $defaults),
     '#description' => t('Select the platforms you want active for user level profiles. Only users with the !permissions permission will be able to add user profiles.',
       array(
-        '!permissions' => l(t('Administer own profiles'), 'admin/people/permissions'),
+        '!permissions' => l(t('Administer own social profiles'), 'admin/people/permissions'),
       )
      ),
     '#options' => $options,
@@ -129,8 +130,14 @@ function socialmedia_admin_settings() {
     '#type' => 'select',
     '#title' => t('Profile rel'),
     '#options' => $options,
-    '#default_value' => variable_get('socialmedia_default_link_target_profile', SOCIALMEDIA_LINK_REL_PROFILE_DEFAULT),
+    '#default_value' => variable_get('socialmedia_default_link_rel_profile', SOCIALMEDIA_LINK_REL_PROFILE_DEFAULT),
     '#description' => t('Sets the default rel= attribute on profile widget links.'),
+  );
+  $form['link_attributes']['socialmedia_default_link_class_profile'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Profile class'),
+    '#default_value' => variable_get('socialmedia_default_link_class_profile', SOCIALMEDIA_LINK_CLASS_PROFILE_DEFAULT),
+    '#description' => t('Use to add css class attributes to links.'),
   );
   $form['link_attributes']['socialmedia_default_link_target_sharing'] = array(
     '#type' => 'textfield',
@@ -146,8 +153,14 @@ function socialmedia_admin_settings() {
     '#type' => 'select',
     '#title' => t('Sharing rel'),
     '#options' => $options,
-    '#default_value' => variable_get('socialmedia_default_link_target_sharing', SOCIALMEDIA_LINK_REL_SHARING_DEFAULT),
+    '#default_value' => variable_get('socialmedia_default_link_rel_sharing', SOCIALMEDIA_LINK_REL_SHARING_DEFAULT),
     '#description' => t('Sets the default rel= attribute on sharing widget links.'),
+  );
+  $form['link_attributes']['socialmedia_default_link_class_sharing'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Sharing class'),
+    '#default_value' => variable_get('socialmedia_default_link_class_sharing', SOCIALMEDIA_LINK_CLASS_SHARING_DEFAULT),
+    '#description' => t('Use to add css class attributes to links.'),
   );
 
   
@@ -175,7 +188,7 @@ function socialmedia_admin_settings() {
     t('Styles')
   );
   foreach ($examples AS $ekey => $ename) {
-  	$header[] = '';
+    $header[] = '';
   }
   
   $rows = array();
@@ -191,30 +204,41 @@ function socialmedia_admin_settings() {
       implode('<br />', $iconset['styles']),
     );
     if (socialmedia_iconset_is_installed($iconset_name)) {
-    	foreach ($examples AS $pkey => $pname) {
-    		$vars = array(
-    		  'path' => call_user_func($iconset['path callback'], $pkey),
-    		  //'alt' => $pname,
-    		  'title' => $pname,
-    		);
-    		$row[] = theme('image', $vars) . ' ';
-    	}
-    	
+      foreach ($examples AS $pkey => $pname) {
+        if (isset($iconset['path callback'])) {
+          $vars = array(
+            'path' => call_user_func($iconset['path callback'], $pkey),
+            //'alt' => $pname,
+            'title' => $pname,
+          );
+          $row[] = theme('image', $vars) . ' ';
+        }
+        else if (isset($iconset['markup callback'])) {
+          $row[] = ' ';
+        }
+        else {
+          $row[] = ' ';
+        }
+      }
     }
     else {
-    	$str = t('<strong>Not installed.</strong><br />To install: !download and install into %dir.',
-    	  array(
-    	    '!download' => l(t('download'), $iconset['download'], array('attributes' => array('target' => '_blank'))),
-    	    '%dir' => drupal_get_path('module', 'socialmedia') . '/icons/' . $iconset_name . '/',
-    	  )
-    	);
-    	if (isset($iconset['additional instructions'])) {
-    	  $str .= ' ' . $iconset['additional instructions'];
-    	}
-    	$row[] = array(
-    	  'data' => $str,
-    	  'colspan' => count($examples),
-    	);
+      if (isset($iconset['download'])) {
+        $str = t('<strong>Not installed.</strong><br />To install: !download and install into %dir.',
+          array(
+            '!download' => l(t('download'), $iconset['download'], array('attributes' => array('target' => '_blank'))),
+            '%dir' => drupal_get_path('module', 'socialmedia') . '/icons/' . $iconset_name . '/',
+          )
+        );
+      } else {
+        $str = '';
+      }
+      if (isset($iconset['additional instructions'])) {
+        $str .= ' ' . $iconset['additional instructions'];
+      }
+      $row[] = array(
+        'data' => $str,
+        'colspan' => count($examples),
+      );
     }
     $rows[] = $row;
     $vars = array(
@@ -224,9 +248,9 @@ function socialmedia_admin_settings() {
         'id' => 'socialmedia-iconsets',
       ),
     );
-	  $form['iconsets']['installed'] = array(
-	    '#markup' => theme('table', $vars),
-	  );    
+    $form['iconsets']['installed'] = array(
+      '#markup' => theme('table', $vars),
+    );    
   
   }
   
@@ -266,15 +290,15 @@ function socialmedia_admin_profiles_form($form, &$form_state, $context = 'site',
   );
   
   foreach ($platforms AS $name => $platform) {
-  	if ((!isset($active_platforms[$name]) || !$active_platforms[$name]) && !$setup_mode) {
-  		continue;
-  	}
-  	$fields = array();
+    if ((!isset($active_platforms[$name]) || !$active_platforms[$name]) && !$setup_mode) {
+      continue;
+    }
+    $fields = array();
     $profile = socialmedia_profile_load($name, $uid);
 
     $fields[$name] = array(
       '#type' => 'fieldset',
-      '#title' => $platform['title'],
+      '#title' => filter_xss($platform['title']),
       '#collapsible' => TRUE,
       '#collapsed' => FALSE,
     );
@@ -284,35 +308,45 @@ function socialmedia_admin_profiles_form($form, &$form_state, $context = 'site',
       $fields[$name] = array_merge($fields[$name], call_user_func($platform['form callback'], $profile)); 
     }
     else {
-  	  $default_description = t('Enter the URL to your @platform profile. To create an account on @platform visit !homepage', 
-  	    array(
-  	      '@platform' => $platform['title'],
-  	      '!homepage' => l($platform['homepage'], $platform['homepage'], array('attributes' => array('target' => '_blank'))),
-  	    )
-  	  );
+      $default_description = t('Enter the URL to your @platform profile. To create an account on @platform visit !homepage', 
+        array(
+          '@platform' => $platform['title'],
+          '!homepage' => l($platform['homepage'], $platform['homepage'], array('attributes' => array('target' => '_blank'))),
+        )
+      );
       $fields[$name]['input_' . $name . '_url'] = array(
         '#type' => 'textfield',
-        '#title' => $platform['title'] . ' URL',
+        '#title' => filter_xss($platform['title'] . ' profile URL'),
         '#default_value' => (isset($profile['inputs']['url'])) ? $profile['inputs']['url'] : '',
-        '#description' => isset($platform['profile url']) ? $platform['profile description url'] : $default_description,
+        '#description' => filter_xss(isset($platform['profile url']) ? $platform['profile description url'] : $default_description),
         '#size' => 80,
       );
       $default_description = t('Enter your @platform profile name how you want it displayed in text links. Leave blank to use the username from the URL.', array('@platform' => $platform['title']));
       $fields[$name]['input_' . $name . '_username'] = array(
         '#type' => 'textfield',
-        '#title' => $platform['title'] . ' Username',
+        '#title' => filter_xss($platform['title'] . ' Username'),
         '#default_value' => (isset($profile['inputs']['username'])) ? $profile['inputs']['username'] : '',
-        '#description' => isset($platform['description username']) ? $platform['description username'] : $default_description,
+        '#description' => filter_xss(isset($platform['description username']) ? $platform['description username'] : $default_description),
         '#size' => 32,
-      ); 
+      );
+      if ($name == 'twitter') {
+        $fields[$name]['input_' . $name . '_user_timeline_widget_id'] = array(
+          '#type' => 'textfield',
+          '#title' => filter_xss($platform['title'] . ' user timeline widget id'),
+          '#default_value' => (isset($profile['inputs']['user_timeline_widget_id'])) ? $profile['inputs']['user_timeline_widget_id'] : '',
+          '#description' => t('Enter the user timeline widget id from Twitter settings you would like to use for profile timelines.'),
+          '#size' => 32,
+        );
+      }
     }
     if (isset($platform['group'])) {
       if (!isset($form[$platform['group']])) {
         $form[$platform['group']] = array(
           '#type' => 'fieldset',
-          '#title' => $platform['group'],
+          '#title' => filter_xss($platform['group']),
           '#collapsible' => TRUE,
           '#collapsed' => TRUE,
+          '#weight' => 20,
         );        
       }
       $form[$platform['group']] = array_merge($form[$platform['group']], $fields);
@@ -325,6 +359,7 @@ function socialmedia_admin_profiles_form($form, &$form_state, $context = 'site',
   $form['submit'] = array(
     '#type' => 'submit',
     '#value' => t('Submit'),
+    '#weight' => 30,
   );
   
   return $form;
@@ -332,20 +367,20 @@ function socialmedia_admin_profiles_form($form, &$form_state, $context = 'site',
 
 function _socialmedia_admin_profiles_form_build_inputs($values, $platforms) {
   $inputs = array();
-	foreach ($values AS $key => $value) {
+  foreach ($values AS $key => $value) {
     if (strpos($key, 'input_') === 0) {
       $key = substr($key, 6);
       foreach ($platforms AS $platform_name => $platform) {
         if (strpos($key, $platform_name . '_') === 0) {
           $key = substr($key, strlen($platform_name . '_'));
           if (!isset($inputs[$platform_name])) {
-          	$inputs[$platform_name] = array();
+            $inputs[$platform_name] = array();
           }
           $inputs[$platform_name][$key] = $value;
         }
       }
     }
-	}	
+  }  
   return $inputs;
 }
 
@@ -353,19 +388,19 @@ function socialmedia_admin_profiles_form_validate($form, &$form_state) {
 
   $setup_mode = (isset($form_state['values']['setup_mode']) && $form_state['values']['setup_mode']) ? 1 : 0;
   $platforms = socialmedia_platform_definitions();
-	$inputs = _socialmedia_admin_profiles_form_build_inputs($form_state['values'], $platforms);
+  $inputs = _socialmedia_admin_profiles_form_build_inputs($form_state['values'], $platforms);
 
-	foreach ($platforms AS $platform_name => $platform) {
-		if (!isset($inputs[$platform_name])) {
-			continue;
-		}
-		if (isset($platform['parser callback'])) {
-		  if ($setup_mode && (!isset($inputs[$platform_name]['url']) || !trim($inputs[$platform_name]['url']))) {
-		    continue;
-		  }
-			call_user_func($platform['parser callback'], $inputs[$platform_name]);
-		}
-	}
+  foreach ($platforms AS $platform_name => $platform) {
+    if (!isset($inputs[$platform_name])) {
+      continue;
+    }
+    if (isset($platform['parser callback'])) {
+      if ($setup_mode && (!isset($inputs[$platform_name]['url']) || !trim($inputs[$platform_name]['url']))) {
+        continue;
+      }
+      call_user_func($platform['parser callback'], $inputs[$platform_name], 'user');
+    }
+  }
 }
 
 function socialmedia_admin_profiles_form_submit($form, &$form_state) {
@@ -375,20 +410,20 @@ function socialmedia_admin_profiles_form_submit($form, &$form_state) {
     if (!isset($inputs[$platform_name])) {
       continue;
     }
-    if (isset($platform['parser callback'])) {    	
+    if (isset($platform['parser callback'])) {      
       $profile = call_user_func($platform['parser callback'], $inputs[$platform_name]);
       $profile['inputs'] = $inputs[$platform_name];
       socialmedia_profile_save($profile, $platform_name, $form_state['values']['uid']);
     }
   }
-	
+  
   //flush widgets caches so tokens are reloaded
   if (module_exists('widgets')) {
     widgets_clear_widgets_cache('*', TRUE);
   }
   // rebuild redirects if module exists
   if (module_exists('redirect')) {
-  	socialmedia_update_redirects();
+    socialmedia_update_redirects();
   }
 
   return 'OK';
@@ -435,13 +470,15 @@ function socialmedia_admin_profile_widgets_form($form, $form_state) {
   
   $defs = socialmedia_widgets_set_profile_default_elements();
   $set = variable_get('socialmedia_widget_set_default_profile', socialmedia_widgets_set_profile_default());
+
   foreach ($defs AS $group => $defs2) {
     $form[$group] = array(
       '#type' => 'fieldset',
-      '#title' => $defs2['name'],
+      '#title' => filter_xss($defs2['name']),
       '#collapsible' => TRUE,
       '#collapsed' => FALSE,
-    );       
+    ); 
+    $weight = 0;      
     foreach ($defs2['elements'] AS $key => $element) {
       $def = widgets_element_definition_load($element['name']);
       if (isset($element['data'])) {
@@ -455,8 +492,10 @@ function socialmedia_admin_profile_widgets_form($form, $form_state) {
         '#field_prefix' => theme('widgets_element_view', $vars),
         '#title' =>  t('Include @widget.', array('@widget' => $def['label'])),
         '#return_value' => $element['name'],  
-        '#default_value' => socialmedia_element_in_set($element, $set) ? $key : 0,    
-      );
+        '#default_value' => socialmedia_element_in_set($element, $set) ? $key : 0, 
+        '#weight' => (isset($defs['basic']['elements'][$key]['weight'])) ? $defs['basic']['elements'][$key]['weight'] : 0,  
+     );
+     $weight++;
     }
   }
   $form['submit'] = array(
@@ -522,7 +561,7 @@ function socialmedia_admin_share_widgets_form($form, $form_state) {
   foreach ($share_defs AS $group => $share_defs2) {
     $form[$group] = array(
       '#type' => 'fieldset',
-      '#title' => $share_defs2['name'],
+      '#title' => filter_xss($share_defs2['name']),
       '#collapsible' => TRUE,
       '#collapsed' => FALSE,
     );       
@@ -579,7 +618,7 @@ function socialmedia_admin_share_widgets_form_submit($form, $form_state) {
 function socialmedia_element_in_set($element, $set) {
 //dsm($element);
 //dsm($set);
-  if (is_array($set['elements'])) {
+  if (isset($set['elements']) && is_array($set['elements'])) {
     foreach ($set['elements'] AS $e) {
       if ($element['name'] == $e['name']) {
         return TRUE;

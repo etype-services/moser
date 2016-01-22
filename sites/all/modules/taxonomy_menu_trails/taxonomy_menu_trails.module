@@ -50,6 +50,7 @@ function _taxonomy_menu_trails_defaults() {
     'term_path_patterns' => array(),
     'instances' => array(),
     'paths_ui' => '',
+    'trail_per_menu' => FALSE,
   );
   if (module_exists('i18n_taxonomy')) {
     $defaults += array(
@@ -244,9 +245,6 @@ function taxonomy_menu_trails_selected_item_for_breadcrumb($new_item = NULL) {
  * Implements hook_menu_breadcrumb_alter().
  *
  * Injects selected menu item and its parents into the breadcrumb.
- * 
- * @param type $active_trail
- * @param type $item
  */
 function taxonomy_menu_trails_menu_breadcrumb_alter(&$active_trail, $item) {
   if (drupal_is_front_page()) {
@@ -256,5 +254,24 @@ function taxonomy_menu_trails_menu_breadcrumb_alter(&$active_trail, $item) {
   if ($selected_item = taxonomy_menu_trails_selected_item_for_breadcrumb()) {
     module_load_include('inc', 'taxonomy_menu_trails');
     _taxonomy_menu_trails_menu_breadcrumb_alter($active_trail, $selected_item);
+  }
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ *
+ * Moves taxonomy_menu_trails_init() to the beginning of the list before
+ * menu_breadcrumb_init(), so the breadcrumb retrieved by Menu Breadcrumb will
+ * be altered by taxonomy_menu_trails_menu_breadcrumb_alter() using the menu
+ * item selected by taxonomy_menu_trails_init() earlier.
+ *
+ * It is moved even if the Menu Breadcrumb is not enabled, so behavior is not
+ * changed when Menu Breadcrumb is enabled/disabled.
+ */
+function taxonomy_menu_trails_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'init' && isset($implementations['taxonomy_menu_trails'])) {
+    $group = $implementations['taxonomy_menu_trails'];
+    unset($implementations['taxonomy_menu_trails']);
+    $implementations = array('taxonomy_menu_trails' => $group) + $implementations;
   }
 }

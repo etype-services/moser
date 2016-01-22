@@ -87,24 +87,44 @@ function _taxonomy_menu_trails_get_paths($tids, $entity, $settings) {
 
     case 'tm':
       if (module_exists('taxonomy_menu')) {
-        // Unfortunately, there is no way to get tids-vids map without DB query.
-        // If you know one, please create issue and describe method.
-        $vids = db_select('taxonomy_term_data', 'ttd')
-          ->fields('ttd', array('tid', 'vid'))
-          ->condition('ttd.tid', $tids, 'IN')
-          ->execute()
-          ->fetchAllKeyed();
-        foreach ($tids as $tid) {
-          if (isset($vids[$tid])) {
-            $paths[] = taxonomy_menu_create_path($vids[$tid], $tid);
-          }
-          else {
-            $paths[] = _taxonomy_menu_trails_default_term_path($tid);
+        /**
+         * @var string|null $function
+         */
+        $function = NULL;
+        $candidate_functions = array(
+          // 7.x-1.x
+          'taxonomy_menu_create_path',
+
+          // 7.x-2.x
+          'taxonomy_menu_path_get',
+        );
+        foreach ($candidate_functions as $candidate) {
+          if (function_exists($candidate)) {
+            $function = $candidate;
           }
         }
-        break;
+
+        if (isset($function)) {
+          // Unfortunately, there is no way to get tids-vids map without DB query.
+          // If you know one, please create issue and describe method.
+          $vids = db_select('taxonomy_term_data', 'ttd')
+            ->fields('ttd', array('tid', 'vid'))
+            ->condition('ttd.tid', $tids, 'IN')
+            ->execute()
+            ->fetchAllKeyed();
+          foreach ($tids as $tid) {
+            if (isset($vids[$tid])) {
+              $paths[] = $function($vids[$tid], $tid);
+            }
+            else {
+              $paths[] = _taxonomy_menu_trails_default_term_path($tid);
+            }
+          }
+          break;
+        }
       }
-      // Fallback to default path when Taxonomy Menu module not exists anymore.
+      // Fallback to default path when Taxonomy Menu module not exists anymore
+      // or the function returning term path is not defined.
       
     default:
       foreach ($tids as $tid) {
@@ -123,11 +143,14 @@ function _taxonomy_menu_trails_get_paths($tids, $entity, $settings) {
 function _taxonomy_menu_trails_process($entity, $settings) {
   $instances = $settings['instances'];
   $tids = array();
+
   //TODO figure out: maybe we have to choose language in term reference fields
   foreach ($instances as $field) {
-    foreach ($entity->$field as $lang => $terms) {
-      foreach ($terms as $term) {
-        $tids[] = $term['tid'];
+    if (!empty($entity->$field)) {
+      foreach ($entity->$field as $lang => $items) {
+        foreach ($items as $item) {
+          $tids[] = $item['tid'];
+        }
       }
     }
   }
@@ -142,6 +165,11 @@ function _taxonomy_menu_trails_process($entity, $settings) {
         unset($tids[$index]);
       }
     }
+
+    // Exit in case no valid terms left.
+    if (empty($tids)) {
+      return;
+    }
   }
 
   if ($settings['selection_method'] == 'last') {
@@ -151,8 +179,9 @@ function _taxonomy_menu_trails_process($entity, $settings) {
   // Get paths for each tid.
   $paths = _taxonomy_menu_trails_get_paths($tids, $entity, $settings);
 
-  // Retrieve a list of menu names, ordered by preference.
-  // TODO: Is it still necessary?
+  // Retrieve the list of menu names sorted by preference. This list is used
+  // by menu system to get order of menus and not as a filter, we do the same.
+  // See menu_link_get_preferred().
   $menu_names = menu_get_active_menu_names();
 
   $query = db_select('menu_links', 'ml', array('fetch' => PDO::FETCH_ASSOC));
@@ -161,7 +190,6 @@ function _taxonomy_menu_trails_process($entity, $settings) {
   // Weight must be taken from {menu_links}, not {menu_router}.
   $query->addField('ml', 'weight', 'link_weight');
   $query->fields('m');
-  $query->condition('ml.menu_name', $menu_names, 'IN');
   $query->condition('ml.link_path', $paths, 'IN');
   $query->condition('ml.hidden', '0');
   if ($settings['selection_method'] == 'deepest-in-menu') {
@@ -170,19 +198,20 @@ function _taxonomy_menu_trails_process($entity, $settings) {
   $query->orderBy('ml.weight', 'ASC');
   $results = $query->execute();
 
-  $selected_item = FALSE;
-  $vars = compact('menu_names', 'results', 'paths', 'selected_item');
+  $selected_items = array();
+  $vars = compact('menu_names', 'results', 'paths', 'selected_items');
+  $vars['trail_per_menu'] = $settings['trail_per_menu'];
   switch ($settings['selection_method']) {
     case 'first':
     case 'last':
-      $selected_item = _taxonomy_menu_trails_fetch_link_simple($vars);
+      $selected_items = _taxonomy_menu_trails_fetch_link_simple($vars);
       break;
     case 'deepest-in-menu':
-      $selected_item = _taxonomy_menu_trails_fetch_link_deepest($vars);
+      $selected_items = _taxonomy_menu_trails_fetch_link_deepest($vars);
       break;
   }
-  
-  if (!$selected_item) {
+
+  if (empty($selected_items)) {
     return;
   }
 
@@ -190,12 +219,15 @@ function _taxonomy_menu_trails_process($entity, $settings) {
   // Function menu_tree_set_path() available since Drupal 7.9, so we should
   // check it exists.
   if (function_exists('menu_tree_set_path')) {
-    menu_tree_set_path($selected_item['menu_name'], $selected_item['link_path']);
+    foreach ($selected_items as $selected_item) {
+      menu_tree_set_path($selected_item['menu_name'], $selected_item['link_path']);
+    }
   }
   
   // Save selected item and "set_breadcrumb" setting for
   // taxonomy_menu_trails_menu_breadcrumb_alter().
   if (!empty($settings['set_breadcrumb'])) {
+    $selected_item = reset($selected_items);
     $selected_item['set_breadcrumb'] = $settings['set_breadcrumb'];
     taxonomy_menu_trails_selected_item_for_breadcrumb($selected_item);
   }
@@ -207,7 +239,9 @@ function _taxonomy_menu_trails_process($entity, $settings) {
   if (module_exists('menu_block')) {
     // Also set preferred item for Menu Block module
     $mb_preferred_links = &drupal_static('_menu_link_get_preferred');
-    $mb_preferred_links[$_GET['q']][$selected_item['menu_name']] = $selected_item;
+    foreach ($selected_items as $selected_item) {
+      $mb_preferred_links[$_GET['q']][$selected_item['menu_name']] = $selected_item;
+    }
   }
 }
 
@@ -226,17 +260,22 @@ function _taxonomy_menu_trails_process($entity, $settings) {
  */
 function _taxonomy_menu_trails_fetch_link_simple($vars) {
   extract($vars);
-  
+
   // Sort candidates by link path and menu name.
   $candidates = array();
   foreach ($results as $candidate) {
-    //Prefer the lightest of items with the same menu and path
+    // Prefer the lightest of items with the same menu and path.
     if (!isset($candidates[$candidate['link_path']][$candidate['menu_name']])) {
       $candidate['weight'] = $candidate['link_weight'];
       $candidates[$candidate['link_path']][$candidate['menu_name']] = $candidate;
+
+      // Add any menus not already in the menu name search list.
+      if (!in_array($candidate['menu_name'], $menu_names)) {
+        $menu_names[] = $candidate['menu_name'];
+      }
     }
   }
-  
+
   if (!empty($candidates)) {
     // Pick the most specific link, in the most preferred menu.
     foreach ($paths as $link_path) {
@@ -251,14 +290,18 @@ function _taxonomy_menu_trails_fetch_link_simple($vars) {
         $map = explode('/', $link_path);
         _menu_translate($candidate_item, $map);
         if ($candidate_item['access']) {
-          $selected_item = $candidate_item;
-          break 2;
+          if (!isset($selected_items[$menu_name])) {
+            $selected_items[$menu_name] = $candidate_item;
+          }
+
+          if (!$trail_per_menu) {
+            break 2;
+          }
         }
       }
     }
   }
-
-  return $selected_item;
+  return $selected_items;
 }
 
 /**
@@ -274,13 +317,18 @@ function _taxonomy_menu_trails_fetch_link_deepest($vars) {
 
   $candidates = array();
   foreach ($results as $candidate) {
-    //Prefer the lightest of items with the same menu and path
+    // Prefer the lightest of items with the same menu and path.
     if (!isset($candidates[$candidate['menu_name']][$candidate['link_path']])) {
       $candidate['weight'] = $candidate['link_weight'];
       $candidates[$candidate['menu_name']][$candidate['link_path']] = $candidate;
+
+      // Add any menus not already in the menu name search list.
+      if (!in_array($candidate['menu_name'], $menu_names)) {
+        $menu_names[] = $candidate['menu_name'];
+      }
     }
   }
-  
+
   if (!empty($candidates)) {
     foreach ($menu_names as $menu_name) {
       if (!empty($candidates[$menu_name])) {
@@ -288,15 +336,23 @@ function _taxonomy_menu_trails_fetch_link_deepest($vars) {
           $map = explode('/', $candidate_item['link_path']);
           _menu_translate($candidate_item, $map);
           if ($candidate_item['access']) {
-            $selected_item = $candidate_item;
-            break 2;
+            $selected_items[$menu_name] = $candidate_item;
+
+            if ($trail_per_menu) {
+              // Break only the loop of current menu candidates.
+              break;
+            }
+            else {
+              // Finish the search.
+              break 2;
+            }
           }
         }
       }
     }
   }
 
-  return $selected_item;
+  return $selected_items;
 }
 
 /**

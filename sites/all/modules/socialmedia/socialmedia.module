@@ -18,7 +18,14 @@ define('SOCIALMEDIA_LINK_TARGET_PROFILE_DEFAULT', '_blank');
 define('SOCIALMEDIA_LINK_TARGET_SHARING_DEFAULT', '_blank');
 define('SOCIALMEDIA_LINK_REL_PROFILE_DEFAULT', '<none>');
 define('SOCIALMEDIA_LINK_REL_SHARING_DEFAULT', '<none>');
+define('SOCIALMEDIA_LINK_CLASS_PROFILE_DEFAULT', '<none>');
+define('SOCIALMEDIA_LINK_CLASS_SHARING_DEFAULT', '<none>');
 define('SOCIALMEDIA_ICON_DEFAULT_STYLE_DEFAULT', 'levelten_glossy:32x32');
+
+// Permissions
+define('SOCIALMEDIA_PERM_ADMINISTER', 'administer social media');
+define('SOCIALMEDIA_PERM_ADMINISTER_OWN_PROFILES', 'administer own social profiles');
+define('SOCIALMEDIA_PERM_ADMINISTER_ANY_PROFILES', 'administer any social profiles');
 
 // TODO figure out better way to include widgetx_elements
 include_once drupal_get_path('module', 'socialmedia') . '/socialmedia.widgets.inc';
@@ -31,13 +38,17 @@ include_once drupal_get_path('module', 'socialmedia') . '/socialmedia.icons.inc'
  */
 function socialmedia_permission() {
   return array(
-    'administer social media' => array(
+    SOCIALMEDIA_PERM_ADMINISTER => array(
       'title' => t('Administer social media'),
       'description' => t('Can configure any social media settings and profiles.'),
     ),
-    'administer own profiles' => array(
-      'title' => t('Administer own profiles'),
+    SOCIALMEDIA_PERM_ADMINISTER_OWN_PROFILES => array(
+      'title' => t('Administer own social profiles'),
       'description' => t('Can setup user level social media profiles for their user account.'),
+    ),
+    SOCIALMEDIA_PERM_ADMINISTER_ANY_PROFILES => array(
+      'title' => t('Administer any social profiles'),
+      'description' => t('Can setup user level social media profiles for any user account.'),
     ),
   );
 }
@@ -80,64 +91,64 @@ function socialmedia_menu() {
     'type' => MENU_LOCAL_TASK,
   );
   if (module_exists('redirect') && FALSE) {  // TODO not implemented yet
-	  $items['admin/config/media/socialmedia/redirects'] = array(
-	    'title' => 'Redirects',
-	    'description' => 'Social media profile configuration',
-	    'page callback' => 'drupal_get_form',
-	    'page arguments' => array('socialmedia_admin_redirect_form'),
-	    'access arguments' => array('administer social media'),
-	    'file' => 'socialmedia.admin.inc',
-	    'file path' => drupal_get_path('module', 'socialmedia'),
-	    'weight' => 2,
-	    'type' => MENU_LOCAL_TASK,
-	  );
+    $items['admin/config/media/socialmedia/redirects'] = array(
+      'title' => 'Redirects',
+      'description' => 'Social media profile configuration',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('socialmedia_admin_redirect_form'),
+      'access arguments' => array('administer social media'),
+      'file' => 'socialmedia.admin.inc',
+      'file path' => drupal_get_path('module', 'socialmedia'),
+      'weight' => 2,
+      'type' => MENU_LOCAL_TASK,
+    );
   }
   if (module_exists('widgets')) {
-	  $items['admin/config/media/socialmedia/widgets'] = array(
-	    'title' => 'Widgets',
-	    'description' => 'Social media widget sets configuration',
-	    'page callback' => 'drupal_get_form',
-	    'page arguments' => array('socialmedia_admin_profile_widgets_form'),
-	    'access arguments' => array('administer social media'),
-	    'file' => 'socialmedia.admin.inc',
-	    'file path' => drupal_get_path('module', 'socialmedia'),
-	    'weight' => 3,
-	    'type' => MENU_LOCAL_TASK,
-	  );
-	  $items['admin/config/media/socialmedia/widgets/profile'] = array(
-	    'title' => 'Default profile set',
-	    'description' => 'Social media default profile widget sets configuration',
-	    'page callback' => 'drupal_get_form',
-	    'page arguments' => array('socialmedia_admin_profile_widgets_form'),
-	    'access arguments' => array('administer social media'),
-	    'file' => 'socialmedia.admin.inc',
-	    'file path' => drupal_get_path('module', 'socialmedia'),
-	    'weight' => 0,
-	    'type' => MENU_DEFAULT_LOCAL_TASK,
-	  );
-	  $items['admin/config/media/socialmedia/widgets/share'] = array(
-	    'title' => 'Default share set',
-	    'description' => 'Social media default profile widget sets configuration',
-	    'page callback' => 'drupal_get_form',
-	    'page arguments' => array('socialmedia_admin_share_widgets_form'),
-	    'access arguments' => array('administer social media'),
-	    'file' => 'socialmedia.admin.inc',
-	    'file path' => drupal_get_path('module', 'socialmedia'),
-	    'weight' => 0,
-	    'type' => MENU_LOCAL_TASK,
-	  );
-	  $items['admin/config/media/socialmedia/setup'] = array(
-	    'title' => 'Setup wizard',
-	    'description' => 'Setup wizard to help you get started quickly.',
-	    'page callback' => 'socialmedia_admin_setup',
-	    'page arguments' => array(5),
-	    'access arguments' => array('administer social media'),
-	    'file' => 'socialmedia.setup.inc',
-	    'file path' => drupal_get_path('module', 'socialmedia'),
-	    'weight' => 2,
-	    'type' => MENU_LOCAL_ACTION,
-	    //'type' => MENU_CALLBACK,
-	  );
+    $items['admin/config/media/socialmedia/widgets'] = array(
+      'title' => 'Widgets',
+      'description' => 'Social media widget sets configuration',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('socialmedia_admin_profile_widgets_form'),
+      'access arguments' => array('administer social media'),
+      'file' => 'socialmedia.admin.inc',
+      'file path' => drupal_get_path('module', 'socialmedia'),
+      'weight' => 3,
+      'type' => MENU_LOCAL_TASK,
+    );
+    $items['admin/config/media/socialmedia/widgets/profile'] = array(
+      'title' => 'Default profile set',
+      'description' => 'Social media default profile widget sets configuration',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('socialmedia_admin_profile_widgets_form'),
+      'access arguments' => array('administer social media'),
+      'file' => 'socialmedia.admin.inc',
+      'file path' => drupal_get_path('module', 'socialmedia'),
+      'weight' => 0,
+      'type' => MENU_DEFAULT_LOCAL_TASK,
+    );
+    $items['admin/config/media/socialmedia/widgets/share'] = array(
+      'title' => 'Default share set',
+      'description' => 'Social media default profile widget sets configuration',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('socialmedia_admin_share_widgets_form'),
+      'access arguments' => array('administer social media'),
+      'file' => 'socialmedia.admin.inc',
+      'file path' => drupal_get_path('module', 'socialmedia'),
+      'weight' => 0,
+      'type' => MENU_LOCAL_TASK,
+    );
+    $items['admin/config/media/socialmedia/setup'] = array(
+      'title' => 'Setup wizard',
+      'description' => 'Setup wizard to help you get started quickly.',
+      'page callback' => 'socialmedia_admin_setup',
+      'page arguments' => array(5),
+      'access arguments' => array('administer social media'),
+      'file' => 'socialmedia.setup.inc',
+      'file path' => drupal_get_path('module', 'socialmedia'),
+      'weight' => 2,
+      'type' => MENU_LOCAL_ACTION,
+      //'type' => MENU_CALLBACK,
+    );
   }
   $items['user/%user/socialmedia'] = array(
     'title' => 'Social profiles',
@@ -145,7 +156,8 @@ function socialmedia_menu() {
     'page callback' => 'drupal_get_form',
     'page arguments' => array('socialmedia_admin_profiles_form', 'user', 1),
     //'page arguments' => array(),
-    'access arguments' => array('administer own profiles'),
+    'access callback' => 'socialmedia_user_profile_access',
+    'access arguments' => array(1),
     'type' => MENU_LOCAL_TASK,
     'file' => 'socialmedia.admin.inc',
   );
@@ -163,13 +175,13 @@ function socialmedia_menu() {
   }
   */
   $items['socialmedia/util'] = array(
-    'title' => t('Social media util'),
+    'title' => 'Social media util',
     'page callback' => 'socialmedia_util',
     'access arguments' => array('access link intelligence'),
     'type' => MENU_CALLBACK,
   );
   $items['socialmedia/util_pattern'] = array(
-    'title' => t('Social media pattern util'),
+    'title' => 'Social media pattern util',
     'page callback' => 'socialmedia_util_pattern',
     'access arguments' => array('access link intelligence'),
     'type' => MENU_CALLBACK,
@@ -177,8 +189,30 @@ function socialmedia_menu() {
   return $items;
 }
 
+/**
+ * Access callback for user social profiles edition page
+ * @global User $user Current user
+ * @param User $account User whose profile is accessed
+ * @return boolean Access granted
+ */
+function socialmedia_user_profile_access($account) {
+  global $user;
+  return user_access(SOCIALMEDIA_PERM_ADMINISTER_ANY_PROFILES)
+      || $account->uid==$user->uid && user_access(SOCIALMEDIA_PERM_ADMINISTER_OWN_PROFILES); 
+}
+
+/**
+ * Implements hook_admin_paths()
+ */
+function socialmedia_admin_paths() {
+  $paths = array(
+    'user/*/socialmedia' => 1,
+  );
+  return $paths;
+}
+
 function socialmedia_util() {
-	
+  
   $platforms = socialmedia_platform_definitions();
   $defaults = drupal_map_assoc(array_keys($platforms));
 //dsm($defaults);
@@ -192,19 +226,19 @@ function socialmedia_util() {
     $source = $platform['redirect path'];
     $profile = socialmedia_profile_load($name);
     if (!isset($profile['url'])) {
-    	continue;
+      continue;
     }
     if (!$redirect = redirect_load_by_source($source)) {
-	    $redirect = new stdClass();
-		  redirect_object_prepare($redirect, array(
-		    'source' => $source,
-		    'source_options' => array(),
-		    'redirect' => 'http://' . $profile['url'],
-		    'redirect_options' => array(),
-		    'language' => LANGUAGE_NONE,
-		  ));   
+      $redirect = new stdClass();
+      redirect_object_prepare($redirect, array(
+        'source' => $source,
+        'source_options' => array(),
+        'redirect' => 'http://' . $profile['url'],
+        'redirect_options' => array(),
+        'language' => LANGUAGE_NONE,
+      ));   
     }
-	  redirect_save($redirect); 
+    redirect_save($redirect); 
   }
 
   return '';
@@ -238,7 +272,13 @@ function socialmedia_help($path, $arg) {
   }
 }
 
-function socialmedia_profile_save($profile, $platform, $uid = 0) {
+function socialmedia_profile_save($profile, $platform = null, $uid = null) {
+  if (!isset($platform) && isset($profile['platform'])) {
+    $platform = $profile['platform'];
+  }
+  if (!isset($uid)) {
+    $uid = isset($profile['uid']) ? $profile['uid'] : 0;
+  }
   $query = db_merge('socialmedia_profile');
   $query->key(array(
     'platform' => $platform,
@@ -261,7 +301,7 @@ function socialmedia_profile_load($platform, $uid = 0) {
     ->condition('a.platform', $platform)
     ->condition('a.uid', $uid);
   $result = $query->execute()->fetchAssoc();
-  if(!$result) {
+  if (!$result) {
     return FALSE; 
   }
   $profile = unserialize($result['data']);
@@ -269,6 +309,22 @@ function socialmedia_profile_load($platform, $uid = 0) {
   
   $profiles[$platform][$uid] = $profile;
   return $profile;
+}
+
+function socialmedia_profile_load_all($platform = null, $uid = null) {
+  // Select all the user-defined sets.
+  $query = db_select('socialmedia_profile', NULL, array('fetch' => PDO::FETCH_ASSOC))
+    ->fields('socialmedia_profile');
+
+  if (isset($platform)) {
+    $query->condition('platform', $platform);
+  }
+  if (isset($uid)) {
+    $query->condition('uid', $uid);
+  }
+
+  $profiles =  $query->execute()->fetchAllAssoc('smid', PDO::FETCH_ASSOC);
+  return $profiles;
 }
 
 /**
@@ -284,7 +340,7 @@ function socialmedia_platform_definitions() {
   static $platforms = NULL;
   
   if (isset($platforms)) {
-  	return $platforms;
+    return $platforms;
   }
 
   $platforms = array();
@@ -332,44 +388,69 @@ function socialmedia_platform_definition_load($platform, $uid = NULL) {
 
   // If a set is specified, do not allow loading of default set
   // elements.
+  // TODO: what was I doing here? I can't remember, commenting out logic
+  /*
   if (isset($uid)) {
     $set = socialmedia_user_load($uid, NULL);
   }
+  */
 
   return isset($definitions[$platform]) ? $definitions[$platform] : FALSE;
 }
 
-function _socialmedia_widgets_set_error($element, $msg, $status = 'warning') {
+function socialmedia_widgets_set_form_alter(&$form, $set) {
+  $data = $set['data'];
+  $form['socialmedia'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Social media'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $options = array(
+    'site' => t('Use site profiles only'),
+    'user' => t('Use user profiles only'),
+    'usersite' => t('Try user profiles first, fallback to site profiles.'),
+  );
+  $form['socialmedia']['profile_context'] = array(
+    '#type' => 'radios',
+    '#title' => t('Profile context'),
+    '#description' => t('Both site and user level social media profiles can be enabed. This option sets which types of profiles to use for the this widget set.'),
+    '#options' => $options,
+    '#default_value' => isset($data['socialmedia']['profile_context']) ? $data['socialmedia']['profile_context'] : 'usersite',
+  );
+}
+
+function _socialmedia_widgets_set_error($name, $msg, $status = 'warning') {
   if (module_exists('widgets')) {
     if (user_access('administer socialmedia')) {
-      widgets_set_error($element, $msg);
+      widgets_set_error($name, $msg);
     }
     else {
-      widgets_set_error($element);
+      widgets_set_error($name);
     }
   }
 }
 
 function socialmedia_update_redirects($redirects = array(), $original_redirects = array()) {
   if (!module_exists('redirect')) {
-  	return FALSE;
+    return FALSE;
   }
-	$platforms = socialmedia_platform_definitions();
+  $platforms = socialmedia_platform_definitions();
   $defaults = drupal_map_assoc(array_keys($platforms));
   $active_platforms = variable_get('socialmedia_platforms_site_redirects_enabled', $defaults);
   $sources = variable_get('socialmedia_platforms_site_redirects_source', array());
 
   foreach ($platforms AS $name => $platform) {
-  	if (!isset($active_platforms[$name]) && $active_platforms[$name]) {
-  		continue;
-  	}
-  	$source = '';
-  	if (isset($sources[$name])) {
-  		$source = $sources[$name];
-  	}
-  	elseif (isset($platform['redirect path'])) {
-  		$source = $platform['redirect path'];
-  	}
+    if (!isset($active_platforms[$name]) && $active_platforms[$name]) {
+      continue;
+    }
+    $source = '';
+    if (isset($sources[$name])) {
+      $source = $sources[$name];
+    }
+    elseif (isset($platform['redirect path'])) {
+      $source = $platform['redirect path'];
+    }
     if (!$source) {
       continue;
     }
@@ -394,5 +475,95 @@ function socialmedia_update_redirects($redirects = array(), $original_redirects 
       ));   
     }
     redirect_save($redirect); 
-  }	
+  }  
+}
+/** 
+ * Determines if page has a author context. Uses widgets algo if widgets is installed
+ * @param $data
+ */
+function socialmedia_get_context_author_uid($data) {
+  if (module_exists('widgets')) {
+    return widgets_get_context_author_uid($data);
+  } 
+  $uid = '';    
+  if (isset($data['node']->uid)) {
+    $uid = $data['node']->uid; 
+  }
+  elseif ((arg(0) == 'node') && is_numeric(arg(1))) {
+    $obj = menu_get_object();
+    if (is_object($obj))  {
+      $uid = $obj->uid;
+    }
+  }
+  elseif (arg(0) == 'user' && is_numeric(arg(1))) {
+    $obj = menu_get_object('user', 1);
+    if (is_object($obj))  {
+      $uid = $obj->uid;
+    }
+  } 
+  drupal_alter('socialmedia_context_author_uid', $uid, $data);
+  return $uid;
+  
+}
+
+/**
+ * Implementation of hook_features_api().
+ *
+ * Allow exporting of config wizards by the Features module.
+ */
+function socialmedia_features_api() {
+  return array(
+    'socialmedia_profile' => array(
+      'name' => t('Socialmedia profiles'),
+      'feature_source' => TRUE,
+      'default_hook' => 'socialmedia_profile_defaults',
+      'default_file' => FEATURES_DEFAULTS_INCLUDED,
+      //'default_file' => 'widgets',
+      'file' => drupal_get_path('module', 'socialmedia') . '/socialmedia.features.inc',
+    )
+  );
+}
+
+/**
+ * Implements hook_user_load()
+ *
+ * Attaches socialmedia profile data on users
+ * @param $users
+ */
+function socialmedia_user_load($users) {
+  foreach ($users AS $uid => $user) {
+    $users[$uid]->socialmedia = array(
+      'profiles' => array(),
+    );
+    $profiles = socialmedia_profile_load_all(null, $uid);
+    if (is_array($profiles)) {
+      foreach ($profiles AS $smid => $profile) {
+        $data = unserialize($profile['data']);
+        // skip empty profiles
+        if (empty($data)) {
+          continue;
+        }
+        $users[$uid]->socialmedia['profiles'][$profile['platform']] = $data;
+      }
+    }
+  }
+}
+
+function socialmedia_user_insert(&$edit, $account, $category) {
+  socialmedia_user_save($edit, $account, $category);
+}
+
+function socialmedia_user_update(&$edit, $account, $category) {
+  socialmedia_user_save($edit, $account, $category);
+}
+
+function socialmedia_user_save(&$edit, $account, $category) {
+  if (isset($edit['socialmedia'])
+    && !empty($edit['socialmedia']['profiles'])
+    && is_array($edit['socialmedia']['profiles'])
+  ) {
+    foreach ($edit['socialmedia']['profiles'] AS $platform => $profile) {
+      socialmedia_profile_save($profile, $platform, $account->uid);
+    }
+  }
 }

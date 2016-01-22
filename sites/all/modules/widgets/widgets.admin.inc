@@ -37,7 +37,7 @@ function widgets_set_form($form, &$form_state, $set) {
 //dsm($set);
   // if destination is set, save it in session so widget element add works correctly
   /*
-	if ($_GET['destination']) {
+  if ($_GET['destination']) {
     $_SESSION['widgets']['set_form']['destination'] = $_GET['destination'];
     $query = str_replace('destination=', 'd', $_SERVER['QUERY_STRING']);
     //drupal_goto(request_path() . '?' . $query);
@@ -171,7 +171,7 @@ function widgets_set_form($form, &$form_state, $set) {
   
   // add data form elements
   if (!isset($set['data'])) {
-  	$set['data'] = array();
+    $set['data'] = array();
   }
   $form['data'] = widgets_set_form_data_fields($set['data'], $set, $editable);
   if (isset($set['form callback']) && function_exists($set['form callback'])) {
@@ -202,7 +202,7 @@ function widgets_set_form($form, &$form_state, $set) {
 
 function widgets_set_form_data_fields($data, $set, $editable) {
   $form = array();
-	$options = array(
+  $options = array(
     '' => t('None'),
     'plain-linebreaks' => t('Plain with linebreaks'),
     'verticle' => t('Verticle'),
@@ -246,7 +246,7 @@ function widgets_set_form_data_fields($data, $set, $editable) {
     '#default_value' => isset($data['visibility']['block']) ? $data['visibility']['block'] : 1,
   );
   
-  if(!$editable) {
+  if (!$editable) {
     $form['visibility']['token']['#type'] = 'item';
     $form['visibility']['token']['#markup'] = isset($data['visibility']['token']) && !$data['visibility']['token'] ? 'No' : 'Yes';
     $form['visibility']['block']['#type'] = 'item';
@@ -273,7 +273,7 @@ function widgets_set_form_data_fields($data, $set, $editable) {
       '#options' => $options,
       '#default_value' => isset($data['visibility']['content_types'][$typename]) ? $data['visibility']['content_types'][$typename] : array(),
     ); 
-    if(!$editable) {
+    if (!$editable) {
       $form['visibility']['content_types'][$typename]['#type'] = 'item';
       $form['visibility']['content_types'][$typename]['#markup'] = ((isset($data['visibility']['content_types'][$typename])) && count($data['visibility']['content_types'][$typename])) ? implode(', ', $data['visibility']['content_types'][$typename]) : 'No';
     }  
@@ -325,23 +325,27 @@ function widgets_set_form_data_fields($data, $set, $editable) {
     '#collapsed' => TRUE,
   );
   if (!is_array($tokens) || (count($tokens) == 0)) {
-  	$form['tokens']['tokens'] = array(
-  	  '#markup' => t('This widget set does not contain any tokens.'),
-  	);
+    $form['tokens']['tokens'] = array(
+      '#markup' => t('This widget set does not contain any tokens.'),
+    );
   }
   else {
-  	$items = array();
-  	$count = 0;
-  	foreach ($tokens AS $key => $type) {
-  		if (is_array($type)) {
-  		  foreach ($type AS $k => $token) {
-  			  $items[] = $token;
-  		    $count++;
-  		  }
-  		}
-  	}
-    $form['tokens']['tokens'] = array(
+    $items = array();
+    $count = 0;
+    foreach ($tokens AS $key => $type) {
+      if (is_array($type)) {
+        foreach ($type AS $k => $token) {
+          $items[] = $token;
+          $count++;
+        }
+      }
+    }
+    $form['tokens']['tokens_list'] = array(
       '#markup' => t('This widget set contains the following !count tokens:', array('!count' => $count)) . theme('item_list', array('items' => $items)),
+    );
+    $form['tokens']['tokens'] = array(
+      '#type' => 'value',
+      '#value' => $items,
     );
   }
   
@@ -413,12 +417,13 @@ function widgets_set_form_submit($form, &$form_state) {
   }
   
   $set['data'] = $form_state['values']['data'];
+  //drupal_alter('widgets_set', $set, 'widgets_set_form');
   widgets_set_save($set);
   if ($form_state['values']['op'] == t('Update set')) {
     drupal_set_message(t('Changes to the set have been saved.'));
   }
   
- 	widgets_clear_widgets_cache($set['data']['cache']['cid0']);
+   widgets_clear_widgets_cache($set['data']['cache']['cid0']);
   
   $form_state['redirect'] = 'admin/structure/widgets/sets/edit/' . $set['name'];
 }
@@ -547,29 +552,29 @@ function widgets_set_export_form($form, &$form_state, $set) {
   $str .= "  'elements' => array(\n";
   $i = 1;
   foreach ($set['elements'] AS $weid => $element) {
-  	$str .= "    array(\n";
-  	$str .= "      'name' => '" . $element['name'] . "',\n";
-  	$str .= "      'weight' => " . $i . ",\n";
-  	$str .= "      'data' => array(\n";
-  	if (is_array($element['data'])) {
-  		foreach ($element['data'] AS $key => $value) {
-  			if (is_array($value)) {
-  				$str .= "        '" . $key . "' => array(\n";
-  				foreach ($value AS $key2 => $value2) {
-  					if ($value2) {
-  					  $str .= "          '" . $key2 . "' => '" . $value2 . "',\n"; 
-  					}
-  				}
-  				$str .= "        ),\n";
-  			}
-  			elseif ($value) {
-  			  $str .= "        '" . $key . "' => '" . $value . "',\n";	
-  			}
-  		}
-  	}
-  	$str .= "      ),\n";
-  	$str .= "    ),\n";
-  	$i++;
+    $str .= "    array(\n";
+    $str .= "      'name' => '" . $element['name'] . "',\n";
+    $str .= "      'weight' => " . $i . ",\n";
+    $str .= "      'data' => array(\n";
+    if (is_array($element['data'])) {
+      foreach ($element['data'] AS $key => $value) {
+        if (is_array($value)) {
+          $str .= "        '" . $key . "' => array(\n";
+          foreach ($value AS $key2 => $value2) {
+            if ($value2) {
+              $str .= "          '" . $key2 . "' => '" . $value2 . "',\n"; 
+            }
+          }
+          $str .= "        ),\n";
+        }
+        elseif ($value) {
+          $str .= "        '" . $key . "' => '" . $value . "',\n";  
+        }
+      }
+    }
+    $str .= "      ),\n";
+    $str .= "    ),\n";
+    $i++;
   }  
   $str .= "  ),\n";
   $str .= ");";
@@ -749,7 +754,7 @@ function widgets_element_scale_validate($element, &$form_state) {
 function widgets_template_auto_form($data, $element = NULL) {
 //dsm($data);  
 
-	$form = array();
+  $form = array();
   if (!isset($element)) {
     $element = widgets_element_load_by_admin_path();
   }
@@ -760,53 +765,53 @@ function widgets_template_auto_form($data, $element = NULL) {
 
   $fields = widgets_field_scan($element['template']);
   if (is_array($fields)) {
-		foreach ($fields AS $key => $values) {			 
-			$keys = explode(':', $key);
-			 if (count($keys) > 0) {
-			 	 $key = $keys[count($keys) - 1];
+    foreach ($fields AS $key => $values) {       
+      $keys = explode(':', $key);
+       if (count($keys) > 0) {
+          $key = $keys[count($keys) - 1];
        }
-			 $default = '';
-			 if (count($keys) == 1) {
-			 	 $default = isset($data[$keys[0]]) ? $data[$keys[0]] : '';
-			 }
-			 elseif (count($keys) == 2) {
-			 	 $default = isset($data[$keys[0]][$keys[1]]) ? $data[$keys[0]][$keys[1]] : '';
-			 }
-		   $field = array(
-		    '#type' => 'textfield',
-		    '#title' => t(ucfirst(str_replace(array('_', '-'), ' ', $key))),  // PVE 7/2/12 translations
-		    '#default_value' => $default,
-		    '#template_default_value' => $values['default'],
-		    '#description' => t('Leave blank to use default %default.',
-		      array(
-		        '%default' => $values['default'],
-		      )
-		    ),        		  
-		  );
-		  if (isset($values['pre']) || isset($values['post'])) {
-		  	if (isset($values['pre'])) {
-		  	  $field['#replace_pre'] = $values['pre'];
-		  	}
-		    if (isset($values['post'])) {
+       $default = '';
+       if (count($keys) == 1) {
+          $default = isset($data[$keys[0]]) ? $data[$keys[0]] : '';
+       }
+       elseif (count($keys) == 2) {
+          $default = isset($data[$keys[0]][$keys[1]]) ? $data[$keys[0]][$keys[1]] : '';
+       }
+       $field = array(
+        '#type' => 'textfield',
+        '#title' => t(ucfirst(str_replace(array('_', '-'), ' ', $key))),  // PVE 7/2/12 translations
+        '#default_value' => $default,
+        '#template_default_value' => $values['default'],
+        '#description' => t('Leave blank to use default %default.',
+          array(
+            '%default' => $values['default'],
+          )
+        ),              
+      );
+      if (isset($values['pre']) || isset($values['post'])) {
+        if (isset($values['pre'])) {
+          $field['#replace_pre'] = $values['pre'];
+        }
+        if (isset($values['post'])) {
           $field['#replace_post'] = $values['post'];
         }
         $field['#description'] .= ' ' . t('Use &lt;none&gt; to remove setting.');
-		  }
-		  if (count($keys) == 1) {
-		  	$form[$key] = $field;
-		  }
-		  else {
-		  	if (!isset($form[$keys[0]])) {
-				  $form[$keys[0]] = array(
-				    '#type' => 'fieldset',
-				    '#title' => ucfirst(str_replace(array('_', '-'), ' ', $keys[0])),
-				    '#collapsible' => TRUE,
-				    '#collapsed' => FALSE,
-				  ); 
-		  	}
-		  	$form[$keys[0]][$key] = $field;
-		  }
-		}
+      }
+      if (count($keys) == 1) {
+        $form[$key] = $field;
+      }
+      else {
+        if (!isset($form[$keys[0]])) {
+          $form[$keys[0]] = array(
+            '#type' => 'fieldset',
+            '#title' => ucfirst(str_replace(array('_', '-'), ' ', $keys[0])),
+            '#collapsible' => TRUE,
+            '#collapsed' => FALSE,
+          ); 
+        }
+        $form[$keys[0]][$key] = $field;
+      }
+    }
   }
 
   return $form;
@@ -873,20 +878,20 @@ function widgets_definition_template_syntax() {
  */
 function widgets_definition_edit_form($form, &$form_state, $definition = NULL, $add = FALSE) {
   $operation = ($add) ? 'add' : 'edit';
-	if (isset($definition)) {
-  	// check if clone operation
-  	if ($add) {
-  		$operation = 'clone';
-  		$definition = widgets_element_definition_load($definition);
-  		$name = $definition['name'] . '-custom'; 
-  		// check name is unique
-  		$i = 1;
-  		while (widgets_element_definition_load($name)) {
-  			$name = $definition['name'] . '-custom' . '-' . $i;
-  			$i++;
-  		}
-  		$definition['name'] = $name;
-  	}
+  if (isset($definition)) {
+    // check if clone operation
+    if ($add) {
+      $operation = 'clone';
+      $definition = widgets_element_definition_load($definition);
+      $name = $definition['name'] . '-custom'; 
+      // check name is unique
+      $i = 1;
+      while (widgets_element_definition_load($name)) {
+        $name = $definition['name'] . '-custom' . '-' . $i;
+        $i++;
+      }
+      $definition['name'] = $name;
+    }
     $title = t('Edit %name definition', array('%name' => $definition['name']));
     drupal_set_title($title, PASS_THROUGH);
   }
@@ -973,11 +978,11 @@ function widgets_definition_edit_form($form, &$form_state, $definition = NULL, $
 }
 
 function widgets_definition_edit_form_validate($form, &$form_state) {
-	if (($form_state['values']['operation'] == 'clone') || ($form_state['values']['operation'] == 'clone')) {
-		if (widgets_element_definition_load($form_state['values']['name'])) {
-			form_set_error('name', t('A widget definition %name already exists. Please select a unique name.', array('%name' => $form_state['values']['name'])));
-		}
-	}
+  if (($form_state['values']['operation'] == 'clone') || ($form_state['values']['operation'] == 'clone')) {
+    if (widgets_element_definition_load($form_state['values']['name'])) {
+      form_set_error('name', t('A widget definition %name already exists. Please select a unique name.', array('%name' => $form_state['values']['name'])));
+    }
+  }
 }
 
 /**
@@ -992,8 +997,8 @@ function widgets_definition_edit_form_submit($form, &$form_state) {
   );
 //dsm($values);
   $values = $values['advanced'];
-  if($values['add_js']['data']) {
-  	$definition['add_js'] = $values['add_js'];
+  if ($values['add_js']['data']) {
+    $definition['add_js'] = $values['add_js'];
   }
 //dsm($definition);
   
@@ -1122,7 +1127,7 @@ function widgets_definition_export_form($form, &$form_state, $definition) {
  * @ingroup themeable
  */
 function theme_widgets_set_list($variables) {  
-	$sets = $variables['sets'];
+  $sets = $variables['sets'];
 
   $header = array(t('Set name'), t('Settings'), array('data' => t('Operations'), 'colspan' => 3));
   $rows = array();

@@ -15,6 +15,7 @@ function uc_roles_rules_data_info() {
   $entities['uc_roles_expiration'] = array(
     'label' => t('Ubercart role expiration'),
     'wrap' => TRUE,
+    'token type' => 'uc_role',
     'property info' => array(
       'reid' => array(
         'type' => 'integer',
@@ -251,7 +252,11 @@ function uc_roles_action_order_email($order, $role_expiration, $from, $addresses
   $recipients = array();
   $addresses = token_replace($settings['addresses'], $settings['replacements']);
   foreach (explode("\n", $addresses) as $address) {
-    $recipients[] = trim($address);
+    $address = trim($address);
+    // Remove blank lines
+    if (!empty($address)) {
+      $recipients[] = $address;
+    }
   }
 
   // Send to each recipient.
@@ -289,7 +294,11 @@ function uc_roles_action_user_email($account, $role_expiration, $from, $addresse
   $recipients = array();
   $addresses = token_replace($settings['addresses'], $settings['replacements']);
   foreach (explode("\n", $addresses) as $address) {
-    $recipients[] = trim($address);
+    $address = trim($address);
+    // Remove blank lines
+    if (!empty($address)) {
+      $recipients[] = $address;
+    }
   }
 
   // Send to each recipient.

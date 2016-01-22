@@ -200,7 +200,12 @@ function _uc_file_download($fid) {
   );
 
   $ip = ip_address();
-  $file_download = uc_file_get_by_uid($user->uid, $fid);
+  if (user_access('view all downloads')) {
+    $file_download = uc_file_get_by_id($fid);
+  }
+  else {
+    $file_download = uc_file_get_by_uid($user->uid, $fid);
+  }
 
   if (isset($file_download->filename)) {
     $file_download->full_path = uc_file_qualify_file($file_download->filename);
@@ -210,7 +215,10 @@ function _uc_file_download($fid) {
   }
 
   // If it's ok, we push the file to the user.
-  $status = _uc_file_download_validate($file_download, $user, $ip);
+  $status = UC_FILE_ERROR_OK;
+  if (!user_access('view all downloads')) {
+    $status = _uc_file_download_validate($file_download, $user, $ip);
+  }
   if ($status == UC_FILE_ERROR_OK) {
     _uc_file_download_transfer($file_download, $ip);
   }
@@ -218,10 +226,12 @@ function _uc_file_download($fid) {
   // Some error state came back, so report it.
   else {
     drupal_set_message($error_messages[$status] . $admin_message, 'error');
+
+    // Kick 'em to the curb. >:)
+    _uc_file_download_redirect($user->uid);
   }
 
-  // Kick 'em to the curb. >:)
-  _uc_file_download_redirect($user->uid);
+  drupal_exit();
 }
 
 /**
@@ -248,7 +258,7 @@ function _uc_file_download_validate($file_download, &$user, $ip) {
   }
 
   // Must be a valid file.
-  if (!$file_download || !is_file($file_download->full_path)) {
+  if (!$file_download || !is_readable($file_download->full_path)) {
     cache_set('uc_file_' . $ip, $requests, 'cache', REQUEST_TIME + 86400);
     if ($requests == UC_FILE_REQUEST_LIMIT) {
       // $message_user has already been passed through check_plain()
@@ -308,9 +318,9 @@ function _uc_file_download_validate($file_download, &$user, $ip) {
  */
 function _uc_file_download_transfer($file_user, $ip) {
 
-  // Check if any hook_file_transfer_alter calls alter the download.
-  foreach (module_implements('file_transfer_alter') as $module) {
-    $name = $module . '_file_transfer_alter';
+  // Check if any hook_uc_file_transfer_alter() calls alter the download.
+  foreach (module_implements('uc_file_transfer_alter') as $module) {
+    $name = $module . '_uc_file_transfer_alter';
     $file_user->full_path = $name($file_user, $ip, $file_user->fid, $file_user->full_path);
   }
 

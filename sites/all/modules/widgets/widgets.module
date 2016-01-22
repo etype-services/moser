@@ -299,8 +299,8 @@ function widgets_clear_widgets_cache($cid, $wildcard = FALSE) {
 //dsm($cid);
 //dsm($wildcard);
   if ($cid) {
-  	cache_clear_all($cid, 'cache_widgets', $wildcard);
-  }	
+    cache_clear_all($cid, 'cache_widgets', $wildcard);
+  }  
 }
 
 /**
@@ -440,7 +440,6 @@ function widgets_sets() {
       cache_set('widgets_sets', $sets);
     }
   }
-
   return $sets;
 }
 
@@ -500,7 +499,7 @@ function widgets_set_load($name = NULL, $wsid = NULL, $include = NULL) {
 function widgets_set_save($set) {
 //dsm($set);
   if (!isset($set['data'])) {
-  	$set['data'] = array();
+    $set['data'] = array();
   }
   if (isset($set['wsid']) && is_numeric($set['wsid'])) {
     // Load the existing set to make sure we account for renamed sets.
@@ -750,7 +749,6 @@ function widgets_element_definitions() {
       cache_set("widgets_elements:$langcode", $elements);
     }
   }
-
   return $elements;
 }
 
@@ -806,18 +804,28 @@ function widgets_field_scan($text, $return_matches = FALSE) {
   // Matches tokens with the following pattern: [$type:$name]
   // $type and $name may not contain  [ ] or whitespace characters.
   // $type may not contain : characters, but $name may.
-  preg_match_all('/
+  $pattern = '/
     \[\?             # [ - pattern start
     ([^\s\?=]*)   # match $type not containing whitespace ? or =
     =               # = - separator
-    ([^\?]*)    # match $name not containing or ? (TODO white space was removed, make sure it keeps working)
+    ([^\]]*)    # match $name not containing or ? (TODO white space was removed, make sure it keeps working)
     \?\]             # ] - pattern end
-    /x', $text, $matches);
-
+    /x';
+  
+  $pattern = '/
+    \[\?             # [ - pattern start
+    ([^\s\?=]*)   # match $type not containing whitespace ? or =
+    =               # = - separator
+    (((?!\?\]).)*)    # dont match ?]
+    \?\]             # ] - pattern end
+    /x';
+  
+  preg_match_all($pattern, $text, $matches);
+  
   if ($return_matches) {
     return $matches;
   }
-  
+
   $originals = $matches[0];
   $fields = $matches[1];
   $defaults = $matches[2];
@@ -840,12 +848,12 @@ function widgets_field_scan($text, $return_matches = FALSE) {
         'default' => $matches[2][0],
         'post' => $matches[3][0],
         'original' => $originals[$i],
-      );  	
+      );    
     }
     else {
-    	$results[$fields[$i]] = array(
+      $results[$fields[$i]] = array(
         'default' => $defaults[$i],
-    	  'original' => $originals[$i],
+        'original' => $originals[$i],
       );
     }
   }
@@ -939,9 +947,9 @@ function widgets_element_load_by_admin_path() {
 function widgets_element_save($element) {
 //dsm($element);
   if (!isset($element['data'])) {
-  	$element['data'] = array();
+    $element['data'] = array();
   }
-	if (!empty($element['weid'])) {
+  if (!empty($element['weid'])) {
     drupal_write_record('widgets_elements', $element, 'weid');
   }
   else {
@@ -953,14 +961,14 @@ function widgets_element_save($element) {
 }
 
 function widgets_is_preview() {
-	if (arg(0) == 'admin' && arg(2) == 'widgets') {
+  if (arg(0) == 'admin' && arg(2) == 'widgets') {
     if (arg(4) == 'preview') {
       return TRUE;
     }
     elseif (arg(4) == 'edit') {
-    	return TRUE;
+      return TRUE;
     }
-	}
+  }
   return FALSE;
 }
 
@@ -1000,9 +1008,9 @@ function widgets_element_delete($element) {
 }
 
 function widgets_set_error($name, $msg = '', $status = 'warning') {
-	if ($msg) {
-		drupal_set_message($msg, $status);
-	}
+  if ($msg) {  	
+    drupal_set_message(filter_xss($msg), $status);
+  }
   return _widgets_error($name, 'set');
 }
 
@@ -1011,19 +1019,23 @@ function widgets_get_error($name) {
 }
 
 function _widgets_error($name, $action = 'get') {
-	static $errors = array();
-	if($action == 'set') {
-		$errors[$name] = TRUE;
-	}
-	elseif ($action == 'reset') {
-		$errors[$name] = FALSE;
-	}
-	if (isset($errors[$name])) {
-	  return $errors[$name];
-	}
-	else {
-		return FALSE;
-	}
+  static $errors = array();
+  // TODO not sure if this is the best idea, but cures the symptoms of #1468030
+  if (!isset($errors[$name])) {
+    //return FALSE;
+  }
+  if ($action == 'set') {
+    $errors[$name] = TRUE;
+  }
+  elseif ($action == 'reset') {
+    $errors[$name] = FALSE;
+  }
+  if (isset($errors[$name])) {
+    return $errors[$name];
+  }
+  else {
+    return FALSE;
+  }
 }
 
 function widgets_set_cache_scope($name, $scope) {
@@ -1036,16 +1048,16 @@ function widgets_get_cache_scope($name) {
 
 function _widgets_cache_scope($name, $scope = NULL, $action = 'get') {
   static $cache_scope = array();
-  if($action == 'set') {
-  	if (!$cache_scope[$name][$scope]) {
-  		$cache_scope[$name][$scope] = array();
-  	}
+  if ($action == 'set') {
+    if (!$cache_scope[$name][$scope]) {
+      $cache_scope[$name][$scope] = array();
+    }
     $cache_scope[$name][$scope] = TRUE;
   }
   elseif ($action == 'reset') {
-  	if ($cache_scope[$name][$scope]) {
+    if ($cache_scope[$name][$scope]) {
       $cache_scope[$name][$scope] = FALSE;
-  	}
+    }
   }
   if (isset($cache_scope[$name])) {
     return $cache_scope[$name];
@@ -1076,7 +1088,7 @@ function theme_widgets_set_view($variables) {
     'set' => $set,
   );
   if (isset($variables['process_tokens']) && !$variables['process_tokens']) {
-  	$process_tokens = FALSE;
+    $process_tokens = FALSE;
   }
   else {
     if (isset($variables['token_data'])) {
@@ -1086,12 +1098,12 @@ function theme_widgets_set_view($variables) {
 
   $is_preview = widgets_is_preview();
   if (!$is_preview && isset($set['data']['cache']['scope']) && ($cid = widgets_build_cache_cid($set['name'], $set['data']['cache']['scope'], $token_data))) {
-  	$cache = cache_get($cid, 'cache_widgets');
-  	if ($cache) {
+    $cache = cache_get($cid, 'cache_widgets');
+    if ($cache) {
 //dsm('cache_returned = ' . $cid);
 //dsm($cache);
-  	  return $cache->data['output'];
-  	}
+      return $cache->data['output'];
+    }
   }
   
 //dsm($set);  
@@ -1102,20 +1114,24 @@ function theme_widgets_set_view($variables) {
   $set_post = '';
   $set_pre_elements = array();
   $set_post_elements = array();
-  
+  $count = 0;
   if (is_array($set['elements']) && (count($set['elements']) > 0)) {
-  	$count = 0;
-    foreach($set['elements'] AS $weight => $element) {
+    
+    foreach ($set['elements'] AS $weight => $element) {
       $template = $element['template'];
       $data = isset($element['data']) ? $element['data'] : array();
-		  $token_data['widgets']['element'] = $element;
-		  // replace literal tokens found in template
-		  if ($process_tokens) {
+      $token_data['widgets']['element'] = $element;
+      // replace literal tokens found in template
+      if ($process_tokens) {
         $template = widgets_token_replace($template, $token_data);
       }
-//dsm($template);
+//          if ($element['name'] == 'socialmedia_socialmedia-linkedin-profile-button' || $element['name'] == 'socialmedia_socialmedia-googleplus-profile-button') {
+//        dsm($template);
+//      }
       $template = widgets_replace_fields($template, $data);
-//dsm($template);
+//          if ($element['name'] == 'socialmedia_socialmedia-linkedin-profile-button' || $element['name'] == 'socialmedia_socialmedia-googleplus-profile-button') {
+//        dsm($template);
+//      }
       if (isset($element['view callback']) && $element['view callback']) {
         $template = call_user_func($element['view callback'], $element);
       }
@@ -1124,23 +1140,24 @@ function theme_widgets_set_view($variables) {
         $template = widgets_token_replace($template, $token_data);
       }
       // if error with tokens, skip widget
+//dsm($element['name']);
       if (widgets_get_error($element['name']) && !widgets_is_preview()) {
-      	continue;
+        continue;
       }
 
       $pre = '';
       $post = '';
-      if($style) {
-      	$a = explode('-', $style);
-      	if($a[0] == 'plain') {
-      		if (($a[1] == 'linebreaks') && ($count > 0)) {
-      			$pre = "\n";
-      		}
-      	}
-      	else {
-	        $pre = '<div id="widgets-element-' . $element['name'] . '" class="widgets widgets-element widgets-element-' . $style . ' widgets-style-' . $style . '">';
-	        $post = '</div>';          		
-      	}   
+      if ($style) {
+        $a = explode('-', $style);
+        if ($a[0] == 'plain') {
+          if (($a[1] == 'linebreaks') && ($count > 0)) {
+            $pre = "\n";
+          }
+        }
+        else {
+          $pre = '<div id="widgets-element-' . $element['name'] . '" class="widgets widgets-element widgets-element-' . $style . ' widgets-style-' . $style . '">';
+          $post = '</div>';  
+        }   
       }
       $output .= $pre . $template . $post;
       
@@ -1151,20 +1168,20 @@ function theme_widgets_set_view($variables) {
           widgets_add_js_singleton($element['add_js']);
         }
         elseif ($scope == 'set_pre') {
-        	// check if already added, if not add
-        	if (!isset($set_pre_elements[$element['add_js']['data']])) {
-        		if ($process_tokens) {
+          // check if already added, if not add
+          if (!isset($set_pre_elements[$element['add_js']['data']])) {
+            if ($process_tokens) {
               $set_pre .= token_replace($element['add_js']['data'], $token_data);
-        		}
-        	  $set_pre_elements[$element['add_js']['data']] = 1;
-        	}
+            }
+            $set_pre_elements[$element['add_js']['data']] = 1;
+          }
         }
         elseif ($scope == 'set_post') {
-        	// check if already added, if not add
+          // check if already added, if not add
           if (!isset($set_post_elements[$element['add_js']['data']])) {
-          	if ($process_tokens) {
+            if ($process_tokens) {
               $set_post .= token_replace($element['add_js']['data'], $token_data);
-          	}
+            }
             $set_post_elements[$element['add_js']['data']] = 1;
           }
         }
@@ -1172,21 +1189,25 @@ function theme_widgets_set_view($variables) {
       $count++;
     }
   }
+  // return empty if no valid widgets
+  if (!$count) {
+    return '';
+  }
   //$set_pre = token_replace($set_pre, $token_data);
  // $set_post = token_replace($set_post, $token_data);
   
   $pre = '';
   $post = '';
-  if($style) {
+  if ($style) {
     $a = explode('-', $style);
-    if($a[0] == 'plain') {
+    if ($a[0] == 'plain') {
 
     }
     else {
       $pre = '<div id="widgets-element-' . $set['name'] . '" class="widgets widgets-set widgets-set-' . $style . ' widgets-style-' . $style . '">';
       $post = '</div>';  
       if ($style == 'horizontal') {
-      	$post = '<div class="widgets-clear"></div>' . $post;
+        $post = '<div class="widgets-clear"></div>' . $post;
       }
     }      
   }
@@ -1205,35 +1226,35 @@ function theme_widgets_set_view($variables) {
 }
 
 function widgets_token_replace($template, $token_data) {
-	$template = token_replace($template, $token_data);
-//dsm($token_data);	
-	// check if any special operators
-	if (strpos($template, '[|') === FALSE) {
-		return $template;
-	}
+  $template = token_replace($template, $token_data);
+//dsm($token_data);  
+  // check if any special operators
+  if (strpos($template, '[|') === FALSE) {
+    return $template;
+  }
 
   $pattern = '/\[\|(.*?)\|\]/';
   preg_match_all($pattern, $template, $matches);
 //dsm($matches);
   if (isset($matches[1])) {
-  	$i = 0;
-  	foreach ($matches[1] AS $match) {
-  		$elements = explode('||', $match);
-  		$value = '';
-  		foreach($elements AS $element) {
-  			$results = token_scan($element);
+    $i = 0;
+    foreach ($matches[1] AS $match) {
+      $elements = explode('||', $match);
+      $value = '';
+      foreach ($elements AS $element) {
+        $results = token_scan($element);
 //dsm($element);
 //dsm($results);
-  			if (count($results) == 0) {
-  				$value = $element;
-  				break;
-  			}
+        if (count($results) == 0) {
+          $value = $element;
+          break;
+        }
 
-  		}
+      }
 //dsm($matches[0][$i] . ", $value");
-  		$template = str_replace($matches[0][$i], $value, $template);
-  		$i++;
-  	}
+      $template = str_replace($matches[0][$i], $value, $template);
+      $i++;
+    }
   }
   return $template;
 }
@@ -1245,35 +1266,35 @@ function widgets_token_replace($template, $token_data) {
  * @param array $context - follows format for token_replace $data
  */
 function widgets_build_cache_cid($name, $scope = '', $context = array()) {
-	//$cache_scope = widgets_build_cache_cid($name);
-	$cache = FALSE;
-	$cid = 'set:' . $name;
+  //$cache_scope = widgets_build_cache_cid($name);
+  $cache = FALSE;
+  $cid = 'set:' . $name;
 //dsm($scope);
   if ($scope == 'site') {
     $cache = TRUE;
   }
-	elseif ($scope == 'page') {
-		$path = widgets_get_context_path($context);
-		$cid .= ':page:' . $path;
-		$cache = TRUE;
-	}
-	elseif ($scope == 'author') {
-	  $uid = widgets_get_context_author_uid($context);
-		$cid .= ':author:' . $uid; 
-		$cache = TRUE;
-	}
+  elseif ($scope == 'page') {
+    $path = widgets_get_context_path($context);
+    $cid .= ':page:' . $path;
+    $cache = TRUE;
+  }
+  elseif ($scope == 'author') {
+    $uid = widgets_get_context_author_uid($context);
+    $cid .= ':author:' . $uid; 
+    $cache = TRUE;
+  }
   elseif ($scope == 'user') {
-  	$uid = widgets_get_context_user_uid($context);
+    $uid = widgets_get_context_user_uid($context);
     $cid .= ':user:' . $uid; 
     $cache = TRUE;
   }
   drupal_alter('widgets_cache_cid', $cid, $name, $scope, $context);
-	if ($cache) {
-	  return $cid;
-	}
-	else {
-		return FALSE;
-	}
+  if ($cache) {
+    return $cid;
+  }
+  else {
+    return FALSE;
+  }
 }
 
 function widgets_get_context_path($context = array()) {
@@ -1293,12 +1314,18 @@ function widgets_get_context_author_uid($context = array()) {
   if (isset($context['node']->uid)) {
     $uid = $context['node']->uid; 
   }
-  elseif ((arg(0) == 'node') && is_numeric(arg(1))) {         
-    $uid = menu_get_object()->uid;
+  elseif ((arg(0) == 'node') && is_numeric(arg(1))) {
+    $obj = menu_get_object();
+    if (is_object($obj))  {
+      $uid = $obj->uid;
+    }
   }
   elseif (arg(0) == 'user' && is_numeric(arg(1))) {
-    $uid = menu_get_object('user', 1)->uid;
-  }	
+    $obj = menu_get_object('user', 1);
+    if (is_object($obj))  {
+      $uid = $obj->uid;
+    }
+  }  
   drupal_alter('widgets_context_author_uid', $uid, $context);
   return $uid;
 }
@@ -1325,33 +1352,33 @@ function widgets_replace_fields($template, $data) {
   $fields = widgets_field_scan($template);
 //dsm($fields);
   foreach ($fields AS $key => $field) {   
-  	$keys = explode(':', $key);
-  	if( count($keys) == 1) {
-  		$value = isset($data[$key]) ? $data[$key] : FALSE;
-  	} 
-  	else {
-  		$value = isset($data[$keys[0]][$keys[1]]) ? $data[$keys[0]][$keys[1]] : FALSE;
-  	}
+    $keys = explode(':', $key);
+    if ( count($keys) == 1) {
+      $value = isset($data[$key]) ? $data[$key] : FALSE;
+    } 
+    else {
+      $value = isset($data[$keys[0]][$keys[1]]) ? $data[$keys[0]][$keys[1]] : FALSE;
+    }
     // if data value, use data otherwise use default
-  	if ($value) {
-  		// remove field if data value is set to none
-  	  if ($value == '<none>') {
-    	  $template = str_replace($field['original'], '', $template);
+    if ($value) {
+      // remove field if data value is set to none
+      if ($value == '<none>') {
+        $template = str_replace($field['original'], '', $template);
       }
       else {
         $str = (isset($field['pre']) ? $field['pre'] : '') . $value . (isset($field['post']) ? $field['post'] : '');
         $template = str_replace($field['original'], $str, $template);
-    	}
+      }
     }
     else {
       // remove field if default is set to none
       if (isset($field['default']) && ($field['default'] == '<none>')) {
         $template = str_replace($field['original'], '', $template);
       }
-    	else {
-    	  $str = (isset($field['pre']) ? $field['pre'] : '') . $field['default'] . (isset($field['post']) ? $field['post'] : '');
+      else {
+        $str = (isset($field['pre']) ? $field['pre'] : '') . $field['default'] . (isset($field['post']) ? $field['post'] : '');
         $template = str_replace($field['original'], $str, $template);
-    	}
+      }
     }
   }
   return $template;
@@ -1394,25 +1421,25 @@ function _widgets_element_definitions_sort($a, $b) {
  *
  */
 function widgets_block_info() {
-	$sets = widgets_sets();
-	$blocks = array();
-	if (is_array($sets)) {
-		foreach ($sets AS $set) {
+  $sets = widgets_sets();
+  $blocks = array();
+  if (is_array($sets)) {
+    foreach ($sets AS $set) {
 
-		  // skip widget sets without block visibility
-		  if(isset($set['data']['visibility']['block']) && !$set['data']['visibility']['block']) {
-		    continue;
-		  }
-		  $blocks['s_' . $set['name']] = array(
-		    'info' => t('Widgets: @name', 
-		      array(
-		        '@name' => $set['name'],
-		      )),
-		    // caching set at widgets set level
-		    'cache' => DRUPAL_NO_CACHE,
-		  );
-		}
-	}
+      // skip widget sets without block visibility
+      if (isset($set['data']['visibility']['block']) && !$set['data']['visibility']['block']) {
+        continue;
+      }
+      $blocks['s_' . $set['name']] = array(
+        'info' => t('Widgets: @name', 
+          array(
+            '@name' => $set['name'],
+          )),
+        // caching set at widgets set level
+        'cache' => DRUPAL_NO_CACHE,
+      );
+    }
+  }
   return $blocks;
 }
 
@@ -1427,7 +1454,7 @@ function widgets_block_view($delta = '') {
     include_once drupal_get_path('module', 'widgets') . '/widgets.admin.inc';
     //$block['content'] = theme('widgets_set_view', array('set' => $set));
     $contextual_links = array(
-      'admin/structure/widgets/sets/edit/'. $a[1],
+      'admin/structure/widgets/sets/edit/' . $a[1],
       array('widgets'),
     );    
     $block['content'] = array(

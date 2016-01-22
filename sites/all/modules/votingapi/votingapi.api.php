@@ -1,5 +1,4 @@
 <?php
-// $Id: votingapi.api.php,v 1.1.2.1.2.2 2010/10/09 02:33:00 eaton Exp $
 
 /**
  * @file
@@ -94,48 +93,6 @@ function hook_votingapi_metadata_alter(&$data) {
   );
 }
 
-
-/**
- * Return metadata used to build Views relationships on voting data.
- *
- * VotingAPI can store votes on any entity in the Drupal database: its content_type
- * and content_id columns can be used to store "node"/1, "comment"/2, and so
- * on. This hook is used to tell VotingAPI what Views base table the content_type
- * field corresponds to, and what field in that base table contains the value in
- * votingapi's content_id table.
- *
- * @return
- *   An array of records containing 'description', 'content_type', 'base_table',
- *   and 'content_id_column' entries.
- */
-function hook_votingapi_relationships() {
-  $relationships[] = array(
-    // 'description' is used to construct the field description in the Views UI.
-    'description' => t('users'),
-
-    // 'content_type' contain the value that your module stores in the voting
-    // api 'content_type' column. 'node', 'comment', etc.
-    'content_type' => 'user',
-
-    // 'base_table' contain the name of the Views base table that stores the
-    // data your votes apply to.
-    'base_table' => 'user',
-
-    // 'content_id_column' contains the name of the views field that represents
-    // your base_table's primary key. This column will be joined against the
-    // voting api 'content_id' column.
-    'content_id_column' => 'uid',
-
-    // VotingAPI constructs pseudo-tables so that multiple relationships can
-    // point to the same base table (normal and translation-based votes nodes
-    // for example. These two columns allow you to override the names of the
-    // pseudo-tables. You probably don't need to change this part unless you're
-    // nedjo.
-    'pseudo_vote' => 'votingapi_vote_special',
-    'pseudo_cache' => 'votingapi_cache_special',
-  );
-}
-
 /**
  * Returns callback functions and descriptions to format a VotingAPI Views field.
  *
@@ -160,4 +117,99 @@ function hook_votingapi_views_formatters($field) {
   if ($field->field == 'tag') {
     return array('mymodule_funky_tags' => t('MyModule tag formatter'));
   }
+}
+
+/**
+ * Save a vote in the database.
+ *
+ * @param $vote
+ *   See votingapi_add_votes() for the structure of this array, with the
+ *   defaults loaded from votingapi_prep_vote().
+ */
+function hook_votingapi_storage_add_vote(&$vote) {
+  _mongodb_votingapi_prepare_vote($criteria);
+  mongodb_collection('votingapi_vote')->insert($vote);
+}
+
+/**
+ * Delete votes from the database.
+ *
+ * @param $votes
+ *   An array of votes to delete. Minimally, each vote must have the 'vote_id'
+ *   key set.
+ * @param $vids
+ *   A list of the 'vote_id' values from $voes.
+ */
+function hook_votingapi_storage_delete_votes($votes, $vids) {
+  mongodb_collection('votingapi_vote')->delete(array('vote_id' => array('$in' => array_map('intval', $vids))));
+}
+
+/**
+ * Select invidual votes from the database
+ *
+ * @param $criteria
+ *   A keyed array used to build the select query. Keys can contain
+ *   a single value or an array of values to be matched.
+ *   $criteria['vote_id']       (If this is set, all other keys are skipped)
+ *   $criteria['entity_id']
+ *   $criteria['entity_type']
+ *   $criteria['value_type']
+ *   $criteria['tag']
+ *   $criteria['uid']
+ *   $criteria['vote_source']
+ *   $criteria['timestamp']   If this is set, records with timestamps
+ *      GREATER THAN the set value will be selected. Defaults to
+ *      REQUEST_TIME - variable_get('votingapi_anonymous_window', 3600); if
+ *      the anonymous window is above zero.
+ * @param $limit
+ *   An integer specifying the maximum number of votes to return. 0 means
+ *   unlimited and is the default.
+ * @return
+ *   An array of votes matching the criteria.
+ */
+function hook_votingapi_storage_select_votes($criteria, $limit) {
+  _mongodb_votingapi_prepare_vote($criteria);
+  $find = array();
+  foreach ($criteria as $key => $value) {
+    $find[$key] = is_array($value) ? array('$in' => $value) : $value;
+  }
+  $cursor = mongodb_collection('votingapi_vote')->find($find);
+  if (!empty($limit)) {
+    $cursor->limit($limit);
+  }
+  $votes = array();
+  foreach ($cursor as $vote) {
+    $votes[] = $vote;
+  }
+  return $votes;
+}
+
+/**
+ * Allows to act on votes before being inserted.
+ *
+ * @param $votes
+ *  An array of votes, each with the following structure:
+ *  $vote['entity_type']  (Optional, defaults to 'node')
+ *  $vote['entity_id']    (Required)
+ *  $vote['value_type']    (Optional, defaults to 'percent')
+ *  $vote['value']         (Required)
+ *  $vote['tag']           (Optional, defaults to 'vote')
+ *  $vote['uid']           (Optional, defaults to current user)
+ *  $vote['vote_source']   (Optional, defaults to current IP)
+ *  $vote['timestamp']     (Optional, defaults to REQUEST_TIME)
+ */
+function hook_votingapi_preset_votes(&$votes) {
+  foreach ($votes as $vote) {
+    if ($vote['tag'] == 'recommend') {
+      // Do something if the 'recommend' vote is being inserted.
+    }
+  }
+}
+
+/**
+ * TODO
+ *
+ */
+function hook_votingapi_storage_standard_results($entity_id, $entity) {
+  // TODO
 }

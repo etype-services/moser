@@ -1,6 +1,7 @@
 <?php 
 
-/*
+/**
+ * @file
  * Functions pertaining to iconset management
  */
 
@@ -10,10 +11,13 @@ function socialmedia_icon_style_options($for_widgets = TRUE, $platform = NULL) {
   if ($for_widgets) {
     $options[] = t('Default');
   }
+  if (!empty($iconset['icon api'])) {
+    return $options;
+  }
   foreach ($icons AS $iconset_name => $iconset) {
     if (socialmedia_iconset_is_installed($iconset_name)) {
-      foreach($iconset['styles'] AS $sid => $style) {
-        if($for_widgets) {
+      foreach ($iconset['styles'] AS $sid => $style) {
+        if ($for_widgets) {
           $options[$iconset['name']][base_path() . call_user_func($iconset['path callback'], $platform, $sid)] = $style;
         }
         else {
@@ -26,9 +30,15 @@ function socialmedia_icon_style_options($for_widgets = TRUE, $platform = NULL) {
 }
 
 function socialmedia_iconset_is_installed($iconset) {
-	
-	$iconsets = socialmedia_iconset_info();
-  return file_exists (call_user_func($iconsets[$iconset]['path callback']));
+  
+  $iconsets = socialmedia_iconset_info();
+  if (!empty($iconset['icon api'])) {
+    return 1;
+  }
+  if (isset($iconsets[$iconset]['path callback'])) {
+    return file_exists(call_user_func($iconsets[$iconset]['path callback']));
+  }
+  return;
 }
 
 function socialmedia_icon_platforms($featured = FALSE) {
@@ -49,6 +59,7 @@ function socialmedia_icon_platforms($featured = FALSE) {
     //'mixx' => t('Mixx'),
     //'myspace' => t('MySpace'),
     'newsvine' => t('Newsvine'),
+    'pinterest' => t('Pinterest'),
     'reddit' => t('Reddit'),
     'rss' => t('RSS'),
     //'slashdot' => t('Slashdot'),
@@ -62,9 +73,9 @@ function socialmedia_icon_platforms($featured = FALSE) {
   );
   
   if ($featured) {
-  	unset($platforms['blinklist']);
-  	unset($platforms['lastfm']);
-  	//unset($platforms['slideshare']);
+    unset($platforms['blinklist']);
+    unset($platforms['lastfm']);
+    //unset($platforms['slideshare']);
   }  
   
   return $platforms;
@@ -87,15 +98,15 @@ function socialmedia_iconset_info() {
 
 function socialmedia_socialmedia_iconset_info() {
   $icons['levelten_glossy'] = array(
-    'name' => 'LevelTen Glossy',
-    'publisher' => 'LevelTen Interactive',
-    'publisher url' => 'http://www.leveltendesign.com',
-    'styles' => array(
+    'name' => 'LevelTen Glossy',                                 // name of your icon set
+    'publisher' => 'LevelTen Interactive',                       // name of publisher
+    'publisher url' => 'http://www.leveltendesign.com',          // url to publisher's site
+    'styles' => array(                                           // different variants of icons available
       '16x16' => '16x16',
-      '32x32' => '32x32', 
+      '32x32' => '32x32',
       '48x48' => '48x48', 
     ),
-    'path callback' => 'socialmedia_icon_path_levelten_glossy',
+    'path callback' => 'socialmedia_icon_path_levelten_glossy',  // callback for icon urls
   );
   $icons['icondock'] = array(
     'name' => 'Icon Dock Vector',
@@ -123,7 +134,7 @@ function socialmedia_socialmedia_iconset_info() {
     ),
     'path callback' => 'socialmedia_icon_path_dryicons', 
     'download' => 'http://dryicons.com/free-icons/category/social/',
-    'additional instructions' => t('Download the PNG version of all four sets. Some directories are misnamed in set 2. Merge icons from folders ending in "px", e.g. 64x64px, into their non px equivalents, e.g. 64x64.',
+    'additional instructions' => t('Download the PNG version of all four sets. Some directories are misnamed in set 2. For example, the correct file path to the 32x32 twitter icon should be "socialmedia/icons/dryicons/png/32x32/twitter.png". Merge icons from folders ending in "px", e.g. 64x64px, into their non px equivalents, e.g. 64x64. NOTE: there are some inconsistancies in file naming that may need to be corrected for specific icon sizes.',
       array('%directory' => drupal_get_path('module', 'socialmedia') . '/icons/dryicons/')
     )
   );
@@ -151,7 +162,7 @@ function socialmedia_socialmedia_iconset_info() {
     ),
     'path callback' => 'socialmedia_icon_path_jankoatwarpspeed', 
     'download' => 'http://www.jankoatwarpspeed.com/post/2008/10/20/handycons-a-free-hand-drawn-social-media-icon-set.aspx',
-    'additional instructions' => t('Also download and install the !link.',
+    'additional instructions' => t('Also download and install the !link. NOTE: Make sure to install the Handycons2 icon set.',
       array('!link' => l(t('Handycons 2 set'), 'http://www.jankoatwarpspeed.com/post/2009/02/23/Handycons-2-another-free-hand-drawn-icon-set.aspx'))
     ),
   );
@@ -208,7 +219,7 @@ function socialmedia_socialmedia_iconset_info() {
 
 function socialmedia_icon_path_levelten_glossy($platform = 'twitter', $style = NULL) {
   $style = isset($style) ? $style : '32x32';
-  $path = drupal_get_path('module', 'socialmedia') . '/icons/levelten/glossy/' . $style . '/' . ((isset($pt[$platform]))? $pt[$platform] : $platform) . '.png'; 
+  $path = drupal_get_path('module', 'socialmedia') . '/icons/levelten/glossy/' . $style . '/' . ((isset($pt[$platform]))? $pt[$platform] : $platform) . '.png';
   return $path;
 }
 
@@ -216,6 +227,7 @@ function socialmedia_icon_path_dryicons($platform = 'twitter', $style = NULL) {
   $style = isset($style) ? $style : '32x32';
   $pt = array(
     'googleplus' => 'google_plus',
+    ''
   );
   $path = drupal_get_path('module', 'socialmedia') . '/icons/dryicons/PNG/' . $style . '/' . ((isset($pt[$platform]))? $pt[$platform] : $platform) . '.png'; 
   return $path;
@@ -226,7 +238,7 @@ function socialmedia_icon_path_icondock($platform = 'twitter', $style = NULL) {
   $t = array(
     'googleplus' => 'google-plus',
   );
-  $path = drupal_get_path('module', 'socialmedia') . '/icons/icondock/Vector Social Media Icons/PNG/' . $style . '/' . ((isset($t[$platform]))? $t[$platform] : $platform) . '.png'; 
+  $path = drupal_get_path('module', 'socialmedia') . '/icons/icondock/Vector Social Media Icons/png/' . $style . '/' . ((isset($t[$platform]))? $t[$platform] : $platform) . '.png'; 
   return $path;
 }
 
@@ -239,7 +251,7 @@ function socialmedia_icon_path_thegforce($platform = 'twitter', $style = NULL) {
     'google' => 'Google',
     'googleplus' => 'Google',
     'lastfm' => 'LastFM',
-    'linkedin' => 'Linkedin',
+    'linkedin' => 'LinkedIn',
     'myspace' => 'Myspace',
     'reddit' => 'Reddit',
     'rss' => 'RSS',   
@@ -249,7 +261,7 @@ function socialmedia_icon_path_thegforce($platform = 'twitter', $style = NULL) {
     'vimeo' => 'Vimeo',
     'youtube' => 'Youtube',
   );
-  if(!isset($trans[$platform])) {
+  if (!isset($trans[$platform])) {
     return FALSE;
   }
   $style = isset($style) ? $style : '32x32';
@@ -259,7 +271,7 @@ function socialmedia_icon_path_thegforce($platform = 'twitter', $style = NULL) {
 
 function socialmedia_icon_path_jankoatwarpspeed($platform = 'twitter', $style = NULL) {
   $style = isset($style) ? $style : '32x32';
-	
+  
   $pt = array(
     'googleplus' => 'google',
   );
@@ -279,7 +291,7 @@ function socialmedia_icon_path_jankoatwarpspeed($platform = 'twitter', $style = 
     'yahoo' => 1,
   );
   if (isset($st[$platform])) {
-  	list($style, $t) = explode('x', $style); 
+    list($style, $t) = explode('x', $style); 
   }
 
   $style = isset($style) ? $style : '32x32';
@@ -298,7 +310,7 @@ function socialmedia_icon_path_ristaumedia($platform = 'twitter', $style = NULL)
 
 function socialmedia_icon_path_arbent_clean($platform = 'twitter', $style = NULL) {
   $style = isset($style) ? $style : '32x32';
-	$pt = array(
+  $pt = array(
     'email' => 'mail',
   );
   $path = drupal_get_path('module', 'socialmedia') . '/icons/arbent/clean/' . $style . '/' . ((isset($pt[$platform]))? $pt[$platform] : $platform) . '.png'; 

@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Token processing for Widgets module
+ */
+
 function widgets_token_info() {
   $type = array(
     'name' => t('Widgets'), 
@@ -33,13 +38,13 @@ function widgets_token_info() {
 function widgets_tokens($type, $tokens, array $data = array(), array $options = array()) {
   $replacements = array();
   if ($type == 'widgets') {
-  	foreach ($tokens as $name => $original) { 
-	    if (strpos($name, 'ws-') === 0) {
-	      $name = substr($name, 3);
-	      $set = widgets_set_load($name);
-	      $replacements[$original] = theme('widgets_set_view', array('set' => $set));
-	    }
-  	}
+    foreach ($tokens as $name => $original) { 
+      if (strpos($name, 'ws-') === 0) {
+        $name = substr($name, 3);
+        $set = widgets_set_load($name);
+        $replacements[$original] = theme('widgets_set_view', array('set' => $set));
+      }
+    }
   }
 
   return $replacements;

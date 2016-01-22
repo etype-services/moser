@@ -11,6 +11,27 @@
  */
 
 /**
+ * Handles the "Print button" order pane.
+ */
+function uc_order_pane_print_button($op, $order, &$form = NULL, &$form_state = NULL) {
+  switch ($op) {
+    case 'customer':
+      if (user_access('view own invoices')) {
+        $link = t('Click to open a window with a printable invoice.');
+        $build = array(
+          '#markup' => l($link, 'user/' . $order->uid . '/orders/' . $order->order_id . '/print', array(
+            'html' => TRUE,
+            'attributes' => array(
+              'onclick' => "window.open(this.href, '" . t('Invoice') . "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=600,height=480,left=50,top=50'); return false;",
+            ),
+          )),
+        );
+        return $build;
+      }
+  }
+}
+
+/**
  * Handles the "Ship to" order pane.
  */
 function uc_order_pane_ship_to($op, $order, &$form = NULL, &$form_state = NULL) {
@@ -113,13 +134,11 @@ function uc_order_pane_customer($op, $order, &$form = NULL, &$form_state = NULL)
       return $build;
 
     case 'edit-form':
-      $form['customer'] = array();
-
       $form['customer']['uid'] = array(
         '#type' => 'hidden',
         '#default_value' => $order->uid,
       );
-      $form['customer']['text']['uid_text'] = array(
+      $form['customer']['uid_text'] = array(
         '#type' => 'textfield',
         '#title' => t('Customer number'),
         '#default_value' => $order->uid,
@@ -128,16 +147,11 @@ function uc_order_pane_customer($op, $order, &$form = NULL, &$form_state = NULL)
         '#disabled' => TRUE,
       );
       $form['customer']['primary_email'] = array(
-        '#type' => 'hidden',
-        '#default_value' => $order->primary_email,
-      );
-      $form['customer']['text']['primary_email_text'] = array(
         '#type' => 'textfield',
-        '#title' => t('Primary e-mail'),
+        '#title' => t('E-mail address'),
         '#default_value' => $order->primary_email,
         '#maxlength' => 64,
         '#size' => 32,
-        '#disabled' => TRUE,
       );
       return $form;
 
@@ -150,15 +164,8 @@ function uc_order_pane_customer($op, $order, &$form = NULL, &$form_state = NULL)
                 . '/images/menu_customers_small.gif" alt="' . t('Create a new customer.') . '" '
                 . 'title="' . t('Create a new customer.') . '" onclick="load_new_customer_form();" />';
       $output .= '</div>';
-      $output .= '<div id="customer-select"></div><table class="order-edit-table">';
-      foreach (element_children($form['customer']['text']) as $field) {
-        $title = $form['customer']['text'][$field]['#title'];
-        $form['customer']['text'][$field]['#title'] = NULL;
-        $output .= '<tr><td class="oet-label">' . $title . ':</td><td>'
-                 . drupal_render($form['customer']['text'][$field]) . '</td></tr>';
-      }
-      $output .= '</table>' . drupal_render($form['customer']['primary_email'])
-               . drupal_render($form['customer']['uid']);
+      $output .= '<div id="customer-select"></div>';
+      $output .= drupal_render($form['customer']);
       return $output;
 
     case 'edit-process':
@@ -471,22 +478,22 @@ function uc_order_pane_products_select($form, &$form_state) {
   $types = uc_product_types();
   $options = array();
 
+  $query = db_select('node', 'n')
+    ->fields('n', array('nid', 'title'))
+    ->condition('n.type', $types, 'IN')
+    ->orderBy('n.title')
+    ->addTag('node_access');
+
   if (!empty($form_state['values']['product_controls']['product_search'])) {
     $search = strtolower(str_replace('*', '%', $form_state['values']['product_controls']['product_search']));
-    $search_args = array(
-      ':types' => $types,
-      ':title' => $search,
-      ':model' => $search,
-    );
+    $query->leftJoin('uc_products', 'p', 'n.nid = p.nid');
+    $query->condition(db_or()
+            ->condition('n.title', $search, 'LIKE')
+            ->condition('p.model', $search, 'LIKE')
+          );
+  }
 
-    $result = db_query("SELECT n.nid, n.title FROM {node} AS n LEFT JOIN "
-      . "{uc_products} AS p ON n.nid = p.nid WHERE n.type IN "
-      . "(:types) AND (n.title LIKE :title OR p.model LIKE :model)"
-      . " ORDER BY n.title", $search_args);
-  }
-  else {
-    $result = db_query("SELECT nid, title FROM {node} WHERE type IN (:types) ORDER BY title", array(':types' => $types));
-  }
+  $result = $query->execute();
   foreach ($result as $row) {
     $options[$row->nid] = $row->title;
   }
@@ -533,7 +540,7 @@ function uc_order_edit_products_add_blank($form, &$form_state) {
   $product = new stdClass();
   $product->qty = 1;
   $product->order_id = $order->order_id;
-  drupal_write_record('uc_order_products', $product);
+  uc_order_product_save($order->order_id, $product);
 
   $order->products[] = $product;
 
@@ -576,6 +583,12 @@ function uc_order_edit_products_remove($form, &$form_state) {
 
   $order_product_id = intval($form_state['triggering_element']['#return_value']);
 
+  if (module_exists('uc_stock')) {
+    // Replace stock immediately.
+    $product = uc_order_product_load($order_product_id);
+    uc_stock_adjust($product->model, $product->qty);
+  }
+
   uc_order_product_delete($order_product_id);
 
   $order = $form_state['build_info']['args'][0];
@@ -591,14 +604,18 @@ function uc_order_edit_products_remove($form, &$form_state) {
  * AJAX callback to render the order product controls.
  */
 function uc_order_pane_products_ajax_callback($form, &$form_state) {
-  $commands[] = ajax_command_replace('#product-controls', drupal_render($form['product_controls']));
-  $commands[] = ajax_command_prepend('#product-controls', theme('status_messages'));
+  $commands[] = ajax_command_replace('#product-controls', trim(drupal_render($form['product_controls'])));
+  $commands[] = ajax_command_prepend('#product-controls', trim(theme('status_messages')));
 
   if (isset($form_state['refresh_products']) && $form_state['refresh_products']) {
-    $commands[] = ajax_command_replace('#order-edit-products', drupal_render($form['products']));
-    $commands[] = ajax_command_replace('#order-line-items', drupal_render($form['line_items']));
-    $commands[] = ajax_command_prepend('#order-edit-products', theme('status_messages'));
+    $commands[] = ajax_command_replace('#order-edit-products', trim(drupal_render($form['products'])));
+    $commands[] = ajax_command_replace('#order-line-items', trim(drupal_render($form['line_items'])));
+    $commands[] = ajax_command_prepend('#order-edit-products', trim(theme('status_messages')));
   }
+
+  // Remove the field so we only refresh the admin comments item-list.
+  unset($form['admin_comment_field']);
+  $commands[] = ajax_command_replace('#order-pane-admin_comments .item-list', uc_order_pane_admin_comments('edit-theme', $form['#order'], $form, $form_state));
 
   return array('#type' => 'ajax', '#commands' => $commands);
 }
@@ -824,7 +841,7 @@ function uc_order_pane_line_items_remove($form, &$form_state) {
  * AJAX callback to render the line items.
  */
 function uc_order_pane_line_items_update($form, &$form_state) {
-  $commands[] = ajax_command_replace('#order-line-items', drupal_render($form['line_items']));
+  $commands[] = ajax_command_replace('#order-line-items', trim(drupal_render($form['line_items'])));
   $commands[] = ajax_command_prepend('#order-line-items', theme('status_messages'));
 
   return array('#type' => 'ajax', '#commands' => $commands);
@@ -1026,8 +1043,6 @@ function uc_order_view_update_form_submit($form, &$form_state) {
 
 /**
  * Builds the order view products table.
- *
- * !FIXME Refactor to use uc_order_product_view.
  */
 function uc_op_products_view_table($order) {
   $table = array(
@@ -1081,7 +1096,7 @@ function uc_op_products_view_table($order) {
   );
 
   if (!empty($order->products)) {
-    $build = entity_view('uc_order_product', $order->products);
+    $build = uc_order_product_view_multiple($order->products);
     $table['#rows'] = $build['uc_order_product'];
   }
   else {
@@ -1096,8 +1111,6 @@ function uc_op_products_view_table($order) {
 
 /**
  * Builds the order customer's view products table.
- *
- * !FIXME Refactor to use uc_order_product_view.
  */
 function uc_op_products_customer_table($order) {
   $table = array(
@@ -1151,7 +1164,7 @@ function uc_op_products_customer_table($order) {
   );
 
   if (!empty($order->products)) {
-    $build = entity_view('uc_order_product', $order->products);
+    $build = uc_order_product_view_multiple($order->products);
     $table['#rows'] = $build['uc_order_product'];
   }
   else {
@@ -1351,9 +1364,6 @@ function _uc_order_pane_list($view = 'view') {
       'enabled' => TRUE,
       'weight' => 0,
     );
-
-    $pane['enabled'] = variable_get('uc_order_pane_' . $id . '_enabled', $pane['enabled']);
-    $pane['weight'] = variable_get('uc_order_pane_' . $id . '_weight_' . $view, $pane['weight']);
 
     $panes[$id] = $pane;
   }

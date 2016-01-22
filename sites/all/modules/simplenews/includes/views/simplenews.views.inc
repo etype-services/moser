@@ -10,7 +10,7 @@
  */
 function simplenews_views_data() {
 
-/* ------------ Definitions for Simplenews mailspool ----------------------*/
+  /* ------------ Definitions for Simplenews mailspool ---------------------- */
 
   $data['simplenews_mail_spool']['table'] = array(
     'base' => array(
@@ -83,25 +83,6 @@ function simplenews_views_data() {
       'base' => 'node',
       'base field' => 'nid',
       'label' => t('Node'),
-    ),
-  );
-
-  $data['simplenews_mail_spool']['vid'] = array(
-    'title' => t('Vid'),
-    'help' => t('The {node}.vid of this newsletter.'),
-    'field' => array(
-      'handler' => 'views_handler_field_numeric',
-      'click sortable' => TRUE,
-    ),
-    'filter' => array(
-      'handler' => 'views_handler_filter_numeric',
-      'allow empty' => TRUE,
-    ),
-    'argument' => array(
-      'handler' => 'views_handler_argument_numeric',
-    ),
-    'sort' => array(
-      'handler' => 'views_handler_sort',
     ),
   );
 
@@ -231,7 +212,7 @@ function simplenews_views_data() {
     ),
   );
 
-/* ------------ Definitions for Simplenews issue ----------------------*/
+  /* ------------ Definitions for Simplenews issue ---------------------- */
 
   $data['simplenews_newsletter']['table'] = array(
     // Define the base group of this table. Fields that don't
@@ -287,7 +268,7 @@ function simplenews_views_data() {
       'handler' => 'simplenews_handler_filter_newsletter_status',
     ),
     'argument' => array(
-        'handler' => 'views_handler_argument_numeric',
+      'handler' => 'views_handler_argument_numeric',
     ),
     'sort' => array(
       'handler' => 'views_handler_sort',
@@ -313,7 +294,15 @@ function simplenews_views_data() {
     ),
   );
 
-/* ------------ Definitions for Simplenews subscriber ----------------------*/
+  $data['simplenews_newsletter']['send'] = array(
+    'field' => array(
+      'title' => t('Send newsletter'),
+      'help' => t('Provides a link to send the simplenews newsletter if not sent yet.'),
+      'handler' => 'simplenews_handler_field_newsletter_send',
+    ),
+  );
+
+  /* ------------ Definitions for Simplenews subscriber ---------------------- */
 
   $data['simplenews_subscriber']['table'] = array(
     'base' => array(
@@ -361,8 +350,10 @@ function simplenews_views_data() {
       'click sortable' => TRUE,
     ),
     'filter' => array(
-      'handler' => 'views_handler_filter_boolean',
-      'allow empty' => TRUE,
+      'handler' => 'views_handler_filter_boolean_operator',
+      'label' => t('Activated'),
+      'type' => 'yes-no',
+      'accept null' => TRUE,
     ),
     'argument' => array(
       'handler' => 'views_handler_argument_numeric',
@@ -454,17 +445,17 @@ function simplenews_views_data() {
     ),
   );
 
-/* ------------ Definitions for Simplenews subscription ----------------------*/
+  /* ------------ Definitions for Simplenews subscription ---------------------- */
 
   $data['simplenews_subscription']['table'] = array(
     'base' => array(
-       'field' => 'snid',
-       'title' => t('Simplenews subscription'),
-       'help' => t('Contains all Subscriptions of every Simplenews Newsletters.'),
-       'weight' => 10,
-       'database' => 'default',
-     ),
-     'group' => t('Simplenews subscription'),
+      'field' => 'snid',
+      'title' => t('Simplenews subscription'),
+      'help' => t('Contains all Subscriptions of every Simplenews Newsletters.'),
+      'weight' => 10,
+      'database' => 'default',
+    ),
+    'group' => t('Simplenews subscription'),
   );
 
   $data['simplenews_subscription']['table']['join'] = array(
@@ -586,7 +577,7 @@ function simplenews_views_data() {
     ),
   );
 
-/* ------------ Definitions for Simplenews category ----------------------*/
+  /* ------------ Definitions for Simplenews category ---------------------- */
 
   // Define the base group of this table. Fields that don't
   // have a group defined will go into this field by default.

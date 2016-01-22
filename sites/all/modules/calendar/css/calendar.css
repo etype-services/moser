@@ -65,7 +65,7 @@
  * simplify the mini calendar by removing borders
  */
 .calendar-calendar .mini {
-  border: 1px solid #eee;
+  border: none;
  }
 
 /**

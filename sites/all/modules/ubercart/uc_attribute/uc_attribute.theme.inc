@@ -13,6 +13,9 @@
  *   - option: The option name.
  *   - price: The price total or adjustment, if any.
  *
+ * @return string
+ *   The HTML output.
+ *
  * @see _uc_attribute_alter_form()
  * @ingroup themeable
  */
@@ -52,4 +55,3 @@ function theme_uc_attribute_add_to_cart($variables) {
 
   return $output;
 }
-

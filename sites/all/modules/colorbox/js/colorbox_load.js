@@ -2,7 +2,7 @@
 
 Drupal.behaviors.initColorboxLoad = {
   attach: function (context, settings) {
-    if (!$.isFunction($.colorbox)) {
+    if (!$.isFunction($.colorbox) || typeof settings.colorbox === 'undefined') {
       return;
     }
     $.urlParams = function (url) {
@@ -31,9 +31,8 @@ Drupal.behaviors.initColorboxLoad = {
       }
       return p;
     };
-    $('a, area, input', context)
-      .filter('.colorbox-load')
-      .once('init-colorbox-load-processed', function () {
+    $('.colorbox-load', context)
+      .once('init-colorbox-load', function () {
         var params = $.urlParams($(this).attr('href'));
         $(this).colorbox($.extend({}, settings.colorbox, params));
       });
