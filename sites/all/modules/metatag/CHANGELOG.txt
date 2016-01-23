@@ -1,5 +1,15 @@
+Metatag 7.x-1.10, 2016-01-22
+----------------------------
+#2654838 by Plazik, DamienMcKenna: Disabling output caching lead to Undefined
+  Variable errors.
+#2654638 by DamienMcKenna, noah, marleythedog: Allow updates 7104 and 7105 to
+  run if Locale is not enabled.
+#2654530 by DamienMcKenna, Adenn, deja711: Twitter Cards update 7100 and
+  OpenGraph update 7103 cannot run until Metatag update 7100 has finished.
+
+
 Metatag 7.x-1.9, 2016-01-21
--------------------------------
+---------------------------
 #2652772 by DamienMcKenna: Fix update 7101 and rerun it to correct translation
   data.
 #2651812 by DamienMcKenna: Added an option to disable the i18n integration.
