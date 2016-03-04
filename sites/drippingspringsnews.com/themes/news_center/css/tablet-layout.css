@@ -62,7 +62,7 @@ body.front h1{
 }
 
 .region-sidebar-second {
-    border-top: 2px solid #333333;
+    border-top: none;
     color: #666666;
     float: none;
     margin-left: 0;
