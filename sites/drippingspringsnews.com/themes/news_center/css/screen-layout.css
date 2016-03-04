@@ -104,7 +104,8 @@ body.front h1{
 }
 
 #block-superfish-1 {
-    margin-bottom: 0; padding-top: 10px;
+    margin-bottom: 0;
+    padding-top: 0;
     width: 1040px;display:block; position:inherit; z-index:99; height: 3px
 }
 
