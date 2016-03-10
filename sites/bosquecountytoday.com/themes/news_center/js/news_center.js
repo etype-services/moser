@@ -93,3 +93,16 @@ Drupal.behaviors.newscenterbox = {
   		}
 	};
 })(jQuery);
+
+
+(function ($) {
+    Drupal.behaviors.imageclick = {
+        attach: function (context) {
+            $(document).on("contextmenu", "img", function (e) {
+                alert('Context Menu event has fired!');
+                return false;
+            });
+        }
+    };
+})(jQuery);
+
