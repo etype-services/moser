@@ -94,7 +94,9 @@ Drupal.behaviors.newscenterbox = {
 	};
 })(jQuery);
 
-
+/*
+ * disable right-click for images at publisher's request
+ */
 (function ($) {
     Drupal.behaviors.imageclick = {
         attach: function (context) {
