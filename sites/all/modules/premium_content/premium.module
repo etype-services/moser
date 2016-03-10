@@ -157,7 +157,7 @@ function premium_form_alter(&$form, $form_state, $form_id) {
       $form['options']['premium'] = array(
         '#type' => 'select',
         '#title' => t('Premium content level'),
-        '#default_value' => is_array($premium_level) ? $premium_level['machine_name'] : '',
+        '#default_value' => is_array($premium_level) && isset($premium_level['machine_name']) ? $premium_level['machine_name'] : '',
         '#options' => array(0 => t('None')) + premium_level_option_list(),
       );
     }
@@ -308,19 +308,24 @@ function _premium_offset($timestamp, &$start_ts, &$end_ts, $mode, $count, $unit)
  * Get premium level data for a node, if the given node has one.
  */
 function premium_node_level_data($node) {
+  $level = '';
+
   if (isset($node->premium_level)) {
     return $node->premium_level;
   }
 
-  $query = db_query("
+  if (isset ($node->nid)) {
+    $query = db_query("
     SELECT pn.level_name, pn.start_ts, pn.end_ts
     FROM {premium_nodes} AS pn
     WHERE pn.nid = :nid
   ", array(':nid' => $node->nid));
 
-  $level = $query->fetchAssoc();
+    $level = $query->fetchAssoc();
 
-  if ($level) {
+  }
+
+  if (!empty($level)) {
     // Merge in the settings from the premium level.
     $level += (array) premium_level_load($level['level_name']);
 
