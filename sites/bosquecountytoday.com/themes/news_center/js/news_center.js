@@ -99,7 +99,7 @@ Drupal.behaviors.newscenterbox = {
     Drupal.behaviors.imageclick = {
         attach: function (context) {
             $(document).on("contextmenu", "img", function (e) {
-                alert('Context Menu event has fired!');
+                alert('Context menu has been disabled for images');
                 return false;
             });
         }
