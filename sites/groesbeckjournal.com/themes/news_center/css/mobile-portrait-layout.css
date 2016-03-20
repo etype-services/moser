@@ -164,11 +164,35 @@ h2, h3, h4, h5, h6 {
 	transition: background-color 0.5s ease-out;
 }
 
-#block-superfish-1 ul li a.active, #block-superfish-1 ul li a.active-trail, #block-superfish-1 ul li a:hover {
-      
-    color: #333333;
-    
+#block-superfish-1 ul li:first-child {
+    display: inline-block;
 }
+
+#block-superfish-1 ul li:not(:first-child) a.active, 
+#block-superfish-1 ul li:not(:first-child) a.active-trail, 
+#block-superfish-1 ul li:not(:first-child) a:hover {
+    color: #333333;
+}
+
+@media only screen and (max-width: 979px) {
+
+	#block-superfish-1 ul li:first-child a {
+    	display: block;
+    	background: url("../images/select-icons.png") no-repeat 0 5px;
+    	cursor: pointer;
+	}
+
+	#block-superfish-1 ul li:not(:first-child) {
+		display: none;
+	}
+	
+	#block-superfish-1 ul li:not(:first-child) a.active, 
+	#block-superfish-1 ul li:not(:first-child) a.active-trail, 
+	#block-superfish-1 ul li:not(:first-child) a:hover {
+    	background: url("../images/mobile_menu_hover.png") no-repeat scroll 7px 8px #ffffff;
+	}
+}
+
 
 /* SlideShow Block Styles */
 
