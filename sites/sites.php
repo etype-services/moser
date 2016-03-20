@@ -38,13 +38,11 @@ $sites['www.cuerorecord.com'] = 'dewittcountytoday.com';
 $sites['prod.cuerorecord.com'] = 'dewittcountytoday.com';
 $sites['dev.cuerorecord.com'] = 'dewittcountytoday.com';
 
-
 $sites['drippingspringsnews.etypegoogle4.com'] = 'drippingspringsnews.com';
 $sites['drippingspringsnews.com'] = 'drippingspringsnews.com';
 $sites['www.drippingspringsnews.com'] = 'drippingspringsnews.com';
 $sites['prod.drippingspringsnews.com'] = 'drippingspringsnews.com';
 $sites['dev.drippingspringsnews.com'] = 'drippingspringsnews.com';
-
 
 $sites['franklin-advocate.etypegoogle4.com'] = 'franklin-advocate.com';
 $sites['franklin-advocate.com'] = 'franklin-advocate.com';
@@ -52,9 +50,14 @@ $sites['www.franklin-advocate.com'] = 'franklin-advocate.com';
 $sites['prod.franklin-advocate.com'] = 'franklin-advocate.com';
 $sites['dev.franklin-advocate.com'] = 'franklin-advocate.com';
 
-
 $sites['robconews.etypegoogle4.com'] = 'robconews.com';
 $sites['robconews.com'] = 'robconews.com';
 $sites['www.robconews.com'] = 'robconews.com';
 $sites['prod.robconews.com'] = 'robconews.com';
 $sites['dev.robconews.com'] = 'robconews.com';
+
+$sites['groesbeckjournal.etypegoogle4.com'] = 'groesbeckjournal.com';
+$sites['groesbeckjournal.com'] = 'groesbeckjournal.com';
+$sites['www.groesbeckjournal.com'] = 'groesbeckjournal.com';
+$sites['prod.groesbeckjournal.com'] = 'groesbeckjournal.com';
+$sites['dev.groesbeckjournal.com'] = 'groesbeckjournal.com';
