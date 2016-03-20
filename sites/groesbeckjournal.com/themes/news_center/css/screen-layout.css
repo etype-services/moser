@@ -133,7 +133,7 @@ body.front h1{
 	background: #000;
 }
 
-#block-superfish-1 ul li a.active,  #block-menu-menu-news-categories ul li a:hover {
+#block-superfish-1 ul li a.active, #block-superfish-1 ul li a:hover, #block-menu-menu-news-categories ul li a:hover {
     background: none repeat scroll 0 0 #FFFFFF;
    height:30px;
     color: #333333;

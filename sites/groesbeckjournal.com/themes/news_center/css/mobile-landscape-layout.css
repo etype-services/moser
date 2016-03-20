@@ -156,11 +156,6 @@ body.front h1{
     text-decoration: none;
 }
 
-#block-superfish-1 ul li a.active, #block-superfish-1 ul li a.active-trail, #block-superfish-1 ul li a:hover {
-    background: #FFFFFF;    
-    color: #333333;
-   
-}
 
 /* SlideShow Block Styles */
 
