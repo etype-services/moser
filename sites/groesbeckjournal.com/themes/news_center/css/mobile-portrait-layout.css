@@ -123,59 +123,74 @@ h2, h3, h4, h5, h6 {
 
 /* Main Menu Styles */
 
-#block-superfish-1, #superfish-1, .superfish-1{background: #000; }
-
-#block-superfish-1 ul li:first-child {
-    display:none;
-}
-
-#block-superfish-1 ul li.first {
-    margin-left: 4px !important;
-}
-
-#block-superfish-1{
+#block-superfish-1 {
     margin-bottom: 0;
-    width: 1040px;display:block; position:inherit; z-index:99; height: 24px
+    width: 310px;
+	height:30px
 }
 
-
+#block-superfish-1 ul {
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-top: -6px;
+    padding-left: 0;
+}
 
 #block-superfish-1 ul li {
+    background: none repeat scroll 0 0 #222222;
+    border-top: 1px dashed #CCCCCC;
+    clear: both;
     display: inline-block;
-    float: none;
-    font-weight: bold;
-    height: 28px;
-    margin-left: 4px !important;
-    margin-top: 2px;
+    float: left;
+    margin-left: 0 !important;
+    margin-top: 0;
     padding: 0;
     text-transform: uppercase;
-    width: auto;
+    width: 310px;
 }
 
 #block-superfish-1 ul li a {
+    background: url("../images/mobile_menu.png") no-repeat scroll 7px 8px transparent;
     color: #FFFFFF;
     display: block;
     font-weight: bold;
-    height: 22px;
+    height: 30px;
     margin-top: 0;
-    padding: 5px 15px 0;
+    padding: 7px 15px 0 26px;
     text-decoration: none;
-    background: #000;
+	-moz-transition: background-color 0.5s ease-out;
+	-o-transition: background-color 0.5s ease-out;
+	-webkit-transition: background-color 0.5s ease-out;
+	transition: background-color 0.5s ease-out;
 }
 
-#block-superfish-1 ul li a.active, #block-superfish-1 ul li a:hover, #block-menu-menu-news-categories ul li a:hover {
-    background: none repeat scroll 0 0 #FFFFFF;
-    height:30px;
-    color: #333333;
-    padding-top: 5px;
-
+#block-superfish-1 ul li:first-child {
+    display: inline-block;
 }
 
-#block-superfish-1 a.active-trail .active li {
-    background: none repeat scroll 0 0 #000033;
+#block-superfish-1 ul li:not(:first-child) a.active,
+#block-superfish-1 ul li:not(:first-child) a.active-trail,
+#block-superfish-1 ul li:not(:first-child) a:hover {
     color: #333333;
-    padding-top: 0px;
-    padding-left: 15px;
+}
+
+@media only screen and (max-width: 979px) {
+
+	#block-superfish-1 ul li:first-child a {
+    	display: block;
+    	background: url("../images/select-icons.png") no-repeat 0 5px;
+    	cursor: pointer;
+	}
+
+	#block-superfish-1 ul li:not(:first-child) {
+		display: none;
+	}
+
+	#block-superfish-1 ul li:not(:first-child) a.active,
+	#block-superfish-1 ul li:not(:first-child) a.active-trail,
+	#block-superfish-1 ul li:not(:first-child) a:hover {
+    	background: url("../images/mobile_menu_hover.png") no-repeat scroll 7px 8px #ffffff;
+	}
 }
 
 
