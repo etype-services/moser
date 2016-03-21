@@ -132,7 +132,7 @@ body.front h1 {
 }
 
 #block-superfish-1 ul li {
-    background: none repeat scroll 0 0 #222222;
+    background-color: #222222;
     clear: both;
     display: inline-block;
     float: left;
@@ -159,6 +159,10 @@ body.front h1 {
 
 #block-superfish-1 ul li:first-child {
     display: inline-block;
+    background-color: #222222;
+}
+
+#block-superfish-1 ul li:first-child a {
     color: #cb001d;
 }
 
