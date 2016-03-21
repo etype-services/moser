@@ -124,52 +124,54 @@ body.front h1{
 
 /* Main Menu Styles */
 
-#block-menu-menu-news-categories {
+#block-superfish-1 {
     margin-bottom: 0;
-    width: 765px;
+    width: 310px;
+    height:30px
 }
 
-#block-menu-menu-news-categories ul {    
+#block-superfish-1 ul {
     margin-bottom: 0;
     margin-right: 0;
     margin-top: -6px;
     padding-left: 0;
 }
 
-#block-menu-menu-news-categories ul li {
+#block-superfish-1 ul li {
     background: none repeat scroll 0 0 #222222;
-    border-top: medium none;
-    clear: none;
+    clear: both;
     display: inline-block;
     float: left;
     margin-left: 0 !important;
     margin-top: 0;
     padding: 0;
     text-transform: uppercase;
-    width: 765px;
+    width: 310px;
 }
 
-#block-menu-menu-news-categories ul li a {
-    background: none no-repeat scroll 7px 8px transparent;
+#block-superfish-1 ul li a {
     color: #FFFFFF;
     display: block;
     font-weight: bold;
-    height: 23px;
+    height: 30px;
     margin-top: 0;
-    padding: 7px 15px 0 17px;
+    padding: 7px 15px 0 26px;
     text-decoration: none;
+    -moz-transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    -webkit-transition: background-color 0.5s ease-out;
+    transition: background-color 0.5s ease-out;
 }
 
-#block-menu-menu-news-categories ul li a.active, #block-menu-menu-news-categories ul li a.active-trail, #block-menu-menu-news-categories ul li a:hover {
-    background: none no-repeat scroll 25px 8px #FFFFFF;
+#block-superfish-1 ul li:first-child {
+    display: inline-block;
+}
+
+#block-superfish-1 ul li:not(:first-child) a.active,
+#block-superfish-1 ul li:not(:first-child) a.active-trail,
+#block-superfish-1 ul li:not(:first-child) a:hover {
     color: #333333;
-    padding-left: 17px;
 }
-
-#block-menu-menu-news-categories ul li.first {
-    margin-left: 14px !important;
-}
-
 
 /* SlideShow Block Styles */
 
