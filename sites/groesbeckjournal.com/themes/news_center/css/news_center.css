@@ -865,3 +865,13 @@ h2.node-title {
     display: none;
     visibility: hidden;
 }
+
+/* breadcrumbs */
+nav.breadcrumb ol {
+    list-style: none;
+}
+
+nav.breadcrumb ol li {
+    float: left;
+    margin-right: 0.4em;
+}
