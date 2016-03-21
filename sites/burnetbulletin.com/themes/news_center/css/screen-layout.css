@@ -120,6 +120,7 @@ body.front h1 {
     text-transform: uppercase;
     width: auto;
     border: none;
+    background-color: #45A037;
 }
 
 #block-superfish-1 ul li a {
@@ -130,7 +131,7 @@ body.front h1 {
     padding: 0 15px 0;
     line-height: 2em;
     text-decoration: none;
-    background: #45A037;
+    background-color: #45A037;
     border: none;
 }
 
