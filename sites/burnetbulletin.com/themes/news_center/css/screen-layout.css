@@ -120,6 +120,7 @@ body.front h1{
     padding: 0;
     text-transform: uppercase;
 	width: auto;
+    border: none;
 }
 
 #block-superfish-1 ul li a {
