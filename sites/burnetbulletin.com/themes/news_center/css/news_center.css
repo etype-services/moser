@@ -885,6 +885,16 @@ h2.node-title {
 .field-content{
     margin-top: 20px !important;
 }
-.menu{
+.menu {
     margin: 0px 0px 0px 0px !important;
+}
+
+/* breadcrumbs */
+nav.breadcrumb ol {
+    list-style: none;
+}
+
+nav.breadcrumb ol li {
+    float: left;
+    margin-right: 0.4em;
 }
