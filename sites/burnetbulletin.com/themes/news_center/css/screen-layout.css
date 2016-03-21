@@ -120,7 +120,6 @@ body.front h1 {
     display: inline-block;
     float: none;
     font-weight: bold;
-    height: 22px;
     margin-left: 4px !important;
     margin-top: 0;
     padding: 0;
@@ -155,12 +154,17 @@ body.front h1 {
     color: #333333;
 }
 
+/* dropdowns */
 #block-superfish-1 ul li ul {
     margin-left: 0;
 }
 
 #block-superfish-1 ul li ul li {
     margin-left: 0;
+}
+
+#block-superfish-1 ul li ul li a {
+    margin-top: 0;
 }
 
 /* SlideShow Block Styles */
