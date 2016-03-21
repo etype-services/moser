@@ -97,6 +97,10 @@ body.front h1 {
     background: #45A037;
 }
 
+#superfish-1 {
+    margin-bottom: 1em;
+}
+
 #block-superfish-1 ul li.first {
     margin-left: 4px !important;
 }
@@ -128,7 +132,7 @@ body.front h1 {
     color: #FFFFFF;
     display: block;
     font-weight: bold;
-    margin-top: 0;
+    margin-top: -6px;
     padding: 0 15px 0;
     line-height: 3em;
     text-decoration: none;
