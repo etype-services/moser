@@ -78,31 +78,6 @@
  * @see template_process()
  */
 ?>
-<style type="text/css">
-#mobile-logo {
-margin-bottom: 0px !important;
-margin-top: 0px !important;
-}
-.region-top-area{
-border:none !important;
-height: 79px;
-}
-.region-top-area .block{
-margin-top: 0px;
-}
-.field-content{
-margin-top: 20px !important;
-}
-.menu{
-margin: 0px 0px 0px 0px !important;
-}
-#block-superfish-1{
-height: 31px !important;
-}
-#block-superfish-1 ul li{
-margin-bottom: 7px;
-}
-</style>
 <div id="page-wrapper" class="container" ><div id="page">
 		
 		<?php print render($page['top_advertisement']); ?>  
