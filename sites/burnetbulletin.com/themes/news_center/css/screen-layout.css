@@ -121,6 +121,7 @@ body.front h1 {
     width: auto;
     border: none;
     background-color: #45A037;
+    background-image: none;
 }
 
 #block-superfish-1 ul li a {
@@ -132,6 +133,7 @@ body.front h1 {
     line-height: 2em;
     text-decoration: none;
     background-color: #45A037;
+    background-image: none;
     border: none;
 }
 
