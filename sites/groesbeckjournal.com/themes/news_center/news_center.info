@@ -19,7 +19,7 @@ stylesheets[all][]        = css/nodes.css
 stylesheets[all][]        = css/comments.css
 stylesheets[all][]        = css/forms.css
 stylesheets[all][]        = css/fields.css	
-#stylesheets[all][]        = css/mobile-portrait-layout.css
+stylesheets[all][]        = css/mobile-portrait-layout.css
 stylesheets[all][]        = css/news_center.css
 stylesheets[print][]      = css/blueprint/print.css
 
