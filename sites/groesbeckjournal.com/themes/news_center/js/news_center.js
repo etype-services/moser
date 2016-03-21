@@ -81,7 +81,7 @@
 
             $(window).resize(function(){
                 var w = $(window).width();
-                if (w > 979) {
+                if (w > 767) {
                     $('#block-superfish-1 ul li:not(:first-child)').css("display", "inline-block").show();
                 } else {
                     $('#block-superfish-1 ul li:first-child a').text('Show Menu');
