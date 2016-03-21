@@ -163,8 +163,9 @@ body.front h1 {
     margin-left: 0;
 }
 
-#block-superfish-1 ul li ul li a {
+#block-superfish-1 ul ul li a {
     margin-top: 0;
+    height: 36px;
 }
 
 /* SlideShow Block Styles */
