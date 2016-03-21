@@ -93,19 +93,22 @@ body.front h1{
 
 /* Main Menu Styles */
 
-#block-superfish-1, #superfish-1, .superfish-1{background: #45A037; }
+#block-superfish-1, #superfish-1, .superfish-1{
+    background: #45A037;
+}
 
 
 #block-superfish-1 ul li.first {
     margin-left: 4px !important;
 }
 
-#block-superfish-1{
-    margin-bottom: 0; padding-top: 10px;
-    width: 1040px;display:block; position:inherit; z-index:99; height: 24px
+#block-superfish-1 {
+    margin-bottom: 0;
+    width: 1040px;
+    display:block;
+    position:inherit;
+    z-index:99;
 }
-
-
 
 #block-superfish-1 ul li {
     display: inline-block;
@@ -123,36 +126,26 @@ body.front h1{
     color: #FFFFFF;
     display: block;
     font-weight: bold;
-    height: 28px;
+    height: 22px;
     margin-top: 0;
-    padding: 5px 15px 0;
+    padding: 0 15px 0;
+    line-height: 1.6em;
     text-decoration: none;
 	background: #45A037;
 }
 
 #block-superfish-1 ul li a.active,  #block-menu-menu-news-categories ul li a:hover {
     background: none repeat scroll 0 0 #FFFFFF;
-   height:24px;
+    height: 22px;
     color: #333333;
-    padding-top: 5px;
-	
 }
-
-
 
 #block-superfish-1 a.active-trail .active li {
     background: none repeat scroll 0 0 #000033;
-    
     color: #333333;
     padding-top: 0px;
 	padding-left: 15px;
-	
-	
 }
-
-
-
-
 
 /* SlideShow Block Styles */
 
