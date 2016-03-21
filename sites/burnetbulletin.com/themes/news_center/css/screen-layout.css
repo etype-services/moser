@@ -101,16 +101,19 @@ body.front h1 {
     margin-bottom: 1em;
 }
 
-#block-superfish-1 ul li.first {
-    margin-left: 4px !important;
-}
-
 #block-superfish-1 {
-    margin-bottom: 0;
     width: 1040px;
     display: block;
     position: inherit;
     z-index: 99;
+}
+
+#block-superfish-1 ul {
+    margin-top: 0;
+}
+
+#block-superfish-1 ul li.first {
+    margin-left: 4px !important;
 }
 
 #block-superfish-1 ul li {
