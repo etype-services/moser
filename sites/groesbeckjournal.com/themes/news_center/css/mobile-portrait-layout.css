@@ -163,6 +163,10 @@ h2, h3, h4, h5, h6 {
 }
 
 #block-superfish-1 ul li:first-child {
+    display: none;
+}
+
+#block-superfish-1 ul li:first-child {
     display: inline-block;
     background-color: #222222;
 }
