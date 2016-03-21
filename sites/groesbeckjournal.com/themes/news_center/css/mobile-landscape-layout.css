@@ -164,7 +164,7 @@ body.front h1 {
 #block-superfish-1 ul li:not(:first-child) a.active,
 #block-superfish-1 ul li:not(:first-child) a.active-trail,
 #block-superfish-1 ul li:not(:first-child) a:hover {
-    color: #333333;
+    color: #cb001d;
 }
 
 /* SlideShow Block Styles */
