@@ -93,7 +93,9 @@ body.front h1{
 
 /* Main Menu Styles */
 
-#block-superfish-1, #superfish-1, .superfish-1{background: #000; }
+#block-superfish-1, #superfish-1, .superfish-1{
+    background: #000;
+}
 
 #block-superfish-1 ul li:first-child {
     display:none;
@@ -139,21 +141,12 @@ body.front h1{
 	
 }
 
-
-
 #block-superfish-1 a.active-trail .active li {
     background: none repeat scroll 0 0 #000033;
-    
     color: #333333;
     padding-top: 0px;
 	padding-left: 15px;
-	
-	
 }
-
-
-
-
 
 /* SlideShow Block Styles */
 

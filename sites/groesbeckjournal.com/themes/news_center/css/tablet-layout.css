@@ -124,53 +124,59 @@ body.front h1{
 
 /* Main Menu Styles */
 
-#block-superfish-1 {
-    margin-bottom: 0;
-    width: 310px;
-    height:30px
+#block-superfish-1, #superfish-1, .superfish-1{
+    background: #000;
 }
 
-#block-superfish-1 ul {
+#block-superfish-1 ul li:first-child {
+    display:none;
+}
+
+#block-superfish-1 ul li.first {
+    margin-left: 4px !important;
+}
+
+#block-superfish-1{
     margin-bottom: 0;
-    margin-right: 0;
-    margin-top: -6px;
-    padding-left: 0;
+    width: 1040px;display:block; position:inherit; z-index:99; height: 24px
 }
 
 #block-superfish-1 ul li {
-    background: none repeat scroll 0 0 #222222;
-    clear: both;
     display: inline-block;
-    float: left;
-    margin-left: 0 !important;
-    margin-top: 0;
+    float: none;
+    font-weight: bold;
+    height: 28px;
+    margin-left: 4px !important;
+    margin-top: 2px;
     padding: 0;
     text-transform: uppercase;
-    width: 310px;
+    width: auto;
 }
 
 #block-superfish-1 ul li a {
     color: #FFFFFF;
     display: block;
     font-weight: bold;
-    height: 30px;
+    height: 22px;
     margin-top: 0;
-    padding: 7px 15px 0 26px;
+    padding: 5px 15px 0;
     text-decoration: none;
-    -moz-transition: background-color 0.5s ease-out;
-    -o-transition: background-color 0.5s ease-out;
-    -webkit-transition: background-color 0.5s ease-out;
-    transition: background-color 0.5s ease-out;
+    background: #000;
 }
 
-#block-superfish-1 ul li:first-child {
-    display: inline-block;
-}
-
-#block-superfish-1 ul li:not(:first-child) a.active,
-#block-superfish-1 ul li:not(:first-child) a.active-trail,
-#block-superfish-1 ul li:not(:first-child) a:hover {
+#block-superfish-1 ul li a.active, #block-superfish-1 ul li a:hover, #block-menu-menu-news-categories ul li a:hover {
+    background: none repeat scroll 0 0 #FFFFFF;
+    height:30px;
     color: #333333;
+    padding-top: 5px;
+
+}
+
+#block-superfish-1 a.active-trail .active li {
+    background: none repeat scroll 0 0 #000033;
+    color: #333333;
+    padding-top: 0px;
+    padding-left: 15px;
 }
 
 /* SlideShow Block Styles */
