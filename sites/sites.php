@@ -67,3 +67,9 @@ $sites['burnetbulletin.com'] = 'burnetbulletin.com';
 $sites['www.burnetbulletin.com'] = 'burnetbulletin.com';
 $sites['prod.burnetbulletin.com'] = 'burnetbulletin.com';
 $sites['dev.burnetbulletin.com'] = 'burnetbulletin.com';
+
+$sites['grahamleader.etypegoogle4.com'] = 'grahamleader.com';
+$sites['grahamleader.com'] = 'grahamleader.com';
+$sites['www.grahamleader.com'] = 'grahamleader.com';
+$sites['prod.grahamleader.com'] = 'grahamleader.com';
+$sites['dev.grahamleader.com'] = 'grahamleader.com';
