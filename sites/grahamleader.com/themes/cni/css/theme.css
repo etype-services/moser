@@ -1251,6 +1251,11 @@ blockquote {
     list-style-position: inside;
 }
 
+#block-menu-block-2 ul.menu li.first {
+    display: none;
+    visibility: hidden;
+}
+
 #views-slideshow-galleria-1 .views-slideshow-galleria-images-1 {
     max-width: 230px;
     height: auto;
