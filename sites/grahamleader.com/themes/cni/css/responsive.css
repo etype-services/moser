@@ -125,11 +125,6 @@
     }
 
     /* other */
-    .page-node .field-name-field-image img {
-        width: 490px;
-        height: auto;
-    }
-
     .page-node.not-logged-in .field-name-field-image img {
         width: auto;
         height: auto;
@@ -144,10 +139,6 @@
         height: 300px;
     }
 
-    .node .content img {
-        max-width: 450px;
-    }
-
     /* SLIDESHOW
     --------------------------------------------------------------------------*/
     .view-slideshow .views_slideshow_main {
@@ -155,7 +146,7 @@
     }
 
     .view-slideshow .views_slideshow_main .views-field-field-image img, .view-slideshow .views_slideshow_main .views-field-field-video img {
-        width: 492px;
+        width: 452px;
         height: auto;
     }
 
@@ -272,18 +263,9 @@
         margin: 0 0 20px 0;
     }
 
-    .page-node .field-name-field-image img {
-        width: 300px;
-        height: auto;
-    }
-
     .page-node .field-name-field-video iframe {
         width: 300px;
         height: 200px;
-    }
-
-    .node .content img {
-        max-width: 380px;
     }
 
     /* SLIDESHOW
@@ -416,10 +398,6 @@
         margin: 0.3em 0 2em;
     }
 
-    .node .content img {
-        max-width: 100%;
-    }
-
     .node-teaser .field-name-field-image img {
         float: left;
         margin: 0 20px 0 0;
@@ -438,11 +416,6 @@
         width: 360px;
         height: 220px;
         margin: 0 0 20px 0;
-    }
-
-    .page-node .field-name-field-image img {
-        width: 418px;
-        height: auto;
     }
 
     .page-node .field-name-field-video iframe {
@@ -573,10 +546,6 @@
         margin: 0.3em 0 2em;
     }
 
-    .node .content img {
-        max-width: 100%;
-    }
-
     .node-teaser .field-name-field-image img {
         float: left;
         margin: 0 20px 0 0;
@@ -595,11 +564,6 @@
         width: 360px;
         height: 220px;
         margin: 0 0 20px 0;
-    }
-
-    .page-node .field-name-field-image img {
-        width: 418px;
-        height: auto;
     }
 
     .page-node .field-name-field-video iframe {

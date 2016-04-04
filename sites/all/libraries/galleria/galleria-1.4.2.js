@@ -1,5 +1,5 @@
 /**
- * Galleria v 1.3.3 2013-11-18
+ * Galleria v 1.4.2 2014-08-07
  * http://galleria.io
  *
  * Licensed under the MIT license
@@ -20,7 +20,7 @@ var doc    = window.document,
     protoArray = Array.prototype,
 
 // internal constants
-    VERSION = 1.33,
+    VERSION = 1.41,
     DEBUG = true,
     TIMEOUT = 30000,
     DUMMY = false,
@@ -228,7 +228,7 @@ var doc    = window.document,
 
         support: (function() {
             var html = DOM().html;
-            return !IFRAME && ( html.requestFullscreen || html.mozRequestFullScreen || html.webkitRequestFullScreen );
+            return !IFRAME && ( html.requestFullscreen || html.msRequestFullscreen || html.mozRequestFullScreen || html.webkitRequestFullScreen );
         }()),
 
         callback: F,
@@ -242,6 +242,9 @@ var doc    = window.document,
             elem = elem || DOM().html;
             if ( elem.requestFullscreen ) {
                 elem.requestFullscreen();
+            }
+            else if ( elem.msRequestFullscreen ) {
+                elem.msRequestFullscreen();
             }
             else if ( elem.mozRequestFullScreen ) {
                 elem.mozRequestFullScreen();
@@ -257,6 +260,9 @@ var doc    = window.document,
 
             if ( doc.exitFullscreen ) {
                 doc.exitFullscreen();
+            }
+            else if ( doc.msExitFullscreen ) {
+                doc.msExitFullscreen();
             }
             else if ( doc.mozCancelFullScreen ) {
                 doc.mozCancelFullScreen();
@@ -281,13 +287,14 @@ var doc    = window.document,
                 }
                 var fs = _nativeFullscreen.instance._fullscreen;
 
-                if ( doc.fullscreen || doc.mozFullScreen || doc.webkitIsFullScreen ) {
+                if ( doc.fullscreen || doc.mozFullScreen || doc.webkitIsFullScreen || ( doc.msFullscreenElement && doc.msFullscreenElement !== null ) ) {
                     fs._enter( _nativeFullscreen.callback );
                 } else {
                     fs._exit( _nativeFullscreen.callback );
                 }
             };
             doc.addEventListener( 'fullscreenchange', handler, false );
+            doc.addEventListener( 'MSFullscreenChange', handler, false );
             doc.addEventListener( 'mozfullscreenchange', handler, false );
             doc.addEventListener( 'webkitfullscreenchange', handler, false );
         }
@@ -308,19 +315,20 @@ var doc    = window.document,
     // instance pool, holds the galleries until themeLoad is triggered
     _pool = [],
 
-    // themeLoad trigger
+    // Run galleries from theme trigger
+    _loadedThemes = [],
     _themeLoad = function( theme ) {
 
-        Galleria.theme = theme;
+        _loadedThemes.push(theme);
 
         // run the instances we have in the pool
+        // and apply the last theme if not specified
         $.each( _pool, function( i, instance ) {
-            if ( !instance._initialized ) {
+            if ( instance._options.theme == theme.name || (!instance._initialized && !instance._options.theme) ) {
+                instance.theme = theme;
                 instance._init.call( instance );
             }
         });
-
-        _pool = [];
     },
 
     // the Utils singleton
@@ -1056,42 +1064,67 @@ _nativeFullscreen.listen();
 $.event.special['click:fast'] = {
     propagate: true,
     add: function(handleObj) {
-        var prop = this.propagate;
-        if ( Galleria.TOUCH ) {
-            $(this).on('touchstart.fast', function start(e) {
-                var ev = e.originalEvent,
-                    x, y, dist = 0;
-                if ( ev.touches.length == 1 ) {
-                    x = ev.touches[0].pageX;
-                    y = ev.touches[0].pageY;
-                    $(this).on('touchmove.fast', function(f) {
-                        var ft = f.originalEvent.touches;
-                        if ( ft.length == 1 ) {
-                            dist = M.max(
-                                M.abs( x - ft[0].pageX ),
-                                M.abs( y - ft[0].pageY )
-                            );
-                        }
-                    });
-                    $(this).on('touchend.fast', function() {
-                        if( dist > 4 ) {
-                            return $(this).off('touchend.fast touchmove.fast');
-                        }
-                        handleObj.handler.call(this, e);
-                        $(this).off('touchend.fast touchmove.fast');
-                    });
-                }
+
+        var getCoords = function(e) {
+            if ( e.touches && e.touches.length ) {
+                var touch = e.touches[0];
+                return {
+                    x: touch.pageX,
+                    y: touch.pageY
+                };
+            }
+        };
+
+        var def = {
+            touched: false,
+            touchdown: false,
+            coords: { x:0, y:0 },
+            evObj: {}
+        };
+
+        $(this).data({
+            clickstate: def,
+            timer: 0
+        }).on('touchstart.fast', function(e) {
+            window.clearTimeout($(this).data('timer'));
+            $(this).data('clickstate', {
+                touched: true, 
+                touchdown: true,
+                coords: getCoords(e.originalEvent),
+                evObj: e
             });
-        } else {
-            $(this).on('click.fast', handleObj.handler);
-        }
+        }).on('touchmove.fast', function(e) {
+            var coords = getCoords(e.originalEvent),
+                state = $(this).data('clickstate'),
+                distance = Math.max( 
+                    Math.abs(state.coords.x - coords.x), 
+                    Math.abs(state.coords.y - coords.y) 
+                );
+            if ( distance > 6 ) {
+                $(this).data('clickstate', $.extend(state, {
+                    touchdown: false
+                }));
+            }
+        }).on('touchend.fast', function(e) {
+            var $this = $(this),
+                state = $this.data('clickstate');
+            if(state.touchdown) {
+              handleObj.handler.call(this, e);
+            }
+            $this.data('timer', window.setTimeout(function() {
+                $this.data('clickstate', def);
+            }, 400));
+        }).on('click.fast', function(e) {
+            var state = $(this).data('clickstate');
+            if ( state.touched ) {
+                return false;
+            }
+            $(this).data('clickstate', def);
+            handleObj.handler.call(this, e);
+        });
     },
-    remove: function(handleObj) {
-        if ( Galleria.TOUCH ) {
-            $(this).off('touchstart.fast touchmove.fast touchend.fast');
-        } else {
-            $(this).off('click.fast', handleObj.handler);
-        }
+    remove: function() {
+        $(this).off('touchstart.fast touchmove.fast touchend.fast click.fast');
     }
 };
 
@@ -1835,6 +1868,11 @@ Galleria = function() {
                         }
                     });
                 });
+
+                var n = self.getNext(index),
+                    p = new Galleria.Picture(),
+                    ndata = self.getData( n );
+                p.preload( self.isFullscreen() && ndata.big ? ndata.big : ndata.image );
             }
 
             // init the first rescale and attach callbacks
@@ -1975,7 +2013,7 @@ Galleria = function() {
         active: false,
 
         add: function(elem, to, from, hide) {
-            if (!elem) {
+            if ( !elem || Galleria.TOUCH ) {
                 return;
             }
             if (!idle.bound) {
@@ -2178,11 +2216,16 @@ Galleria = function() {
                 },
                 appends = {};
 
-            // IE8 fix for IE's transparent background event "feature"
-            if ( IE && IE > 7 ) {
-                cssMap.nextholder += 'background:#000;filter:alpha(opacity=0);';
-                cssMap.prevholder += 'background:#000;filter:alpha(opacity=0);';
+            // fix for navigation hovers transparent background event "feature"
+            var exs = '';
+            if ( IE > 7 ) {
+                exs = IE < 9 ? 'background:#000;filter:alpha(opacity=0);' : 'background:rgba(0,0,0,0);';
+            } else {
+                exs = 'z-index:99999';
             }
+
+            cssMap.nextholder += exs;
+            cssMap.prevholder += exs;
 
             // create and insert CSS
             $.each(cssMap, function( key, value ) {
@@ -2590,7 +2633,8 @@ Galleria.prototype = {
             showInfo: true,
             showCounter: true,
             showImagenav: true,
-            swipe: true, // 1.2.4 -> revised in 1.3
+            swipe: 'auto', // 1.2.4 -> revised in 1.3 -> changed type in 1.3.5
+            theme: null,
             thumbCrop: true,
             thumbEventType: 'click:fast',
             thumbMargin: 0,
@@ -2627,24 +2671,27 @@ Galleria.prototype = {
         // legacy support for transitionInitial
         this._options.initialTransition = this._options.initialTransition || this._options.transitionInitial;
 
-        // turn off debug
-        if ( options && options.debug === false ) {
-            DEBUG = false;
-        }
+        if ( options ) {
 
-        // set timeout
-        if ( options && typeof options.imageTimeout === 'number' ) {
-            TIMEOUT = options.imageTimeout;
-        }
+            // turn off debug
+            if ( options.debug === false ) {
+                DEBUG = false;
+            }
 
-        // set dummy
-        if ( options && typeof options.dummy === 'string' ) {
-            DUMMY = options.dummy;
-        }
+            // set timeout
+            if ( typeof options.imageTimeout === 'number' ) {
+                TIMEOUT = options.imageTimeout;
+            }
 
-        // disable swipe if no touch
-        if ( !Galleria.TOUCH ) {
-           this._options.swipe = false;
+            // set dummy
+            if ( typeof options.dummy === 'string' ) {
+                DUMMY = options.dummy;
+            }
+
+            // set theme
+            if ( typeof options.theme == 'string' ) {
+                this._options.theme = options.theme;
+            }
         }
 
         // hide all content
@@ -2656,10 +2703,25 @@ Galleria.prototype = {
         }
 
         // now we just have to wait for the theme...
-        if ( typeof Galleria.theme === 'object' ) {
+        // first check if it has already loaded
+        if ( _loadedThemes.length ) {
+            if ( this._options.theme ) {
+                for ( var i=0; i<_loadedThemes.length; i++ ) {
+                    if( this._options.theme === _loadedThemes[i].name ) {
+                        this.theme = _loadedThemes[i];
+                        break;
+                    }
+                }
+            } else {
+                // if no theme sepcified, apply the first loaded theme
+                this.theme = _loadedThemes[0];
+            }
+        }
+
+        if ( typeof this.theme == 'object' ) {
             this._init();
         } else {
-            // push the instance into the pool and run it when the theme is ready
+            // if no theme is loaded yet, push the instance into a pool and run it when the theme is ready
             _pool.push( this );
         }
 
@@ -2681,13 +2743,25 @@ Galleria.prototype = {
 
         this._initialized = true;
 
-        if ( !Galleria.theme ) {
+        if ( !this.theme ) {
             Galleria.raise( 'Init failed: No theme found.', true );
             return this;
         }
 
         // merge the theme & caller options
-        $.extend( true, options, Galleria.theme.defaults, this._original.options, Galleria.configure.options );
+        $.extend( true, options, this.theme.defaults, this._original.options, Galleria.configure.options );
+
+        // internally we use boolean for swipe
+        options.swipe = (function(s) {
+
+            if ( s == 'enforced' ) { return true; }
+
+            // legacy patch
+            if( s === false || s == 'disabled' ) { return false; }
+            
+            return !!Galleria.TOUCH;
+
+        }( options.swipe ));
 
         // disable options that arent compatible with swipe
         if ( options.swipe ) {
@@ -2697,19 +2771,16 @@ Galleria.prototype = {
 
         // check for canvas support
         (function( can ) {
-
             if ( !( 'getContext' in can ) ) {
                 can = null;
                 return;
             }
-
             _canvas = _canvas || {
                 elem: can,
                 context: can.getContext( '2d' ),
                 cache: {},
                 length: 0
             };
-
         }( doc.createElement( 'canvas' ) ) );
 
         // bind the gallery to run when data is ready
@@ -2817,7 +2888,11 @@ Galleria.prototype = {
         Utils.hide( self.get('tooltip') );
 
         // add a notouch class on the container to prevent unwanted :hovers on touch devices
-        this.$( 'container' ).addClass( ( Galleria.TOUCH ? 'touch' : 'notouch' ) + ' ' + this._options.variation );
+        this.$( 'container' ).addClass([
+            ( Galleria.TOUCH ? 'touch' : 'notouch' ),
+            this._options.variation,
+            'galleria-theme-'+this.theme.name
+        ].join(' '));
 
         // add images to the controls
         if ( !this._options.swipe ) {
@@ -2880,20 +2955,24 @@ Galleria.prototype = {
             });
             this.finger = new Galleria.Finger(this.get('stage'), {
                 onchange: function(page) {
-                    self.setCounter( page ).setInfo( page ).pause();
-                    self.show(page);
+                    self.pause().show(page);
                 },
                 oncomplete: function(page) {
 
                     var index = M.max( 0, M.min( parseInt( page, 10 ), self.getDataLength() - 1 ) ),
                         data = self.getData(index);
 
+                    $( self._thumbnails[ index ].container )
+                        .addClass( 'active' )
+                        .siblings( '.active' )
+                        .removeClass( 'active' );
+
                     if ( !data ) {
                        return;
                     }
 
-                    self.$( 'images' ).find( 'iframe' ).remove();
-                    self.$( 'images' ).find( '.galleria-frame' ).css('opacity', 0).hide();
+                    // remove video iframes
+                    self.$( 'images' ).find( '.galleria-frame' ).css('opacity', 0).hide().find( 'iframe' ).remove();
 
                     if ( self._options.carousel && self._options.carouselFollow ) {
                         self._carousel.follow( index );
@@ -3403,8 +3482,7 @@ Galleria.prototype = {
                 }
 
             // create empty spans if thumbnails is set to 'empty'
-            } else if ( data.iframe || optval === 'empty' || optval === 'numbers' ) {
-
+            } else if ( ( data.iframe && optval !== null ) || optval === 'empty' || optval === 'numbers' ) {
                 thumb = {
                     container: Utils.create( 'galleria-image' ),
                     image: Utils.create( 'img', 'span' ),
@@ -3681,7 +3759,7 @@ Galleria.prototype = {
                 self.trigger( Galleria.READY );
 
                 // call the theme init method
-                Galleria.theme.init.call( self, self._options );
+                self.theme.init.call( self, self._options );
 
                 // Trigger Galleria.ready
                 $.each( Galleria.ready.callbacks, function(i ,fn) {
@@ -4408,6 +4486,16 @@ $(document).mousemove(function(e) {
     },
 
     /**
+        Tells you the theme name of the gallery
+
+        @returns {String} theme name
+    */
+
+    getThemeName : function() {
+        return this.theme.name;
+    },
+
+    /**
         Removes the panning effect set by addPan()
 
         @returns Instance
@@ -4694,11 +4782,15 @@ this.prependChild( 'info', 'myElement' );
                 self.updateCarousel();
             }
 
-            self._controls.frames[ self._controls.active ].scale({
-                width: self._stageWidth,
-                height: self._stageHeight,
-                iframelimit: self._options.maxVideoSize
-            });
+            var frame = self._controls.frames[ self._controls.active ];
+
+            if (frame) {
+                self._controls.frames[ self._controls.active ].scale({
+                    width: self._stageWidth,
+                    height: self._stageHeight,
+                    iframelimit: self._options.maxVideoSize
+                });
+            }
 
             self.trigger( Galleria.RESCALE );
 
@@ -4725,6 +4817,22 @@ this.prependChild( 'info', 'myElement' );
             this.addPan();
         }
         return this;
+    },
+
+    _preload: function() {
+        if ( this._options.preload ) {
+            var p, i,
+                n = this.getNext(),
+                ndata;
+            try {
+                for ( i = this._options.preload; i > 0; i-- ) {
+                    p = new Galleria.Picture();
+                    ndata = this.getData( n );
+                    p.preload( this.isFullscreen() && ndata.big ? ndata.big : ndata.image );
+                    n = this.getNext( n );
+                }
+            } catch(e) {}
+        }
     },
 
     /**
@@ -4791,11 +4899,6 @@ this.prependChild( 'info', 'myElement' );
                 type: Galleria.LOADSTART
             }));
 
-            $( self._thumbnails[ index ].container )
-                .addClass( 'active' )
-                .siblings( '.active' )
-                .removeClass( 'active' );
-
             self.$('container').removeClass( 'videoplay' );
 
             var complete = function() {
@@ -4808,14 +4911,17 @@ this.prependChild( 'info', 'myElement' );
                 self._playCheck();
             };
 
+            self._preload();
+
             window.setTimeout(function() {
 
                 // load if not ready
-                if ( !image.ready ) {
+                if ( !image.ready || $(image.image).attr('src') != src ) {
                     if ( data.iframe && !data.image ) {
                         image.isIframe = true;
                     }
                     image.load(src, function(image) {
+                        evObj.imageTarget = image.image;
                         self._scaleImage(image, complete).trigger($.extend(evObj, {
                             type: Galleria.IMAGE
                         }));
@@ -5008,21 +5114,7 @@ this.prependChild( 'info', 'myElement' );
         }
 
         // preload images
-        if ( this._options.preload ) {
-
-            var p, i,
-                n = this.getNext(),
-                ndata;
-
-            try {
-                for ( i = this._options.preload; i > 0; i-- ) {
-                    p = new Galleria.Picture();
-                    ndata = self.getData( n );
-                    p.preload( this.isFullscreen() && ndata.big ? ndata.big : ndata.image );
-                    n = self.getNext( n );
-                }
-            } catch(e) {}
-        }
+        self._preload();
 
         // show the next image, just in case
         Utils.show( next.container );
@@ -5638,9 +5730,9 @@ Galleria.addTheme = function( theme ) {
                             css = script.src.replace(/[^\/]*$/, '') + theme.css;
 
                             window.setTimeout(function () {
-                                Utils.loadCSS(css, 'galleria-theme', function () {
+                                Utils.loadCSS(css, 'galleria-theme-'+theme.name, function () {
 
-                                    // the themeload trigger
+                                    // run galleries with this theme
                                     _themeLoad(theme);
 
                                 });
@@ -5692,44 +5784,18 @@ Galleria.loadTheme = function( src, options ) {
         if ( !loaded ) {
             // give it another 20 seconds
             err = window.setTimeout(function() {
-                if ( !loaded && !Galleria.theme ) {
+                if ( !loaded ) {
                     Galleria.raise( "Galleria had problems loading theme at " + src + ". Please check theme path or load manually.", true );
                 }
             }, 20000);
         }
     });
 
-    // first clear the current theme, if exists
-    Galleria.unloadTheme();
-
     // load the theme
     Utils.loadScript( src, function() {
         loaded = true;
         window.clearTimeout( err );
     });
-
-    return Galleria;
-};
-
-/**
-    unloadTheme unloads the Galleria theme and prepares for a new theme
-
-    @returns Galleria
-*/
-
-Galleria.unloadTheme = function() {
-
-    if ( typeof Galleria.theme == 'object' ) {
-
-        $('script').each(function( i, script ) {
-
-            if( new RegExp( 'galleria\\.' + Galleria.theme.name + '\\.' ).test( script.src ) ) {
-                $( script ).remove();
-            }
-        });
-
-        Galleria.theme = undef;
-    }
 
     return Galleria;
 };
@@ -5985,6 +6051,12 @@ Galleria.raise = function( msg, fatal ) {
 // Add the version
 Galleria.version = VERSION;
 
+Galleria.getLoadedThemes = function() {
+    return $.map(_loadedThemes, function(theme) {
+        return theme.name;
+    });
+};
+
 /**
     A method for checking what version of Galleria the user has installed and throws a readable error if the user needs to upgrade.
     Useful when building plugins that requires a certain version to function.
@@ -6148,6 +6220,12 @@ Galleria.Picture.prototype = {
         // IE8 opacity inherit bug
         if ( Galleria.IE8 ) {
             $( this.image ).css( 'filter', 'inherit' );
+        }
+
+        // FF shaking images bug:
+        // http://support.galleria.io/discussions/problems/12245-shaking-photos
+        if ( !Galleria.IE && !Galleria.CHROME && !Galleria.SAFARI ) {
+            $( this.image ).css( 'image-rendering', 'optimizequality' );
         }
 
         var reload = false,
@@ -6500,6 +6578,7 @@ $.extend( $.easing, {
 
 });
 
+
 // Forked version of Ainos Finger.js for native-style touch
 
 Galleria.Finger = (function() {
@@ -6602,7 +6681,7 @@ Galleria.Finger = (function() {
                 style.left = self.pos+'px';
                 return;
             }
-            style.MozTransform = style.webkitTransform = 'translate3d(' + self.pos + 'px,0,0)';
+            style.MozTransform = style.webkitTransform = style.transform = 'translate3d(' + self.pos + 'px,0,0)';
             return;
         };
 
@@ -6750,8 +6829,11 @@ Galleria.Finger = (function() {
                     // save animation parameters
                     this.anim = { start: this.pos, time: +new Date(), distance: distance, factor: factor, destination: this.to };
                 }
-                // check if to has changed
-                if ( this.anim.destination != this.to ) {
+                // check if to has changed or time has run out
+                var elapsed = +new Date() - this.anim.time;
+                var duration = this.config.duration*this.anim.factor;
+
+                if ( elapsed > duration || this.anim.destination != this.to ) {
                     this.anim = 0;
                     this.easing = this.easeout;
                     return;
@@ -6759,12 +6841,11 @@ Galleria.Finger = (function() {
                 // apply easing
                 this.pos = this.easing(
                     null,
-                    +new Date() - this.anim.time,
+                    elapsed,
                     this.anim.start,
                     this.anim.distance,
-                    this.config.duration*this.anim.factor
+                    duration
                 );
-
             }
             this.setX();
         }

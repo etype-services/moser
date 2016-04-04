@@ -284,7 +284,12 @@ article .field-image {
 }
 
 .sidebar h3 {
+    font-size: 1.5em;
+}
+
+.sidebar .block-inner h3.title {
     font-size: 1em;
+    margin-bottom: 0;
 }
 
 /* POSTSCRIPT 
@@ -346,6 +351,17 @@ article .field-image {
 
 #block-block-34 .content div > a {
     margin-left: 1.7em;
+}
+
+/* title in first column of footer */
+.region-postscript-1 h3.title {
+    margin-left: 0;
+}
+
+/* hide Show Menu link in footer */
+.region-postscript-2 #block-menu-block-2 .menu li.first {
+    display: none;
+    visibility: hidden;
 }
 
 /* FOOTER
@@ -637,13 +653,6 @@ article .field-image {
     margin-bottom: 10px;
 }
 
-.submitted {
-    padding: 5px 0;
-    margin-bottom: 10px;
-    color: #999999;
-    border-bottom: 1px solid #dddddd;
-}
-
 .node .content a {
     color: #333;
 }
@@ -659,6 +668,12 @@ article .field-image {
     padding: 0 5px 0 5px;
     font-size: 0.9em;
     background: #eeeeee;
+}
+
+.node ul.links li.node-readmore a {
+    font-size: 0.8em;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
 }
 
 .node .taxonomy .field-type-taxonomy-term-reference {
@@ -680,13 +695,23 @@ article .field-image {
 
 .node-teaser h2.title {
     font-size: 18px;
+    line-height: 1.2em;
+    margin-bottom: 0.2em;
 }
 
 .node-teaser .node-content-wrapper {
     margin-left: 180px;
 }
 
-.node-teaser .field-name-field-image img {
+.node-teaser .field-image .field-name-field-image .field-items .field-item {
+    display: none;
+}
+
+.node-teaser .field-image .field-name-field-image .field-items .field-item:first-child {
+    display: block;
+}
+
+.node-teaser .field-image .field-name-field-image .field-items .field-item:first-child img {
     display: block;
     padding: 10px;
     float: left;
@@ -1003,8 +1028,6 @@ ul.quicktabs-tabs.quicktabs-style-nostyle li.active a {
     padding: 0 0 0 0;
 }
 
-
-
 .field-name-field-mugshot {
     float: left;
     margin-right: 10px;
@@ -1215,10 +1238,16 @@ ul.quicktabs-tabs.quicktabs-style-nostyle li.active a {
     padding-left: 50px;
 }
 
+/* removes quote icons from bones layout.css */
 blockquote {
     background-image: none;
     margin: 0;
     padding: 0;
+}
+
+blockquote p {
+    padding-right: 1em;
+    background: none;
 }
 
 #block-menu-block-2 ul.menu li, #block-menu-block-2 #main-menu ul.menu li, #block-menu-block-2 #user-menu ul.menu li, #block-menu-block-2 #nav-menu ul.menu li {
@@ -1249,11 +1278,6 @@ blockquote {
     list-style-type: circle;
     list-style-image: none;
     list-style-position: inside;
-}
-
-#block-menu-block-2 ul.menu li.first {
-    display: none;
-    visibility: hidden;
 }
 
 #views-slideshow-galleria-1 .views-slideshow-galleria-images-1 {
@@ -1358,6 +1382,59 @@ blockquote {
 }
 
 .not-logged-in.node-type-article .view-more-digital, .not-logged-in.node-type-article .links {
+    display: none;
+    visibility: hidden;
+}
+
+/* WEBFORMS
+--------------------------------------------------------------------------*/
+
+/* excludes captcha forms by inclusion of .webform-component-fieldset */
+.webform-client-form .webform-component-fieldset .fieldset-legend {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.0em;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 0.6em;
+    font-size: 1.2em;
+}
+
+.webform-client-form .webform-component-fieldset .fieldset-wrapper {
+    margin-left: 0.5em;
+}
+
+textarea, select, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"] {
+    font-family: 'Lato', sans-serif;
+}
+
+/* ARTICLE
+--------------------------------------------------------------------------*/
+.page-node .node-article .field-name-field-dateline {
+    float: none;
+    display: block;
+}
+
+.page-node .node-article .addthis_sharing_toolbox {
+    float: right;
+}
+
+.page-node .node-article .field-name-body {
+    margin-top: 1em;
+}
+
+.node-teaser .addthis_sharing_toolbox {
+    display: none;
+    visibility: hidden;
+}
+
+.submitted {
+    padding: 5px 0;
+    margin-bottom: 10px;
+    color: #999999;
+    border-bottom: 1px solid #dddddd;
+}
+
+.page-node .node-article .galleria-info-link {
     display: none;
     visibility: hidden;
 }
