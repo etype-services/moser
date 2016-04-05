@@ -8,6 +8,8 @@
                 <div id="social">
                     <ul class="social-links">
                         <li><a class="facebook" href="<?php echo $facebook ?>"></a></li>
+                        <li><a class="twitter" href="<?php echo $twitter ?>"></a></li>
+                        <li><a class="pinterest" href="<?php echo $pinterest ?>"></a></li>
                     </ul>
                 </div>
             </nav>
