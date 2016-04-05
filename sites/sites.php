@@ -73,3 +73,26 @@ $sites['grahamleader.com'] = 'grahamleader.com';
 $sites['www.grahamleader.com'] = 'grahamleader.com';
 $sites['prod.grahamleader.com'] = 'grahamleader.com';
 $sites['dev.grahamleader.com'] = 'grahamleader.com';
+
+/* fairfield-recorder.etypegoogle4.com */
+$sites['fairfield-recorder.etypegoogle4.com'] = 'fairfield-recorder.com';
+$sites['fairfield-recorder.com'] = 'fairfield-recorder.com';
+$sites['www.fairfield-recorder.com'] = 'fairfield-recorder.com';
+$sites['prod.fairfield-recorder.com'] = 'fairfield-recorder.com';
+$sites['dev.fairfield-recorder.com'] = 'fairfield-recorder.com';
+
+$sites['fairfield-recorder.net'] = 'fairfield-recorder.com';
+$sites['www.fairfield-recorder.net'] = 'fairfield-recorder.com';
+
+$sites['thefairfieldrecorder.net'] = 'fairfield-recorder.com';
+$sites['www.thefairfieldrecorder.net'] = 'fairfield-recorder.com';
+
+/* wimberleyview.etypegoogle4.com */
+$sites['wimberleyview.etypegoogle4.com'] = 'wimberleyview.com';
+$sites['wimberleyview.com'] = 'wimberleyview.com';
+$sites['www.wimberleyview.com'] = 'wimberleyview.com';
+$sites['prod.wimberleyview.com'] = 'wimberleyview.com';
+$sites['dev.wimberleyview.com'] = 'wimberleyview.com';
+
+$sites['century-news.com'] = 'wimberleyview.com';
+$sites['www.century-news.com'] = 'cwimberleyview.com';
