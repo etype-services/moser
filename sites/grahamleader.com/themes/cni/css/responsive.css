@@ -6,6 +6,10 @@
         margin: 0;
     }
 
+    ul .menu li ul {
+        top: 32px;
+    }
+
     #main-menu ul.menu li a, #main-menu ul.menu li li a {
         padding: 0 8px;
         font-size: 0.9em;
@@ -85,6 +89,10 @@
     #main-menu ul.menu li a, #main-menu ul.menu li li a  {
         padding: 0 7px;
         font-size: 0.9em;
+    }
+
+    ul .menu li ul {
+        top: 32px;
     }
 
     /* drop-down menu */
