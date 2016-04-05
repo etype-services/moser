@@ -14,7 +14,6 @@
                 </div>
             </nav>
         <?php endif; ?>
-
         <div class="header-wrapper clearfix">
             <div class="header-wrapper-inner <?php echo $grid_full_width ?>">
                 <header>
