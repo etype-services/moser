@@ -7,7 +7,8 @@
     }
 
     #main-menu ul.menu li a {
-        padding: 0 10px;
+        padding: 0 8px;
+        font-size: 0.9em;
     }
 
     #block-superfish-1 .content {
@@ -31,11 +32,6 @@
     #main-menu ul.menu li ul li {
         background-color: #cccccc;
         width: 100%;
-    }
-
-    #main-menu ul.menu li ul li a {
-        font-size: 0.9em;
-        padding: 0 8px;
     }
 
     #main-menu ul.menu li li a, #main-menu ul.menu li li a.active {
@@ -87,9 +83,8 @@
     }
 
     #main-menu ul.menu li a {
-        padding: 0 9px;
-        font-size: 12px;
-        font-weight: bold;
+        padding: 0 8px;
+        font-size: 0.9em;
     }
 
     /* drop-down menu */
