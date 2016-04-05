@@ -411,10 +411,6 @@
         margin: 0 20px 0 0;
     }
 
-    .node-teaser .node-content-wrapper {
-        margin-left: 180px;
-    }
-
     .video .node-teaser .node-content-wrapper {
         margin-left: 0px;
     }
@@ -557,10 +553,6 @@
     .node-teaser .field-name-field-image img {
         float: left;
         margin: 0 20px 0 0;
-    }
-
-    .node-teaser .node-content-wrapper {
-        margin-left: 180px;
     }
 
     .video .node-teaser .node-content-wrapper {

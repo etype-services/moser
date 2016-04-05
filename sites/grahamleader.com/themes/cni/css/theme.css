@@ -699,10 +699,6 @@ article .field-image {
     margin-bottom: 0.2em;
 }
 
-.node-teaser .node-content-wrapper {
-    margin-left: 180px;
-}
-
 .node-teaser .field-image .field-name-field-image .field-items .field-item {
     display: none;
 }
