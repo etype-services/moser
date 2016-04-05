@@ -1,16 +1,19 @@
 <?php
 
-drupal_add_css(drupal_get_path('theme', 'bones') . '/css/theme-settings.css', array('group' => CSS_THEME, 'weight' => 100));
+drupal_add_css(drupal_get_path('theme', 'bones') . '/css/theme-settings.css', array(
+  'group' => CSS_THEME,
+  'weight' => 100
+));
 
 // Get the number of columns
 function get_columns() {
-	$grid_size = theme_get_setting('grid_size');
-	$columns = array();
-	for ($grid_unit = 0; $grid_unit <= $grid_size; $grid_unit++) {
-	 $columns[] = $grid_unit;
-	 $columns[$grid_unit] = $grid_unit . ' columns';
-	}
-	return $columns;	
+  $grid_size = theme_get_setting('grid_size');
+  $columns = array();
+  for ($grid_unit = 0; $grid_unit <= $grid_size; $grid_unit++) {
+    $columns[] = $grid_unit;
+    $columns[$grid_unit] = $grid_unit . ' columns';
+  }
+  return $columns;
 }
 
 function bones_form_system_theme_settings_alter(&$form, $form_state) {
@@ -24,29 +27,29 @@ function bones_form_system_theme_settings_alter(&$form, $form_state) {
     '#description' => t('Customize widths of the Preface and Postscript regions.'),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
-		'#weight' => -10,
+    '#weight' => -10,
     '#prefix' => t('<h3> Advanced Settings </h3>')
   );
 
-// Grid Settings		
-	
+  // Grid Settings
+
   $form['advanced_settings']['grid_settings'] = array(
     '#type' => 'fieldset',
     '#title' => t('Grid Settings'),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
-		'#weight' => -10,
-  );	
-	
+    '#weight' => -10,
+  );
+
   $form['advanced_settings']['grid_settings']['grid_size'] = array(
     '#type' => 'select',
     '#title' => t('Grid Size'),
     '#default_value' => theme_get_setting('grid_size'),
-		'#options' => array(
-			12 => t('12 columns')
-		),
-  );	
-	
+    '#options' => array(
+      12 => t('12 columns')
+    ),
+  );
+
   $form['advanced_settings']['grid_settings']['sidebar_grid_settings'] = array(
     '#type' => 'fieldset',
     '#title' => t('Sidebar Grid Settings'),
@@ -54,36 +57,36 @@ function bones_form_system_theme_settings_alter(&$form, $form_state) {
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
     '#attributes' => array(
-				'class' => array('form-inline'),
-     ),
-		 '#prefix' => t('<h3> Sidebar Grid Settings </h3>')
-  );		
-	
+      'class' => array('form-inline'),
+    ),
+    '#prefix' => t('<h3> Sidebar Grid Settings </h3>')
+  );
+
   $form['advanced_settings']['grid_settings']['sidebar_grid_settings']['sidebar_layout'] = array(
     '#type' => 'select',
     '#title' => t('Sidebar Layout'),
     '#default_value' => theme_get_setting('sidebar_layout'),
-		'#options' => array(
-			'sidebars-both-first' => t('Both Sidebars First'),
-			'sidebars-both-second' => t('Both Sidebars Second'),
-			'sidebars-split' => t('Split Sidebars'),
-		),
-  );		
-	
+    '#options' => array(
+      'sidebars-both-first' => t('Both Sidebars First'),
+      'sidebars-both-second' => t('Both Sidebars Second'),
+      'sidebars-split' => t('Split Sidebars'),
+    ),
+  );
+
   $form['advanced_settings']['grid_settings']['sidebar_grid_settings']['sidebar_first_width'] = array(
     '#type' => 'select',
     '#title' => t('Sidebar First'),
     '#default_value' => theme_get_setting('sidebar_first_width'),
     '#options' => $col_number,
   );
-	
+
   $form['advanced_settings']['grid_settings']['sidebar_grid_settings']['sidebar_second_width'] = array(
     '#type' => 'select',
     '#title' => t('Sidebar Second'),
     '#default_value' => theme_get_setting('sidebar_second_width'),
     '#options' => $col_number,
-  );	
-	
+  );
+
   $form['advanced_settings']['grid_settings']['preface_settings'] = array(
     '#type' => 'fieldset',
     '#title' => t('More Grid Settings'),
@@ -91,11 +94,11 @@ function bones_form_system_theme_settings_alter(&$form, $form_state) {
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
     '#attributes' => array(
-				'class' => array('form-inline'),
-     ),
-		 '#prefix' => t('<h3> Preface Grid Widths </h3>')
-  );	
-	
+      'class' => array('form-inline'),
+    ),
+    '#prefix' => t('<h3> Preface Grid Widths </h3>')
+  );
+
   $form['advanced_settings']['grid_settings']['postscript_settings'] = array(
     '#type' => 'fieldset',
     '#title' => t('More Grid Settings'),
@@ -103,50 +106,57 @@ function bones_form_system_theme_settings_alter(&$form, $form_state) {
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
     '#attributes' => array(
-				'class' => array('form-inline'),
-     ),
-		 '#prefix' => t('<h3> Postscript Grid Widths </h3>')
-  );		
-	
-	for ($region_count = 1; $region_count <= 4; $region_count++) {
-		
-		$form['advanced_settings']['grid_settings']['preface_settings']['preface_' . $region_count . '_grid_width'] = array(
-			'#type' => 'select',
-			'#title' => t('Preface ' . $region_count),
-			'#default_value' => theme_get_setting('preface_' . $region_count . '_grid_width'),
-			'#options' => $col_number,
-		);	
-		
-		$form['advanced_settings']['grid_settings']['postscript_settings']['postscript_' . $region_count . '_grid_width'] = array(
-			'#type' => 'select',
-			'#title' => t('Postscript ' . $region_count),
-			'#default_value' => theme_get_setting('postscript_' . $region_count . '_grid_width'),
-			'#options' => $col_number,
-		);			
-		
-	}
+      'class' => array('form-inline'),
+    ),
+    '#prefix' => t('<h3> Postscript Grid Widths </h3>')
+  );
 
-// Misc Settings (Facebook, Twitter, etc.)	
-	
+  for ($region_count = 1; $region_count <= 4; $region_count++) {
+
+    $form['advanced_settings']['grid_settings']['preface_settings']['preface_' . $region_count . '_grid_width'] = array(
+      '#type' => 'select',
+      '#title' => t('Preface ' . $region_count),
+      '#default_value' => theme_get_setting('preface_' . $region_count . '_grid_width'),
+      '#options' => $col_number,
+    );
+
+    $form['advanced_settings']['grid_settings']['postscript_settings']['postscript_' . $region_count . '_grid_width'] = array(
+      '#type' => 'select',
+      '#title' => t('Postscript ' . $region_count),
+      '#default_value' => theme_get_setting('postscript_' . $region_count . '_grid_width'),
+      '#options' => $col_number,
+    );
+
+  }
+
+  // Misc Settings (Facebook, Twitter, etc.)
+
   $form['advanced_settings']['misc_settings'] = array(
     '#type' => 'fieldset',
     '#title' => t('Misc Settings'),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
-  );		
-	
+  );
+
   $form['advanced_settings']['misc_settings']['twitter'] = array(
     '#type' => 'textfield',
     '#title' => t('Twitter URL'),
-		'#size' => 10,
+    '#size' => 10,
     '#default_value' => theme_get_setting('twitter'),
-  );		
-	
+  );
+
   $form['advanced_settings']['misc_settings']['facebook'] = array(
     '#type' => 'textfield',
     '#title' => t('Facebook URL'),
-		'#size' => 10,
+    '#size' => 10,
     '#default_value' => theme_get_setting('facebook'),
-  );		
-	
+  );
+
+  $form['advanced_settings']['misc_settings']['pinterest'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Pinterest URL'),
+    '#size' => 10,
+    '#default_value' => theme_get_setting('pinterest'),
+  );
+
 }
