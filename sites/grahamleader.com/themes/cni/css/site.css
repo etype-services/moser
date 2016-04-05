@@ -95,6 +95,7 @@
         display: block;
         visibility: visible;
     }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -109,6 +110,11 @@
     #block-dfp-cni-crossroadsmobile {
         display: none;
         visibility: hidden;
+    }
+
+    /* main menu */
+    #main-menu ul.menu {
+        margin-left: 1em;
     }
 }
 
