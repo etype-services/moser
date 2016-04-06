@@ -67,9 +67,12 @@ li a.active {
     float: left;
 }
 
+.user-menu-wrapper {
+    height: 34px;
+}
+
 .user-menu  {
     list-style: none;
-
 }
 
 .user-menu li {
