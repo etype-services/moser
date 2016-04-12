@@ -87,6 +87,9 @@ $sites['www.fairfield-recorder.net'] = 'fairfield-recorder.com';
 $sites['thefairfieldrecorder.net'] = 'fairfield-recorder.com';
 $sites['www.thefairfieldrecorder.net'] = 'fairfield-recorder.com';
 
+$sites['fairfieldrecorder.com'] = 'fairfield-recorder.com';
+$sites['www.fairfieldrecorder.com'] = 'fairfield-recorder.com';
+
 /* wimberleyview.etypegoogle4.com */
 $sites['wimberleyview.etypegoogle4.com'] = 'wimberleyview.com';
 $sites['wimberleyview.com'] = 'wimberleyview.com';
@@ -109,3 +112,15 @@ $sites['breckenridgeamerican.com'] = 'breckenridgeamerican.com';
 $sites['www.breckenridgeamerican.com'] = 'breckenridgeamerican.com';
 $sites['prod.breckenridgeamerican.com'] = 'breckenridgeamerican.com';
 $sites['dev.breckenridgeamerican.com'] = 'breckenridgeamerican.com';
+
+$sites['burlesonstar.etypegoogle4.com'] = 'burlesonstar.net';
+$sites['burlesonstar.net'] = 'burlesonstar.net';
+$sites['www.burlesonstar.net'] = 'burlesonstar.net';
+$sites['prod.burlesonstar.net'] = 'burlesonstar.net';
+$sites['dev.burlesonstar.net'] = 'burlesonstar.net';
+
+$sites['hennesseyclipper.etypegoogle4.com'] = 'hennesseyclipper.com';
+$sites['hennesseyclipper.com'] = 'hennesseyclipper.com';
+$sites['www.hennesseyclipper.com'] = 'hennesseyclipper.com';
+$sites['prod.hennesseyclipper.com'] = 'hennesseyclipper.com';
+$sites['dev.hennesseyclipper.com'] = 'hennesseyclipper.com';

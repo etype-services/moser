@@ -1438,3 +1438,10 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
     display: none;
     visibility: hidden;
 }
+
+/* SIMPLE ADS
+--------------------------------------------------------------------------*/
+
+.contextual-links-region #block-simpleads-ad-groups-436 {
+	text-align:center;
+}
