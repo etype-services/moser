@@ -1,0 +1,133 @@
+/* dfp ads */
+
+#dfp-ad-banner > img {
+    max-width: 100% !important;
+}
+
+#block-dfp-sidebar-1 .block-inner .content {
+    padding: 0;
+}
+
+#block-dfp-cni-crossroadsleaderboard {
+    width:728px;
+    margin: 1.6em auto 0 auto;
+}
+
+#block-dfp-cni-crossroadsleaderboard iframe {
+    width:728px;
+    height:90px;
+}
+
+#block-dfp-cni-crossroadssidebar1 {
+    width:300px;
+}
+
+#block-dfp-cni-crossroadssidebar1 iframe {
+    width:300px;
+    height:250px;
+}
+
+#block-dfp-cni-crossroadssidebar2 {
+    width:300px;
+}
+
+#block-dfp-cni-crossroadssidebar2 iframe {
+    width:300px; height:250px;
+}
+
+#block-dfp-cni-crossroadsfooter {
+    width:728px;
+    margin: 5px auto 1.4em;
+}
+
+#block-dfp-cni-crossroadsfooter iframe {
+    width:728px;
+    height:90px;
+}
+
+#block-dfp-cni-crossroadsmobile {
+	width:130px;
+	margin: 1.6em auto 1.6em auto;
+}
+
+/* desktop browsers */
+@media only screen and (min-width: 959px) {
+
+    /* dfp ads */
+    #dfp-ad-cni_crossroadsbanner {
+        width: 468px;
+        margin: 0 auto ;
+    }
+
+    /* main menu */
+    #main-menu ul.menu {
+        margin-left: 0;
+    }
+
+}
+
+/* desktop browsers */
+@media only screen and (min-width: 768px) and (max-width: 958px) {
+
+    /* dfp ads */
+    #dfp-cni-crossroadsbanner {
+        width: 468px;
+        margin: 0 auto;
+    }
+
+    /* main menu */
+    #main-menu ul.menu {
+        margin-left: 0;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    /* Hide larger DFP ads on non full-size browsers */
+    #block-dfp-cni-crossroadsleaderboard, #block-dfp-cni-crossroadsbanner, #block-dfp-cni-crossroadsfooter {
+        display: none;
+        visibility: hidden;
+    }
+
+    /* show mobile ad on smaller windows */
+    #block-dfp-cni-crossroadsmobile {
+        display: block;
+        visibility: visible;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* Hide larger DFP ads on non full-size browsers */
+    #block-dfp-cni-crossroadsleaderboard, #block-dfp-cni-crossroadsbanner, #block-dfp-cni-crossroadsfooter {
+        display: block;
+        visibility: visible;
+    }
+
+    /* show mobile ad on smaller windows */
+    #block-dfp-cni-crossroadsmobile {
+        display: none;
+        visibility: hidden;
+    }
+
+    /* main menu */
+    #main-menu ul.menu {
+        margin-left: 1em;
+    }
+}
+
+
+/* logo */
+.site-logo {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1152px;
+}
+
+.site-logo img {
+    width: 100%;
+    max-width: 1152px;
+}
+

@@ -95,4 +95,17 @@ $sites['prod.wimberleyview.com'] = 'wimberleyview.com';
 $sites['dev.wimberleyview.com'] = 'wimberleyview.com';
 
 $sites['century-news.com'] = 'wimberleyview.com';
-$sites['www.century-news.com'] = 'cwimberleyview.com';
+$sites['www.century-news.com'] = 'wimberleyview.com';
+
+/* olneyenterprise.etypegoogle4.com */
+$sites['olneyenterprise.etypegoogle4.com'] = 'olneyenterprise.com';
+$sites['olneyenterprise.com'] = 'olneyenterprise.com';
+$sites['www.olneyenterprise.com'] = 'olneyenterprise.com';
+$sites['prod.olneyenterprise.com'] = 'olneyenterprise.com';
+$sites['dev.olneyenterprise.com'] = 'olneyenterprise.com';
+
+$sites['breckenridgeamerican.etypegoogle4.com'] = 'breckenridgeamerican.com';
+$sites['breckenridgeamerican.com'] = 'breckenridgeamerican.com';
+$sites['www.breckenridgeamerican.com'] = 'breckenridgeamerican.com';
+$sites['prod.breckenridgeamerican.com'] = 'breckenridgeamerican.com';
+$sites['dev.breckenridgeamerican.com'] = 'breckenridgeamerican.com';
