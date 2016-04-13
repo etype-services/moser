@@ -1442,6 +1442,6 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
 /* SIMPLE ADS
 --------------------------------------------------------------------------*/
 
-.contextual-links-region #block-simpleads-ad-groups-436 {
+.region-main-menu .contextual-links-region #block-simpleads-ad-groups-436 {
 	text-align:center;
 }
