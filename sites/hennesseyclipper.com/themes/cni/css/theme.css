@@ -368,9 +368,7 @@ article .field-image {
 }
 
 /* menus in footer */
-#block-menu-block-2 ul.menu li, #block-menu-block-2 #main-menu ul.menu li, #block-menu-block-2 #user-menu ul.menu li, #block-menu-block-2 #nav-menu ul.menu li,
-#block-menu-block-3 ul.menu li, #block-menu-block-3 #main-menu ul.menu li, #block-menu-block-3 #user-menu ul.menu li, #block-menu-block-3 #nav-menu ul.menu li,
-#block-menu-block-4 ul.menu li {
+#postscript .block-menu-block ul.menu li {
     float: none;
     padding-top: 0;
     padding-right: 0;
