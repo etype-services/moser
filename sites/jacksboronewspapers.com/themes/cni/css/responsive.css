@@ -49,21 +49,6 @@
         background-color: #eaeaea;
     }
 
-    /* legal forms for fernandina */
-    #legals-0-1 {
-        float:left;
-        margin: 2em 0.5em 2em 0;
-    }
-
-    #legals-0-2 {
-        float:left;
-        margin: 2em 0 2em 0.5em;
-    }
-
-    #legals-0-2 ::after {
-        clear: left;
-    }
-
     .page-node.not-logged-in .content .node-content-wrapper {
         margin-top: -13px;
     }
