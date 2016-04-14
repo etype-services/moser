@@ -363,7 +363,7 @@ article .field-image {
 }
 
 /* space out menus */
-.region-postscript-2 .block-menu-block {
+#postscript .block {
     margin-bottom: 1.5em;
 }
 
