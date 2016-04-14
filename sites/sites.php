@@ -124,3 +124,9 @@ $sites['hennesseyclipper.com'] = 'hennesseyclipper.com';
 $sites['www.hennesseyclipper.com'] = 'hennesseyclipper.com';
 $sites['prod.hennesseyclipper.com'] = 'hennesseyclipper.com';
 $sites['dev.hennesseyclipper.com'] = 'hennesseyclipper.com';
+
+$sites['jacksboronewspapers.etypegoogle4.com'] = 'jacksboronewspapers.com';
+$sites['jacksboronewspapers.com'] = 'jacksboronewspapers.com';
+$sites['www.jacksboronewspapers.com'] = 'jacksboronewspapers.com';
+$sites['prod.jacksboronewspapers.com'] = 'jacksboronewspapers.com';
+$sites['dev.jacksboronewspapers.com'] = 'jacksboronewspapers.com';
