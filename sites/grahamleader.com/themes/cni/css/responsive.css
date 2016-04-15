@@ -231,17 +231,6 @@
         color: #ffffff;
     }
 
-    /* legal forms */
-    #legals-0-1 {
-        float:left;
-        margin: 2em 0 0.3em;
-    }
-
-    #legals-0-2 {
-        float:left;
-        margin: 0.3em 0 2em;
-    }
-
     .main-content-wrapper {
         margin-top: 0px;
     }
