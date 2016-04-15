@@ -96,6 +96,12 @@
         visibility: visible;
     }
 
+    /* hide postscript menus completely, temporary solution until I figure out why the .menu list is being hidden*/
+    #postscript .block-menu-block {
+        display: none;
+        visibility: hidden;
+    }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -130,5 +136,4 @@
     width: 100%;
     max-width: 1152px;
 }
-
 

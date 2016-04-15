@@ -6,7 +6,7 @@
         margin: 0;
     }
 
-    ul .menu li ul {
+    #main-menu ul.menu li ul {
         top: 32px;
     }
 
@@ -41,6 +41,7 @@
     #main-menu ul.menu li li a, #main-menu ul.menu li li a.active {
         padding: 0 8px;
         color: #000000;
+        font-size: 0.8em;
     }
 
     #main-menu ul.menu li ul li a:hover,
@@ -71,11 +72,12 @@
         margin: 0;
     }
 
-    #main-menu ul.menu li a, #main-menu ul.menu li li a  {
+    #main-menu ul.menu li a, #main-menu ul.menu li li a, #main-menu ul.menu li li a.active  {
         padding: 0 7px;
+        font-size: 0.8em;
     }
 
-    ul .menu li ul {
+    #main-menu ul.menu li ul {
         top: 32px;
     }
 
@@ -222,17 +224,6 @@
     #main-menu ul.menu li a:hover {
         background: url("../images/mobile_menu.png") no-repeat scroll 7px 8px transparent;
         color: #ffffff;
-    }
-
-    /* legal forms */
-    #legals-0-1 {
-        float:left;
-        margin: 2em 0 0.3em;
-    }
-
-    #legals-0-2 {
-        float:left;
-        margin: 0.3em 0 2em;
     }
 
     .main-content-wrapper {
@@ -510,17 +501,6 @@
     #main-menu ul.menu li a:hover {
         background: url("../images/mobile_menu.png") no-repeat scroll 7px 8px transparent;
         color: #ffffff;
-    }
-
-    /* legal forms */
-    #legals-0-1 {
-        float:left;
-        margin: 2em 0 0.3em;
-    }
-
-    #legals-0-2 {
-        float:left;
-        margin: 0.3em 0 2em;
     }
 
     .node-teaser .field-name-field-image img {

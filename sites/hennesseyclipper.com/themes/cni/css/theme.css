@@ -631,6 +631,7 @@ article .field-image {
 
 #main-menu-second-level ul.menu li li a:hover, #main-menu-second-level ul.menu li li a.active:hover {
     background: #eeeeee;
+    font-size: 0.9em;
 }
 
 #main-menu-second-level ul.menu li ul ul {
