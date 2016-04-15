@@ -6,7 +6,7 @@
         margin: 0;
     }
 
-    ul .menu li ul {
+    #main-menu ul.menu li ul {
         top: 32px;
     }
 
@@ -395,17 +395,6 @@
         color: #ffffff;
     }
 
-    /* legal forms */
-    #legals-0-1 {
-        float:left;
-        margin: 2em 0 0.3em;
-    }
-
-    #legals-0-2 {
-        float:left;
-        margin: 0.3em 0 2em;
-    }
-
     .node-teaser .field-name-field-image img {
         float: left;
         margin: 0 20px 0 0;
@@ -537,17 +526,6 @@
     #main-menu ul.menu li a:hover {
         background: url("../images/mobile_menu.png") no-repeat scroll 7px 8px transparent;
         color: #ffffff;
-    }
-
-    /* legal forms */
-    #legals-0-1 {
-        float:left;
-        margin: 2em 0 0.3em;
-    }
-
-    #legals-0-2 {
-        float:left;
-        margin: 0.3em 0 2em;
     }
 
     .node-teaser .field-name-field-image img {
