@@ -132,7 +132,7 @@ body.front h1{
 
 #block-superfish-1 ul li a.active,  #block-menu-menu-news-categories ul li a:hover {
     background: none repeat scroll 0 0 #FFFFFF;
-   height:30px
+    height:30px;
     color: #333333;
     padding-top: 5px;
 	
