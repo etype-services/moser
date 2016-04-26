@@ -2,9 +2,6 @@
 @media only screen and (min-width: 959px) {
 
     /* main menu */
-    #main-menu ul.menu {
-        margin: 0;
-    }
 
     #main-menu ul.menu li ul {
         top: 32px;
@@ -16,7 +13,7 @@
     }
 
     #block-superfish-1 .content {
-        width: 908px;
+        width: 1000px;
     }
 
     #block-superfish-1 ul #menu-1797-1 {
