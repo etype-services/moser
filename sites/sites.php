@@ -133,13 +133,18 @@ $sites['dev.jacksboronewspapers.com'] = 'jacksboronewspapers.com';
 
 $sites['marlindemocrat.etypegoogle4.com'] = 'marlindemocrat.com';
 $sites['marlindemocrat.com'] = 'marlindemocrat.com';
-$sites['www.jacksboronewspapers.com'] = 'marlindemocrat.com';
+$sites['www.marlindemocrat.com'] = 'marlindemocrat.com';
 $sites['prod.marlindemocrat.com'] = 'marlindemocrat.com';
 $sites['dev.marlindemocrat.com'] = 'marlindemocrat.com';
 
 $sites['cameronherald.etypegoogle4.com'] = 'cameronherald.com';
 $sites['cameronherald.com'] = 'cameronherald.com';
-$sites['www.jacksboronewspapers.com'] = 'cameronherald.com';
+$sites['www.cameronherald.com'] = 'cameronherald.com';
 $sites['prod.cameronherald.com'] = 'cameronherald.com';
 $sites['dev.cameronherald.com'] = 'cameronherald.com';
 
+$sites['aransaspassprogress.etypegoogle4.com'] = 'aransaspassprogress.com';
+$sites['aransaspassprogress.com'] = 'aransaspassprogress.com';
+$sites['www.aransaspassprogress.com'] = 'aransaspassprogress.com';
+$sites['prod.aransaspassprogress.com'] = 'aransaspassprogress.com';
+$sites['dev.aransaspassprogress.com'] = 'aransaspassprogress.com';

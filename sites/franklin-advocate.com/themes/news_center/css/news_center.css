@@ -848,3 +848,6 @@ h2.node-title {
 #block-views-calendar-block-2, #block-poll-recent {background: #E5ECF9; padding: 3px; border: 1px solid #ddd;}
 #block-simpleads-ad-groups-13 img {max-width: 99%; height:auto;}
 .page-node-245 h1 {display:none;}
+
+#block-dfp-tpa-northleaderboard iframe {margin-left: -11px;}
+#block-dfp-tpa-northsidebar {padding:0px;}
