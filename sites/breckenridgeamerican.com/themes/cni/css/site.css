@@ -3,9 +3,12 @@
 
     /* main menu */
     #main-menu ul.menu {
-        margin-left: 4em;
+        margin-left: 0;
     }
 
+    #main-menu ul.menu li.sf-item-2 {
+        margin-left: 4em;
+    }
 }
 
 /* desktop browsers */
