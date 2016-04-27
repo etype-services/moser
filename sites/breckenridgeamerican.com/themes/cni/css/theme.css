@@ -646,6 +646,7 @@ article .field-image {
     margin-left: 0;
     margin-bottom: 0px;
     width: 100%;
+    height: auto
 }
 
 .node .field-name-field-video iframe {

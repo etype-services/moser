@@ -107,21 +107,8 @@
         background-color: #eaeaea;
     }
 
-    /* legal forms */
-    #legals-0-1 {
-        float:left;
-        margin: 2em 0 0.3em;
-    }
-
-    #legals-0-2 {
-        float:left;
-        margin: 0.3em 0 2em;
-    }
-
     /* other */
     .page-node.not-logged-in .field-name-field-image img {
-        width: auto;
-        height: auto;
     }
 
     .page-node.not-logged-in .content .node-content-wrapper {
