@@ -3,7 +3,7 @@
 
     /* main menu */
     #main-menu ul.menu {
-        margin-left: 5em;
+        margin-left: 0;
     }
 
 }
@@ -13,7 +13,7 @@
 
     /* main menu */
     #main-menu ul.menu {
-        margin-left: 3em;
+        margin-left: 0;
     }
 
 }
