@@ -6,11 +6,11 @@
         <?php print render($page['user_menu']); ?>
         <?php print render($page['search_box']); ?>
         <div id="social">
-          <!--                    <ul class="social-links">
-                        <li><a class="facebook" href="<?php echo $facebook ?>"></a></li>
-                        <li><a class="twitter" href="<?php echo $twitter ?>"></a></li>
-                        <li><a class="pinterest" href="<?php echo $pinterest ?>"></a></li>
-                    </ul>-->
+<!--          <ul class="social-links">
+            <li><a class="facebook" href="<?php echo $facebook ?>"></a></li>
+            <li><a class="twitter" href="<?php echo $twitter ?>"></a></li>
+            <li><a class="pinterest" href="<?php echo $pinterest ?>"></a></li>
+          </ul> -->
         </div>
       </nav>
     <?php endif; ?>
@@ -31,7 +31,6 @@
 
       </div>
     </div>
-
   </div>
 </div>
 
@@ -44,9 +43,9 @@
       </nav>
     </div>
   </div>
-  <?php endif; ?>
+<?php endif; ?>
 
-  <?php if ($page['main_menu_second_level']): ?>
+<?php if ($page['main_menu_second_level']): ?>
   <div class="main-menu-second-level-wrapper clearfix">
     <div class="main-menu-second-level-wrapper-inner">
       <nav id="main-menu-second-level">
@@ -54,7 +53,6 @@
       </nav>
     </div>
   </div>
-</div>
 <?php endif; ?>
 
 <div id="page">
@@ -65,8 +63,7 @@
       <div class="main-content-wrapper-inner">
         <section id="main-content">
 
-          <!-- Main 1 -->
-          <div class="main clearfix">
+          <div class="main">
             <div class="main-inner grid_8">
 
               <?php if ($page['slideshow']): ?>
@@ -159,6 +156,5 @@
         </div>
       </div>
     <?php endif; ?>
-
   </div>
 </div><!-- page -->
