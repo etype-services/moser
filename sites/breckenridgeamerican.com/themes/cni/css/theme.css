@@ -642,9 +642,10 @@ article .field-image {
 
 .node .field-name-field-image img {
     display: block;
-    margin-top: -20px;
+    margin-top: 0;
     margin-left: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    width: 100%;
 }
 
 .node .field-name-field-video iframe {
