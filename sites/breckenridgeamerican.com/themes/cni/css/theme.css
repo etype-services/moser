@@ -716,6 +716,7 @@ article .field-image {
     float: left;
     margin: 0 20px 0 0;
     background: url(../images/image-background.png);
+    width: auto;
 }
 
 .node-teaser .field-name-field-video iframe {
