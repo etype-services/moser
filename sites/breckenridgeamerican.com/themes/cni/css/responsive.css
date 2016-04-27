@@ -202,7 +202,7 @@
 
     #main-menu ul.menu li  {
         float: none;
-        list-style: disc;
+        list-style: none;
     }
 
     #main-menu ul.menu li a {
@@ -346,7 +346,7 @@
 
     #main-menu ul.menu li  {
         float: none;
-        list-style: disc;
+        list-style: none;
     }
 
     #main-menu ul.menu li a {
@@ -479,7 +479,7 @@
 
     #main-menu ul.menu li  {
         float: none;
-        list-style: disc;
+        list-style: none;
     }
 
     #main-menu ul.menu li a {
