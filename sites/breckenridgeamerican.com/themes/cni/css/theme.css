@@ -1442,7 +1442,7 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
     visibility: hidden;
 }
 
-blockquote .image-field-caption {
+blockquote.image-field-caption {
     font-family: Lato;
     font-size: 0.8em;
 }
