@@ -30,7 +30,18 @@ function etype_block_view($delta = '') {
  * @return null
  */
 function _etype_social_content() {
+  $output = '';
   $facebook = theme_get_setting('facebook','cni');
-  $output = $facebook;
+  $twitter = theme_get_setting('twitter','cni');
+  $pinterest = theme_get_setting('pinterest','cni');
+  if ( ! empty($facebook)) {
+    $output .= '<div class="facebook"><a href="' . $facebook . '">Like us on Facebook</a></div>';
+  }
+  if ( ! empty($twitter)) {
+    $output .= '<div class="twitter"><a href="' . $twitter . '">Follow us on Twitter</a></div>';
+  }
+  if ( ! empty($pinterest)) {
+    $output .= '<div class="pinterest"><a href="' . $pinterest . '">Follow us on Pinterest</a></div>';
+  }
   return $output;
 }
