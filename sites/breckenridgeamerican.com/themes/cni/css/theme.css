@@ -38,7 +38,7 @@ h2 {
 }
 
 .container_12 {
-    padding: 0;
+    padding: 0 10px;
 }
 
 #page {
@@ -326,7 +326,6 @@ article .field-image {
     display: block;
     margin-left: 20px;
     margin-bottom: 10px;
-    background: url(../images/h3-bg.png) right center repeat-x;
 }
 
 .postscript-wrapper h3 span {
@@ -362,6 +361,27 @@ article .field-image {
 .region-postscript-2 #block-menu-block-2 .menu li.first {
     display: none;
     visibility: hidden;
+}
+
+/* space out menus */
+#postscript .block {
+    margin-bottom: 1.5em;
+}
+
+/* menus in footer */
+#postscript .block-menu-block ul.menu li {
+    float: none;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 10px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    list-style-type: circle;
+    list-style-image: none;
+    list-style-position: inside;
 }
 
 /* FOOTER
@@ -536,7 +556,7 @@ article .field-image {
 
 #block-superfish-1 .content {
     margin: 0 auto;
-    width: 100%;
+    width: 900px;
 }
 
 .sf-menu.sf-style-space li, .sf-menu.sf-style-space li li, .sf-menu.sf-style-space li li li, .sf-menu.sf-style-space.sf-navbar {

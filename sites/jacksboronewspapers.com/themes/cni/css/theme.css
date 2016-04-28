@@ -347,7 +347,7 @@ article .field-image {
     border-bottom: 0 dotted #555555;
 }
 
-#block-block-34 .content div > a {
+#block-etype-social .content div > a {
     margin-left: 1.7em;
 }
 
@@ -432,7 +432,7 @@ article .field-image {
 --------------------------------------------------------------------------*/
 
 #user-menu {
-    margin: 0 -10px;
+    margin: 0;
     border-bottom: 1px solid #dddddd;
     background: #f5f5f5;
 }
@@ -661,9 +661,11 @@ article .field-image {
 
 .node .field-name-field-image img {
     display: block;
-    margin-top: -20px;
+    margin-top: 0;
     margin-left: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    width: 100%;
+    height: auto
 }
 
 .node .field-name-field-video iframe {
@@ -733,6 +735,7 @@ article .field-image {
     float: left;
     margin: 0 20px 0 0;
     background: url(../images/image-background.png);
+    width: auto;
 }
 
 .node-teaser .field-name-field-video iframe {
@@ -1425,6 +1428,16 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
 }
 
 .page-node .node-article .galleria-info-link {
+    display: none;
+    visibility: hidden;
+}
+
+blockquote.image-field-caption {
+    font-family: Lato;
+    font-size: 0.8em;
+}
+
+.views-field-field-image blockquote.image-field-caption {
     display: none;
     visibility: hidden;
 }

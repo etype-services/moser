@@ -6,9 +6,6 @@
         margin-left: 0;
     }
 
-    #main-menu ul.menu li.sf-item-2 {
-        margin-left: 3em;
-    }
 }
 
 /* desktop browsers */
@@ -17,10 +14,6 @@
     /* main menu */
     #main-menu ul.menu {
         margin-left: 0;
-    }
-
-    #main-menu ul.menu li.sf-item-2 {
-        margin-left: 2em;
     }
 
 }
