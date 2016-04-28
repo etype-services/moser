@@ -89,7 +89,3 @@ function cni_preprocess_html(&$vars) {
   }
 
 }
-
-function cni_preprocess_block(&$variables) {
-  var_dump($variables);
-}
