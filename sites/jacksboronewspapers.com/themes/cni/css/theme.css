@@ -347,7 +347,7 @@ article .field-image {
     border-bottom: 0 dotted #555555;
 }
 
-#block-etype-social .content div > a {
+#block-etype-follow .content div > a {
     margin-left: 1.7em;
 }
 
@@ -1346,20 +1346,6 @@ blockquote p {
 .page-classifieds div.views-row {
     border-bottom: 1px #dddddd solid;
     margin-bottom: 1.5em;
-}
-
-
-/* DFP ADS
---------------------------------------------------------------------------*/
-#main-content .block-dfp .block-inner {
-    border: none;
-    border-bottom: none;
-    box-shadow: none;
-    padding: 0;
-}
-
-.block-dfp .content {
-	padding-top: 0;
 }
 
 /* PREMIUM CONTENT
