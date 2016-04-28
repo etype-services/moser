@@ -15,9 +15,6 @@ a:hover, a:focus{
 
 /* General Layout & Theme Styles */
 
-
-
-
 h1, h2, h3 {
 	font-family: "Lucida Grande","Lucida Sans Unicode",Arial,Verdana,sans-serif;
 }
@@ -658,6 +655,11 @@ h2.node-title {
 	
 }
 
+/* hide captions in views */
+.views-field-field-image blockquote.image-field-caption {
+    display: none;
+    visibility: hidden;
+}
 
 /* Footer Region General Styles */
 
