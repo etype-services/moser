@@ -109,6 +109,8 @@
 
     /* other */
     .page-node.not-logged-in .field-name-field-image img {
+        width: auto;
+        height: auto;
     }
 
     .page-node.not-logged-in .content .node-content-wrapper {
