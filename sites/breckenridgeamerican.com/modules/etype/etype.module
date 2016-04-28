@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * Implements hook_block_info().
+ */
+function etype_block_info() {
+  $blocks = array();
+  $blocks['Social'] = array(
+    'info' => t('Social'),
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function etype_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+    case 'Social':
+      $block['subject'] = 'Follow Us';
+      $block['content'] = _etype_social_content();
+      break;
+  }
+  return $block;
+}
+
+function _etype_social_content() {
+  $output = t('Hello world');
+  return $output;
+}
