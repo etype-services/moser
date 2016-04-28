@@ -140,21 +140,28 @@ function bones_form_system_theme_settings_alter(&$form, $form_state) {
 
   $form['advanced_settings']['misc_settings']['twitter'] = array(
     '#type' => 'textfield',
-    '#title' => t('Twitter URL'),
+    '#title' => t('Twitter'),
     '#size' => 10,
     '#default_value' => theme_get_setting('twitter'),
   );
 
+  $form['advanced_settings']['misc_settings']['twitter_widget_id'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Twitter Widget Id'),
+    '#size' => 10,
+    '#default_value' => theme_get_setting('twitter_widget_id'),
+  );
+
   $form['advanced_settings']['misc_settings']['facebook'] = array(
     '#type' => 'textfield',
-    '#title' => t('Facebook URL'),
+    '#title' => t('Facebook'),
     '#size' => 10,
     '#default_value' => theme_get_setting('facebook'),
   );
 
   $form['advanced_settings']['misc_settings']['pinterest'] = array(
     '#type' => 'textfield',
-    '#title' => t('Pinterest URL'),
+    '#title' => t('Pinterest'),
     '#size' => 10,
     '#default_value' => theme_get_setting('pinterest'),
   );
