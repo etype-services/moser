@@ -26,6 +26,7 @@ function etype_block_view($delta = '') {
 }
 
 function _etype_social_content() {
-  $output = t('Hello world');
+  $facebook = theme_get_setting('facebook','cni');
+  $output = $facebook;
   return $output;
 }
