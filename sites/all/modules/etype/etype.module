@@ -9,6 +9,10 @@ function etype_block_info() {
   $blocks['Social'] = array(
     'info' => t('Social'),
   );
+  
+  $blocks['Follow'] = array(
+    'info' => t('Follow'),
+  );
 
   $blocks['Facebook'] = array(
     'info' => t('Facebook'),
@@ -26,11 +30,17 @@ function etype_block_info() {
 function etype_block_view($delta = '') {
   $block = array();
   switch ($delta) {
+
     case 'Social':
-      $block['subject'] = 'Follow Us';
+      $block['subject'] = '';
       $block['content'] = _etype_social_content();
       break;
-
+    
+    case 'Follow':
+      $block['subject'] = 'Follow Us';
+      $block['content'] = _etype_follow_content();
+      break;
+    
     case 'Facebook':
       $block['subject'] = 'Facebook';
       $block['content'] = _etype_facebook_content();
@@ -49,6 +59,30 @@ function etype_block_view($delta = '') {
  * @return null
  */
 function _etype_social_content() {
+  $output = '
+<div id="social">
+    <ul class="social-links">';
+  $facebook = theme_get_setting('facebook','cni');
+  $twitter = theme_get_setting('twitter','cni');
+  $pinterest = theme_get_setting('pinterest','cni');
+  if ( ! empty($facebook)) {
+    $output .= '<li><a class="facebook" href="https://www.facebook.com/' . $facebook . '"></a></li>';
+  }
+  if ( ! empty($twitter)) {
+    $output .= '<li><a class="twitter" href="https://twitter.com/' . $twitter . '"></a></li>';
+  }
+  if ( ! empty($pinterest)) {
+    $output .= '<li><a class="pinterest" href="https://www.pinterest.com/' . $pinterest . '"></a></li>';
+  }
+  $output .= '</ul></div>';
+  return $output;
+}
+
+/**
+ * Follow Block
+ * @return null
+ */
+function _etype_follow_content() {
   $output = '';
   $facebook = theme_get_setting('facebook','cni');
   $twitter = theme_get_setting('twitter','cni');
