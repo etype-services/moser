@@ -52,7 +52,6 @@ function get_grid_info() {
 	}
 	
 	return $grid_info;
-
 }
 
 
