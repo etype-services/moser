@@ -326,7 +326,6 @@ article .field-image {
     display: block;
     margin-left: 20px;
     margin-bottom: 10px;
-    background: url(../images/h3-bg.png) right center repeat-x;
 }
 
 .postscript-wrapper h3 span {
@@ -349,7 +348,7 @@ article .field-image {
     border-bottom: 0 dotted #555555;
 }
 
-#block-block-34 .content div > a {
+#block-etype-follow .content div > a {
     margin-left: 1.7em;
 }
 
@@ -362,6 +361,27 @@ article .field-image {
 .region-postscript-2 #block-menu-block-2 .menu li.first {
     display: none;
     visibility: hidden;
+}
+
+/* space out menus */
+#postscript .block {
+    margin-bottom: 1.5em;
+}
+
+/* menus in footer */
+#postscript .block-menu-block ul.menu li {
+    float: none;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 10px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    list-style-type: circle;
+    list-style-image: none;
+    list-style-position: inside;
 }
 
 /* FOOTER
@@ -413,7 +433,7 @@ article .field-image {
 --------------------------------------------------------------------------*/
 
 #user-menu {
-    margin: 0 -10px;
+    margin: 0;
     border-bottom: 1px solid #dddddd;
     background: #f5f5f5;
 }
@@ -642,9 +662,11 @@ article .field-image {
 
 .node .field-name-field-image img {
     display: block;
-    margin-top: -20px;
+    margin-top: 0;
     margin-left: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    width: 100%;
+    height: auto
 }
 
 .node .field-name-field-video iframe {
@@ -714,6 +736,7 @@ article .field-image {
     float: left;
     margin: 0 20px 0 0;
     background: url(../images/image-background.png);
+    width: auto;
 }
 
 .node-teaser .field-name-field-video iframe {
@@ -1356,20 +1379,6 @@ blockquote p {
     margin-bottom: 1.5em;
 }
 
-
-/* DFP ADS
---------------------------------------------------------------------------*/
-#main-content .block-dfp .block-inner {
-    border: none;
-    border-bottom: none;
-    box-shadow: none;
-    padding: 0;
-}
-
-.block-dfp .content {
-	padding-top: 0;
-}
-
 /* PREMIUM CONTENT
 --------------------------------------------------------------------------*/
 .premium-message {
@@ -1436,6 +1445,16 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
 }
 
 .page-node .node-article .galleria-info-link {
+    display: none;
+    visibility: hidden;
+}
+
+blockquote.image-field-caption {
+    font-family: Lato;
+    font-size: 0.8em;
+}
+
+.views-field-field-image blockquote.image-field-caption {
     display: none;
     visibility: hidden;
 }

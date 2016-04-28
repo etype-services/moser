@@ -2,6 +2,9 @@
 @media only screen and (min-width: 959px) {
 
     /* main menu */
+    #main-menu ul.menu {
+        margin: 0;
+    }
 
     #main-menu ul.menu li ul {
         top: 32px;
@@ -102,17 +105,6 @@
     #main-menu ul.menu li li a:hover,
     #main-menu ul.menu li ul li a.active:hover {
         background-color: #eaeaea;
-    }
-
-    /* legal forms */
-    #legals-0-1 {
-        float:left;
-        margin: 2em 0 0.3em;
-    }
-
-    #legals-0-2 {
-        float:left;
-        margin: 0.3em 0 2em;
     }
 
     /* other */
