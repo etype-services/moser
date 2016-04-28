@@ -116,11 +116,6 @@ h2.block-title /* Block title */
 {
 }
 
-#block-system-user-menu ul /* "User menu" block for Drupal user menu */
-{
-    list-style-type: none;
-}
-
 #block-system-help /* "System help" block */
 {
 }
