@@ -62,3 +62,4 @@ settings[postscript_3_grid_width] = 4
 settings[postscript_4_grid_width] = 0
 settings[facebook] = 'https://www.facebook.com/breckenridgeamerican/'
 settings[twitter] = 'https://twitter.com/breckamerican'
+settings[pinterest] = ''
