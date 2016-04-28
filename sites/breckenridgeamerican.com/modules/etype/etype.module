@@ -5,11 +5,17 @@
  */
 function etype_block_info() {
   $blocks = array();
+
   $blocks['Social'] = array(
     'info' => t('Social'),
   );
+
   $blocks['Facebook'] = array(
     'info' => t('Facebook'),
+  );
+
+  $blocks['Twitter'] = array(
+    'info' => t('Twitter'),
   );
   return $blocks;
 }
@@ -28,6 +34,11 @@ function etype_block_view($delta = '') {
     case 'Facebook':
       $block['subject'] = 'Facebook';
       $block['content'] = _etype_facebook_content();
+      break;
+
+    case 'Twitter':
+      $block['subject'] = 'Twitter';
+      $block['content'] = _etype_twitter_content();
       break;
   }
   return $block;
@@ -54,6 +65,9 @@ function _etype_social_content() {
   return $output;
 }
 
+/**
+ * @return string
+ */
 function _etype_facebook_content() {
   $output = '';
   $facebook = theme_get_setting('facebook','cni');
@@ -61,6 +75,24 @@ function _etype_facebook_content() {
   if ( ! empty($facebook)) {
     $output .= '
  <div class="fb-page" data-href="https://www.facebook.com/' . $facebook . '" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+    ';
+  }
+
+  return $output;
+}
+
+/**
+ * @return string
+ */
+function _etype_twitter_content() {
+  $output = '';
+  $twitter = theme_get_setting('twitter','cni');
+  $twitter_widget_id = theme_get_setting('twitter_widget_id','cni');
+
+  if ( ! empty($twitter)) {
+    $output .= '
+<a class="twitter-timeline" href="https://twitter.com/' . $twitter . '" data-widget-id="' . $twitter_widget_id . '">Tweets by @' . $twitter . '</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?\'http\':\'https\';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     ';
   }
 
