@@ -25,6 +25,10 @@ function etype_block_view($delta = '') {
   return $block;
 }
 
+/**
+ * Social Block
+ * @return null
+ */
 function _etype_social_content() {
   $facebook = theme_get_setting('facebook','cni');
   $output = $facebook;
