@@ -12,7 +12,8 @@
 .sf-menu.sf-style-space a {
   border: 1px outset #000000;
   color: #f1f1f1;
-  padding: 0.75em 1em;
+  padding: 0.75em .75em;
+  
 }
 .sf-menu.sf-style-space a.sf-with-ul {
   padding-right: 2.25em;
@@ -36,20 +37,26 @@
 .sf-menu.sf-style-space li li,
 .sf-menu.sf-style-space li li li,
 .sf-menu.sf-style-space.sf-navbar {
-  background: #333333;
+  background: #007DBF; font-size:13px; text-transform:uppercase;
 }
 .sf-menu.sf-style-space li:hover,
 .sf-menu.sf-style-space li.sfHover,
 .sf-menu.sf-style-space li.active a,
 .sf-menu.sf-style-space a:focus,
 .sf-menu.sf-style-space a:hover,
-.sf-menu.sf-style-space a:active,
+.sf-menu.sf-style-space a:active {
+  background: #575E6E;
+  color: #fff;
+  
+}
+
 .sf-menu.sf-style-space.sf-navbar li li {
-  background: #008ad2;
-  color: #ffffff;
+  background: #575E6E;
+  color: #000;font-size:12px; text-transform:capitalize;
+  
 }
 .sf-menu.sf-style-space.sf-navbar li ul {
-  background-color: #008ad2;
+  background-color: #575E6E;
 }
 .sf-menu.sf-style-space.sf-navbar li ul li ul {
   background-color: transparent;

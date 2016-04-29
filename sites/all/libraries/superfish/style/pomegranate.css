@@ -10,7 +10,7 @@
   padding-left: 0;
 }
 .sf-menu.sf-style-pomegranate a {
-  border: 1px outset #68000e;
+  border: 1px outset #79001C;
   color: #ffebee;
   padding: 0.75em 1em;
 }
@@ -34,13 +34,13 @@
 }
 .sf-menu.sf-style-pomegranate li,
 .sf-menu.sf-style-pomegranate.sf-navbar {
-  background: #79001c;
+  background: #E4332D;text-transform:uppercase; font-size: 15px;
 }
 .sf-menu.sf-style-pomegranate li li{
-  background: #6c0019;
+  background: #E4332D; text-transform:none; font-size:12px;
 }
 .sf-menu.sf-style-pomegranate li li li {
-  background: #5f0016;
+  background: #E4332D;
 }
 .sf-menu.sf-style-pomegranate li:hover,
 .sf-menu.sf-style-pomegranate li.sfHover,
@@ -49,11 +49,11 @@
 .sf-menu.sf-style-pomegranate a:hover,
 .sf-menu.sf-style-pomegranate a:active,
 .sf-menu.sf-style-pomegranate.sf-navbar li li {
-  background: #4c0012;
+  background: #000;
   color: #ffffff;
 }
 .sf-menu.sf-style-pomegranate.sf-navbar li ul {
-  background-color: #4c0012;
+  background-color: #000;
 }
 .sf-menu.sf-style-pomegranate.sf-navbar li ul li ul {
   background-color: transparent;

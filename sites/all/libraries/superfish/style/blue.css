@@ -34,7 +34,7 @@
 }
 .sf-menu.sf-style-blue li,
 .sf-menu.sf-style-blue.sf-navbar {
-  background: #095cb1;
+  background: #366593;
 }
 .sf-menu.sf-style-blue li li {
   background: #0151a4;
@@ -49,11 +49,11 @@
 .sf-menu.sf-style-blue a:hover,
 .sf-menu.sf-style-blue a:active,
 .sf-menu.sf-style-blue.sf-navbar li li {
-  background: #3270c5;
+  background: #366593;
   color: #ffea00;
 }
 .sf-menu.sf-style-blue.sf-navbar li ul {
-  background-color: #3270c5;
+  background-color: #366593;
 }
 .sf-menu.sf-style-blue.sf-navbar li ul li ul {
   background-color: transparent;
