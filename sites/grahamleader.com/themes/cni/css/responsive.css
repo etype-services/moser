@@ -41,7 +41,6 @@
     #main-menu ul.menu li li a, #main-menu ul.menu li li a.active {
         padding: 0 8px;
         color: #000000;
-        font-size: 0.8em;
     }
 
     #main-menu ul.menu li ul li a:hover,
