@@ -1454,7 +1454,14 @@ blockquote.image-field-caption {
     font-size: 0.8em;
 }
 
+/* captions in views */
 .views-field-field-image blockquote.image-field-caption {
+    display: none;
+    visibility: hidden;
+}
+
+/* hide details in calendar month view */
+.view-calendar .month-view .views-field-field-date {
     display: none;
     visibility: hidden;
 }
