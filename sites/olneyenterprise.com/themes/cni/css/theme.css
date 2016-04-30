@@ -1449,12 +1449,14 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
     visibility: hidden;
 }
 
-blockquote.image-field-caption {
-    font-family: Lato;
-    font-size: 0.8em;
+/* own local */
+#block-etype-own-local .block-inner {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
 }
 
-.views-field-field-image blockquote.image-field-caption {
-    display: none;
-    visibility: hidden;
+#block-etype-own-local .block-inner .content {
+    padding: 0;
 }

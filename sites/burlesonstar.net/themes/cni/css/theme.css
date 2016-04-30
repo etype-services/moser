@@ -1457,6 +1457,10 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
     box-shadow: none;
 }
 
+#block-etype-own-local .block-inner .content {
+    padding: 0;
+}
+
 /* hide details in calendar month view */
 .view-calendar .month-view .views-field-field-date {
     display: none;

@@ -1425,3 +1425,7 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
     border: none;
     box-shadow: none;
 }
+
+#block-etype-own-local .block-inner .content {
+    padding: 0;
+}
