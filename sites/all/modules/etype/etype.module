@@ -154,9 +154,7 @@ function _etype_ownlocal_content() {
   $path = path_to_theme();
   $file = '/data/web/public/drupal/' . $path . '/templates/ownlocal.html';
   if (file_exists($file)) {
-    $output .= '<div id="ownlocal">' . "\n";
     $output .= file_get_contents($file);
-    $output .= "\n" . '</div>';
   }
   return $output;
 }
