@@ -15,6 +15,10 @@
         font-size: 1.2em;
     }
 
+    #block-superfish-1 .content {
+        width: 908px;
+    }
+
     #block-superfish-1 ul #menu-1797-1 {
         display: none;
     }
@@ -55,6 +59,10 @@
 @media only screen and (max-width: 958px) and (min-width: 768px) {
 
     /* main menu */
+    #block-superfish-1 .content {
+        width: 900px;
+    }
+
     #block-superfish-1 ul #menu-1797-1 {
         display: none;
     }
@@ -100,6 +108,8 @@
 
     /* other */
     .page-node.not-logged-in .field-name-field-image img {
+        width: auto;
+        height: auto;
     }
 
     .page-node.not-logged-in .content .node-content-wrapper {
