@@ -1454,6 +1454,7 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
     padding: 0;
     margin: 0;
     border: none;
+    box-shadow: none;
 }
 
 /* SIMPLE ADS
