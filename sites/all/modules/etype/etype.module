@@ -152,7 +152,7 @@ function _etype_twitter_content() {
 function _etype_ownlocal_content() {
   $output = '';
   $path = path_to_theme();
-  $file = '../../' . $path . '/templates/ownlocal.html';
+  $file = '../../../' . $path . '/templates/ownlocal.html';
   $output .= $file;
   if (file_exists($file)) {
     $output .= '<div id="ownlocal">' . "\n";
