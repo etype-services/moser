@@ -1449,15 +1449,12 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
     visibility: hidden;
 }
 
-blockquote.image-field-caption {
-    font-family: Lato;
-    font-size: 0.8em;
-}
-
-/* captions in views */
-.views-field-field-image blockquote.image-field-caption {
-    display: none;
-    visibility: hidden;
+/* own local */
+#block-etype-own-local .block-inner {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
 }
 
 /* hide details in calendar month view */
