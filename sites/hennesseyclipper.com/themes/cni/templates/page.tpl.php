@@ -9,7 +9,7 @@
     <?php endif; ?>
 
     <div class="header-wrapper clearfix">
-      <div class="header-wrapper-inner <?php echo $grid_full_width ?>">
+      <div class="header-wrapper-inner">
         <header>
 
           <?php if ($logo): ?>
@@ -28,6 +28,7 @@
 </div>
 
 <?php if ($page['main_menu']): ?>
+<div class="page-inner <?php echo $grid_size ?>">
   <div class="main-menu-wrapper clearfix">
     <div class="main-menu-wrapper-inner">
       <nav id="main-menu">
@@ -35,6 +36,7 @@
       </nav>
     </div>
   </div>
+</div>
 <?php endif; ?>
 
 <?php if ($page['main_menu_second_level']): ?>
