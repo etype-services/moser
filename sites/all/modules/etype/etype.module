@@ -56,7 +56,7 @@ function etype_block_view($delta = '') {
       break;
 
     case 'Own Local':
-      $block['subject'] = 'Own Local';
+      $block['subject'] = '';
       $block['content'] = _etype_ownlocal_content();
       break;
   }
