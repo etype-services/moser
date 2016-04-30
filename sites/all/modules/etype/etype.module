@@ -150,9 +150,11 @@ function _etype_twitter_content() {
  * @return string
  */
 function _etype_ownlocal_content() {
+  $output = '';
   $path = path_to_theme();
-
-  $output = $path;
-
+  $file = '../../' . $path . '/includes/ownlocal.html';
+  if (file_exists($file)) {
+    $output = file_get_contents($file);
+  }
   return $output;
 }
