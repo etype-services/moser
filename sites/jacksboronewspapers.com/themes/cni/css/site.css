@@ -1,28 +1,3 @@
-/* desktop browsers */
-@media only screen and (min-width: 959px) {
-
-    /* main menu */
-    #main-menu ul.menu {
-        margin-left: 10em;
-    }
-
-}
-
-/* desktop browsers */
-@media only screen and (min-width: 768px) and (max-width: 958px) {
-
-    /* main menu */
-    #main-menu ul.menu {
-        margin-left: 9em;
-    }
-
-}
-
-@media only screen and (max-width: 767px) {
-
-}
-
-
 /* logo */
 .site-logo {
     width: 100%;
