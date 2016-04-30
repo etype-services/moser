@@ -9,9 +9,8 @@
     <?php endif; ?>
 
     <div class="header-wrapper clearfix">
-      <div class="header-wrapper-inner <?php echo $grid_full_width ?>">
+      <div class="header-wrapper-inner">
         <header>
-
           <?php if ($logo): ?>
             <div class="site-logo">
             <a href="<?php print check_url($front_page); ?>"><img
