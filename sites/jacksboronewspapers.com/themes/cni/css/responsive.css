@@ -166,6 +166,10 @@
         height: auto;
     }
 
+    #block-superfish-1 .content {
+        width: 710px;
+    }
+
     #block-superfish-1 ul li {
         display: none;
     }
