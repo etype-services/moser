@@ -1,33 +1,3 @@
-/* desktop browsers */
-@media only screen and (min-width: 959px) {
-
-    /* main menu */
-    #main-menu ul.menu {
-        margin-left: 2em;
-    }
-
-}
-
-/* desktop browsers */
-@media only screen and (min-width: 768px) and (max-width: 958px) {
-
-    /* main menu */
-    #main-menu ul.menu {
-        margin-left: 1em;
-    }
-
-}
-
-@media only screen and (max-width: 767px) {
-
-    /* hide postscript menus completely, temporary solution until I figure out why the .menu list is being hidden*/
-    #postscript .block-menu-block {
-        display: none;
-        visibility: hidden;
-    }
-
-}
-
 /* logo */
 .site-logo {
     width: 100%;
