@@ -33,7 +33,7 @@ CKEDITOR.editorConfig = function (config) {
         {name: 'links', items: ['Link', 'Unlink', 'Anchor']},
         {name: 'insert', items: ['Image', 'Table', 'HorizontalRule', 'SpecialChar']},
         '/',
-        {name: 'styles', items: ['Styles', 'Format']},
+        {name: 'styles', items: ['Styles', 'Format', 'Color']},
         {name: 'tools', items: ['Maximize']},
         {name: 'others', items: ['-']},
         {name: 'about', items: ['About']}
