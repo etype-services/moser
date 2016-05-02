@@ -34,20 +34,22 @@ function ownlocal_insert_business_list(returned_businesses) {
 }
 
 function attach_link(biz, element) {
-    var link = $('<a class="image-link" target="_blank">');
-    var image_url, link_href;
-    if (biz.ad_full_image) {
-        link_href = biz.ad_url;
-        image_url = biz.ad_full_image;
-    }
-    else {
-        link_href = biz.link;
-        image_url = biz.image;
-    }
+    (function ($) {
+        var link = $('<a class="image-link" target="_blank">');
+        var image_url, link_href;
+        if (biz.ad_full_image) {
+            link_href = biz.ad_url;
+            image_url = biz.ad_full_image;
+        }
+        else {
+            link_href = biz.link;
+            image_url = biz.image;
+        }
 
-    link.attr('href', link_href);
-    link.data('ad-image', image_url);
-    element.append(link);
+        link.attr('href', link_href);
+        link.data('ad-image', image_url);
+        element.append(link);
+    }(jQuery));
 }
 
 function get_image(e) {
@@ -65,11 +67,11 @@ function get_image(e) {
     var search_field = $('#ownlocal-custom-search-field');
 
     search_field.data('default_text', search_field.val());
-    search_field.on('focus', function () {
+    search_field.focus(function () {
         if ($(this).data('default_text') == $(this).val())
             $(this).val('');
     })
-    search_field.on('blur', function () {
+    search_field.blur(function () {
         if ('' == $(this).val())
             $(this).val($(this).data('default_text'));
     })
