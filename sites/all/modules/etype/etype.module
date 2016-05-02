@@ -159,6 +159,6 @@ function _etype_ownlocal_content() {
   return $output;
 }
 
-drupal_add_js('http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js', 'external');
+// drupal_add_js('http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js', 'external');
 drupal_add_js(drupal_get_path('module', 'etype') . '/ownlocal/ownlocal.js', 'file');
 drupal_add_css(drupal_get_path('module', 'etype') . '/ownlocal/ownlocal.css', array('group' => CSS_THEME, 'type' => 'file'));
