@@ -1,6 +1,6 @@
 // $Id$
 (function ($) {
-    Drupal.behaviors.external = {
+    Drupal.behaviors.ownlocal = {
         attach: function (context, settings) {
             function ownlocal_insert_business_list(returned_businesses) {
                 $(function() {
