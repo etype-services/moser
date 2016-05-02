@@ -85,7 +85,7 @@ function cni_preprocess_html(&$vars) {
    */
   global $user;
   if ($user->uid > 0) {
-    drupal_add_js('sites/all/themes/cni/js/user-menu.js', 'file');
+    drupal_add_js(drupal_get_path('theme', 'cni'). '/js/user-menu.js', 'file');
   }
 
 }
