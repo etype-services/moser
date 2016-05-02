@@ -1,35 +1,33 @@
 function ownlocal_insert_business_list(returned_businesses) {
-    $(function () {
-        list = $("#ownlocal-business-list ul");
-        list.empty();
-        $(returned_businesses).each(function (index, biz) {
-            var new_item = $("#ownlocal-business-list-template li").clone();
-            var info = new_item.find('.ownlocal-business-popup-info');
-            var info_html = '';
-            var website;
+    list = $("#ownlocal-business-list ul");
+    list.empty();
+    $(returned_businesses).each(function (index, biz) {
+        var new_item = $("#ownlocal-business-list-template li").clone();
+        var info = new_item.find('.ownlocal-business-popup-info');
+        var info_html = '';
+        var website;
 
-            new_item.find('.ownlocal-business-link').attr('href', biz.link).text(biz.name);
-            list.append(new_item);
-            info.find('h4 a').attr('href', biz.link).text(biz.name);
+        new_item.find('.ownlocal-business-link').attr('href', biz.link).text(biz.name);
+        list.append(new_item);
+        info.find('h4 a').attr('href', biz.link).text(biz.name);
 
-            if (biz.address) {
-                info_html += "<div class='biz-address'>" + biz.address + "<br/>";
-            }
-            if (biz.address2) {
-                info_html += biz.address2 + "<br/>";
-            }
-            info_html += biz.city + ", " + biz.state + "</div>";
+        if (biz.address) {
+            info_html += "<div class='biz-address'>" + biz.address + "<br/>";
+        }
+        if (biz.address2) {
+            info_html += biz.address2 + "<br/>";
+        }
+        info_html += biz.city + ", " + biz.state + "</div>";
 
-            if (biz.website) {
-                website = biz.website.replace('http://', '');
-                info_html += " <div><a class='customer-site' target='_blank' href='http://" + website + "'>WEBSITE</a></div>";
-            }
+        if (biz.website) {
+            website = biz.website.replace('http://', '');
+            info_html += " <div><a class='customer-site' target='_blank' href='http://" + website + "'>WEBSITE</a></div>";
+        }
 
-            info.find('p').html(info_html);
+        info.find('p').html(info_html);
 
-            attach_link(biz, info);
-            new_item.hover(get_image);
-        });
+        attach_link(biz, info);
+        new_item.hover(get_image);
     });
 }
 
