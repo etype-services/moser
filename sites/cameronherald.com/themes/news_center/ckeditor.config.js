@@ -67,4 +67,7 @@ CKEDITOR.editorConfig = function (config) {
 
     // Simplify the dialog windows.
     config.removeDialogTabs = 'image:advanced;link:advanced';
+
+    config.font_names = 'Arial;Times New Roman;Verdana';
+    config.fontSize_sizes = '16/16px;24/24px;48/48px;';
 };

@@ -158,3 +158,5 @@ function _etype_ownlocal_content() {
   }
   return $output;
 }
+
+drupal_add_css(drupal_get_path('module', 'etype') . '/css/own-local.css', array('group' => CSS_THEME, 'type' => 'file'));
