@@ -77,13 +77,13 @@ function get_image(e) {
     })
 
     // Activate the Dropdown
-    $('#ownlocal-dropdown').on('click', '.dropdown-button a', function () {
+    $('#ownlocal-dropdown').click('.dropdown-button a', function () {
         $('#ownlocal-dropdown .dropdown-container').toggleClass('active');
     });
-    $('#ownlocal-dropdown').on('mouseleave', '.dropdown-container', function () {
+    $('#ownlocal-dropdown').mouseleave('.dropdown-container', function () {
         $(this).removeClass('active');
     });
-    $('#ownlocal-dropdown').on('click', 'li', function () {
+    $('#ownlocal-dropdown').click('li', function () {
         $('#ownlocal-dropdown .dropdown-container').addClass('active');
     });
 })(jQuery);
