@@ -16,7 +16,7 @@ $sites['www.meridiantribune.com'] = 'bosquecountytoday.com';
 $sites['prod.meridiantribune.com'] = 'bosquecountytoday.com';
 $sites['dev.meridiantribune.com'] = 'bosquecountytoday.com';
 
-
+/* dewittcountytoday.etypegoogle4.com */
 $sites['dewittcountytoday.etypegoogle4.com'] = 'dewittcountytoday.com';
 $sites['dewittcountytoday.com'] = 'dewittcountytoday.com';
 $sites['www.dewittcountytoday.com'] = 'dewittcountytoday.com';
@@ -38,6 +38,7 @@ $sites['www.cuerorecord.com'] = 'dewittcountytoday.com';
 $sites['prod.cuerorecord.com'] = 'dewittcountytoday.com';
 $sites['dev.cuerorecord.com'] = 'dewittcountytoday.com';
 
+/* drippingspringsnews.etypegoogle4.com */
 $sites['drippingspringsnews.etypegoogle4.com'] = 'drippingspringsnews.com';
 $sites['drippingspringsnews.com'] = 'drippingspringsnews.com';
 $sites['www.drippingspringsnews.com'] = 'drippingspringsnews.com';
@@ -68,11 +69,15 @@ $sites['www.burnetbulletin.com'] = 'burnetbulletin.com';
 $sites['prod.burnetbulletin.com'] = 'burnetbulletin.com';
 $sites['dev.burnetbulletin.com'] = 'burnetbulletin.com';
 
+/* grahamleader.etypegoogle4.com */
 $sites['grahamleader.etypegoogle4.com'] = 'grahamleader.com';
 $sites['grahamleader.com'] = 'grahamleader.com';
 $sites['www.grahamleader.com'] = 'grahamleader.com';
 $sites['prod.grahamleader.com'] = 'grahamleader.com';
 $sites['dev.grahamleader.com'] = 'grahamleader.com';
+
+$sites['lakecountrysun.com'] = 'grahamleader.com';
+$sites['www.lakecountrysun.com'] = 'grahamleader.com';
 
 /* fairfield-recorder.etypegoogle4.com */
 $sites['fairfield-recorder.etypegoogle4.com'] = 'fairfield-recorder.com';
@@ -113,12 +118,26 @@ $sites['www.breckenridgeamerican.com'] = 'breckenridgeamerican.com';
 $sites['prod.breckenridgeamerican.com'] = 'breckenridgeamerican.com';
 $sites['dev.breckenridgeamerican.com'] = 'breckenridgeamerican.com';
 
+/* burlesonstar.etypegoogle4.com */
 $sites['burlesonstar.etypegoogle4.com'] = 'burlesonstar.net';
 $sites['burlesonstar.net'] = 'burlesonstar.net';
 $sites['www.burlesonstar.net'] = 'burlesonstar.net';
 $sites['prod.burlesonstar.net'] = 'burlesonstar.net';
 $sites['dev.burlesonstar.net'] = 'burlesonstar.net';
 
+$sites['crowleystar.net'] = 'burlesonstar.net';
+$sites['www.crowleystar.net'] = 'burlesonstar.net';
+
+$sites['joshuastar.net'] = 'burlesonstar.net';
+$sites['www.joshuastar.net'] = 'burlesonstar.net';
+
+$sites['keenestar.net'] = 'burlesonstar.net';
+$sites['www.keenestar.net'] = 'burlesonstar.net';
+
+$sites['alvaradostar.net'] = 'burlesonstar.net';
+$sites['www.alvaradostar.net'] = 'burlesonstar.net';
+
+/* hennesseyclipper.etypegoogle4.com */
 $sites['hennesseyclipper.etypegoogle4.com'] = 'hennesseyclipper.com';
 $sites['hennesseyclipper.com'] = 'hennesseyclipper.com';
 $sites['www.hennesseyclipper.com'] = 'hennesseyclipper.com';
@@ -148,3 +167,71 @@ $sites['aransaspassprogress.com'] = 'aransaspassprogress.com';
 $sites['www.aransaspassprogress.com'] = 'aransaspassprogress.com';
 $sites['prod.aransaspassprogress.com'] = 'aransaspassprogress.com';
 $sites['dev.aransaspassprogress.com'] = 'aransaspassprogress.com';
+
+$sites['jacksonconews.etypegoogle4.com'] = 'jacksonconews.com';
+$sites['dev.jacksonconews.com'] = 'jacksonconews.com';
+$sites['prod.jacksonconews.com'] = 'jacksonconews.com';
+$sites['www.jacksonconews.com'] = 'jacksonconews.com';
+$sites['jacksonconews.com'] = 'jacksonconews.com';
+
+/* atlantacitizensjournal.etypegoogle4.com */
+$sites['atlantacitizensjournal.etypegoogle4.com'] = 'atlantacitizensjournal.com';
+$sites['dev.atlantacitizensjournal.com'] = 'atlantacitizensjournal.com';
+$sites['prod.atlantacitizensjournal.com'] = 'atlantacitizensjournal.com';
+$sites['www.atlantacitizensjournal.com'] = 'atlantacitizensjournal.com';
+$sites['atlantacitizensjournal.com'] = 'atlantacitizensjournal.com';
+
+$sites['www.casscountynow.com'] = 'atlantacitizensjournal.com';
+$sites['casscountynow.com'] = 'atlantacitizensjournal.com';
+
+$sites['www.casscountysun.com'] = 'atlantacitizensjournal.com';
+$sites['casscountysun.com'] = 'atlantacitizensjournal.com';
+
+$sites['www.theatlantacitizensjournal.com'] = 'atlantacitizensjournal.com';
+$sites['theatlantacitizensjournal.com'] = 'atlantacitizensjournal.com';
+
+/* campcountynow.etypegoogle4.com */
+$sites['campcountynow.etypegoogle4.com'] = 'campcountynow.com';
+$sites['dev.campcountynow.com'] = 'campcountynow.com';
+$sites['prod.campcountynow.com'] = 'campcountynow.com';
+$sites['www.campcountynow.com'] = 'campcountynow.com';
+$sites['campcountynow.com'] = 'campcountynow.com';
+
+$sites['www.thepittsburggazette.com'] = 'campcountynow.com';
+$sites['thepittsburggazette.com'] = 'campcountynow.com';
+
+/* bowiecountynow.etypegoogle4.com*/
+$sites['bowiecountynow.etypegoogle4.com'] = 'bowiecountynow.com';
+$sites['dev.bowiecountynow.com'] = 'bowiecountynow.com';
+$sites['prod.bowiecountynow.com'] = 'bowiecountynow.com';
+$sites['www.bowiecountynow.com'] = 'bowiecountynow.com';
+$sites['bowiecountynow.com'] = 'bowiecountynow.com';
+
+$sites['www.bowiecountycitizenstribune.com'] = 'bowiecountynow.com';
+$sites['bowiecountycitizenstribune.com'] = 'bowiecountynow.com';
+
+$sites['www.bowiecountycitizens.com'] = 'bowiecountynow.com';
+$sites['bowiecountycitizens.com'] = 'bowiecountynow.com';
+
+$sites['www.bowiecountycitizen.com'] = 'bowiecountynow.com';
+$sites['bowiecountycitizen.com'] = 'bowiecountynow.com';
+
+/* steelcountrybee.etypegoogle4.com */
+$sites['steelcountrybee.etypegoogle4.com'] = 'steelcountrybee.com';
+$sites['dev.steelcountrybee.com'] = 'steelcountrybee.com';
+$sites['prod.steelcountrybee.com'] = 'steelcountrybee.com';
+$sites['www.steelcountrybee.com'] = 'steelcountrybee.com';
+$sites['steelcountrybee.com'] = 'steelcountrybee.com';
+
+$sites['www.thedaingerfieldbee.com'] = 'steelcountrybee.com';
+$sites['thedaingerfieldbee.com'] = 'steelcountrybee.com';
+
+/* themexianews.etypegoogle4.com */
+$sites['themexianews.etypegoogle4.com'] = 'themexianews.com';
+$sites['dev.themexianews.com'] = 'themexianews.com';
+$sites['prod.themexianews.com'] = 'themexianews.com';
+$sites['www.themexianews.com'] = 'themexianews.com';
+$sites['themexianews.com'] = 'themexianews.com';
+
+$sites['www.mexiadailynews.com'] = 'themexianews.com';
+$sites['mexiadailynews.com'] = 'themexianews.com';
