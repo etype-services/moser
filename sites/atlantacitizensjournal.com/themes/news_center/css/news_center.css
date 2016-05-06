@@ -842,8 +842,8 @@ h2.node-title {
 #block-menu-menu-secondary-menu li {display:inline; height: 20px; padding: 0px; margin-bottom:-10px;}
 #block-menu-menu-secondary-menu {float: right; display:block; clear:both; width: 100%; text-align: right}
 
-#block-simpleads-ad-groups-12, #block-simpleads-ad-groups-15, #block-simpleads-ad-groups-25 {background: transparent; margin-left: -10px;}
-#block-simpleads-ad-groups-12 img, #block-simpleads-ad-groups-15 img, #block-simpleads-ad-groups-25 img {width: 290px; height: auto; margin-bottom: 10px;}
+#block-simpleads-ad-groups-12, #block-simpleads-ad-groups-15, #block-simpleads-ad-groups-25 {background: transparent; width:300px;}
+#block-simpleads-ad-groups-12 img, #block-simpleads-ad-groups-15 img, #block-simpleads-ad-groups-25 img {margin-bottom: 10px;}
 
 .calendar-calendar {margin-top:-20px;}
 
