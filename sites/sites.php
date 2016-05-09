@@ -235,3 +235,7 @@ $sites['themexianews.com'] = 'themexianews.com';
 
 $sites['www.mexiadailynews.com'] = 'themexianews.com';
 $sites['mexiadailynews.com'] = 'themexianews.com';
+
+/* inglesideindex.etypegoogle4.com */
+$sites['www.inglesideindex.com'] = 'inglesideindex.com';
+$sites['inglesideindex.com'] = 'inglesideindex.com';
