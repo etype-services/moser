@@ -173,7 +173,7 @@ function _etype_e_edition_content() {
   $site_name = variable_get('site_name', 'Drupal');
   global $user;
   $username = $user->name;
-  $arr = preg_split("/ID(0-9)+/", $site_name);
+  $arr = preg_split("/ID(0-9)+/", $e_edition);
   $fixed = $arr[0];
 
   $output= '
