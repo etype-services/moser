@@ -173,9 +173,11 @@ function _etype_e_edition_content() {
   $site_name = variable_get('site_name', 'Drupal');
   global $user;
   $username = $user->name;
+  $arr = preg_split("/ID(0-9)+/", $site_name);
+  $fixed = $arr[0];
 
   $output= '
-<p class="rtecenter" style="text-align: center;"><a href="http://etypeservices.com/' . $e_edition . '/"><img src="http://etypeservices.com/LandingPageImages/Hennessey%20Clipper/currentpg1.jpg" width="193"></a></p><h4 class="rtecenter" style="text-align: center;"><a href="http://etypeservices.com/' . $e_edition . '/">CLICK HERE TO READ ' . $site_name . '</a></h4>
+<p class="rtecenter" style="text-align: center;"><a href="http://etypeservices.com/' . $e_edition . '/"><img src="http://etypeservices.com/LandingPageImages/' . $fixed . '/currentpg1.jpg" width="193"></a></p><h4 class="rtecenter" style="text-align: center;"><a href="http://etypeservices.com/' . $e_edition . '/">Click here to read ' . $site_name . '</a></h4>
 ';
   return $output;
 }
