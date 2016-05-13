@@ -25,6 +25,10 @@ function etype_block_info() {
   $blocks['Own Local'] = array(
     'info' => t('Own Local'),
   );
+
+  $blocks['e-Edition'] = array(
+    'info' => t('e-Edition'),
+  );
   return $blocks;
 }
 
@@ -58,6 +62,11 @@ function etype_block_view($delta = '') {
     case 'Own Local':
       $block['subject'] = '';
       $block['content'] = _etype_ownlocal_content();
+      break;
+
+    case 'e-Edition':
+      $block['subject'] = '';
+      $block['content'] = _etype_e_edition_content();
       break;
   }
   return $block;
@@ -156,6 +165,18 @@ function _etype_ownlocal_content() {
   if (file_exists($file)) {
     $output .= file_get_contents($file);
   }
+  return $output;
+}
+
+function _etype_e_edition_content() {
+  $e_edition = theme_get_setting('e_edition','cni');
+  $site_name = variable_get('site_name', 'Drupal');
+  global $user;
+  $username = $user->name;
+
+  $output= '
+<p class="rtecenter" style="text-align: center;"><a href="http://etypeservices.com/' . $e_edition . '/"><img src="http://etypeservices.com/LandingPageImages/Hennessey%20Clipper/currentpg1.jpg" width="193"></a></p><h4 class="rtecenter" style="text-align: center;"><a href="http://etypeservices.com/' . $e_edition . '/">CLICK HERE TO READ ' . $site_name . '</a></h4>
+';
   return $output;
 }
 
