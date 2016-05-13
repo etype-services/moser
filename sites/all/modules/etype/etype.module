@@ -172,6 +172,7 @@ function _etype_e_edition_content() {
   $e_edition = theme_get_setting('e_edition','cni');
   $site_name = variable_get('site_name', 'Drupal');
   $arr = preg_split("/ID(0-9)+/", $e_edition);
+  var_dump($arr);
   $fixed = $arr[0];
 
   $output= '
