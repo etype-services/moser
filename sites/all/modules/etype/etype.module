@@ -171,8 +171,6 @@ function _etype_ownlocal_content() {
 function _etype_e_edition_content() {
   $e_edition = theme_get_setting('e_edition','cni');
   $site_name = variable_get('site_name', 'Drupal');
-  global $user;
-  $username = $user->name;
   $arr = preg_split("/ID(0-9)+/", $e_edition);
   $fixed = $arr[0];
 
