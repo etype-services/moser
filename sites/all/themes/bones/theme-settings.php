@@ -166,4 +166,18 @@ function bones_form_system_theme_settings_alter(&$form, $form_state) {
     '#default_value' => theme_get_setting('pinterest'),
   );
 
+  $form['advanced_settings']['misc_settings']['instagram'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Instagram'),
+    '#size' => 10,
+    '#default_value' => theme_get_setting('instagram'),
+  );
+
+  $form['advanced_settings']['misc_settings']['e_edition'] = array(
+    '#type' => 'textfield',
+    '#title' => t('e-Edition'),
+    '#size' => 10,
+    '#default_value' => theme_get_setting('e_edition'),
+  );
+
 }
