@@ -5,11 +5,6 @@
             <nav id="user-menu" class="clearfix">
                 <?php print render($page['user_menu']); ?>
                 <?php print render($page['search_box']); ?>
-                <div id="social">
-                    <ul class="social-links">
-                        <li><a class="facebook" href="<?php echo $facebook ?>"></a></li>
-                    </ul>
-                </div>
             </nav>
         <?php endif; ?>
 
