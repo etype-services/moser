@@ -185,7 +185,7 @@ drupal_add_css(drupal_get_path('module', 'etype') . '/ownlocal/ownlocal.css', ar
 
 function etype_menu() {
 
-  /* add e-Edition link */
+  /* add e-Edition link to user menu */
   $e_edition = theme_get_setting('e_edition','cni');
   $path = 'http://etypeservices.com/' . $e_edition . '/';
   $items = array();
