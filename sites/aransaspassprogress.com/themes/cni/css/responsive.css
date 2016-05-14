@@ -12,11 +12,11 @@
 
     #main-menu ul.menu li a, #main-menu ul.menu li li a {
         padding: 0 8px;
-        font-size: 0.9em;
+        font-size: 1.2em;
     }
 
     #block-superfish-1 .content {
-        width: 908px;
+        width: 1011px;
     }
 
     #block-superfish-1 ul #menu-1797-1 {
@@ -74,7 +74,7 @@
 
     #main-menu ul.menu li a, #main-menu ul.menu li li a, #main-menu ul.menu li li a.active  {
         padding: 0 7px;
-        font-size: 0.8em;
+        font-size: 1.1em;
     }
 
     #main-menu ul.menu li ul {
@@ -105,17 +105,6 @@
     #main-menu ul.menu li li a:hover,
     #main-menu ul.menu li ul li a.active:hover {
         background-color: #eaeaea;
-    }
-
-    /* legal forms */
-    #legals-0-1 {
-        float:left;
-        margin: 2em 0 0.3em;
-    }
-
-    #legals-0-2 {
-        float:left;
-        margin: 0.3em 0 2em;
     }
 
     /* other */
@@ -189,7 +178,7 @@
     }
 
     #block-superfish-1 .content {
-        width: auto;
+        width: 710px;
     }
 
     #block-superfish-1 ul li {
