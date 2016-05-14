@@ -183,8 +183,12 @@ function _etype_e_edition_content() {
 drupal_add_js(drupal_get_path('module', 'etype') . '/ownlocal/ownlocal.js', 'file');
 drupal_add_css(drupal_get_path('module', 'etype') . '/ownlocal/ownlocal.css', array('group' => CSS_THEME, 'type' => 'file'));
 
+function etype_menu() {
+  _etype_add_e_edition_link();
+}
+
 /* add e-Edition link */
-function etype_add_e_edition_link() {
+function _etype_add_e_edition_link() {
   $e_edition = theme_get_setting('e_edition','cni');
   $item = array(
     'link_path' => 'http://etypeservices.com/' . $e_edition . '/',
