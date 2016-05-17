@@ -182,3 +182,8 @@ $sites['mexiadailynews.com'] = 'themexianews.com';
 $sites['inglesideindex.etypegoogle4.com'] = 'inglesideindex.com';
 $sites['www.inglesideindex.com'] = 'inglesideindex.com';
 $sites['inglesideindex.com'] = 'inglesideindex.com';
+
+/* fredericksburgstandard.etypegoogle4.com */
+$sites['fredericksburgstandard.etypegoogle4.com'] = 'fredericksburgstandard.com';
+$sites['www.fredericksburgstandard.com'] = 'fredericksburgstandard.com';
+$sites['fredericksburgstandard.com'] = 'fredericksburgstandard.com';
