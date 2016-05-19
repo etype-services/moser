@@ -15,6 +15,10 @@
     background-color: #000000;
 }
 
+#main-menu ul.menu li a {
+    color: #ffffff;
+}
+
 @media only screen and (min-width: 959px) {
 
     /* main-menu site-specific options */
