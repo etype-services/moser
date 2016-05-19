@@ -495,13 +495,16 @@
 
     #block-superfish-1 ul li:first-child a, #block-superfish-1 ul li:first-child a.active {
         color: #000000;
-        background: url("../images/hamburger-menu.png") no-repeat #000000;
-
+        background: url("../images/hamburger-menu.png") no-repeat 7px 0 #000000;
     }
 
     #block-superfish-1 ul li:first-child a:hover {
         color: #CCCCCC;
-        background: url("../images/hamburger-menu.png") no-repeat scroll 7px 8px #CCCCCC;
+        background: url("../images/hamburger-menu.png") no-repeat 7px 0 #CCCCCC;
+    }
+
+    #block-superfish-1 ul li:first-child a span {
+        display: none;
     }
 
     /* end menu */

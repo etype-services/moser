@@ -51,9 +51,7 @@
     Drupal.behaviors.superfish = {
         attach: function (context) {
             var obj = $('#block-superfish-1 ul li.sf-depth-1:first-child a');
-            $(this).text('');
             obj.click(function(e){
-                var text = $(this).text();
                 e.preventDefault();
                 $('#block-superfish-1 ul li.sf-depth-1:not(:first-child)').toggle();
             });
