@@ -39,7 +39,7 @@ h2 {
 }
 
 .container_12 {
-    padding: 0 10px;
+    padding: 10px;
 }
 
 #page {
@@ -260,7 +260,7 @@ h3.site-slogan {
 --------------------------------------------------------------------------*/
 
 .main-content-wrapper {
-    margin-top: 20px;
+
 }
 
 #main-content .block-inner, #preface .block-inner, h1#page-title {
