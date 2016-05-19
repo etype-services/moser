@@ -441,11 +441,6 @@
 /* smaller phones */
 @media only screen and (max-width: 420px) {
 
-    .region-headerad {
-        float: left;
-        margin: 0.2em 0 1em 1em;
-    }
-
     /* main menu */
     #main-menu ul.menu {
         margin: 0;
@@ -477,10 +472,10 @@
         color: #ffffff;
         display: block;
         font-weight: bold;
-        height: 27px;
+        height: 33px;
         margin-top: 0;
-        padding: 7px 15px 0 26px;
-        line-height: 22px;
+        padding: 0 15px 0 26px;
+        line-height: 33px;
         text-decoration: none;
         -moz-transition: background-color 0.1s ease-out;
         -o-transition: background-color 0.1s ease-out;
