@@ -178,8 +178,9 @@
         background-color: #000000;
     }
 
-    #block-superfish-1 ul li:first-child a {
+    #block-superfish-1 ul li:first-child a, #block-superfish-1 ul li:first-child a.active {
         color: #ffffff;
+        background-color: #000000;
     }
 
     #main-menu ul.menu li {
