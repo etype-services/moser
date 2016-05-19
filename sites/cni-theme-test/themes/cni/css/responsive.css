@@ -175,7 +175,11 @@
 
     #block-superfish-1 ul li:first-child {
         display: list-item;
+        background-color: #000000;
+    }
 
+    #block-superfish-1 ul li:first-child a {
+        color: #ffffff;
     }
 
     #main-menu ul.menu li {
@@ -202,6 +206,11 @@
     #main-menu ul.menu li a:hover {
         background: url("../images/mobile_menu.png") no-repeat scroll 7px 8px transparent;
         color: #ffffff;
+    }
+
+    #block-superfish-1 ul li:first-child a {
+        display: list-item;
+
     }
 
     .main-content-wrapper {
