@@ -435,13 +435,14 @@ article .field-image {
     margin: 0;
     border-bottom: 1px solid #dddddd;
     background: #f5f5f5;
+    font-family: 'Lato', sans-serif;
 }
 
 #user-menu ul.menu li a {
     display: block;
-    line-height: 20px;
+    line-height: 18px;
     font-size: 11px;
-    padding: 0 20px;
+    padding: 1px 20px 0;
     text-transform: uppercase;
     border-right: 1px solid #dddddd;
     color: #111111;
