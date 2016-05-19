@@ -467,17 +467,6 @@
         display: none;
     }
 
-    #block-superfish-1 ul li:first-child {
-        display: list-item;
-        background-color: #000000;
-    }
-
-    #block-superfish-1 ul li:first-child a, #block-superfish-1 ul li:first-child a.active {
-        color: #ffffff;
-        background-color: #000000;
-        font-style: italic;
-    }
-
     #main-menu ul.menu li {
         float: none;
         list-style: none;
@@ -503,6 +492,19 @@
         background-color: #cccccc;
         color: #000000;
     }
+
+    #block-superfish-1 ul li:first-child {
+        display: list-item;
+        background-color: #000000;
+    }
+
+    #block-superfish-1 ul li:first-child a, #block-superfish-1 ul li:first-child a.active, , #block-superfish-1 ul li:first-child a:hover {
+        color: #ffffff;
+        background-color: #000000;
+        font-style: italic;
+    }
+
+    /* end menu */
 
     .node-teaser .field-name-field-image img {
         float: left;
