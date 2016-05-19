@@ -212,7 +212,6 @@
 
     #block-superfish-1 ul li:first-child a {
         display: list-item;
-
     }
 
     .main-content-wrapper {
@@ -501,8 +500,8 @@
     }
 
     #main-menu ul.menu li a:hover {
-        background: url("../images/mobile_menu.png") no-repeat scroll 7px 8px transparent;
-        color: #ffffff;
+        background-color: #cccccc;
+        color: #000000;
     }
 
     .node-teaser .field-name-field-image img {
