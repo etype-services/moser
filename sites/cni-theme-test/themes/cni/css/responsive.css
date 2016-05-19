@@ -161,6 +161,11 @@
 /* smaller browsers, tablets */
 @media only screen and (max-width: 767px) and (min-width: 480px) {
 
+    /* main menu */
+    #main-menu ul.menu {
+        margin: 0;
+    }
+
     #superfish-1 {
         display: block !important;
     }
@@ -169,19 +174,12 @@
         height: auto;
     }
 
+    #block-superfish-1 .content {
+        width: auto;
+    }
+
     #block-superfish-1 ul li {
         display: none;
-    }
-
-    #block-superfish-1 ul li:first-child {
-        display: list-item;
-        background-color: #000000;
-    }
-
-    #block-superfish-1 ul li:first-child a, #block-superfish-1 ul li:first-child a.active {
-        color: #ffffff;
-        background-color: #000000;
-        font-style: italic;
     }
 
     #main-menu ul.menu li {
@@ -194,29 +192,36 @@
         color: #ffffff;
         display: block;
         font-weight: bold;
-        height: 27px;
+        height: 33px;
         margin-top: 0;
-        padding: 7px 15px 0 26px;
-        line-height: 22px;
+        padding: 0 15px 0 26px;
+        line-height: 33px;
         text-decoration: none;
-        -moz-transition: background-color 0.5s ease-out;
-        -o-transition: background-color 0.5s ease-out;
-        -webkit-transition: background-color 0.5s ease-out;
-        transition: background-color 0.5s ease-out;
+        -moz-transition: background-color 0.1s ease-out;
+        -o-transition: background-color 0.1s ease-out;
+        -webkit-transition: background-color 0.1s ease-out;
+        transition: background-color 0.1s ease-out;
     }
 
     #main-menu ul.menu li a:hover {
-        background: url("../images/mobile_menu.png") no-repeat scroll 7px 8px transparent;
-        color: #ffffff;
+        background: url("../images/mobile_menu.png") no-repeat scroll 7px 8px #cccccc;
+        color: #000000;
     }
 
-    #block-superfish-1 ul li:first-child a {
+    #block-superfish-1 ul li:first-child {
         display: list-item;
+        background-color: #000000;
     }
 
-    .main-content-wrapper {
-        margin-top: 0px;
+    #block-superfish-1 ul li:first-child a, #block-superfish-1 ul li:first-child a.active, #block-superfish-1 ul li:first-child a:hover {
+        background: url("../images/hamburger-menu.png") no-repeat 7px 0 #000000;
     }
+
+    #block-superfish-1 ul li:first-child a span {
+        display: none;
+    }
+
+    /* end menu */
 
     .node-teaser .field-name-field-image img {
         float: none;
@@ -302,14 +307,9 @@
 /* larger phones */
 @media only screen and (max-width: 479px) and (min-width: 421px) {
 
-    .region-headerad {
-        float: left;
-        margin: 0.2em 0 1em 5em;
-    }
-
     /* main menu */
     #main-menu ul.menu {
-        margin: 0 0 0 1em;
+        margin: 0;
     }
 
     #superfish-1 {
@@ -328,17 +328,6 @@
         display: none;
     }
 
-    #block-superfish-1 ul li:first-child {
-        display: list-item;
-        background-color: #000000;
-    }
-
-    #block-superfish-1 ul li:first-child a, #block-superfish-1 ul li:first-child a.active {
-        color: #ffffff;
-        background-color: #000000;
-        font-style: italic;
-    }
-
     #main-menu ul.menu li {
         float: none;
         list-style: none;
@@ -349,21 +338,36 @@
         color: #ffffff;
         display: block;
         font-weight: bold;
-        height: 27px;
+        height: 33px;
         margin-top: 0;
-        padding: 7px 15px 0 26px;
-        line-height: 22px;
+        padding: 0 15px 0 26px;
+        line-height: 33px;
         text-decoration: none;
-        -moz-transition: background-color 0.5s ease-out;
-        -o-transition: background-color 0.5s ease-out;
-        -webkit-transition: background-color 0.5s ease-out;
-        transition: background-color 0.5s ease-out;
+        -moz-transition: background-color 0.1s ease-out;
+        -o-transition: background-color 0.1s ease-out;
+        -webkit-transition: background-color 0.1s ease-out;
+        transition: background-color 0.1s ease-out;
     }
 
     #main-menu ul.menu li a:hover {
-        background: url("../images/mobile_menu.png") no-repeat scroll 7px 8px transparent;
-        color: #ffffff;
+        background: url("../images/mobile_menu.png") no-repeat scroll 7px 8px #cccccc;
+        color: #000000;
     }
+
+    #block-superfish-1 ul li:first-child {
+        display: list-item;
+        background-color: #000000;
+    }
+
+    #block-superfish-1 ul li:first-child a, #block-superfish-1 ul li:first-child a.active, #block-superfish-1 ul li:first-child a:hover {
+        background: url("../images/hamburger-menu.png") no-repeat 7px 0 #000000;
+    }
+
+    #block-superfish-1 ul li:first-child a span {
+        display: none;
+    }
+
+    /* end menu */
 
     .node-teaser .field-name-field-image img {
         float: left;
