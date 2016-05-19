@@ -181,6 +181,7 @@
     #block-superfish-1 ul li:first-child a, #block-superfish-1 ul li:first-child a.active {
         color: #ffffff;
         background-color: #000000;
+        font-style: italic;
     }
 
     #main-menu ul.menu li {
@@ -336,6 +337,7 @@
     #block-superfish-1 ul li:first-child a, #block-superfish-1 ul li:first-child a.active {
         color: #ffffff;
         background-color: #000000;
+        font-style: italic;
     }
 
     #main-menu ul.menu li {
@@ -474,6 +476,7 @@
     #block-superfish-1 ul li:first-child a, #block-superfish-1 ul li:first-child a.active {
         color: #ffffff;
         background-color: #000000;
+        font-style: italic;
     }
 
     #main-menu ul.menu li {
