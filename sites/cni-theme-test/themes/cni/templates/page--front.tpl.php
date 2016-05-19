@@ -1,5 +1,5 @@
 <div id="page-top">
-    <div class="page-inner <?php echo $grid_size ?>">
+    <div class="page-inner">
 
         <?php if ($page['user_menu']): ?>
             <nav id="user-menu" class="clearfix">
@@ -7,6 +7,9 @@
                 <?php print render($page['search_box']); ?>
             </nav>
         <?php endif; ?>
+    </div>
+
+    <div class="page-inner <?php echo $grid_size ?>">
 
         <div class="header-wrapper clearfix">
             <div class="header-wrapper-inner <?php echo $grid_full_width ?>">
@@ -20,10 +23,8 @@
                     <?php endif; ?>
 
                 </header>
-
             </div>
         </div>
-
     </div>
 </div>
 
