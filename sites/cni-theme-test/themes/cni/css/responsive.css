@@ -494,9 +494,13 @@
     }
 
     #block-superfish-1 ul li:first-child a, #block-superfish-1 ul li:first-child a.active {
-        color: #ffffff;
-        background: url("../images/mobile_menu.png") no-repeat scroll 7px 8px #000000;
-        font-style: italic;
+        color: #000000;
+        background: url("../images/hamburger-menu.png") no-repeat scroll 7px 8px #000000;
+    }
+
+    #block-superfish-1 ul li:first-child a:hover {
+        color: #CCCCCC;
+        background: url("../images/hamburger-menu.png") no-repeat scroll 7px 8px #CCCCCC;
     }
 
     /* end menu */
