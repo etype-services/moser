@@ -204,4 +204,4 @@ $sites['www.fredericksburgtexas.org'] = 'fredericksburgstandard.com';
 $sites['test.etypegoogle4.com'] = 'cni-theme-test';
 
 /* fredcni.etypegoogle4.com.conf  */
-$sites['fredcni.etypegoogle4.com.conf '] = 'fred-cni';
+$sites['fredcni.etypegoogle4.com'] = 'fred-cni';
