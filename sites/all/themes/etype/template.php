@@ -5,6 +5,8 @@
  */
 function etype_preprocess_html(&$vars) {
 
+    echo base_path();
+
     $vars['classes_array'][] = theme_get_setting('sidebar_layout');
 
     /* Add Page Body Class */
@@ -15,6 +17,8 @@ function etype_preprocess_html(&$vars) {
     }
 
 }
+
+
 function etype_preprocess_page(&$variables) {
 
     $grid_info = get_grid_info();
@@ -75,6 +79,7 @@ function etype_preprocess_page(&$variables) {
 }
 
 function etype_preprocess_node(&$variables) {
+    
     $node = $variables['node'];
     if (!empty($node->classes_array)) {
         $variables['classes_array'] = array_merge($variables['classes_array'], $node->classes_array);
@@ -109,7 +114,6 @@ function etype_link($variables) {
 
 function etype_form_alter(&$form, &$form_state, $form_id) {
     if ($form_id == 'search_block_form') {
-
         // Add extra attributes to the text box
         $form['search_block_form']['#attributes']['onblur'] = "if (this.value == '') {this.value = 'Search';}";
         $form['search_block_form']['#attributes']['onfocus'] = "if (this.value == 'Search') {this.value = '';}";
