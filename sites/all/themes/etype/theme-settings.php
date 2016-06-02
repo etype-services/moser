@@ -21,6 +21,8 @@ function etype_form_system_theme_settings_alter(&$form, $form_state) {
     $grid_size = theme_get_setting('grid_size');
     $col_number = get_columns();
 
+    echo theme_get_setting('sidebar_layout');
+
     $form['advanced_settings'] = array(
         '#type' => 'vertical_tabs',
         '#title' => t('Advanced Theme Settings'),
