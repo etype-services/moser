@@ -5,7 +5,7 @@
  */
 function etype_preprocess_html(&$vars) {
 
-    echo base_path();
+    echo $_SERVER['DOCUMENT_ROOT'] . base_path() . file_directory_path();
 
     $vars['classes_array'][] = theme_get_setting('sidebar_layout');
 
