@@ -5,10 +5,3 @@ engine = phptemplate
 base theme = etype
 
 stylesheets[all][] = site.css
-
-settings[facebook]          = ''
-settings[twitter]           = ''
-settings[pinterest]         = ''
-settings[instagram]         = ''
-settings[e_edition]         = ''
-settings[twitter_widget_id] = ''
