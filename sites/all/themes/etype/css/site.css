@@ -37,7 +37,7 @@
 
 }
 
-@media only screen and (max-width: 767px) and (min-width: 480px) {
+@media only screen and (max-width: 767px) and (min-width: 601px) {
 
     /* main-menu site-specific options */
     #block-superfish-1 .content {
