@@ -21,9 +21,8 @@ function etype_form_system_theme_settings_alter(&$form, $form_state) {
     $grid_size = theme_get_setting('grid_size');
     $col_number = get_columns();
 
-    echo $col_number;
+    print_r ($col_number);
     echo $grid_size;
-    exit;
 
     $form['advanced_settings'] = array(
         '#type' => 'vertical_tabs',
