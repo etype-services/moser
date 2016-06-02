@@ -75,11 +75,12 @@ function etype_form_alter(&$form, &$form_state, $form_id) {
     if ($form_id == 'search_block_form') {
         // Add extra attributes to the text box
         $text = 'Search';
-        $form['search_block_form']['#attributes']['#default_value'] = $text;
+        $form['search_block_form']['#default_value'] = $text;
+        $form['#submit']['#value'] = 'Go';
         $form['search_block_form']['#attributes']['onblur'] = "if (this.value == '') {this.value = '" . $text . "';}";
-        $form['search_block_form']['#attributes']['onfocus'] = "if (this.value == 'Search') {this.value = '" . $text . "';}";
+        $form['search_block_form']['#attributes']['onfocus'] = "if (this.value == '" . $text . "') {this.value = '';}";
         // Prevent user from searching the default text
-        $form['#attributes']['onsubmit'] = "if(this.search_block_form.value=='Search'){return false;}";
+        $form['#attributes']['onsubmit'] = "if(this.search_block_form.value=='" . $text . "'){return false;}";
     }
 }
 
