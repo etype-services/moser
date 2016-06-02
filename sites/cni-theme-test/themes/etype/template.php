@@ -5,11 +5,6 @@
  */
 function etype_preprocess_html(&$vars) {
 
-    $var = $_SERVER['DOCUMENT_ROOT'] . base_path() . file_directory_path();
-    echo $var;
-
-    $vars['classes_array'][] = theme_get_setting('sidebar_layout');
-
     /* Add Page Body Class */
     $path = drupal_get_path_alias($_GET['q']);
     $aliases = explode('/', $path);
@@ -21,43 +16,6 @@ function etype_preprocess_html(&$vars) {
 
 
 function etype_preprocess_page(&$variables) {
-
-    $grid_info = get_grid_info();
-
-    // Create page variables
-
-    $vars['grid_size'] = 'container_' . $grid_info['grid_size'];
-    $vars['grid_full_width'] = 'grid_' . $grid_info['grid_size'];
-    $vars['sidebar_first_grid_width'] = 'grid_' . $grid_info['sidebar_first_width'];
-    $vars['sidebar_second_grid_width'] = 'grid_' . $grid_info['sidebar_second_width'];
-    $vars['twitter'] = theme_get_setting('twitter');
-    $vars['facebook'] = theme_get_setting('facebook');
-    $vars['pinterest'] = theme_get_setting('pinterest');
-
-    for ($region_count = 1; $region_count <= 4; $region_count++) {
-        $vars['preface_' . $region_count . '_grid_width'] = 'grid_' . $grid_info['preface_' . $region_count . '_grid_width'];
-        $vars['postscript_' . $region_count . '_grid_width'] = 'grid_' . $grid_info['postscript_' . $region_count . '_grid_width'];
-    }
-
-    if (empty($vars['page']['sidebar_first']) && empty($vars['page']['sidebar_second'])) {
-        $vars['main_content_grid_width'] = 'grid_' . $grid_info['grid_size'];
-    }
-    else {
-        if (!empty($vars['page']['sidebar_first']) && !empty($vars['page']['sidebar_second'])) {
-            $vars['main_content_grid_width'] = 'grid_' . ($grid_info['grid_size'] - ($grid_info['sidebar_first_width'] + $grid_info['sidebar_second_width']));
-        }
-        else {
-            if (empty($vars['page']['sidebar_first']) && !empty($vars['page']['sidebar_second'])) {
-                $vars['main_content_grid_width'] = 'grid_' . ($grid_info['grid_size'] - $grid_info['sidebar_second_width']);
-            }
-            else {
-                if (!empty($vars['page']['sidebar_first']) && empty($vars['page']['sidebar_second'])) {
-                    $vars['main_content_grid_width'] = 'grid_' . ($grid_info['grid_size'] - $grid_info['sidebar_first_width']);
-                }
-            }
-        }
-    }
-
 
     if (isset ($variables['page']['content']['system_main']['nodes'])) {
         $nodes = $variables['page']['content']['system_main']['nodes'];
@@ -91,8 +49,8 @@ function etype_preprocess_node(&$variables) {
     }
 }
 
-/* Breadcrumbs */
 
+/* Breadcrumbs */
 function etype_breadcrumb($variables) {
     $breadcrumb = $variables['breadcrumb'];
     if (!empty($breadcrumb)) {
@@ -105,14 +63,14 @@ function etype_breadcrumb($variables) {
     }
 }
 
-/* Span Tag on Links */
 
+/* Span Tag on Links */
 function etype_link($variables) {
     return '<a href="' . check_plain(url($variables['path'], $variables['options'])) . '"' . drupal_attributes($variables['options']['attributes']) . '><span>' . ($variables['options']['html'] ? $variables['text'] : check_plain($variables['text'])) . '</span></a>';
 }
 
-/* Some text in ye old Search Form */
 
+/* Some text in ye old Search Form */
 function etype_form_alter(&$form, &$form_state, $form_id) {
     if ($form_id == 'search_block_form') {
         // Add extra attributes to the text box
@@ -121,22 +79,5 @@ function etype_form_alter(&$form, &$form_state, $form_id) {
         // Prevent user from searching the default text
         $form['#attributes']['onsubmit'] = "if(this.search_block_form.value=='Search'){ alert('Please enter a search'); return false; }";
     }
-}
-
-
-function get_grid_info() {
-
-    $grid_info = array();
-
-    $grid_info['grid_size'] = theme_get_setting('grid_size');
-    $grid_info['sidebar_first_width'] = theme_get_setting('sidebar_first_width');
-    $grid_info['sidebar_second_width'] = theme_get_setting('sidebar_second_width');
-
-    for ($region_count = 1; $region_count <= 4; $region_count++) {
-        $grid_info['preface_' . $region_count . '_grid_width'] = theme_get_setting('preface_' . $region_count . '_grid_width');
-        $grid_info['postscript_' . $region_count . '_grid_width'] = theme_get_setting('postscript_' . $region_count . '_grid_width');
-    }
-
-    return $grid_info;
 }
 
