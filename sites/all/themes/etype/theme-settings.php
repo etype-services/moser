@@ -1,6 +1,6 @@
 <?php
 
-drupal_add_css(drupal_get_path('theme', 'bones') . '/css/theme-settings.css', array(
+drupal_add_css(drupal_get_path('theme', 'etype') . '/css/theme-settings.css', array(
   'group' => CSS_THEME,
   'weight' => 100
 ));
