@@ -1,5 +1,5 @@
-name = EType Base Theme
-description = EType Base Theme.
+name = EType Theme
+description = EType Theme for Drupal 7 (adapted from CNI theme)
 core = 7.x
 engine = phptemplate
 base theme = bones
