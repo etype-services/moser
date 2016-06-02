@@ -1,5 +1,5 @@
-name = EType Drupal 7 Theme
-description = EType Drupal 7 Theme.
+name = EType Base Theme
+description = EType Base Theme.
 core = 7.x
 engine = phptemplate
 screenshot = screenshot.png
@@ -8,7 +8,6 @@ base theme = bones
 stylesheets[all][] = css/theme.css
 stylesheets[all][] = css/responsive.css
 stylesheets[all][] = css/jcarousel.css
-stylesheets[all][] = css/site.css
 
 scripts[] = js/scripts.js
 scripts[] = js/jquery.color.js
@@ -44,7 +43,7 @@ regions[postscript_1]           = Postscript First
 regions[postscript_2]           = Postscript Second
 regions[postscript_3]           = Postscript Third
 regions[postscript_4]           = Postscript Fourth
-regions[footer]                    = Footer
+regions[footer]                 = Footer
 
 settings[style] = 1
 settings[sidebar_layout] = 'sidebars-split'
@@ -60,9 +59,3 @@ settings[postscript_1_grid_width] = 4
 settings[postscript_2_grid_width] = 4
 settings[postscript_3_grid_width] = 4
 settings[postscript_4_grid_width] = 0
-settings[facebook]          = ''
-settings[twitter]           = ''
-settings[pinterest]         = ''
-settings[instagram]         = ''
-settings[e_edition]         = ''
-settings[twitter_widget_id] = ''

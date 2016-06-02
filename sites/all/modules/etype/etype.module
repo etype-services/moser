@@ -180,8 +180,11 @@ function _etype_e_edition_content() {
   return $output;
 }
 
-drupal_add_js(drupal_get_path('module', 'etype') . '/ownlocal/ownlocal.js', 'file');
-drupal_add_css(drupal_get_path('module', 'etype') . '/ownlocal/ownlocal.css', array('group' => CSS_THEME, 'type' => 'file'));
+$ownlocal_path = drupal_get_path('module', 'etype') . '/ownlocal/ownlocal.js';
+if (file_exists($ownlocal_path)) {
+    drupal_add_js(drupal_get_path('module', 'etype') . '/ownlocal/ownlocal.js', 'file');
+    drupal_add_css(drupal_get_path('module', 'etype') . '/ownlocal/ownlocal.css', array('group' => CSS_THEME, 'type' => 'file'));
+}
 
 
 function etype_menu() {
