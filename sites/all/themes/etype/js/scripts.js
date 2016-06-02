@@ -1,48 +1,50 @@
 (function ($) {
 
-    $(document).ready(function(){															 
+    $(document).ready(function () {
 
-	  if ($.browser.msie) { } else {
-		$('ul.menu').mobileMenu({
-		combine: true,
-		switchWidth: 760,
-		prependTo: ".header-wrapper-inner",
-		nested: false,
-		groupPageText: 'More',
-		topOptionText: 'Select a page'
-		});
-	  }
-	
-    }); 
+        if ($.browser.msie) {
+        } else {
+            $('ul.menu').mobileMenu({
+                combine: true,
+                switchWidth: 760,
+                prependTo: ".header-wrapper-inner",
+                nested: false,
+                groupPageText: 'More',
+                topOptionText: 'Select a page'
+            });
+        }
 
- 	Drupal.behaviors.bonesSuperfish = {
-	
-	  attach: function(context, settings) {
-			  
-	  $('#user-menu ul.menu', context).superfish({
-		  delay: 400,											    
-		  animation: {height:'show'},
-		  speed: 500,
-		  easing: 'easeOutBounce', 
-		  autoArrows: false,
-		  dropShadows: false /* Needed for IE */
-	  });
-		  
-	  }
-    }	
-				
-	$(function() {
-		
-		$('.postscript-wrapper img').hover(function() {
-		  $(this).animate({
-			  backgroundColor: "#ff7800", opacity: "1.0"
-		  }, 'fast'); }, function() {
-		  $(this).animate({
-			  backgroundColor: "#555", opacity: "0.9"
-		  }, 'normal');
-		});
-	
-	});
+    });
+
+    Drupal.behaviors.bonesSuperfish = {
+
+        attach: function (context, settings) {
+
+            $('#user-menu ul.menu', context).superfish({
+                delay: 400,
+                animation: {height: 'show'},
+                speed: 500,
+                easing: 'easeOutBounce',
+                autoArrows: false,
+                dropShadows: false /* Needed for IE */
+            });
+
+        }
+    }
+
+    $(function () {
+
+        $('.postscript-wrapper img').hover(function () {
+            $(this).animate({
+                backgroundColor: "#ff7800", opacity: "1.0"
+            }, 'fast');
+        }, function () {
+            $(this).animate({
+                backgroundColor: "#555", opacity: "0.9"
+            }, 'normal');
+        });
+
+    });
 
 
 })(jQuery);
@@ -51,12 +53,12 @@
     Drupal.behaviors.superfish = {
         attach: function (context) {
             var obj = $('#block-superfish-1 ul li.sf-depth-1:first-child a');
-            obj.click(function(e){
+            obj.click(function (e) {
                 e.preventDefault();
                 $('#block-superfish-1 ul li.sf-depth-1:not(:first-child)').toggle();
             });
 
-            $(window).resize(function(){
+            $(window).resize(function () {
                 var w = $(window).width();
                 if (w > 767) {
                     $('#block-superfish-1 ul li.sf-depth-1:not(:first-child)').css("display", "list-item").show();

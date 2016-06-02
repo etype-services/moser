@@ -1,5 +1,3 @@
 (function ($) {
-    Drupal.behaviors.usermenu = {
-        
-    };
+    Drupal.behaviors.usermenu = {};
 })(jQuery);

@@ -1,4 +1,4 @@
-<?php require_once ('header.inc.php'); ?>
+<?php require_once('header.inc.php'); ?>
 
 <div id="page">
     <div class="page-inner <?php echo $grid_size ?>">
