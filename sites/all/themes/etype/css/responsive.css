@@ -1,3 +1,7 @@
+/*
+ * Using design-based breakpoints, not device-based.
+ */
+
 /* wider screens */
 @media only screen and (min-width: 959px) {
 
@@ -304,8 +308,8 @@
     }
 }
 
-/* larger phones */
-@media only screen and (max-width: 479px) and (min-width: 421px) {
+/* phones & smaller screens */
+@media only screen and (max-width: 600px) {
 
     /* main menu */
     #main-menu ul.menu {
@@ -436,144 +440,6 @@
 
     /* weather block */
     #block-block-35 .block-inner {
-        border: none;
-        box-shadow: none;
-    }
-
-}
-
-/* smaller phones */
-@media only screen and (max-width: 420px) {
-
-    /* main menu */
-    #main-menu ul.menu {
-        margin: 0;
-    }
-
-    #superfish-1 {
-        display: block !important;
-    }
-
-    #block-superfish-1 {
-        height: auto;
-    }
-
-    #block-superfish-1 .content {
-        width: auto;
-    }
-
-    #block-superfish-1 ul li {
-        display: none;
-    }
-
-    #main-menu ul.menu li {
-        float: none;
-        list-style: none;
-    }
-
-    #main-menu ul.menu li a {
-        background: url("../images/mobile_menu.png") no-repeat scroll 7px 8px transparent;
-        color: #ffffff;
-        display: block;
-        font-weight: bold;
-        height: 33px;
-        margin-top: 0;
-        padding: 0 15px 0 26px;
-        line-height: 33px;
-        text-decoration: none;
-        -moz-transition: background-color 0.1s ease-out;
-        -o-transition: background-color 0.1s ease-out;
-        -webkit-transition: background-color 0.1s ease-out;
-        transition: background-color 0.1s ease-out;
-    }
-
-    #main-menu ul.menu li a:hover {
-        background: url("../images/mobile_menu.png") no-repeat scroll 7px 8px #cccccc;
-        color: #000000;
-    }
-
-    #block-superfish-1 ul li:first-child {
-        display: list-item;
-        background-color: #000000;
-    }
-
-    #block-superfish-1 ul li:first-child a, #block-superfish-1 ul li:first-child a.active, #block-superfish-1 ul li:first-child a:hover {
-        background: url("../images/hamburger-menu.png") no-repeat 7px 0 #000000;
-    }
-
-    #block-superfish-1 ul li:first-child a span {
-        display: none;
-    }
-
-    /* end menu */
-
-    .node-teaser .field-name-field-image img {
-        float: left;
-        margin: 0 20px 0 0;
-    }
-
-    .video .node-teaser .node-content-wrapper {
-        margin-left: 0px;
-    }
-
-    .node-teaser .field-name-field-video iframe {
-        float: none;
-        width: 360px;
-        height: 220px;
-        margin: 0 0 20px 0;
-    }
-
-    .page-node .field-name-field-video iframe {
-        width: 418px;
-        height: 300px;
-    }
-
-    /* SLIDESHOW
---------------------------------------------------------------------------*/
-    .view-slideshow .views_slideshow_main {
-        height: 160px;
-        margin: 14px;
-    }
-
-    .view-slideshow .views_slideshow_main .views-field-field-image img, .view-slideshow .views_slideshow_main .views-field-field-video img {
-        width: 270px;
-        height: auto;
-    }
-
-    .view-slideshow .views_slideshow_main .views-field-title {
-        width: 230px;
-    }
-
-    .view-slideshow .views_slideshow_main .views-field-body {
-        display: none;
-    }
-
-    /* Slideshow controls */
-    .view-slideshow .views-slideshow-controls-bottom .views-field-field-image img, .view-slideshow .views-slideshow-controls-bottom .views-field-field-video img {
-        width: 26px;
-        height: 17px;
-        margin-left: 6px;
-    }
-
-    /* FOOTER */
-    .postscript-wrapper {
-        padding: 1em;
-        margin: 0;
-        border-top: 0;
-    }
-
-    .postscript-wrapper h3 {
-        margin-left: 0;
-        margin-bottom: 10px;
-        background: none;
-    }
-
-    .region-postscript-4 {
-        margin-top: 1em;
-    }
-
-    /* weather block */
-    #block-block-1 .block-inner {
         border: none;
         box-shadow: none;
     }
