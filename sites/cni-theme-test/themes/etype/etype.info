@@ -10,15 +10,6 @@ stylesheets[all][] = css/site.css
 
 scripts[] = js/scripts.js
 
-features[] = logo
-features[] = name
-features[] = slogan
-features[] = node_user_picture
-features[] = comment_user_picture
-features[] = favicon
-features[] = main_menu
-features[] = secondary_menu
-
 regions[header] = Header
 regions[user_menu] = User Menu
 regions[main_menu] = Main Menu
@@ -48,7 +39,7 @@ settings[sidebar_second_width] = 4
 settings[grid_size] = 12
 settings[preface_1_grid_width] = 6
 settings[preface_2_grid_width] = 6
-settings[preface_3_grid_width] = 0
+settings[preface_3_grid_width] = 6
 settings[preface_4_grid_width] = 0
 settings[preface_5_grid_width] = 0
 settings[postscript_1_grid_width] = 4
