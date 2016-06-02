@@ -110,3 +110,20 @@ $vars['classes_array'][] = theme_get_setting('sidebar_layout');
   }
 
 }
+
+function get_grid_info() {
+
+    $grid_info = array();
+
+    $grid_info['grid_size'] = theme_get_setting('grid_size');
+    $grid_info['sidebar_first_width'] = theme_get_setting('sidebar_first_width');
+    $grid_info['sidebar_second_width'] = theme_get_setting('sidebar_second_width');
+
+    for ($region_count = 1; $region_count <= 4; $region_count++) {
+        $grid_info['preface_' . $region_count . '_grid_width'] = theme_get_setting('preface_' . $region_count . '_grid_width');
+        $grid_info['postscript_' . $region_count . '_grid_width'] = theme_get_setting('postscript_' . $region_count . '_grid_width');
+    }
+
+    return $grid_info;
+}
+
