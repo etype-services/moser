@@ -202,6 +202,13 @@ $sites['www.fredericksburgtx.news'] = 'fredericksburgstandard.com';
 $sites['fredericksburgtexas.org']  = 'fredericksburgstandard.com';
 $sites['www.fredericksburgtexas.org'] = 'fredericksburgstandard.com';
 
+/* sanmarcosdailyrecord.etypegoogle4.com */
+$sites['sanmarcosdailyrecord.etypegoogle4.com'] = 'sanmarcosdailyrecord.com';
+$sites['www.sanmarcosdailyrecord.com'] = 'sanmarcosdailyrecord.com';
+$sites['sanmarcosdailyrecord.com'] = 'sanmarcosdailyrecord.com';
+$sites['www.sanmarcosrecord.com'] = 'sanmarcosdailyrecord.com';
+$sites['sanmarcosrecord.com'] = 'sanmarcosdailyrecord.com';
+
 /* test.etypegoogle4.com */
 $sites['test.etypegoogle4.com'] = 'cni-theme-test';
 
