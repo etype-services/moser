@@ -498,6 +498,13 @@ h3.site-slogan {
     background: #eeeeee;
 }
 
+
+.sf-menu.sf-style-pomegranate li, .sf-menu.sf-style-pomegranate.sf-navbar {
+    background: #79001c;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
 /* SIDE MENU
 --------------------------------------------------------------------------*/
 
