@@ -97,7 +97,7 @@ margin-top: 20px !important;
 margin: 0px 0px 0px 0px !important;
 }
 #block-superfish-1{
-height: 37px !important;
+height: 37gipx !important;
 }
 #block-superfish-1 ul li{
 margin-bottom: 7px;
