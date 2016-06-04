@@ -15,6 +15,10 @@ class FeedsNotExistingException extends Exception {
  * Base class for configurable classes. Captures configuration handling, form
  * handling and distinguishes between in-memory configuration and persistent
  * configuration.
+ *
+ * Due to the magic method __get(), protected properties from this class and
+ * from classes that extend this class will be publicly readable (but not
+ * writeable).
  */
 abstract class FeedsConfigurable {
 
@@ -44,17 +48,20 @@ abstract class FeedsConfigurable {
   protected $disabled;
 
   /**
-   * Instantiate a FeedsConfigurable object.
+   * Instantiates a FeedsConfigurable object.
    *
-   * Don't use directly, use feeds_importer() or feeds_plugin()
-   * instead.
+   * Don't use directly, use feeds_importer() or feeds_plugin() instead.
+   *
+   * @see feeds_importer()
+   * @see feeds_plugin()
    */
   public static function instance($class, $id) {
-    // This is useful at least as long as we're developing.
-    if (empty($id)) {
-      throw new Exception(t('Empty configuration identifier.'));
+    if (!strlen($id)) {
+      throw new InvalidArgumentException(t('Empty configuration identifier.'));
     }
-    static $instances = array();
+
+    $instances = &drupal_static(__METHOD__, array());
+
     if (!isset($instances[$class][$id])) {
       $instances[$class][$id] = new $class($id);
     }
@@ -136,8 +143,13 @@ abstract class FeedsConfigurable {
   }
 
   /**
-   * Override magic method __get(). Make sure that $this->config goes through 
-   * getConfig().
+   * Overrides magic method __get().
+   *
+   * - Makes sure that external reads of FeedsConfigurable::config go through
+   *   ::getConfig();
+   * - Makes private and protected properties from this class and protected
+   *   properties from child classes publicly readable.
+   * - Prevents warnings when accessing non-existent properties.
    */
   public function __get($name) {
     if ($name == 'config') {
@@ -167,6 +179,17 @@ abstract class FeedsConfigurable {
    */
   public function configDefaults() {
     return array();
+  }
+
+  /**
+   * Returns whether or not the configurable has a config form.
+   *
+   * @return bool
+   *   True if the configurable has a config form, and false if not.
+   */
+  public function hasConfigForm() {
+    $form_state = array();
+    return (bool) $this->configForm($form_state);
   }
 
   /**
@@ -201,6 +224,16 @@ abstract class FeedsConfigurable {
     $this->save();
     drupal_set_message(t('Your changes have been saved.'));
     feeds_cache_clear(FALSE);
+  }
+
+  /**
+   * Returns an array of required modules.
+   *
+   * @return array
+   *   The modules that this configurable requires.
+   */
+  public function dependencies() {
+    return array();
   }
 }
 
@@ -265,6 +298,8 @@ function feeds_form_submit($form, &$form_state) {
 
 /**
  * Helper for Feeds validate and submit callbacks.
+ *
+ * @todo This is all terrible. Remove.
  */
 function _feeds_form_helper($form, &$form_state, $action) {
   $method = $form['#feeds_form_method'] . $action;
@@ -277,12 +312,13 @@ function _feeds_form_helper($form, &$form_state, $action) {
   // This will re-initialize all of the plugins anyway, causing some tricky
   // saving issues in certain cases.
   // See http://drupal.org/node/1672880.
-
   if ($class == variable_get('feeds_importer_class', 'FeedsImporter')) {
     $form['#configurable'] = feeds_importer($id);
   }
   else {
-    $form['#configurable'] = feeds_plugin($class, $id);
+    $importer = feeds_importer($id);
+    $plugin_key = $importer->config[$form['#configurable']->pluginType()]['plugin_key'];
+    $form['#configurable'] = feeds_plugin($plugin_key, $id);
   }
 
   if (method_exists($form['#configurable'], $method)) {
