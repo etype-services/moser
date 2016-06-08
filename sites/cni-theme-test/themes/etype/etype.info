@@ -7,6 +7,7 @@ base theme = bones
 stylesheets[all][] = css/theme.css
 stylesheets[all][] = css/responsive.css
 stylesheets[all][] = css/site.css
+stylesheets[all][] = css/jacarousel.css
 
 scripts[] = js/scripts.js
 

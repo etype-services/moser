@@ -719,6 +719,7 @@ article .field-image {
 
 .region-search-box {
     float: right;
+    height: 25px;
 }
 
 #search-block-form {
