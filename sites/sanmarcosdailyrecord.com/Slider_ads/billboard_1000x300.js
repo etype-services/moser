@@ -135,7 +135,7 @@ function endSlide(objname){
 }
 var expandingAd = new Object();
 //** Below input the Tile Id number, and for the ad_rollover_counter also change the Tile ID number to match ad_url
-expandingAd.filesdir = "/sites/wimberleyview.com/Slider_ads/ads/"; // your website folder where you files are will go here....
+expandingAd.filesdir = "/sites/sanmarcosdailyrecord.com/Slider_ads/ads/"; // your website folder where you files are will go here....
 // Small SWF size
 expandingAd.smallwidth = 950;
 expandingAd.smallheight = 45;
