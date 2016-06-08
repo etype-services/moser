@@ -82,6 +82,8 @@ function _etype_social_content() {
     <ul class="social-links">';
     $facebook = theme_get_setting('facebook', 'etype');
     echo $facebook;
+    exit;
+    
     $twitter = theme_get_setting('twitter', 'etype');
     $pinterest = theme_get_setting('pinterest', 'etype');
     if (!empty($facebook)) {
