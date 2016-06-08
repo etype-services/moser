@@ -80,9 +80,9 @@ function _etype_social_content() {
   $output = '
 <div id="social">
     <ul class="social-links">';
-  $facebook = theme_get_setting('facebook','cni');
-  $twitter = theme_get_setting('twitter','cni');
-  $pinterest = theme_get_setting('pinterest','cni');
+  $facebook = theme_get_setting('facebook','etype');
+  $twitter = theme_get_setting('twitter', 'etype');
+  $pinterest = theme_get_setting('pinterest','etype');
   if ( ! empty($facebook)) {
     $output .= '<li><a class="facebook" href="https://www.facebook.com/' . $facebook . '"></a></li>';
   }
@@ -102,9 +102,9 @@ function _etype_social_content() {
  */
 function _etype_follow_content() {
   $output = '';
-  $facebook = theme_get_setting('facebook','cni');
-  $twitter = theme_get_setting('twitter','cni');
-  $pinterest = theme_get_setting('pinterest','cni');
+  $facebook = theme_get_setting('facebook','etype');
+  $twitter = theme_get_setting('twitter','etype');
+  $pinterest = theme_get_setting('pinterest','etype');
   if ( ! empty($facebook)) {
     $output .= '<div class="facebook"><a href="https://www.facebook.com/' . $facebook . '">Like us on Facebook</a></div>';
   }
@@ -122,7 +122,7 @@ function _etype_follow_content() {
  */
 function _etype_facebook_content() {
   $output = '';
-  $facebook = theme_get_setting('facebook','cni');
+  $facebook = theme_get_setting('facebook','etype');
 
   if ( ! empty($facebook)) {
     $output .= '
@@ -138,8 +138,8 @@ function _etype_facebook_content() {
  */
 function _etype_twitter_content() {
   $output = '';
-  $twitter = theme_get_setting('twitter','cni');
-  $twitter_widget_id = theme_get_setting('twitter_widget_id','cni');
+  $twitter = theme_get_setting('twitter','etype');
+  $twitter_widget_id = theme_get_setting('twitter_widget_id','etype');
 
   if ( ! empty($twitter)) {
     $output .= '
@@ -169,7 +169,7 @@ function _etype_ownlocal_content() {
 }
 
 function _etype_e_edition_content() {
-  $e_edition = theme_get_setting('e_edition','cni');
+  $e_edition = theme_get_setting('e_edition','etype');
   $site_name = variable_get('site_name', 'Drupal');
   $arr = preg_split("/ID[0-9]+/", $e_edition);
   $fixed = $arr[0];
@@ -202,7 +202,7 @@ function etype_menu() {
 
 function _etype_e_edition() {
     /* redirect to e-Edition */
-    $e_edition = theme_get_setting('e_edition', 'cni');
+    $e_edition = theme_get_setting('e_edition', 'etype');
     $path = 'http://etypeservices.com/' . $e_edition . '/';
     drupal_goto($path);
 }
