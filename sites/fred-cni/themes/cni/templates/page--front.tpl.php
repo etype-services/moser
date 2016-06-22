@@ -38,6 +38,16 @@
     </div>
 <?php endif; ?>
 
+<?php if ($page['main_menu_second_level']): ?>
+    <div class="main-menu-second-level-wrapper clearfix">
+        <div class="main-menu-second-level-wrapper-inner">
+            <nav id="main-menu-second-level">
+                <?php print render($page['main_menu_second_level']); ?>
+            </nav>
+        </div>
+    </div>
+<?php endif; ?>
+
 <div id="page">
     <div class="page-inner <?php echo $grid_size ?>">
 
