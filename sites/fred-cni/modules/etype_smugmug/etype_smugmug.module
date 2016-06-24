@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * Implements hook_block_info().
+ */
+function etype_smugmug_block_info() {
+  $blocks = array();
+
+  $blocks['Smugmug'] = array(
+    'info' => t('Smugmug'),
+  );
+  
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function etype_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+
+    case 'Smugmug':
+      $block['subject'] = '';
+      $block['content'] = _etype_smugmug_content();
+      break;
+    
+  }
+  return $block;
+}
+
+/**
+ * Smugmug Block
+ * @return null
+ */
+function _etype_smugmug_content() {
+
+}
