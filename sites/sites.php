@@ -214,3 +214,4 @@ $sites['test.etypegoogle4.com'] = 'cni-theme-test';
 
 /* fredcni.etypegoogle4.com.conf  */
 $sites['fredcni.etypegoogle4.com'] = 'fred-cni';
+$sites['smugmug.etypegoogle4.com'] = 'fred-cni';
