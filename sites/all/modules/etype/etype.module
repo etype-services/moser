@@ -176,8 +176,8 @@ function _etype_e_edition_content() {
 }
 
 
-$ownlocal_file = drupal_get_path('module', 'cni') . '/ownlocal/ownlocal.js';
-if (file_exists($ownlocal_file)) {
+$own_local_file = drupal_get_path('module', 'cni') . '/ownlocal/ownlocal.js';
+if (file_exists($own_local_file)) {
     drupal_add_js(drupal_get_path('module', 'cni') . '/ownlocal/ownlocal.js', 'file');
     drupal_add_css(drupal_get_path('module', 'cni') . '/ownlocal/ownlocal.css', array(
         'group' => CSS_THEME,
