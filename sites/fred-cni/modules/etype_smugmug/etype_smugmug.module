@@ -34,5 +34,5 @@ function etype_block_view($delta = '') {
  * @return null
  */
 function _etype_smugmug_content() {
-
+    $output = 'hola';
 }
