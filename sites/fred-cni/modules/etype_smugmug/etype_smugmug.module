@@ -16,7 +16,7 @@ function etype_smugmug_block_info() {
 /**
  * Implements hook_block_view().
  */
-function etype_block_view($delta = '') {
+function etype_smugmug_block_view($delta = '') {
   $block = array();
   switch ($delta) {
 
