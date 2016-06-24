@@ -35,4 +35,5 @@ function etype_block_view($delta = '') {
  */
 function _etype_smugmug_content() {
     $output = 'hola';
+    return $output;
 }
