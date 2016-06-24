@@ -185,6 +185,11 @@ h3.site-slogan {
     overflow: hidden;
 }
 
+.preface-wrapper #block-views-business-blog-block .views-row:last-child, .preface-wrapper #block-views-editor-s-blog-block .views-row:last-child
+{
+    padding-bottom: 10px;
+}
+
 .preface-wrapper .views-row a {
     font-size: 1em;
     font-weight: bold;
