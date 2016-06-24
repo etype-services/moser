@@ -129,7 +129,7 @@
 }
 
 /* Events Calendar Ad */
-#block-simpleads-ad-groups-503 .block-inner {
+#block-simpleads-ad-groups-503 .block-inner, #block-simpleads-ad-groups-512 .block-inner {
     border: 0;
     box-shadow: 0 0 0 0;
     padding: 0;
