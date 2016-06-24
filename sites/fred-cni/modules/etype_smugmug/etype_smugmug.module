@@ -41,7 +41,7 @@ function _etype_smugmug_content() {
         'AppName' => 'FredericksburgStandard.com',
         'OAuthSecret' => '528FJVpbGkrRsWsZ9DPCc6n6FhqvxzWhRrPhdVGZxTVkPdtRdLDWSSfJDTDqSzKv'
     ];
-    $client = new phpSmug\Client(' SxFKHHZ7q4tPVbjLxkRTbDbcn7pCtBjM', $options);
+    $client = new phpSmug\Client('SxFKHHZ7q4tPVbjLxkRTbDbcn7pCtBjM', $options);
     $repositories = $client->get('user/fbgnews@fredericksburgstandard.com!albums');
     $output = 'hola';
     return $output;
