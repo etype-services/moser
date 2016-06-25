@@ -211,6 +211,3 @@ $sites['sanmarcosrecord.com'] = 'sanmarcosdailyrecord.com';
 
 /* test.etypegoogle4.com */
 $sites['test.etypegoogle4.com'] = 'cni-theme-test';
-
-/* fredcni.etypegoogle4.com.conf  */
-$sites['fredcni.etypegoogle4.com'] = 'fredericksburgstandard.com';
