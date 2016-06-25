@@ -186,21 +186,21 @@ $sites['www.inglesideindex.com'] = 'inglesideindex.com';
 $sites['inglesideindex.com'] = 'inglesideindex.com';
 
 /* fredericksburgstandard.etypegoogle4.com */
-$sites['fredericksburgstandard.etypegoogle4.com'] = 'fred-cni';
-$sites['www.fredericksburgstandard.com'] = 'fred-cni';
-$sites['fredericksburgstandard.com'] = 'fred-cni';
-$sites['fbgnews.com'] = 'fred-cni';
-$sites['www.fbgnews.com'] = 'fred-cni';
-$sites['fredericksburgpaper.com'] = 'fred-cni';
-$sites['www.fredericksburgpaper.com'] = 'fred-cni';
-$sites['fredericksburgstandard.net']  = 'fred-cni';
-$sites['www.fredericksburgstandard.net'] = 'fred-cni';
-$sites['fredericksburgstandard.news']  = 'fred-cni';
-$sites['www.fredericksburgstandard.news'] = 'fred-cni';
-$sites['fredericksburgtx.news']  = 'fred-cni';
-$sites['www.fredericksburgtx.news'] = 'fred-cni';
-$sites['fredericksburgtexas.org']  = 'fred-cni';
-$sites['www.fredericksburgtexas.org'] = 'fred-cni';
+$sites['fredericksburgstandard.etypegoogle4.com'] = 'fredericksburgstandard.com';
+$sites['www.fredericksburgstandard.com'] = 'fredericksburgstandard.com';
+$sites['fredericksburgstandard.com'] = 'fredericksburgstandard.com';
+$sites['fbgnews.com'] = 'fredericksburgstandard.com';
+$sites['www.fbgnews.com'] = 'fredericksburgstandard.com';
+$sites['fredericksburgpaper.com'] = 'fredericksburgstandard.com';
+$sites['www.fredericksburgpaper.com'] = 'fredericksburgstandard.com';
+$sites['fredericksburgstandard.net']  = 'fredericksburgstandard.com';
+$sites['www.fredericksburgstandard.net'] = 'fredericksburgstandard.com';
+$sites['fredericksburgstandard.news']  = 'fredericksburgstandard.com';
+$sites['www.fredericksburgstandard.news'] = 'fredericksburgstandard.com';
+$sites['fredericksburgtx.news']  = 'fredericksburgstandard.com';
+$sites['www.fredericksburgtx.news'] = 'fredericksburgstandard.com';
+$sites['fredericksburgtexas.org']  = 'fredericksburgstandard.com';
+$sites['www.fredericksburgtexas.org'] = 'fredericksburgstandard.com';
 
 /* sanmarcosdailyrecord.etypegoogle4.com */
 $sites['sanmarcosdailyrecord.etypegoogle4.com'] = 'sanmarcosdailyrecord.com';
@@ -213,4 +213,4 @@ $sites['sanmarcosrecord.com'] = 'sanmarcosdailyrecord.com';
 $sites['test.etypegoogle4.com'] = 'cni-theme-test';
 
 /* fredcni.etypegoogle4.com.conf  */
-$sites['fredcni.etypegoogle4.com'] = 'fred-cni';
+$sites['fredcni.etypegoogle4.com'] = 'fredericksburgstandard.com';
