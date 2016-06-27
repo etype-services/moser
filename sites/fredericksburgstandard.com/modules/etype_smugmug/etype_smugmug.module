@@ -42,13 +42,12 @@ function _etype_smugmug_content() {
 
         $options = [
             'AppName' => 'FredericksburgStandard.com',
-            'verbosity' => 1
+            '_verbosity' => 1
         ];
 
         $client = new phpSmug\Client('SxFKHHZ7q4tPVbjLxkRTbDbcn7pCtBjM', $options);
         $albums = $client->get('user/fredericksburgstandard!albums', array('count' => 1));
         $images = $client->get($albums->Album[0]->Uris->AlbumImages, array('count' => 25));
-
 
         foreach ($images->AlbumImage as $image) {
             $output .= sprintf('<a href="%s"><img src="%s" title="%s" alt="%s" width="150" height="150" /></a>', $image->WebUri, $image->ThumbnailUrl, $image->Title, $image->ImageKey);
