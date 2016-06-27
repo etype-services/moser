@@ -49,7 +49,7 @@ function _etype_smugmug_content() {
         $images = $client->get($albums->Album[0]->Uris->AlbumImages, array('count' => 25));
 
         foreach ($images->AlbumImage as $image) {
-            $output .= sprintf('<div class="smugmug_thumb"><a href="%s" target="_blank"><img src="%s" title="%s" alt="%s" width="150" /></a></div>', $image->WebUri, $image->ThumbnailUrl, $image->Title, $image->ImageKey);
+            $output .= sprintf('<a href="%s" target="_blank"><img src="%s" title="%s" alt="%s" width="150"  class="smugmug_thumb" /></a>', $image->WebUri, $image->ThumbnailUrl, $image->Title, $image->ImageKey);
         }
 
     } catch (Exception $e) {
