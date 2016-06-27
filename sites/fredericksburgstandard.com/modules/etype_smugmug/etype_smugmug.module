@@ -38,18 +38,24 @@ function _etype_smugmug_content() {
     require_once '/data/web/vendor/autoload.php';
     $output = '';
 
-    $options = [
-        'AppName' => 'FredericksburgStandard.com',
-        '_verbosity' => 1
-    ];
+    try {
 
-    $client = new phpSmug\Client('SxFKHHZ7q4tPVbjLxkRTbDbcn7pCtBjM', $options);
-    $albums = $client->get('user/fredericksburgstandard!albums', array('count' => 1));
-    $images = $client->get($albums->Album[0]->Uris->AlbumImages, array('count' => 25));
+        $options = [
+            'AppName' => 'FredericksburgStandard.com',
+            '_verbosity' => 1
+        ];
 
-    foreach ($images->AlbumImage as $image) {
-        $output .= sprintf('<div class="smugmug_thumb"><a href="%s" target="_blank"><img src="%s" title="%s" alt="%s" width="30%" /></a></div>', $image->WebUri, $image->ThumbnailUrl, $image->Title, $image->ImageKey);
+        $client = new phpSmug\Client('SxFKHHZ7q4tPVbjLxkRTbDbcn7pCtBjM', $options);
+        $albums = $client->get('user/fredericksburgstandard!albums', array('count' => 1));
+        $images = $client->get($albums->Album[0]->Uris->AlbumImages, array('count' => 25));
+
+        foreach ($images->AlbumImage as $image) {
+            $output .= sprintf('<div class="smugmug_thumb"><a href="%s" target="_blank"><img src="%s" title="%s" alt="%s" width="30%" /></a></div>', $image->WebUri, $image->ThumbnailUrl, $image->Title, $image->ImageKey);
+        }
+
+    } catch (Exception $e) {
+        $output .= sprintf('%s (Error Code: %d)', $e->getMessage(), $e->getCode());
     }
-
+    
     return $output;
 }
