@@ -39,7 +39,8 @@ function _etype_smugmug_content() {
     $output = '';
 
     $options = [
-        'AppName' => 'FredericksburgStandard.com'
+        'AppName' => 'FredericksburgStandard.com',
+        '_verbosity' => 1
     ];
 
     $client = new phpSmug\Client('SxFKHHZ7q4tPVbjLxkRTbDbcn7pCtBjM', $options);
