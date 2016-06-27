@@ -38,8 +38,7 @@ function _etype_smugmug_content() {
     require_once '/data/web/vendor/autoload.php';
     // Optional, but definitely nice to have, options
     $options = [
-        'AppName' => 'FredericksburgStandard.com',
-        'OAuthSecret' => '528FJVpbGkrRsWsZ9DPCc6n6FhqvxzWhRrPhdVGZxTVkPdtRdLDWSSfJDTDqSzKv'
+        'AppName' => 'FredericksburgStandard.com'
     ];
     $client = new phpSmug\Client('SxFKHHZ7q4tPVbjLxkRTbDbcn7pCtBjM', $options);
     $repositories = $client->get('user/fbgnews@fredericksburgstandard.com!albums');
