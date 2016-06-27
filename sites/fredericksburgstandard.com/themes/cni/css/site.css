@@ -59,7 +59,7 @@
 	margin-top: 5px;
 }
 
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 727px) {
    #block-dfp-tpa-northleaderboard {
        display: none;
        visibility: hidden;
