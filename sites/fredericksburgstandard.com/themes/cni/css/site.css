@@ -59,6 +59,7 @@
 	margin-top: 5px;
 }
 
+/* hide footer google adds on smaller screens */
 @media only screen and (max-width: 727px) {
    #block-dfp-tpa-northleaderboard {
        display: none;
