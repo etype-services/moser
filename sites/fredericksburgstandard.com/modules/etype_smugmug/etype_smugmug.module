@@ -41,8 +41,8 @@ function _etype_smugmug_content() {
         'AppName' => 'FredericksburgStandard.com'
     ];
     $client = new phpSmug\Client('SxFKHHZ7q4tPVbjLxkRTbDbcn7pCtBjM', $options);
-    $repositories = $client->get('user/fbgnews@fredericksburgstandard.com!albums');
+    $repositories = $client->get('user/fredericksburgstandard!albums');
     $output = 'hola';
-    
+
     return $output;
 }
