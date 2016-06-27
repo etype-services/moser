@@ -39,8 +39,7 @@ function _etype_smugmug_content() {
     $output = '';
 
     $options = [
-        'AppName' => 'FredericksburgStandard.com',
-        '_verbosity' => 1
+        'AppName' => 'FredericksburgStandard.com'
     ];
 
     $client = new phpSmug\Client('SxFKHHZ7q4tPVbjLxkRTbDbcn7pCtBjM', $options);
@@ -50,6 +49,6 @@ function _etype_smugmug_content() {
     foreach ($images->AlbumImage as $image) {
         $output .= sprintf('<div class="smugmug_thumb"><a href="%s" target="_blank"><img src="%s" title="%s" alt="%s" width="30%" /></a></div>', $image->WebUri, $image->ThumbnailUrl, $image->Title, $image->ImageKey);
     }
-    
+
     return $output;
 }
