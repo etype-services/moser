@@ -42,7 +42,7 @@ function _etype_smugmug_content() {
     ];
     $client = new phpSmug\Client('SxFKHHZ7q4tPVbjLxkRTbDbcn7pCtBjM', $options);
     $repositories = $client->get('user/fredericksburgstandard!albums');
-    $output = 'hola';
+    var_dump($repositories);
 
-    return $output;
+    // return $output;
 }
