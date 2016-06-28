@@ -52,13 +52,16 @@ function _etype_smugmug_content() {
             if (count($tmp) == 0) {
                 $tmp = $albums->Album[1]->Uris->AlbumImages;
             }
-            var_dump($tmp);
-            /*$images = $client->get($tmp, array('count' => 25));
-            foreach ($images->AlbumImage as $image) {
-                $output .= sprintf('<a href="%s" target="_blank"><img src="%s" title="%s" alt="%s" width="150"  class="smugmug_thumb" /></a>', $image->WebUri, $image->ThumbnailUrl, $image->Title, $image->ImageKey);
+            if (count($tmp) > 0) {
+                $images = $client->get($tmp, array('count' => 25));
+                foreach ($images->AlbumImage as $image) {
+                    $output .= sprintf('<a href="%s" target="_blank"><img src="%s" title="%s" alt="%s" width="150"  class="smugmug_thumb" /></a>', $image->WebUri, $image->ThumbnailUrl, $image->Title, $image->ImageKey);
+                }
+            } else {
+                $output .= 'No SmugMug images found.';
             }
         } else {
-            $output .= 'No SmugMug albums found.';*/
+            $output .= 'No SmugMug albums found.';
         }
 
     } catch (Exception $e) {
