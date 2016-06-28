@@ -50,10 +50,11 @@ function _etype_smugmug_content() {
 
         $client = new phpSmug\Client($api_key, $options);
         $albums = $client->get("user/{$user_name}!albums", array('count' => 1));
-        var_dump($albums);
+        $images = $client->get($albums->Album[1]->Uris->AlbumImages, array('count' => 25));
+        var_dump($images);
 
         exit;
-        
+
         if (count($albums) > 0) {
             $tmp = $albums->Album[0]->Uris->AlbumImages;
             if (count($tmp) == 0) {
