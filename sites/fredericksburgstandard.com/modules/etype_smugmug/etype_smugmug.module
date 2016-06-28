@@ -46,7 +46,7 @@ function _etype_smugmug_content() {
 
         $client = new phpSmug\Client('SxFKHHZ7q4tPVbjLxkRTbDbcn7pCtBjM', $options);
         $albums = $client->get('user/fredericksburgstandard!albums', array('count' => 2));
-        // var_dump($albums);
+        var_dump($albums);
         if (count($albums) > 0) {
             $tmp = $albums->Album[0]->Uris->AlbumImages;
             if (count($tmp) == 0) {
