@@ -56,10 +56,7 @@ function _etype_smugmug_content() {
             $output .= sprintf('<a href="%s" target="_blank"><img src="%s" title="%s" alt="%s" width="150"  class="smugmug_thumb" /></a>', $image->WebUri, $image->ThumbnailUrl, $image->Title, $image->ImageKey);
         }
 
-        print $output;
-
-        exit;
-
+        /*
         if (count($albums) > 0) {
             $tmp = $albums->Album[0]->Uris->AlbumImages;
             if (count($tmp) == 0) {
@@ -76,7 +73,7 @@ function _etype_smugmug_content() {
             }
         } else {
             $output .= 'No SmugMug albums found.';
-        }
+        }*/
 
     } catch (Exception $e) {
         $output .= sprintf('%s (Error Code: %d)', $e->getMessage(), $e->getCode());
