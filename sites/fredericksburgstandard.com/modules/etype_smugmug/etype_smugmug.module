@@ -45,10 +45,13 @@ function _etype_smugmug_content() {
         ];
 
         $client = new phpSmug\Client('SxFKHHZ7q4tPVbjLxkRTbDbcn7pCtBjM', $options);
-        $albums = $client->get('user/fredericksburgstandard!albums', array('count' => 1));
+        $albums = $client->get('user/fredericksburgstandard!albums', array('count' => 2));
         // var_dump($albums);
         if (count($albums) > 0) {
             $tmp = $albums->Album[0]->Uris->AlbumImages;
+            if (count($tmp) == 0) {
+                $tmp = $albums->Album[1]->Uris->AlbumImages;
+            }
             var_dump($tmp);
             /*$images = $client->get($tmp, array('count' => 25));
             foreach ($images->AlbumImage as $image) {
