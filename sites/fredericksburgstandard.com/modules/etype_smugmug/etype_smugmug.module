@@ -44,7 +44,7 @@ function _etype_smugmug_content() {
     $api_key = 'SxFKHHZ7q4tPVbjLxkRTbDbcn7pCtBjM';
 
     require_once '/data/web/vendor/autoload.php';
-    $output = '';
+    $output = '<div id="smugmug_div">';
 
     try {
 
@@ -83,5 +83,6 @@ function _etype_smugmug_content() {
         $output .= sprintf('%s (Error Code: %d)', $e->getMessage(), $e->getCode());
     }
 
+    $output .= '</div>';
     return $output;
 }
