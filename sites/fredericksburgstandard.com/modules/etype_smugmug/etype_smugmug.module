@@ -35,6 +35,11 @@ function etype_smugmug_block_view($delta = '') {
  */
 function _etype_smugmug_content() {
 
+    drupal_add_css(drupal_get_path('module', 'etype_smugmug') . '/css/etype_smugmug.css', array(
+        'group' => CSS_THEME,
+        'type' => 'file'
+    ));
+
     $user_name = 'fredericksburgstandard';
     $api_key = 'SxFKHHZ7q4tPVbjLxkRTbDbcn7pCtBjM';
 
@@ -52,7 +57,6 @@ function _etype_smugmug_content() {
         $albums = $client->get("user/{$user_name}!albums", array('count' => 1));
         $images = $client->get($albums->Album[0]->Uris->AlbumImages, array('count' => 25));
         foreach ($images->AlbumImage as $image) {
-            // var_dump($image);
             $output .= sprintf('<a href="%s" target="_blank"><img src="%s" title="%s" alt="%s" width="150"  class="smugmug_thumb" /></a>', $image->WebUri, $image->ThumbnailUrl, $image->Title, $image->ImageKey);
         }
 
