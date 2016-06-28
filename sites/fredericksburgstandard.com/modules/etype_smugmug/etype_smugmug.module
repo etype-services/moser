@@ -51,7 +51,12 @@ function _etype_smugmug_content() {
         $client = new phpSmug\Client($api_key, $options);
         $albums = $client->get("user/{$user_name}!albums", array('count' => 1));
         $images = $client->get($albums->Album[0]->Uris->AlbumImages, array('count' => 25));
-        var_dump($images);
+        foreach ($images->AlbumImage as $image) {
+            // var_dump($image);
+            $output .= sprintf('<a href="%s" target="_blank"><img src="%s" title="%s" alt="%s" width="150"  class="smugmug_thumb" /></a>', $image->WebUri, $image->ThumbnailUrl, $image->Title, $image->ImageKey);
+        }
+
+        print $output;
 
         exit;
 
