@@ -107,11 +107,6 @@
         background-color: #eaeaea;
     }
 
-
-    #main-menu ul.menu li.first a.active, #main-menu ul.menu li.first a.active:hover {
-        background-color: #9900cc;
-    }
-
     /* other */
     .page-node.not-logged-in .field-name-field-image img {
         width: auto;
@@ -218,6 +213,10 @@
     #main-menu ul.menu li a:hover {
         background: url("../images/mobile_menu.png") no-repeat scroll 7px 8px transparent;
         color: #ffffff;
+    }
+
+    #main-menu ul.menu li.first a.active, #main-menu ul.menu li.first a.active:hover {
+        background-color: #9900cc;
     }
 
     .main-content-wrapper {
