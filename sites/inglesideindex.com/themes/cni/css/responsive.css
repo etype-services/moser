@@ -210,6 +210,10 @@
         transition: background-color 0.5s ease-out;
     }
 
+    #main-menu ul.menu li.first a.active {
+        background-color: #9900cc;
+    }
+
     #main-menu ul.menu li a:hover {
         background: url("../images/mobile_menu.png") no-repeat scroll 7px 8px transparent;
         color: #ffffff;
