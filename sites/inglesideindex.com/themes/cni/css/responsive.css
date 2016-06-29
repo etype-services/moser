@@ -215,11 +215,6 @@
         color: #ffffff;
     }
 
-
-    #main-menu ul.menu li.first a.active, #main-menu ul.menu li.first a.active:hover {
-        background: #9900cc url("../images/mobile_menu.png") no-repeat scroll 7px 8px;
-    }
-
     .main-content-wrapper {
         margin-top: 0;
     }

@@ -107,6 +107,11 @@
         background-color: #eaeaea;
     }
 
+
+    #main-menu ul.menu li.first a.active, #main-menu ul.menu li.first a.active:hover {
+        background-color: #9900cc;
+    }
+
     /* other */
     .page-node.not-logged-in .field-name-field-image img {
         width: auto;
