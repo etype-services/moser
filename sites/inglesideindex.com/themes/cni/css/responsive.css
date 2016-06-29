@@ -215,6 +215,10 @@
         color: #ffffff;
     }
 
+    #main-menu ul.menu li.first a.active, #main-menu ul.menu li.first a.active:hover {
+        background-color: #0000ff;
+    }
+
     .main-content-wrapper {
         margin-top: 0;
     }
