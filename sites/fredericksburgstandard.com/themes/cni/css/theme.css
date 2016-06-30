@@ -254,9 +254,9 @@ h3.site-slogan {
     font-style: italic;
 }
 
-/* TAXONOMY PAGES
+/* TAXONOMY PAGES (and Paid Obits)
 --------------------------------------------------------------------------*/
-.page-taxonomy-term h1#page-title {
+.page-taxonomy-term h1#page-title, .page-paid-obits h1#page-title {
     text-transform: uppercase;
 }
 
