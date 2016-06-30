@@ -254,6 +254,12 @@ h3.site-slogan {
     font-style: italic;
 }
 
+/* TAXONOMY PAGES
+--------------------------------------------------------------------------*/
+.page-taxonomy-term h1#page-title {
+    text-transform: uppercase;
+}
+
 /* MAIN CONTENT 
 --------------------------------------------------------------------------*/
 
