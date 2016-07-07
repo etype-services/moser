@@ -90,14 +90,7 @@ function encrypt_decrypt($action, $string) {
   <?php if ($page['user_menu']): ?>   
     <nav id="user-menu" class="clearfix">
       <?php print render($page['user_menu']); ?>
-      <?php print render($page['search_box']); ?>
-      <div id="social">
-        <ul class="social-links">
-          <li><a class="rss" href="<?php print $base_path ?>rss.xml"></a></li>
-         <!-- No Twitter  <li><a class="twitter" href="<?php echo $twitter ?>"></a></li> /no twitter -->
-          <li><a class="facebook" href="<?php echo $facebook ?>"></a></li>
-        </ul>
-      </div>           
+      <?php print render($page['search_box']); ?>       
     </nav>      
   <?php endif; ?>    
 
