@@ -1,4 +1,4 @@
-/* HTML 
+/* HTML
 --------------------------------------------------------------------------*/
 
 body {
@@ -6,14 +6,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5em;
     color: #444444;
-    background: #dddddd url(../images/style1/background.png);
+    background: #dddddd url(../images/style5/background.png);
 }
 
 a {
     font-weight: normal;
-}
-
-a:hover {
+    color: #0000cc;
     text-decoration: underline;
 }
 
@@ -21,8 +19,6 @@ h1, h2, h3, h4, h5 {
     font-family: 'Lato', sans-serif;
     line-height: 1.0em;
     font-weight: normal;
-    text-transform: normal;
-
 }
 
 h1 {
@@ -46,11 +42,11 @@ h2 {
 }
 
 #page {
-    background: url(../images/style1/background-shadow.png) top center repeat-y;
+    background: url(../images/style5/background-shadow.png) top center repeat-y;
 }
 
 .page-inner {
-    background: #f9f9f9 url(../images/style1/page-background.png);
+    background: #f9f9f9 url(../images/style5/page-background.png);
 }
 
 p {
@@ -69,7 +65,7 @@ td {
     border: 1px solid #dddddd;
 }
 
-/* HEADER 
+/* HEADER
 --------------------------------------------------------------------------*/
 
 .header-wrapper-inner {
@@ -78,12 +74,11 @@ td {
 
 header {
     float: left;
+    max-width: 650px;
 }
 
-.site-logo {
-}
-
-hgroup {
+.site-logo img {
+    max-width: 100%;
 }
 
 h1.site-name, h2.site-name {
@@ -97,7 +92,7 @@ h3.site-slogan {
     text-shadow: 1px 1px #ffffff;
 }
 
-/* SLIDESHOW 
+/* SLIDESHOW
 --------------------------------------------------------------------------*/
 
 .view-slideshow {
@@ -130,13 +125,13 @@ h3.site-slogan {
     width: 578px;
     top: -20px;
     left: -20px;
-    background: url(../images/style1/trans.png);
+    background: url(../images/style5/trans.png);
     color: #ffffff;
 }
 
 .view-slideshow .views_slideshow_main .views-field-title a {
     color: #ffffff;
-    text-decoration: none;
+    text-transform: uppercase;
     font-weight: bold;
     font-size: 14px;
 }
@@ -148,7 +143,7 @@ h3.site-slogan {
     padding: 20px;
     top: 190px;
     left: -20px;
-    background: url(../images/style1/trans.png);
+    background: url(../images/style5/trans.png);
     color: #cccccc;
     text-shadow: -1px -1px #000000;
 }
@@ -157,8 +152,7 @@ h3.site-slogan {
 
 .view-slideshow .views-slideshow-controls-bottom .views-field-field-image img, .view-slideshow .views-slideshow-controls-bottom .views-field-field-video img {
     display: block;
-    margin-right: 50px;
-    margin-left: 50px;
+    margin-right: 20px;
     float: left;
     opacity: 0.5;
     border: 2px solid #333333;
@@ -167,7 +161,7 @@ h3.site-slogan {
 
 .view-slideshow .views-slideshow-controls-bottom .views-field-field-image img:hover, .view-slideshow .views-slideshow-controls-bottom .views-field-field-video img:hover {
     opacity: 1;
-    border: 2px solid #920000
+    border: 2px solid #000
 }
 
 .view-slideshow .views-slideshow-controls-bottom .active .views-field-field-image img, .view-slideshow .views-slideshow-controls-bottom .active .views-field-field-video img {
@@ -178,11 +172,8 @@ h3.site-slogan {
     margin-right: 0;
 }
 
-/* PREFACE 
+/* PREFACE
 --------------------------------------------------------------------------*/
-.preface-wrapper .block .content {
-    height: 300px;
-}
 
 .preface-wrapper .content {
     padding: 20px 0 0 0;
@@ -190,7 +181,7 @@ h3.site-slogan {
 }
 
 .preface-wrapper h3 {
-    background: url(../images/style1/h3-bg.png) right center repeat-x;
+    background: url(../images/style5/h3-bg.png) right center repeat-x;
 }
 
 .preface-wrapper h3 span {
@@ -198,7 +189,7 @@ h3.site-slogan {
     background: #f9f9f9;
 }
 
-/* MAIN CONTENT 
+/* MAIN CONTENT
 --------------------------------------------------------------------------*/
 
 .main-content-wrapper {
@@ -209,12 +200,12 @@ h3.site-slogan {
     padding: 20px;
     margin-bottom: 20px;
     border: 1px solid #dddddd;
-    border-bottom: 3px solid #920000;
+    border-bottom: 3px solid #000;
     background: #ffffff;
     box-shadow: 0px 1px 5px #bbbbbb;
 }
 
-/* SIDEBARS 
+/* SIDEBARS
 --------------------------------------------------------------------------*/
 
 .sidebar .content {
@@ -223,7 +214,7 @@ h3.site-slogan {
 }
 
 .sidebar h3 {
-    background: url(../images/style1/h3-bg.png) right center repeat-x;
+    background: url(../images/style5/h3-bg.png) right center repeat-x;
 }
 
 .sidebar h3 span {
@@ -231,7 +222,7 @@ h3.site-slogan {
     background: #f9f9f9;
 }
 
-/* POSTSCRIPT 
+/* POSTSCRIPT
 --------------------------------------------------------------------------*/
 
 #postscript {
@@ -248,7 +239,7 @@ h3.site-slogan {
 .postscript-wrapper {
     padding: 20px 0;
     margin: 0 -10px;
-    background: url(../images/style1/postscript-bg.png);
+    background: url(../images/style5/postscript-bg.png);
     border-top: 20px solid #252525;
 }
 
@@ -265,7 +256,7 @@ h3.site-slogan {
     display: block;
     margin-left: 20px;
     margin-bottom: 10px;
-    background: url(../images/style1/h3-bg.png) right center repeat-x;
+    background: url(../images/style5/h3-bg.png) right center repeat-x;
 }
 
 .postscript-wrapper h3 span {
@@ -303,7 +294,7 @@ h3.site-slogan {
     color: #ffffff;
 }
 
-/* LISTS 
+/* LISTS
 --------------------------------------------------------------------------*/
 
 .item-list ul {
@@ -320,7 +311,7 @@ h3.site-slogan {
     padding: 5px 0;
     list-style-position: outside;
     list-style-type: square;
-    color: #920000;
+    color: #000;
     border-bottom: 1px dotted #999999;
 }
 
@@ -398,10 +389,6 @@ h3.site-slogan {
     background: #eeeeee;
 }
 
-#main-menu ul.menu li ul ul {
-    margin: -25px 0 0 200px;
-}
-
 #user-menu ul.menu li:hover ul ul, #user-menu ul.menu li.sfHover ul ul, #user-menu ul.menu li:hover ul ul ul, #user-menu ul.menu li.sfHover ul ul ul, #user-menu ul.menu li:hover ul ul ul ul, #user-menu ul.menu li.sfHover ul ul ul ul {
     left: -999em;
 }
@@ -428,146 +415,87 @@ h3.site-slogan {
 #main-menu ul.menu {
     display: block;
     height: 100%;
-    min-height: 40px;
-    max-height: 85px;
     margin: 0;
     border: 1px solid #dddddd;
-    border-bottom: 3px solid #920000;
-    background: #333333 url(../images/style1/main-menu-bg.png) top left repeat-x;
+    border-bottom: 3px solid #000000;
+    background-color: #79001c;
+    width: 100%;
 }
 
 #main-menu ul.menu li {
-
+    background-color: #79001c;
 }
 
-#main-menu ul.menu li a {
+#main-menu ul.menu li a, #main-menu ul.menu li ul li a {
     display: block;
-    height: 40px;
-    line-height: 40px;
-    color: #555555;
-    padding: 0 20px;
+    height: 37px;
+    line-height: 37px;
+    color: #ffffff;
+    padding: 0 11px;
     text-transform: uppercase;
-    text-shadow: 1px 1px #ffffff;
-    border-right: 1px solid #dddddd;
-    border-left: 1px solid #f9f9f9;
+    border-left: 2px solid #f9f9f9;
+    font-size: 0.9em;
 }
 
-#main-menu ul.menu li.first a {
-    border-left: 0px solid #f9f9f9;
+/* no border on first visible item */
+#main-menu ul.menu li#menu-656-1 a {
+    border-left: none;
 }
 
 #main-menu ul.menu li.last a {
-    border-right: 0px solid #dddddd;
+    border-right: 2px solid #f9f9f9;
 }
 
-#main-menu ul.menu li a:hover {
+#main-menu ul.menu li a:hover, #main-menu ul.menu li ul li a:hover {
     color: #333333;
-    height: 38px;
-    line-height: 38px;
+    height: 36px;
+    line-height: 36px;
     border-top: 1px solid #dddddd;
     text-decoration: none;
     background: #eeeeee;
 }
 
 #main-menu ul.menu li a.active {
-    color: #333333;
-    height: 38px;
-    line-height: 38px;
-    border-top: 2px solid #920000;
+    background-color: #008ad2; /* matches sf-space color */
+    height: 36px;
+    line-height: 36px;
+    border-top: 2px solid #000;
     text-decoration: none;
 }
 
-/* Main Menu Drop Down */
+/* Main menu drop-downs */
 
 #main-menu ul.menu li ul {
-    display: none;
-}
-
-/* MAIN MENU SECOND LEVEL
---------------------------------------------------------------------------*/
-
-#main-menu-second-level h3 {
-    display: none;
-}
-
-#main-menu-second-level ul.menu {
-    display: block;
-    height: 25px;
-    margin: 0;
-    background: #333333;
-}
-
-#main-menu-second-level ul.menu li {
-}
-
-#main-menu-second-level ul.menu li a {
-    display: block;
-    height: 25px;
-    line-height: 25px;
-    color: #ffffff;
-    padding: 0 20px;
-    text-shadow: -1px -1px #111111;
-}
-
-#main-menu-second-level ul.menu li a:hover {
-    background: #222222;
-    text-decoration: none;
-}
-
-/* Main Menu Second Level Drop Down */
-
-#main-menu-second-level ul.menu li ul {
     position: absolute;
     padding: 0;
-    margin: 1px 0 0 0;
-    width: 200px;
+    margin: 0;
+    width: 150px; /* arbitrary choice adjust if necessary */
     left: -999em;
     z-index: 100;
-    background: #f9f9f9;
-    border: 1px solid #dddddd;
-    box-shadow: 0 1px 3px #ddd;
-}
-
-#main-menu-second-level ul.menu li:hover ul, #main-menu-second-level ul.menu li.sfHover ul {
-    left: auto;
-}
-
-#main-menu-second-level ul.menu li li {
-    border-bottom: 1px solid #dddddd;
-}
-
-#main-menu-second-level ul.menu li li.last {
-    border-bottom: 0px solid #dddddd;
-}
-
-#main-menu-second-level ul.menu li li a, #main-menu-second-level ul.menu li li a.active {
-    width: 160px;
-    padding: 0 20px;
-    margin: 0;
-    font-size: 0.9em;
     border: 0;
+    background-color: #f9f9f9; /* matches sf-space color */
+}
+
+#main-menu ul.menu li ul li {
+    border-bottom: 1px solid #dddddd;
+    width: 150px; /* must match ul above */
+}
+
+#main-menu ul.menu li ul li a {
+    border-left: none;
+}
+
+#main-menu ul.menu li li a.active {
+    padding: 0 18px;
+}
+
+#main-menu ul.menu li ul li a:hover, #main-menu ul.menu li ul li a.active:hover {
     color: #333333;
-    text-shadow: 1px 1px #ffffff;
-}
-
-#main-menu-second-level ul.menu li li a:hover, #main-menu-second-level ul.menu li li a.active:hover {
+    height: 40px;
+    line-height: 40px;
+    border-top: none;
+    text-decoration: none;
     background: #eeeeee;
-}
-
-#main-menu-second-level ul.menu li ul ul {
-    margin: -25px 0 0 200px;
-}
-
-#main-menu-second-level ul.menu li:hover ul ul, #main-menu-second-level ul.menu li.sfHover ul ul, #main-menu-second-level ul.menu li:hover ul ul ul, #main-menu-second-level ul.menu li.sfHover ul ul ul, #main-menu-second-level ul.menu li:hover ul ul ul ul, #main-menu-second-level ul.menu li.sfHover ul ul ul ul {
-    left: -999em;
-}
-
-#main-menu-second-level ul.menu li li:hover ul, #main-menu-second-level ul.menu li li.sfHover ul, #main-menu-second-level ul.menu li li li:hover ul, #main-menu-second-level ul.menu li li li.sfHover ul, #main-menu-second-level ul.menu li li li li:hover ul, #main-menu-second-level ul.menu li li li li.sfHover ul {
-    left: auto;
-}
-
-#main-menu-second-level ul.menu li li.expanded, #main-menu-second-level ul.menu li li li.expanded {
-    background: 0;
 }
 
 /* SIDE MENU
@@ -582,8 +510,10 @@ h3.site-slogan {
 .node .field-name-field-image img {
     display: block;
     margin-top: -20px;
-    margin-left: -20px;
+    margin-left: 0px;
     margin-bottom: 10px;
+    float: left;
+    margin-right: 10px;
 }
 
 .node .field-name-field-video iframe {
@@ -601,7 +531,7 @@ h3.site-slogan {
 }
 
 .node .content a {
-    color: #920000;
+    color: #000;
 }
 
 .node ul.inline li {
@@ -619,15 +549,11 @@ h3.site-slogan {
 
 .node .taxonomy .field-type-taxonomy-term-reference {
     margin: 5px 0;
-    field-type-taxonomy-term-reference background: #f9f9f9;
-}
-
-.node .taxonomy-inner {
-    ≈
+    background: #f9f9f9;
 }
 
 .node .taxonomy a {
-    color: #920000;
+    color: #000;
     font-size: 0.8em;
     text-transform: uppercase;
 }
@@ -651,7 +577,7 @@ h3.site-slogan {
     padding: 10px;
     float: left;
     margin: 0 20px 0 0;
-    background: url(../images/style1/image-background.png);
+    background: url(../images/style5/image-background.png);
 }
 
 .node-teaser .field-name-field-video iframe {
@@ -659,7 +585,7 @@ h3.site-slogan {
     padding: 10px;
     float: left;
     margin: 0 20px 0 0;
-    background: url(../images/style1/image-background.png);
+    background: url(../images/style5/image-background.png);
 }
 
 .node-teaser .links, .node-teaser .content, .node-teaser p, .node-teaser .field, .node-teaser .field-items, .node-teaser .field-item {
@@ -735,7 +661,7 @@ h3.site-slogan {
 }
 
 #search-block-form {
-    margin-top: 0x;
+    margin-top: 0;
     background: 0;
     line-height: 25px;
     border-left: 1px solid #dddddd;
@@ -747,8 +673,8 @@ h3.site-slogan {
 }
 
 #search-block-form .form-item, #search-block-form .form-actions {
-    margin-bottom: 0em;
-    margin-top: 0em;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 #search-block-form .form-text, #search-block-form .form-submit {
@@ -789,6 +715,7 @@ h3.site-slogan {
 
 #social {
     float: left;
+    margin-top: -30px;
     padding-left: 10px;
     margin-right: -10px;
     padding-top: 4px;
@@ -833,7 +760,6 @@ h3.site-slogan {
     margin-left: 2px;
     font-size: 1.0em;
     padding-bottom: 0;
-
 }
 
 .breadcrumb a {
@@ -887,7 +813,7 @@ body #main-content .quicktabs-wrapper .block-inner {
     padding: 0px;
     margin-bottom: 0px;
     border: 0px solid #dddddd;
-    border-bottom: 0px solid #920000;
+    border-bottom: 0px solid #000;
     background: 0;
     box-shadow: 0px 0px 0px #bbbbbb;
 }
@@ -941,7 +867,7 @@ ul.quicktabs-tabs.quicktabs-style-nostyle li.active {
 }
 
 ul.quicktabs-tabs.quicktabs-style-nostyle li.active a {
-    color: #920000;
+    color: #000;
 }
 
 .quicktabs_main.quicktabs-style-nostyle .item-list li span {
@@ -960,7 +886,7 @@ ul.quicktabs-tabs.quicktabs-style-nostyle li.active a {
 
 .preface-wrapper .views-row {
     padding: 10px 10px 0 10px;
-    background: url(../images/style1/preface-view.png);
+    background: url(../images/style5/preface-view.png);
     overflow: hidden;
 }
 
@@ -996,9 +922,53 @@ ul.quicktabs-tabs.quicktabs-style-nostyle li.active a {
     font-size: 12px;
 }
 
+#weathertext {
+    font-size: 10px;
+    line-height: 10px;
+}
+
+header {
+    width: 100%;
+}
+
+.logo-slogan {
+    float: left;
+}
+
+.header-ad {
+    float: right;
+    max-width: 400px;
+
+    background: #f9f9f9;
+}
+
+#main-content .block-simpleads .block-inner {
+    padding: 0;
+    border: none;
+    border-bottom: none;
+    background: #ffffff;
+    box-shadow: none;
+}
+
 /* extra hacks */
 /* top content banner */
-.block-simpleads-ad-groups-376 {
+#block-simpleads-ad-groups-376 {
     margin-top: 1em;
     text-align: center;
+}
+
+
+/* SIMPLE ADS
+--------------------------------------------------------------------------*/
+.block-simpleads .block-inner, #main-content .block-simpleads .block-inner {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-width: 0;
+    box-shadow: 0 0 0 0;
+    text-align:center;
+}
+
+.block-simpleads .block-inner img, #main-content .block-simpleads .block-inner img {
+    max-width:100%;
 }
