@@ -498,13 +498,6 @@ h3.site-slogan {
     background: #eeeeee;
 }
 
-
-.sf-menu.sf-style-pomegranate li, .sf-menu.sf-style-pomegranate.sf-navbar {
-    background: #79001c;
-    text-transform: uppercase;
-    font-size: 15px;
-}
-
 /* SIDE MENU
 --------------------------------------------------------------------------*/
 
@@ -962,4 +955,20 @@ header {
 #block-simpleads-ad-groups-376 {
     margin-top: 1em;
     text-align: center;
+}
+
+
+/* SIMPLE ADS
+--------------------------------------------------------------------------*/
+.block-simpleads .block-inner, #main-content .block-simpleads .block-inner {
+    padding: 0;
+	margin: 0;
+    border: 0;
+    border-width: 0;
+    box-shadow: 0 0 0 0;
+    text-align:center;
+}
+
+.block-simpleads .block-inner img, #main-content .block-simpleads .block-inner img {
+	max-width:100%;
 }
