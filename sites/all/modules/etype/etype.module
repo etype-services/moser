@@ -80,9 +80,9 @@ function _etype_social_content() {
     $output = '
 <div id="social">
     <ul class="social-links">';
-    $facebook = theme_get_setting('facebook', 'cni');
-    $twitter = theme_get_setting('twitter', 'cni');
-    $pinterest = theme_get_setting('pinterest', 'cni');
+    $facebook = theme_get_setting('facebook');
+    $twitter = theme_get_setting('twitter');
+    $pinterest = theme_get_setting('pinterest');
     if (!empty($facebook)) {
         $output .= '<li><a class="facebook" href="https://www.facebook.com/' . $facebook . '"></a></li>';
     }
@@ -102,9 +102,9 @@ function _etype_social_content() {
  */
 function _etype_follow_content() {
     $output = '';
-    $facebook = theme_get_setting('facebook', 'cni');
-    $twitter = theme_get_setting('twitter', 'cni');
-    $pinterest = theme_get_setting('pinterest', 'cni');
+    $facebook = theme_get_setting('facebook');
+    $twitter = theme_get_setting('twitter');
+    $pinterest = theme_get_setting('pinterest');
     if (!empty($facebook)) {
         $output .= '<div class="facebook"><a href="https://www.facebook.com/' . $facebook . '">Like us on Facebook</a></div>';
     }
@@ -122,7 +122,7 @@ function _etype_follow_content() {
  */
 function _etype_facebook_content() {
     $output = '';
-    $facebook = theme_get_setting('facebook', 'cni');
+    $facebook = theme_get_setting('facebook');
 
     if (!empty($facebook)) {
         $output .= '
@@ -138,9 +138,7 @@ function _etype_facebook_content() {
  */
 function _etype_twitter_content() {
     $output = '';
-    $twitter = theme_get_setting('twitter', 'cni');
-    // $twitter_widget_id = theme_get_setting('twitter_widget_id', 'cni');
-
+    $twitter = theme_get_setting('twitter');
     if (!empty($twitter)) {
         $output .= '
 <a class="twitter-timeline" data-height="300" href="https://twitter.com/' . $twitter . '">Tweets by ' . $twitter . '</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>';
@@ -164,7 +162,7 @@ function _etype_ownlocal_content() {
 }
 
 function _etype_e_edition_content() {
-    $e_edition = theme_get_setting('e_edition', 'cni');
+    $e_edition = theme_get_setting('e_edition');
     $site_name = variable_get('site_name', 'Drupal');
     $arr = preg_split("/ID[0-9]+/", $e_edition);
     $fixed = $arr[0];
@@ -176,10 +174,10 @@ function _etype_e_edition_content() {
 }
 
 
-$own_local_file = drupal_get_path('module', 'cni') . '/ownlocal/ownlocal.js';
+$own_local_file = drupal_get_path('module', 'etype') . '/ownlocal/ownlocal.js';
 if (file_exists($own_local_file)) {
-    drupal_add_js(drupal_get_path('module', 'cni') . '/ownlocal/ownlocal.js', 'file');
-    drupal_add_css(drupal_get_path('module', 'cni') . '/ownlocal/ownlocal.css', array(
+    drupal_add_js(drupal_get_path('module', 'etype') . '/ownlocal/ownlocal.js', 'file');
+    drupal_add_css(drupal_get_path('module', 'etype') . '/ownlocal/ownlocal.css', array(
         'group' => CSS_THEME,
         'type' => 'file'
     ));
@@ -204,7 +202,7 @@ function etype_menu() {
 
 function _etype_e_edition() {
     /* redirect to e-Edition */
-    $e_edition = theme_get_setting('e_edition', 'cni');
+    $e_edition = theme_get_setting('e_edition');
     $path = 'http://etypeservices.com/' . $e_edition . '/';
     drupal_goto($path);
 }
