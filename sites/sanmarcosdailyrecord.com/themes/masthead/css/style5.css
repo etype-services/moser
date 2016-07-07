@@ -426,6 +426,10 @@ h3.site-slogan {
     width: 100%;
 }
 
+#main-menu ul.menu li {
+    background-color: #79001c;
+}
+
 #main-menu ul.menu li a, #main-menu ul.menu li ul li a {
     display: block;
     height: 37px;
