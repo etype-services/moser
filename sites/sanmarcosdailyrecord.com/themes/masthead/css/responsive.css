@@ -251,128 +251,123 @@ Note: Design for a width of 420px
 }
 
 #block-block-1 .block-inner {
-    padding: 0px 0 0 0;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 #block-block-1 .content {
-    padding: 0px 0 0 0;
+    padding: 00;
     color: #999999;
 }
 
-#block-block-1 .block-inner {
-    padding: 0px 0 0 0;
-    margin: 0px 0px 20px 0px;
-}
-
 #block-block-10 .content {
-    padding: 0px 0 0 0;
+    padding: 0;
     color: #999999;
 }
 
 #block-block-10 .block-inner {
-    padding: 0px 0 0 0;
-    margin: 0px 0px 20px 0px;
+    padding: 0
+    margin: 0px 0 20px 0;
 }
 
 #block-block-9 .content {
-    padding: 0px 0 0 0;
+    padding: 0;
     color: #999999;
 }
 
 #block-block-9 .block-inner {
-    padding: 0px 0 0 0;
-    margin: 0px 0px 20px 0px;
+    padding: 0;
+    margin: 0 0 20px 0;
 }
 
 #block-block-8 .content {
-    padding: 0px 0 0 0;
+    padding: 0;
     color: #999999;
 }
 
 #block-block-8 .block-inner {
-    padding: 0px 0 0 0;
-    margin: 0px 0px 20px 0px;
+    padding: 0;
+    margin: 0 0 20px 0;
 }
 
 #block-block-13 .content {
-    padding: 0px 0 0 0;
+    padding: 0;
     color: #999999;
 }
 
 #block-block-13 .block-inner {
-    padding: 0px 0 0 0;
-    margin: 0px 0px 20px 0px;
+    padding: 0;
+    margin: 0 0 20px 0;
 }
 
 #block-block-11 .content {
-    padding: 0px 0 0 0;
+    padding: 0;
     color: #999999;
 }
 
 #block-block-11 .block-inner {
-    padding: 0px 0 0 0;
-    margin: 0px 0px 20px 0px;
+    padding: 0;
+    margin: 0 0 20px 0;
 }
 
 #block-block-14 .content {
-    padding: 0px 0 0 0;
+    padding: 0;
     color: #999999;
 }
 
 #block-block-14 .block-inner {
-    padding: 0px 0 0 0;
-    margin: 0px 0px 20px 0px;
+    padding: 0;
+    margin: 0 0 20px 0;
 }
 
 #block-block-16 .content {
-    padding: 0px 0 0 0;
+    padding: 0;
     color: #999999;
 }
 
 #block-block-16 .block-inner {
-    padding: 0px 0 0 0;
-    margin: 0px 0px 20px 0px;
+    padding: 0;
+    margin: 0 0 20px 0;
 }
 
 #block-block-208 .content {
-    padding: 0px 0 0 0;
+    padding: 0;
     color: #999999;
 }
 
 #block-block-208 .block-inner {
-    padding: 0px 0 0 0;
-    margin: 0px 0px 20px 0px;
+    padding: 0;
+    margin: 0 0 20px 0;
 }
 
 #block-block-17 .content {
-    padding: 0px;
+    padding: 0;
     color: #000;
 }
 
 #block-block-17 .block-inner {
     padding: 5px;
-    margin: 0px;
+    margin: 0;
 }
 
 #block-simpleads-ad-groups-51 .content {
-    padding: 0px;
+    padding: 0;
     color: #000;
 }
 
 #block-simpleads-ad-groups-51 .block-inner {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 #block-simpleads-ad-groups-63 .content {
-    padding: 0px;
+    padding: 0;
     color: #000;
 }
 
 #block-simpleads-ad-groups-63 .block-inner {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 #block-block-11 {
@@ -390,27 +385,27 @@ Note: Design for a width of 420px
 }
 
 #block-simpleads-ad-groups-208 .block-inner {
-    padding: 0px 0 0 0;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 #block-simpleads-ad-groups-208 .content {
-    padding: 0px;
+    padding: 0;
     color: #000;
 }
 
 #block-simpleads-ad-groups-64 .block-inner {
-    padding: 0px 0 0 0;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 #block-simpleads-ad-groups-52 .block-inner {
-    padding: 0px 0 0 0;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 #block-simpleads-ad-groups-52 .content {
-    padding: 0px;
+    padding: 0;
     color: #000;
 }
 
@@ -454,20 +449,20 @@ Note: Design for a width of 420px
 
 blockquote {
     background: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 #block-menu-block-2 ul.menu li, #block-menu-block-2 #main-menu ul.menu li, #block-menu-block-2 #user-menu ul.menu li, #block-menu-block-2 #nav-menu ul.menu li {
     float: none;
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
     padding-left: 10px;
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
     list-style-type: circle;
     list-style-image: none;
     list-style-position: inside;
@@ -475,14 +470,14 @@ blockquote {
 
 #block-menu-block-3 ul.menu li, #block-menu-block-3 #main-menu ul.menu li, #block-menu-block-3 #user-menu ul.menu li, #block-menu-block-3 #nav-menu ul.menu li {
     float: none;
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
     padding-left: 10px;
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
     list-style-type: circle;
     list-style-image: none;
     list-style-position: inside;
@@ -501,7 +496,7 @@ blockquote {
 #leader {
     margin-top: 30px;
     margin-bottom: -90px;
-    padding: 0px;
+    padding: 0;
     text-align: center;
     margin-left: 100px;
 }
@@ -558,29 +553,29 @@ blockquote.image-field-caption {
 }
 
 #block-simpleads-ad-groups-241 .block-inner {
-    padding: 0px 0 0 0;
-    margin: 0px 0px 20px 0px;
+    padding: 0;
+    margin: 0 0 20px 0;
 }
 
 #block-simpleads-ad-groups-241 .content {
-    padding: 0px;
+    padding: 0;
     color: #000;
 }
 
 #block-block-27 {
-    margin: 10px 0px 0px 0px;
+    margin: 10px 0 0 0;
 }
 
 #block-block-27 .block-inner {
-    padding: 0px;
+    padding: 0;
 }
 
 #block-block-28 .block-inner {
-    padding: 0px;
+    padding: 0;
 }
 
 #block-block-29 .block-inner {
-    padding: 23px 0px;
+    padding: 23px 0;
 }
 
 #block-dfp-tpa-southsidebar1 iframe {
@@ -591,8 +586,8 @@ blockquote.image-field-caption {
 }
 
 #block-dfp-tpa-southsidebar1 .block-inner {
-    padding: 0px;
-    margin: 0px 0px 20px 0px;
+    padding: 0;
+    margin: 0 0 20px 0;
 }
 
 #block-dfp-tpa-southleaderboard iframe {
@@ -601,41 +596,41 @@ blockquote.image-field-caption {
 }
 
 #block-simpleads-ad-groups-400 .block-inner {
-    padding: 0px 0 0 0;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 #block-simpleads-ad-groups-400 .content {
-    padding: 0px;
+    padding: 0;
     color: #000;
 }
 
 #block-simpleads-ad-groups-399 .block-inner {
-    padding: 0px 0 0 0;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 #block-simpleads-ad-groups-399 .content {
-    padding: 0px;
+    padding: 0;
     color: #000;
 }
 
 #block-simpleads-ad-groups-401 .block-inner {
-    padding: 0px 0 0 0;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 #block-simpleads-ad-groups-401 .content {
-    padding: 0px;
+    padding: 0;
     color: #000;
 }
 
 #block-simpleads-ad-groups-402 .block-inner {
-    padding: 0px 0 0 0;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 #block-simpleads-ad-groups-402 .content {
-    padding: 0px;
+    padding: 0;
     color: #000;
 }
