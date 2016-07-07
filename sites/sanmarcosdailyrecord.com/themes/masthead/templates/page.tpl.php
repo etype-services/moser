@@ -223,7 +223,6 @@ function encrypt_decrypt($action, $string) {
   <div class="footer-wrapper clearfix"><div class="footer-wrapper-inner">
     <footer id="footer" class="<?php echo $grid_full_width ?>">
       <?php print render($page['footer']) ?>
-      <span style="font-size: 0.6em;"><a href="http://www.surfnewmedia.com">Surf New Media</a></span>
     </footer><!-- /footer -->
   </div></div>
 
