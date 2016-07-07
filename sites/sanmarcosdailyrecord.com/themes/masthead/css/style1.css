@@ -13,6 +13,16 @@ a {
     font-weight: normal;
 }
 
+a:hover {
+    color: #0000cc;
+    text-decoration: underline;
+}
+
+
+#page .node-content-wrapper .field-name-body a {
+    color: #0000cc;
+}
+
 h1, h2, h3, h4, h5 {
     font-family: 'Lato', sans-serif;
     line-height: 1.0em;
