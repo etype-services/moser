@@ -8,7 +8,7 @@
   <?php else: ?>
     <?php if ($teaser): ?>
     <div class="field-image">
-      
+      <img class="teaser-default" src="/sites/sanmarcosdailyrecord.com/files/teaser_default.png" />
     </div>
     <?php endif; ?>
 
