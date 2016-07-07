@@ -8,7 +8,7 @@
   <?php else: ?>
     <?php if ($teaser): ?>
     <div class="field-image">
-      <?php print 'No teaser image'; ?>
+      
     </div>
     <?php endif; ?>
 
