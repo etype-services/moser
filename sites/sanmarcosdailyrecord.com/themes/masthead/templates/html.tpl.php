@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" <?php print $rdf_namespaces; ?>>
-
 <head>
   <?php print $head; ?>
   <title>San Marcos Daily Record <?php print $head_title; ?></title>
@@ -10,17 +9,6 @@
   <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
-<style>
-#capption{
-   display: none;
-}
-.views-slideshow-pager-field-item{
-float:left !important;
-}
-.views-slideshow-pager-field-item .views_slideshow_pager_field_item .views-row-odd{
-float:left;
-}
-</style>
 <body class="<?php print $classes; ?>"<?php print $attributes;?>>
 
   <?php print $page_top; ?>

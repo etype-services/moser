@@ -1006,3 +1006,16 @@ header {
 #block-block-21 {
     padding-top: 1em;
 }
+
+/* y mas */
+#capption { /* sic */
+    display: none;
+}
+
+.views-slideshow-pager-field-item {
+    float:left !important;
+}
+
+.views-slideshow-pager-field-item .views_slideshow_pager_field_item .views-row-odd {
+    float:left;
+}
