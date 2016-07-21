@@ -10,16 +10,18 @@ var dir = new Array();
 var mousedover = false;
 //// START PREVIEW OPEN ///////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-$(document).ready(function() {
-    document.getElementById('ad1').onmouseover = function()
+
+(function($) {
+    $('#ad1').onmouseover = function()
     {
         slidedown('ad2');
     }
-	document.getElementById('ad1').onmouseout = function()
+    $('#ad1').onmouseout = function()
     {
         slideup('ad2');
     }
-});
+})(jQuery);
+
 function preview(objname){
 	if(moving[objname])
 		return;
@@ -27,12 +29,12 @@ function preview(objname){
     setTimeout("previewup('"+objname+"')", 20000);  //// uncomment the line to the left and adjust the time that the add is expanded on page load. ////
 //// START - SET COOKIE FOR PREVIEW FUNCTION //////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	
+
 	//var cookie = getcookie("sbb");
 //alert(cookie);
 if(cookie)
  {
-  document.getElementById(objname).style.display = 'none'; 
+  document.getElementById(objname).style.display = 'none';
  }
  else
  {
@@ -45,9 +47,9 @@ if(cookie)
 function getcookie(cookiename) {
 var cookiestring=""+document.cookie;
 var index1=cookiestring.indexOf(cookiename);
-if (index1==-1 || cookiename=="") return ""; 
+if (index1==-1 || cookiename=="") return "";
 var index2=cookiestring.indexOf(';',index1);
-if (index2==-1) index2=cookiestring.length; 
+if (index2==-1) index2=cookiestring.length;
 return unescape(cookiestring.substring(index1+cookiename.length+1,index2));
 	}
 //// END - SET COOKIE FOR PREVIEW FUNCTION //////
