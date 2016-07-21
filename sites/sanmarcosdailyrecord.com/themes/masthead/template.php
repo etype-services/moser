@@ -24,7 +24,6 @@ function masthead_preprocess_page(&$variables) {
   }
 
   $path = current_path();
-  echo $path;
   if (isset($variables['node'])) {
     $title = $variables['node']->title;
   } else {
