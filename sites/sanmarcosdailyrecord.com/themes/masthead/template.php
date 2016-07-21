@@ -24,13 +24,14 @@ function masthead_preprocess_page(&$variables) {
   }
 
   $path = current_path();
-  if (isset($variables['node'])) {
-    $title = $variables['node']->title;
-  } else {
-    $title = 'Home';
+  if ($path == 'frontpage') {
+    $title = 'Home' . ' | ';
+  } else if (isset($variables['node'])) {
+    $title = $variables['node']->title . ' | ';
   }
+
   $site_name = variable_get('site_name', "San Marcos Record");
-  drupal_set_title($title  . ' | ' . $site_name);
+  drupal_set_title($title . $site_name);
 }
 
 function masthead_preprocess_node(&$variables) {
