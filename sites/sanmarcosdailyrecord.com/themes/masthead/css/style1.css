@@ -6,7 +6,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5em;
     color: #444444;
-    background: #dddddd url(../images/style5/background.png);
+    background: #dddddd url(../images/style1/background.png);
 }
 
 a {
@@ -50,11 +50,11 @@ h2 {
 }
 
 #page {
-    background: url(../images/style5/background-shadow.png) top center repeat-y;
+    background: url(../images/style1/background-shadow.png) top center repeat-y;
 }
 
 .page-inner {
-    background: #f9f9f9 url(../images/style5/page-background.png);
+    background: #f9f9f9 url(../images/style1/page-background.png);
 }
 
 p {
@@ -133,7 +133,7 @@ h3.site-slogan {
     width: 578px;
     top: -20px;
     left: -20px;
-    background: url(../images/style5/trans.png);
+    background: url(../images/style1/trans.png);
     color: #ffffff;
 }
 
@@ -151,7 +151,7 @@ h3.site-slogan {
     padding: 20px;
     top: 190px;
     left: -20px;
-    background: url(../images/style5/trans.png);
+    background: url(../images/style1/trans.png);
     color: #cccccc;
     text-shadow: -1px -1px #000000;
 }
@@ -189,7 +189,7 @@ h3.site-slogan {
 }
 
 .preface-wrapper h3 {
-    background: url(../images/style5/h3-bg.png) right center repeat-x;
+    background: url(../images/style1/h3-bg.png) right center repeat-x;
 }
 
 .preface-wrapper h3 span {
@@ -222,7 +222,7 @@ h3.site-slogan {
 }
 
 .sidebar h3 {
-    background: url(../images/style5/h3-bg.png) right center repeat-x;
+    background: url(../images/style1/h3-bg.png) right center repeat-x;
 }
 
 .sidebar h3 span {
@@ -247,7 +247,7 @@ h3.site-slogan {
 .postscript-wrapper {
     padding: 20px 0;
     margin: 0 -10px;
-    background: url(../images/style5/postscript-bg.png);
+    background: url(../images/style1/postscript-bg.png);
     border-top: 20px solid #252525;
 }
 
@@ -264,7 +264,7 @@ h3.site-slogan {
     display: block;
     margin-left: 20px;
     margin-bottom: 10px;
-    background: url(../images/style5/h3-bg.png) right center repeat-x;
+    background: url(../images/style1/h3-bg.png) right center repeat-x;
 }
 
 .postscript-wrapper h3 span {
@@ -586,7 +586,7 @@ h3.site-slogan {
     padding: 10px;
     float: left;
     margin: 0 20px 0 0;
-    background: url(../images/style5/image-background.png);
+    background: url(../images/style1/image-background.png);
 }
 
 .node-teaser .field-name-field-video iframe {
@@ -594,7 +594,7 @@ h3.site-slogan {
     padding: 10px;
     float: left;
     margin: 0 20px 0 0;
-    background: url(../images/style5/image-background.png);
+    background: url(../images/style1/image-background.png);
 }
 
 .node-teaser .links, .node-teaser .content, .node-teaser p, .node-teaser .field, .node-teaser .field-items, .node-teaser .field-item {
@@ -899,7 +899,7 @@ ul.quicktabs-tabs.quicktabs-style-nostyle li.active a {
 
 .preface-wrapper .views-row {
     padding: 10px 10px 0 10px;
-    background: url(../images/style5/preface-view.png);
+    background: url(../images/style1/preface-view.png);
     overflow: hidden;
 }
 
