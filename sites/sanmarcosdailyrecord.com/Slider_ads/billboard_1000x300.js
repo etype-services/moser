@@ -152,7 +152,7 @@ expandingAd.expandableAdUrl = 'http://archives.etypeservices.com/CDN/SMDR_Rattle
 expandingAd.big_params_2 = '&expandable_ad_url=' + expandingAd.expandableAdUrl;
 expandingAd.putObjects = function () {
 	document.write('<div id="ad1" style="width:950px; height:45px; padding:0;">');
-	document.write('<a href="'+ expandingAd.expandableAdUrl +'" >'); // comment out this line to unlink the small banner
+	document.write('<a href="'+ expandingAd.expandableAdUrl +'" target="_blank">'); // comment out this line to unlink the small banner
 	document.write('<img width="'+ expandingAd.smallwidth +'" height="'+ expandingAd.smallheight +'" id="'+ expandingAd.smallid +'"');
     document.write(' src="'+ expandingAd.filesdir + expandingAd.smallid +'.jpg" />');
 	document.write('</a>') // comment out this line to unlink the small banner
