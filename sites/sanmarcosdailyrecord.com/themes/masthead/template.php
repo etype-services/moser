@@ -82,5 +82,5 @@ function masthead_preprocess_html(&$vars) {
   $site_name = variable_get('site_name', "San Marcos Record");
   drupal_set_title($title . $site_name);
   global $user;
-  if ($user->uid == 1) var_dump($variables['page']);
+  if ($user->uid == 1) var_dump($vars);
 }
