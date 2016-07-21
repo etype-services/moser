@@ -151,17 +151,17 @@ expandingAd.expandableAdUrl = 'http://archives.etypeservices.com/CDN/SMDR_Rattle
 //expandingAd.expandableAdUrl = escape('http://localhost/adv_tile_redirect.php?tileID=' +TILE_ID + '&adurl=http://www.mysite.com/');
 expandingAd.big_params_2 = '&expandable_ad_url=' + expandingAd.expandableAdUrl;
 expandingAd.putObjects = function () {
-	document.write('<div id="ad1" style="width:'+ expandingAd.smallwidth +'; height:'+ expandingAd.smallheight +'; padding:0;">');
+	document.write('<div id="ad1" style="width:'+ expandingAd.smallwidth +'; padding:0;">');
 	document.write('<a href="'+ expandingAd.expandableAdUrl +'" target="_blank">'); // comment out this line to unlink the small banner
-	document.write('<img style="width:'+ expandingAd.smallwidth +';height:'+ expandingAd.smallheight +';" id="'+ expandingAd.smallid +'"');
+	document.write('<img style="width:'+ expandingAd.smallwidth +';" id="'+ expandingAd.smallid +'"');
     document.write(' src="'+ expandingAd.filesdir + expandingAd.smallid +'.jpg" />');
 	document.write('</a>') // comment out this line to unlink the small banner
 	document.write(' </div> ');
 	//****** Next DIV ******//
 	
-	document.write(' <div id="ad2" style="position:relative; width:'+ expandingAd.largewidth +'; height:'+ expandingAd.largeheight +'; display:none; overflow:hidden;">');
+	document.write(' <div id="ad2" style="position:relative; width:'+ expandingAd.largewidth +'; display:none; overflow:hidden;">');
 	//document.write('<a href="'+ expandingAd.expandableAdUrl +'" >');
-	document.write('<img style="width:'+ expandingAd.largewidth +';height:"'+ expandingAd.largeheight +';" id="'+ expandingAd.largeid +'"');
+	document.write('<img style="width:'+ expandingAd.largewidth +';" id="'+ expandingAd.largeid +'"');
     document.write(' src="'+ expandingAd.filesdir + expandingAd.largeid +'.jpg" />');
 	//document.write('</a>')
     document.write(' </div> ');
