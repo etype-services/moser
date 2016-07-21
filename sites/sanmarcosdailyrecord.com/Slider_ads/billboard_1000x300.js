@@ -139,11 +139,11 @@ var expandingAd = new Object();
 //** Below input the Tile Id number, and for the ad_rollover_counter also change the Tile ID number to match ad_url
 expandingAd.filesdir = "/sites/sanmarcosdailyrecord.com/Slider_ads/ads/"; // your website folder where you files are will go here....
 // Small SWF size
-expandingAd.smallwidth = '940px';
+expandingAd.smallwidth = '100%';
 expandingAd.smallheight = '45px';
 expandingAd.smallid =  "billboard_628x45";
 // Large SWF size
-expandingAd.largewidth = '940px';
+expandingAd.largewidth = '100%';
 expandingAd.largeheight = '300px';
 expandingAd.largeid = "billboard_628x300";
 //expandingAd.expandableAdUrl = escape('http://www.mysite.com/');
