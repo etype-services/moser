@@ -2,9 +2,8 @@
 <html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" <?php print $rdf_namespaces; ?>>
 
 <head>
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <?php print $head; ?>
-  <title><?php print $head_title; ?></title>  
+  <title>San Marcos Daily Record <?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  

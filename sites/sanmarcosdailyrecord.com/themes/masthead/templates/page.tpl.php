@@ -1,26 +1,4 @@
 <div id="page"><div class="page-inner <?php echo $grid_size ?>">
-<style>
-#block-simpleads-ad-groups-163{
-float: left;
-margin-right: 20px;
-}
-.simpleads-207{
-width: 250px;
-float: left;
-margin-left: 40px;
-}
-header{
-width: 65% !important;
-}
-#block-simpleads-ad-groups-206{
-width: 65%;
-float: left;
-}
-#ad2{
-position: relative; width: 950px; height: 300px; display: none; overflow: hidden;
-}
-
-</style>
 <?php 
 if($_COOKIE['etype'])
 {

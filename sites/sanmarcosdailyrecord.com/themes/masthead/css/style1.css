@@ -991,3 +991,23 @@ header {
 #block-block-21 {
     padding-top: 1em;
 }
+
+#block-simpleads-ad-groups-163{
+    float: left;
+    margin-right: 20px;
+}
+
+.simpleads-207 {
+    width: 250px;
+    float: left;
+    margin-left: 40px;
+}
+
+header {
+    width: 65% !important;
+}
+
+#block-simpleads-ad-groups-206{
+    width: 65%;
+    float: left;
+}
