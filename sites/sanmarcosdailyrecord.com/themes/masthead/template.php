@@ -23,6 +23,8 @@ function masthead_preprocess_page(&$variables) {
     unset($nodes,$nid);
   }
 
+  $path = current_path();
+  echo $path;
   if (isset($variables['node'])) {
     $title = $variables['node']->title;
   } else {
