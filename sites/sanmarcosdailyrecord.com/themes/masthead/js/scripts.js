@@ -13,6 +13,7 @@
 		});
 	  }
 
+	  /* "Slider" ads */
         $('#ad1, #ad2').mouseenter(function () {// show pohelp
             $("#ad1").css({
                 "z-index": "1110"

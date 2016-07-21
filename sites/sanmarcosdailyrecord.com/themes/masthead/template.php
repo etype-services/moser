@@ -1,27 +1,7 @@
 <?php
 
-$style = theme_get_setting('style');
+drupal_add_css(drupal_get_path('theme', 'masthead') . '/css/style1.css', array('group' => CSS_THEME, 'weight' => 100, 'type' => 'file'));
 
-switch ($style) {
-	case 1:
-		drupal_add_css(drupal_get_path('theme', 'masthead') . '/css/style1.css', array('group' => CSS_THEME, 'weight' => 100, 'type' => 'file'));
-		break;
-	case 2:
-		drupal_add_css(drupal_get_path('theme', 'masthead') . '/css/style2.css', array('group' => CSS_THEME, 'weight' => 100, 'type' => 'file'));
-		break;
-	case 3:
-		drupal_add_css(drupal_get_path('theme', 'masthead') . '/css/style3.css', array('group' => CSS_THEME, 'weight' => 100, 'type' => 'file'));
-		break;
-	case 4:
-		drupal_add_css(drupal_get_path('theme', 'masthead') . '/css/style4.css', array('group' => CSS_THEME, 'weight' => 100, 'type' => 'file'));
-		break;
-	case 5:
-		drupal_add_css(drupal_get_path('theme', 'masthead') . '/css/style5.css', array('group' => CSS_THEME, 'weight' => 100, 'type' => 'file'));
-		break;
-	default:
-		drupal_add_css(drupal_get_path('theme', 'masthead') . '/css/style1.css', array('group' => CSS_THEME, 'weight' => 100, 'type' => 'file'));
-
-}
 
 drupal_add_css(drupal_get_path('theme', 'masthead') . '/css/responsive.css', array('group' => CSS_THEME, 'weight' => 101, 'type' => 'file'));
 
@@ -92,5 +72,8 @@ function masthead_preprocess_html(&$vars) {
 
   foreach($aliases as $alias) {
     $vars['classes_array'][] = drupal_clean_css_identifier($alias);
-  } 
+  }
+
+  $site_name = variable_get('site_name', "San Marcos Record");
+  drupal_set_title($site_name . ' | ');
 }
