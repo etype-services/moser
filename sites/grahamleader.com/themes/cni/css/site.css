@@ -145,6 +145,18 @@
 	box-shadow: none;
 }
 
+#block-dfp-tpa-northsidebar2 {
+	margin-bottom: 10px;
+}	
+
+#block-dfp-tpa-northsidebar2 .block-inner {
+    padding: 0;
+	margin: 0;
+	border-style: none;
+    border-width: 0;
+	box-shadow: none;
+}
+
 #block-dfp-tpa-northleaderboard {
 	text-align:center;
 	margin-top: 5px;

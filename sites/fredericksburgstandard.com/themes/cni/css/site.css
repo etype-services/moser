@@ -61,3 +61,13 @@
 	text-align:center;
 	margin-top: 5px;
 }
+
+/* Memorial Page sidebar block
+--------------------------------------------------------------------------*/
+#block-block-41 .block-inner {
+    padding: 0;
+	margin: 0;
+	border-style: none;
+    border-width: 0;
+	box-shadow: none;
+}
