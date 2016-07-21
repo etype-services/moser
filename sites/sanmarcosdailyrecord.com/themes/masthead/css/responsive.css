@@ -170,10 +170,6 @@ Note: Design for a width of 300px
        padding-left: 27px;
    }
 
-   /* paper address in footer on mobile */
-    .postscript-wrapper-inner .block .content p {
-        margin-left: 2.2em;
-    }
 }
 
 /** 

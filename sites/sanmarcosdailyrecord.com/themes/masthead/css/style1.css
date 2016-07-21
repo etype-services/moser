@@ -302,6 +302,11 @@ h3.site-slogan {
     color: #ffffff;
 }
 
+/* paper address in footer on mobile */
+.postscript-wrapper-inner .block .content p {
+    margin-left: 2.2em;
+}
+
 /* LISTS
 --------------------------------------------------------------------------*/
 
