@@ -201,7 +201,7 @@ h3.site-slogan {
 --------------------------------------------------------------------------*/
 
 .main-content-wrapper {
-    margin-top: 20px;
+    margin-top: 1em;
 }
 
 #main-content .block-inner, #preface .block-inner, h1#page-title {
