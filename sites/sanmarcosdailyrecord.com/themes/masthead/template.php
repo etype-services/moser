@@ -29,7 +29,7 @@ function masthead_preprocess_page(&$variables) {
     $title = 'Home';
   }
   $site_name = variable_get('site_name', "San Marcos Record");
-  drupal_set_title($site_name . ' | ' . $title);
+  drupal_set_title($title  . ' | ' . $site_name);
 }
 
 function masthead_preprocess_node(&$variables) {
