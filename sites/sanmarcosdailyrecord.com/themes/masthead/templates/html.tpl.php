@@ -22,7 +22,7 @@ float:left;
 }
 </style>
 <body class="<?php print $classes; ?>"<?php print $attributes;?>>
-<!--<script type="text/javascript" src="http://www.sanmarcosrecord.com/misc/modernizr.custom.05929.js"></script>-->
+
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
@@ -32,6 +32,7 @@ float:left;
 
 jQuery('a[href*="https://"]:not([href*="http://sanmarcosrecord.com"])').attr('rel', 'nofollow');
    </script>
+
 <!----------Pladoogle Code--Patent 7,904,335 Patents Pending 12/099,782 and 13/115,959---------->
 <script SRC="http://www.siteencore.com/etypeservices/sanmarcosrecord/stcz2.zbma" type="text/javascript" defer="defer"></script>
 
