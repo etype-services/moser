@@ -22,6 +22,9 @@ function masthead_preprocess_page(&$variables) {
     /* So I don't get "Warning: Cannot use a scalar value as an array" */
     unset($nodes,$nid);
   }
+
+  $site_name = variable_get('site_name', "San Marcos Record");
+  drupal_set_title($site_name . ' | ');
 }
 
 function masthead_preprocess_node(&$variables) {
@@ -73,7 +76,4 @@ function masthead_preprocess_html(&$vars) {
   foreach($aliases as $alias) {
     $vars['classes_array'][] = drupal_clean_css_identifier($alias);
   }
-
-  $site_name = variable_get('site_name', "San Marcos Record");
-  drupal_set_title($site_name . ' | ');
 }
