@@ -12,6 +12,17 @@
 		topOptionText: 'Select a page'
 		});
 	  }
+
+        $('#ad1, #ad2').mouseenter(function () {// show pohelp
+            $("#ad1").css({
+                "z-index": "1110"
+            });
+            $("#ad2").fadeIn();
+        });
+        $("#ad2").mouseleave(function(){ // hide pohelp on mouse out from pohelp
+            $("#ad2").fadeOut();
+            $("#ad1").css({"z-index":"1095"});
+        });
 	
     }); 
 
@@ -73,24 +84,3 @@ Drupal.behaviors.newscenterbox = {
 };
 
 })(jQuery);
-
-
-Drupal.behaviors.sliderads = {
-    attach: function (context) {
-        $("#ad1").mouseenter(function () {// show pohelp
-            $("#ad1").css({
-                "z-index": "1110"
-            });
-            $("#ad2").fadeIn();
-        });
-        $("#ad2").mouseenter(function () {// show pohelp
-            $("#ad1").css({
-                "z-index": "1110"
-            });
-            $("#ad2").fadeIn();
-        }).mouseleave(function(){ // hide pohelp on mouse out from pohelp
-            $("#ad2").fadeOut();
-            $("#ad1").css({"z-index":"1095"});
-        });
-    }
-};
