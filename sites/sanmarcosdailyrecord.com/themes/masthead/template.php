@@ -73,14 +73,4 @@ function masthead_preprocess_html(&$vars) {
   foreach($aliases as $alias) {
     $vars['classes_array'][] = drupal_clean_css_identifier($alias);
   }
-
-  if ($path == 'frontpage') {
-    $title = 'Home' . ' | ';
-  } else if (isset($variables['node'])) {
-    $title = $variables['node']->title . ' | ';
-  }
-  $site_name = variable_get('site_name', "San Marcos Record");
-  drupal_set_title($title . $site_name);
-  global $user;
-  if ($user->uid == 1) var_dump($vars);
 }
