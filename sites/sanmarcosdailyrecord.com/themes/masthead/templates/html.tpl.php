@@ -2,7 +2,7 @@
 <html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" <?php print $rdf_namespaces; ?>>
 <head>
   <?php print $head; ?>
-  <title>San Marcos Daily Record <?php print $head_title; ?></title>
+  <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
