@@ -24,8 +24,7 @@ function masthead_preprocess_page(&$variables) {
   }
 
   $site_name = variable_get('site_name', "San Marcos Record");
-  echo $site_name;
-  drupal_set_title($site_name . ' | ');
+  drupal_set_title(' | ');
 }
 
 function masthead_preprocess_node(&$variables) {
