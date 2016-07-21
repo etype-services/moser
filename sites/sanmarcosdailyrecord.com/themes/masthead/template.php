@@ -32,6 +32,7 @@ function masthead_preprocess_page(&$variables) {
   $site_name = variable_get('site_name', "San Marcos Record");
   drupal_set_title($title . $site_name);
   global $user;
+  var_dump($user);
   if ($user->uid == 1) var_dump($variables['page']);
 }
 
