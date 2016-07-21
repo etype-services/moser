@@ -139,11 +139,11 @@ var expandingAd = new Object();
 //** Below input the Tile Id number, and for the ad_rollover_counter also change the Tile ID number to match ad_url
 expandingAd.filesdir = "/sites/sanmarcosdailyrecord.com/Slider_ads/ads/"; // your website folder where you files are will go here....
 // Small SWF size
-expandingAd.smallwidth = 950;
+expandingAd.smallwidth = 940;
 expandingAd.smallheight = 45;
 expandingAd.smallid =  "billboard_628x45";
 // Large SWF size
-expandingAd.largewidth = 950;
+expandingAd.largewidth = 940;
 expandingAd.largeheight = 300;
 expandingAd.largeid = "billboard_628x300";
 //expandingAd.expandableAdUrl = escape('http://www.mysite.com/');
@@ -151,7 +151,7 @@ expandingAd.expandableAdUrl = 'http://archives.etypeservices.com/CDN/SMDR_Rattle
 //expandingAd.expandableAdUrl = escape('http://localhost/adv_tile_redirect.php?tileID=' +TILE_ID + '&adurl=http://www.mysite.com/');
 expandingAd.big_params_2 = '&expandable_ad_url=' + expandingAd.expandableAdUrl;
 expandingAd.putObjects = function () {
-	document.write('<div id="ad1" style="width:950px; height:45px; padding:0;">');
+	document.write('<div id="ad1" style="width:940px; height:45px; padding:0;">');
 	document.write('<a href="'+ expandingAd.expandableAdUrl +'" target="_blank">'); // comment out this line to unlink the small banner
 	document.write('<img width="'+ expandingAd.smallwidth +'" height="'+ expandingAd.smallheight +'" id="'+ expandingAd.smallid +'"');
     document.write(' src="'+ expandingAd.filesdir + expandingAd.smallid +'.jpg" />');
@@ -159,7 +159,7 @@ expandingAd.putObjects = function () {
 	document.write(' </div> ');
 	//****** Next DIV ******//
 	
-	document.write(' <div id="ad2" style="position:relative; width:950px; height:300px; display:none; overflow:hidden;">');
+	document.write(' <div id="ad2" style="position:relative; width:940px; height:300px; display:none; overflow:hidden;">');
 	//document.write('<a href="'+ expandingAd.expandableAdUrl +'" >');
 	document.write('<img width="'+ expandingAd.largewidth +'" height="'+ expandingAd.largeheight +'" id="'+ expandingAd.largeid +'"');
     document.write(' src="'+ expandingAd.filesdir + expandingAd.largeid +'.jpg" />');
