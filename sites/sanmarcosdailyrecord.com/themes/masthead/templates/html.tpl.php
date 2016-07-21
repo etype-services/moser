@@ -23,7 +23,7 @@ float:left;
 }
 </style>
 <body class="<?php print $classes; ?>"<?php print $attributes;?>>
-<script type="text/javascript" src="http://www.sanmarcosrecord.com/misc/modernizr.custom.05929.js"></script>
+<!--<script type="text/javascript" src="http://www.sanmarcosrecord.com/misc/modernizr.custom.05929.js"></script>-->
   <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
   </div>
@@ -34,16 +34,19 @@ float:left;
 
 
   <script language='javascript' type='text/javascript'>
- $("#ad1, #ad2").mouseenter(function () {// show pohelp 
+    (function($) {
+      $("#ad1, #ad2").mouseenter(function () {// show pohelp
         $("#ad1").css({
-            "z-index": "1110"
+          "z-index": "1110"
         });
         $("#ad2").fadeIn();
-    });
- $("#ad2").mouseleave(function(){ // hide pohelp on mouse out from pohelp
-       $("#ad2").fadeOut();
-      $("#ad1").css({"z-index":"1095"});
-});
+      });
+      $("#ad2").mouseleave(function(){ // hide pohelp on mouse out from pohelp
+        $("#ad2").fadeOut();
+        $("#ad1").css({"z-index":"1095"});
+      });
+    })(jQuery);
+
  </script>
   <script language='javascript' type='text/javascript'>
   jQuery('a[href*="http://"]:not([href*="http://www.sanmarcosrecord.com"])').attr('rel', 'nofollow');
