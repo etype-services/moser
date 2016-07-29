@@ -48,7 +48,7 @@ body.front h1 {
 
 #header .region-header {
     background: none repeat scroll 0 0 #CA2228;
-    padding-top: 1px;
+    padding: 1px;
 }
 
 .sidebar-second #content {
@@ -112,7 +112,7 @@ body.front h1 {
     display: inline-block;
     float: none;
     font-weight: bold;
-    margin-left: 4px !important;
+    margin-left: 1px;
     margin-top: 0;
     padding: 0;
     text-transform: uppercase;
@@ -133,14 +133,13 @@ body.front h1 {
 #block-superfish-1 ul li a.active, #block-menu-menu-news-categories ul li a:hover {
     background: none repeat scroll 0 0 #FFFFFF;
     color: #333333;
-    padding-top: 5px;
 
 }
 
 #block-superfish-1 a.active-trail .active li {
     background: none repeat scroll 0 0 #000033;
     color: #333333;
-    padding-top: 0px;
+    padding-top: 0;
     padding-left: 15px;
 }
 
