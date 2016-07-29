@@ -1465,3 +1465,9 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
     display: none;
     visibility: hidden;
 }
+
+/* lists in story pages */
+.page-node .field-name-body ul {
+    list-style: inside;
+    margin-left: 1em;
+}
