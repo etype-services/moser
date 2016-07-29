@@ -103,8 +103,7 @@ body.front h1 {
 
 #block-superfish-1 {
     margin-bottom: 0;
-    padding-top: 10px;
-    width: 1040px;
+    width: 100%;
     display: block;
     position: inherit;
     z-index: 99;
