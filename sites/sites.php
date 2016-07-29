@@ -216,3 +216,6 @@ $sites['highlandernews.com'] = 'highlandernews.com';
 
 /* test.etypegoogle4.com */
 $sites['test.etypegoogle4.com'] = 'cni-theme-test';
+
+/* fredericksburgtexasjobs.etypegoogle4.com */
+$sites['fredericksburgtexasjobs.etypegoogle4.com'] = 'fredericksburgtexasjobs.com';
