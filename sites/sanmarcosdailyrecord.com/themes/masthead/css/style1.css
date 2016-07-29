@@ -523,11 +523,11 @@ h3.site-slogan {
 
 .node .field-name-field-image img {
     display: block;
-    margin-top: -20px;
-    margin-left: 0px;
+    margin-left: 0;
     margin-bottom: 10px;
     float: left;
     margin-right: 10px;
+    max-width: 100%;
 }
 
 .node .field-name-field-video iframe {
