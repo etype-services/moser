@@ -209,5 +209,10 @@ $sites['sanmarcosdailyrecord.com'] = 'sanmarcosdailyrecord.com';
 $sites['www.sanmarcosrecord.com'] = 'sanmarcosdailyrecord.com';
 $sites['sanmarcosrecord.com'] = 'sanmarcosdailyrecord.com';
 
+/* highlandernews.etypegoogle4.com */
+$sites['highlandernews.etypegoogle4.com'] = 'highlandernews.com';
+$sites['www.highlandernews.com'] = 'highlandernews.com';
+$sites['highlandernews.com'] = 'highlandernews.com';
+
 /* test.etypegoogle4.com */
 $sites['test.etypegoogle4.com'] = 'cni-theme-test';
