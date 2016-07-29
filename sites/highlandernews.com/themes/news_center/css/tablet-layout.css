@@ -19,6 +19,7 @@ body.front h1 {
     background: none repeat scroll 0 0 #fff;
     display: block;
     padding: 1px;
+    height: 28px; /* this is the master */
 }
 
 #block-user-login {
