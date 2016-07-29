@@ -1470,4 +1470,5 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
 .page-node .field-name-body ul {
     list-style: inside;
     margin-left: 1em;
+    margin-right: 2em;
 }
