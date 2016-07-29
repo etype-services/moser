@@ -592,6 +592,7 @@ h3.site-slogan {
     float: left;
     margin: 0 20px 0 0;
     background: url(../images/style1/image-background.png);
+    width: 140px;
 }
 
 .node-teaser .field-name-field-video iframe {
