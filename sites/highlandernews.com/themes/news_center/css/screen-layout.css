@@ -127,6 +127,7 @@ body.front h1 {
     padding: 5px 13px 0;
     text-decoration: none;
     background: #CA2228;
+    line-height: 1.6em;
 }
 
 #block-superfish-1 ul li a.active, #block-menu-menu-news-categories ul li a:hover {
