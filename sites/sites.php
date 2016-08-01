@@ -1,4 +1,6 @@
 <?php
+/* test.etypegoogle4.com */
+$sites['test.etypegoogle4.com'] = 'cni-theme-test';
 
 $sites['bosquecountytoday.etypegoogle4.com'] = 'bosquecountytoday.com';
 $sites['bosquecountytoday.com'] = 'bosquecountytoday.com';
@@ -213,9 +215,6 @@ $sites['sanmarcosrecord.com'] = 'sanmarcosdailyrecord.com';
 $sites['highlandernews.etypegoogle4.com'] = 'highlandernews.com';
 $sites['www.highlandernews.com'] = 'highlandernews.com';
 $sites['highlandernews.com'] = 'highlandernews.com';
-
-/* test.etypegoogle4.com */
-$sites['test.etypegoogle4.com'] = 'cni-theme-test';
 
 /* fredericksburgtexasjobs.etypegoogle4.com */
 $sites['fredericksburgtexasjobs.etypegoogle4.com'] = 'fredericksburgtexasjobs.com';
