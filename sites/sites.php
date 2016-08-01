@@ -218,3 +218,7 @@ $sites['highlandernews.com'] = 'highlandernews.com';
 
 /* fredericksburgtexasjobs.etypegoogle4.com */
 $sites['fredericksburgtexasjobs.etypegoogle4.com'] = 'fredericksburgtexasjobs.com';
+$sites['www.fredericksburgtexasjobs.com'] = 'fredericksburgtexasjobs.com';
+$sites['fredericksburgtexasjobs.com'] = 'fredericksburgtexasjobs.com';
+$sites[www.gillespiejobs.com'] = 'fredericksburgtexasjobs.com';
+$sites['gillespiejobs.com'] = 'fredericksburgtexasjobs.com';
