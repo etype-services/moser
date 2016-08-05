@@ -13,9 +13,14 @@
 /* jCAROUSEL for PROMOS
 --------------------------------------------------------------------------*/
 
-#block-views-promos-block .content {
+#block-views-promos-block .views-row {
     background: none;
-    margin: 0;
+    border: none;
+    padding: 0;
+}
+
+#block-views-promos-block .content {
+    padding: 0;
 }
 
 /* SIMPLE ADS
