@@ -12,14 +12,14 @@
 }
 
 .jcarousel-skin-default .jcarousel-container-horizontal {
-    /*width: 440px;
-    min-height: 196px;
-    padding: 20px 40px 40px;*/
+    width: 100%;
+    height: 300px;
+    padding: 0;
     margin: auto;
 }
 
 .jcarousel-skin-default .jcarousel-clip-horizontal {
-    /*width: 440px;*/
+    width: 100%;
     overflow: hidden;
 }
 
