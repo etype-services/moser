@@ -26,10 +26,11 @@
 .jcarousel-skin-default .jcarousel-item {
     padding: 0;
     width: 45%;
+    height: auto;
     overflow: hidden;
     list-style: none;
     border: none;
-    background: url(../images/preface-view.png);
+    background: none;
     font-weight: bold;
 }
 
