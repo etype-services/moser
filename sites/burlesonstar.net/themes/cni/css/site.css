@@ -20,7 +20,9 @@
 }
 
 #block-views-promos-block .content {
+    margin: 0;
     padding: 0;
+    background: none;
 }
 
 /* SIMPLE ADS
