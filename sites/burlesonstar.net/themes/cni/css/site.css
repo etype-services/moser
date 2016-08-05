@@ -25,6 +25,10 @@
     background: none;
 }
 
+#block-views-promos-block .content img{
+    max-width: 100%;
+}
+
 /* SIMPLE ADS
 --------------------------------------------------------------------------*/
 
