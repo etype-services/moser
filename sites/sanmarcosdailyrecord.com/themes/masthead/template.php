@@ -75,4 +75,5 @@ function masthead_preprocess_html(&$vars) {
   }
 
   $vars['head_title'] = 'Testing';
+  dpm($vars);
 }
