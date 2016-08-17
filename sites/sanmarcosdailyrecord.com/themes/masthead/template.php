@@ -75,7 +75,8 @@ function masthead_preprocess_html(&$vars) {
   }
 
   if (drupal_is_front_page() == TRUE) {
-    $vars['head_title'] = 'Testing';
+    $site_name =  variable_get('site_name', 'Drupal');
+    $vars['head_title'] = 'Home | ' . $site_name;
   }
   dpm($vars);
 }
