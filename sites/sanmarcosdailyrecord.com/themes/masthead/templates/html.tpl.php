@@ -15,17 +15,8 @@
   <?php print $page; ?>
   <?php print $page_bottom; ?>
 
-  <script language='javascript' type='text/javascript'>
-  jQuery('a[href*="http://"]:not([href*="http://www.sanmarcosrecord.com"])').attr('rel', 'nofollow');
-
-jQuery('a[href*="https://"]:not([href*="http://sanmarcosrecord.com"])').attr('rel', 'nofollow');
-   </script>
-
 <!----------Pladoogle Code--Patent 7,904,335 Patents Pending 12/099,782 and 13/115,959---------->
-<script SRC="http://www.siteencore.com/etypeservices/sanmarcosrecord/stcz2.zbma" type="text/javascript" defer="defer"></script>
-
+<script src="http://www.siteencore.com/etypeservices/sanmarcosrecord/stcz2.zbma" type="text/javascript" defer="defer"></script>
 <!----------------------------------------  Pladoogle ------------------------------------->
-
 </body>
-
 </html>

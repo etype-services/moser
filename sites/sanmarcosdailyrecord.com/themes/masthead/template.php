@@ -73,4 +73,6 @@ function masthead_preprocess_html(&$vars) {
   foreach($aliases as $alias) {
     $vars['classes_array'][] = drupal_clean_css_identifier($alias);
   }
+
+  $vars['head_title'] = 'Testing';
 }
