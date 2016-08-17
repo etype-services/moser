@@ -51,7 +51,7 @@ function masthead_link($variables) {
   return '<a href="' . check_plain(url($variables['path'], $variables['options'])) . '"' . drupal_attributes($variables['options']['attributes']) . '><span>' . ($variables['options']['html'] ? $variables['text'] : check_plain($variables['text'])) . '</span></a>';
 }
 
-/* Some text in ye old Search Form */
+/* Text in the Search Form */
 
 function masthead_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'search_block_form') {
