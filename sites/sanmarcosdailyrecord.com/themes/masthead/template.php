@@ -62,10 +62,13 @@ function masthead_form_alter(&$form, &$form_state, $form_id) {
     // Prevent user from searching the default text
     $form['#attributes']['onsubmit'] = "if(this.search_block_form.value=='Search'){ alert('Please enter a search'); return false; }";
   }
-} 
+}
 
-/* Add Page Body Class */
-
+/**
+ * Add Page Body Class
+ * Add Custom Title to Home Page
+ * @param $vars
+ */
 function masthead_preprocess_html(&$vars) {
   $path = drupal_get_path_alias($_GET['q']);
   $aliases = explode('/', $path);
@@ -78,5 +81,5 @@ function masthead_preprocess_html(&$vars) {
     $site_name =  variable_get('site_name', 'Drupal');
     $vars['head_title'] = 'Home | ' . $site_name;
   }
-  dpm($vars);
+
 }
