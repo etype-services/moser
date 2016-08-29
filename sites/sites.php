@@ -91,6 +91,7 @@ $sites['www.breckenridgeamerican.com'] = 'breckenridgeamerican.com';
 $sites['burlesonstar.etypegoogle4.com'] = 'burlesonstar.net';
 $sites['burlesonstar.net'] = 'burlesonstar.net';
 $sites['www.burlesonstar.net'] = 'burlesonstar.net';
+$sites['burlesonstardev.etypegoogle4.com'] = 'burlesonstar.net';
 
 $sites['crowleystar.net'] = 'burlesonstar.net';
 $sites['www.crowleystar.net'] = 'burlesonstar.net';
