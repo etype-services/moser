@@ -92,16 +92,12 @@ $sites['burlesonstar.etypegoogle4.com'] = 'burlesonstar.net';
 $sites['burlesonstar.net'] = 'burlesonstar.net';
 $sites['www.burlesonstar.net'] = 'burlesonstar.net';
 $sites['burlesonstardev.etypegoogle4.com'] = 'burlesonstar.net';
-
 $sites['crowleystar.net'] = 'burlesonstar.net';
 $sites['www.crowleystar.net'] = 'burlesonstar.net';
-
 $sites['joshuastar.net'] = 'burlesonstar.net';
 $sites['www.joshuastar.net'] = 'burlesonstar.net';
-
 $sites['keenestar.net'] = 'burlesonstar.net';
 $sites['www.keenestar.net'] = 'burlesonstar.net';
-
 $sites['alvaradostar.net'] = 'burlesonstar.net';
 $sites['www.alvaradostar.net'] = 'burlesonstar.net';
 
