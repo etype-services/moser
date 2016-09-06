@@ -13,7 +13,7 @@
 /* Simple Ads */
 #main-content .block-simpleads .block-inner, .block-simpleads .block-inner {
     padding: 0;
-    margin: 0;
+    margin: 0 0 20px 0;
     border: 0;
     border-width: 0;
     box-shadow: 0 0 0 0;
