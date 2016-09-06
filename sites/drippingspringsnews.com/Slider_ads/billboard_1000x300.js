@@ -135,7 +135,7 @@ function endSlide(objname){
 }
 var expandingAd = new Object();
 //** Below input the Tile Id number, and for the ad_rollover_counter also change the Tile ID number to match ad_url
-expandingAd.filesdir = "/sites/wimberleyview.com/Slider_ads/ads/"; // your website folder where you files are will go here....
+expandingAd.filesdir = "/sites/drippingspringsnews.com/Slider_ads/ads/"; // your website folder where you files are will go here....
 // Small SWF size
 expandingAd.smallwidth = 950;
 expandingAd.smallheight = 45;
@@ -145,7 +145,7 @@ expandingAd.largewidth = 950;
 expandingAd.largeheight = 300;
 expandingAd.largeid = "billboard_628x300";
 //expandingAd.expandableAdUrl = escape('http://www.mysite.com/');
-expandingAd.expandableAdUrl = 'http://www.wimberleyvfwrodeo.com';
+expandingAd.expandableAdUrl = 'http://www.southpointdodge.com/';
 //expandingAd.expandableAdUrl = escape('http://localhost/adv_tile_redirect.php?tileID=' +TILE_ID + '&adurl=http://www.mysite.com/');
 expandingAd.big_params_2 = '&expandable_ad_url=' + expandingAd.expandableAdUrl;
 expandingAd.putObjects = function () {
