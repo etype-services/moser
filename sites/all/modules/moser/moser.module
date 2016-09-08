@@ -29,19 +29,15 @@ function moser_function() {
     ->orderBy('n.nid', 'ASC')
     ->execute();
 
-  $count = count($result);
-  echo $count;
-  var_dump($result);
-  exit;
-
   foreach ($result as $row) {
     if (isset($row->nid)) {
+      echo $nid . '<br />';
       $nid = $row->nid;
       $node = node_load($nid);
       if (isset($node)) {
-        node_save($node);
-        print_r("saving " . $nid . " (" . $node->title . ")" . '<br />');
-        ob_flush();
+        //node_save($node);
+        //print_r("saving " . $nid . " (" . $node->title . ")" . '<br />');
+        //ob_flush();
       }
     }
   }
