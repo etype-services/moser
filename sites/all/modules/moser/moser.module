@@ -18,6 +18,7 @@ function moser_menu() {
 }
 
 function moser_function() {
+
   set_time_limit(0);
   ob_start();
   echo 'Starting<br />';
@@ -25,7 +26,6 @@ function moser_function() {
   $result = db_select('node', 'n')
     ->fields('n', array('nid'))
     ->condition('type', 'article', '=')
-    ->condition('nid', '5998', '>')
     ->orderBy('n.nid', 'ASC')
     ->execute();
 
