@@ -31,6 +31,7 @@ function moser_function() {
 
   $count = count($result);
   echo $count;
+  var_dump($result);
   exit;
 
   foreach ($result as $row) {
