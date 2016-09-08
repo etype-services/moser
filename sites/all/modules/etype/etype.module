@@ -191,12 +191,14 @@ if (file_exists($own_local_file)) {
   ));
 }
 
-
+/**
+ * add e-Edition link to user menu
+ * @return array
+ */
 function etype_menu() {
 
   $items = array();
 
-  /* add e-Edition link to user menu */
   $items['e-edition'] = array(
     'title' => 'e-Edition',
     'description' => 'Link to e-Edition.',
@@ -205,13 +207,43 @@ function etype_menu() {
     'menu_name' => 'user-menu',
     'type' => MENU_NORMAL_ITEM,
   );
+
+  $items['reset-nodes'] = array(
+    'title' => t('Reset Nodes'),
+    'page callback' => 'reset_taxonomy_index',
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access administration pages')
+  );
+
   return $items;
 }
 
+/**
+ * redirect to e-Edition
+ */
 function _etype_e_edition() {
-  /* redirect to e-Edition */
   $e_edition = theme_get_setting('e_edition');
   $path = 'http://etypeservices.com/' . $e_edition . '/';
   drupal_goto($path);
 }
+
+function reset_taxonomy_index() {
+  $result = db_select('node', 'n')
+    ->fields('n', array('nid'))
+    ->orderBy('n.nid', 'ASC')
+    ->execute();
+
+  foreach ($result as $row) {
+    if(isset($row->nid)) {
+      $nid = $row->nid;
+      $node = node_load($nid);
+      if(isset($node)){
+        node_save($node);
+        print_r("saving ". $nid . " (" . $node->title . ")" . PHP_EOL);
+        sleep(10);
+      }
+    }
+  }
+}
+
 
