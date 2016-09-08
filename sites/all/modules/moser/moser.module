@@ -29,6 +29,10 @@ function moser_function() {
     ->orderBy('n.nid', 'ASC')
     ->execute();
 
+  $count = count($result);
+  echo $count;
+  exit;
+
   foreach ($result as $row) {
     if (isset($row->nid)) {
       $nid = $row->nid;
