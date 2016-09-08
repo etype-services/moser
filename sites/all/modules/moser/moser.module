@@ -24,7 +24,8 @@ function moser_function() {
   ob_flush();
   $result = db_select('node', 'n')
     ->fields('n', array('nid'))
-    ->condition('type', 'article', '=')
+    ->condition('n.type', 'article', '=')
+    ->condition('n.nid', '5900', '>')
     ->orderBy('n.nid', 'ASC')
     ->execute();
 
