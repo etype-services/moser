@@ -31,8 +31,8 @@ function moser_function() {
 
   foreach ($result as $row) {
     if (isset($row->nid)) {
-      echo $nid . '<br />';
       $nid = $row->nid;
+      echo $nid . '<br />';
       $node = node_load($nid);
       if (isset($node)) {
         //node_save($node);
