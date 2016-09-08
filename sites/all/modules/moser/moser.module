@@ -20,6 +20,8 @@ function moser_menu() {
 function moser_function() {
 
  ob_start();
+  echo 'Starting';
+  flush();
  $result = db_select('node', 'n')
     ->fields('n', array('nid'))
     ->orderBy('n.nid', 'ASC')
