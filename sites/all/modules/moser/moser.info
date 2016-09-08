@@ -1,0 +1,5 @@
+name = Moser
+description = Custom module for Moser.
+package = EType Services Custom Modules
+core = 7.x
+project = "moser"

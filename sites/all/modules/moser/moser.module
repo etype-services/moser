@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @return array
+ */
+function moser_menu() {
+
+  $items = array();
+
+  $items['reset-nodes'] = array(
+    'title' => 'Moser',
+    'description' => 'Moser',
+    'page callback' => 'moser_function',
+    'access arguments' => array('access content')
+  );
+
+  return $items;
+}
+
+function moser_function() {
+
+ $result = db_select('node', 'n')
+    ->fields('n', array('nid'))
+    ->orderBy('n.nid', 'ASC')
+    ->execute();
+
+  foreach ($result as $row) {
+    if(isset($row->nid)) {
+      $nid = $row->nid;
+      $node = node_load($nid);
+      if(isset($node)){
+        node_save($node);
+        print_r("saving ". $nid . " (" . $node->title . ")" . PHP_EOL);
+        sleep(1);
+      }
+    }
+  }
+}
+
+
