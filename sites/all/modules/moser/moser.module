@@ -19,6 +19,7 @@ function moser_menu() {
 
 function moser_function() {
 
+ ob_start();
  $result = db_select('node', 'n')
     ->fields('n', array('nid'))
     ->orderBy('n.nid', 'ASC')
@@ -31,7 +32,7 @@ function moser_function() {
       if(isset($node)){
         node_save($node);
         print_r("saving ". $nid . " (" . $node->title . ")" . PHP_EOL);
-        sleep(1);
+        flush();
       }
     }
   }
