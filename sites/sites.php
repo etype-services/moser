@@ -220,3 +220,8 @@ $sites['www.fredericksburgtexasjobs.com'] = 'fredericksburgtexasjobs.com';
 $sites['fredericksburgtexasjobs.com'] = 'fredericksburgtexasjobs.com';
 $sites['www.gillespiejobs.com'] = 'fredericksburgtexasjobs.com';
 $sites['gillespiejobs.com'] = 'fredericksburgtexasjobs.com';
+
+/* lakecountryradio.etypegoogle4.com */
+$sites['lakecountryradio.etypegoogle4.com'] = 'lakecountryradio.net';
+$sites['www.lakecountryradio.net'] = 'lakecountryradio.net';
+$sites['lakecountryradio.net'] = 'lakecountryradio.net';
