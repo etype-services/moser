@@ -992,3 +992,9 @@ pre {
     display: none;
     visibility: hidden;
 }
+
+/* hide sidebar on add content page -- interferes with buttons */
+.page-node-add .region-sidebar-second {
+    display: none;
+    visibility: hidden;
+}
