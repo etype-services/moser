@@ -135,7 +135,7 @@
 
 #block-dfp-tpa-northsidebar {
 	margin-bottom: 10px;
-}	
+}
 
 #block-dfp-tpa-northsidebar .block-inner {
     padding: 0;
@@ -148,4 +148,30 @@
 #block-dfp-tpa-northleaderboard {
 	text-align:center;
 	margin-top: 5px;
+}
+
+/* User Menu */
+#block-system-user-menu {
+    background-color: #ffffff;
+    width: 100%;
+}
+
+#block-system-user-menu {
+    background-color: #ffffff;
+    width: 100%;
+    height: 27px;
+}
+
+#block-system-user-menu ul.menu li {
+    height: 27px;
+}
+
+#block-system-user-menu ul.menu li a {
+    font-size: 0.8em;
+}
+
+#block-system-user-menu ul.menu li a {
+    color: #333333;
+    height: 27px;
+    line-height: 27px;
 }
