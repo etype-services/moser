@@ -16,7 +16,7 @@
     }
 
     #block-superfish-1 .content, #block-system-user-menu .content {
-        width: 979px;
+        width: 1000px;
     }
 
     #block-superfish-1 ul #menu-1797-1 {
@@ -66,7 +66,7 @@
 
     /* main menu */
     #block-superfish-1 .content {
-        width: 797px;
+        width: 1000px;
         font-size: 0.8em;
     }
 
@@ -76,7 +76,7 @@
 
     /* user-menu */
     #block-system-user-menu .content {
-        width: 797px;
+        width: 1000px;
     }
 
     #block-system-user-menu {
