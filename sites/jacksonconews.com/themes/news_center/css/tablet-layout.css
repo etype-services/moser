@@ -934,3 +934,9 @@ body.page-taxonomy-term .node-article.node-teaser img {
     display: block;
     visibility: visible;
 }
+
+/* hide sidebar on add content page -- interferes with buttons */
+.page-node-add .region-sidebar-second {
+    display: none;
+    visibility: hidden;
+}
