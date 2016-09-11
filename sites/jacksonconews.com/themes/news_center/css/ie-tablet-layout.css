@@ -883,3 +883,9 @@ body.page-taxonomy-term .node-article.node-teaser img {
     margin-top: -5px;
 }
 
+/* hide sidebar on add content page -- interferes with buttons */
+.page-node-add .region-sidebar-second {
+    display: none;
+    visibility: hidden;
+}
+
