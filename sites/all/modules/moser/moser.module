@@ -7,11 +7,11 @@ function moser_menu() {
 
   $items = array();
 
-  $items['reset-nodes'] = array(
+  $items['admin/reset-nodes'] = array(
     'title' => 'Moser',
     'description' => 'Moser',
     'page callback' => 'moser_function',
-    'access arguments' => array('access content')
+    'access arguments' => array('access administration pages')
   );
 
   return $items;
