@@ -15,7 +15,11 @@
         font-size: 1em;
     }
 
-    #block-superfish-1 .content, #block-system-user-menu .content {
+    #block-superfish-1 .content {
+        width: 300px;
+    }
+
+    #block-system-user-menu .content {
         width: 1000px;
     }
 
@@ -66,7 +70,7 @@
 
     /* main menu */
     #block-superfish-1 .content {
-        width: 1000px;
+        width: 290px;
         font-size: 0.8em;
     }
 
