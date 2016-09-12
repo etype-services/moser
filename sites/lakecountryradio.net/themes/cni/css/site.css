@@ -150,6 +150,16 @@
 	margin-top: 5px;
 }
 
+/* hide info on webforms */
+article.node-webform .node-content-wrapper .submitted span {
+    display: none;
+}
+
+article.node-webform .node-content-wrapper h1.title {
+    margin-bottom: 0;
+}
+
+
 /* User Menu */
 #block-system-user-menu {
     background-color: #ffffff;
