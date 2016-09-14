@@ -53,6 +53,7 @@ body {
 
 #logo img {
   vertical-align: bottom;
+  max-width: 100%;
 }
 
 #name-and-slogan /* Wrapper for website name and slogan */ {
