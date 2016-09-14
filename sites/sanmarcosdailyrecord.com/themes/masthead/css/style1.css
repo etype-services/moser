@@ -1182,6 +1182,7 @@ header {
     float: right;
     background-repeat: no-repeat;
     padding-left: 50px;
+    margin-bottom: 1em;
 }
 
 .field-name-field-pulled-quote .field-item {
