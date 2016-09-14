@@ -1184,6 +1184,11 @@ header {
     padding-left: 50px;
 }
 
+.field-name-field-pulled-quote .field-item {
+    background: url("/sites/all/themes/bones/images/icons_48/closequote.png") no-repeat right bottom;
+    padding-right: 29px;
+}
+
 blockquote {
     background: none;
     margin: 0;
