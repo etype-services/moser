@@ -976,3 +976,6 @@ h2.node-title {
 input[type="submit"] {
     cursor: pointer;
 }
+
+/* Centering e-edition */
+#block-block-23 {text-align:center;}

@@ -1,0 +1,20 @@
+<?php
+/**
+ * @file
+ * (Un)Install file for node_revision_cleanup module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function node_revision_cleanup_uninstall() {
+  // It may seem a bit odd to not know the name of all of the variables we've
+  // set in the module, but that's because the module uses the variables table
+  // to create numbered job lists for varying content types, if memcache isn't
+  // installed. If memcache is installed, it will expire any entries for this
+  // module automatically.
+  $results = db_query('SELECT v.name FROM {variable} v WHERE v.name LIKE \'node_revision_cleanup_%\'');
+  foreach ($results as $result) {
+    variable_del($result->name);
+  }
+}
