@@ -145,7 +145,7 @@ expandingAd.largewidth = 950;
 expandingAd.largeheight = 300;
 expandingAd.largeid = "billboard_628x300";
 //expandingAd.expandableAdUrl = escape('http://www.mysite.com/');
-expandingAd.expandableAdUrl = 'http://www.southpointdodge.com/';
+expandingAd.expandableAdUrl = 'http://drippingspringsnews.com/';
 //expandingAd.expandableAdUrl = escape('http://localhost/adv_tile_redirect.php?tileID=' +TILE_ID + '&adurl=http://www.mysite.com/');
 expandingAd.big_params_2 = '&expandable_ad_url=' + expandingAd.expandableAdUrl;
 expandingAd.putObjects = function () {
