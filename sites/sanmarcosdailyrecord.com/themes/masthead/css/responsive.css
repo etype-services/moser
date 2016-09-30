@@ -179,6 +179,10 @@ Note: Design for a width of 300px
         display: none;
         visibility: hidden;
     }
+
+    header {
+        width: 100% !important;
+    }
 }
 
 /** 
@@ -251,17 +255,9 @@ Note: Design for a width of 420px
         height: 220px;
     }
 
-    header {
-        width: 52% !important;
-    }
-
-
 }
 
 @media only screen and (max-width: 480px) {
 
-    header {
-        width: 100% !important;
-    }
 
 }
