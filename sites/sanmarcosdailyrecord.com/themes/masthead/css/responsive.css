@@ -63,6 +63,11 @@ Note: Design for a width of 768px
         height: 120px;
     }
 
+    header {
+        width: 52% !important;
+    }
+
+
 }
 
 /** 
@@ -244,6 +249,19 @@ Note: Design for a width of 420px
     .view-featured-view iframe {
         width: 380px;
         height: 220px;
+    }
+
+    header {
+        width: 52% !important;
+    }
+
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    header {
+        width: 100% !important;
     }
 
 }
