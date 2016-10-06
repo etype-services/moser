@@ -1444,9 +1444,13 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
 
 .submitted {
     padding: 5px 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: #999999;
     border-bottom: 1px solid #dddddd;
+}
+
+.field-name-field-tags .field-item {
+    margin-right: 0.6em;
 }
 
 .page-node .node-article .galleria-info-link {
