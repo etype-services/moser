@@ -574,6 +574,15 @@ h3.site-slogan {
 .node-article .galleria-info-description {
     display: none;
     visibility: hidden;
+    height: 0;
+}
+
+.node-article .galleria-info-text {
+    padding: 12px 12px 0 12px
+}
+
+.node-article .field-image {
+    margin-bottom: 1em;
 }
 
 /* Teasers */
