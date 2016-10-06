@@ -142,6 +142,9 @@ $sites['casscountysun.com'] = 'atlantacitizensjournal.com';
 $sites['www.theatlantacitizensjournal.com'] = 'atlantacitizensjournal.com';
 $sites['theatlantacitizensjournal.com'] = 'atlantacitizensjournal.com';
 
+$sites['www.lindensun.com'] = 'atlantacitizensjournal.com';
+$sites['lindensun.com'] = 'atlantacitizensjournal.com';
+
 /* campcountynow.etypegoogle4.com */
 $sites['campcountynow.etypegoogle4.com'] = 'campcountynow.com';
 $sites['www.campcountynow.com'] = 'campcountynow.com';
@@ -163,6 +166,9 @@ $sites['bowiecountycitizens.com'] = 'bowiecountynow.com';
 
 $sites['www.bowiecountycitizen.com'] = 'bowiecountynow.com';
 $sites['bowiecountycitizen.com'] = 'bowiecountynow.com';
+
+$sites['www.newbostonnews.com'] = 'bowiecountynow.com';
+$sites['newbostonnews.com'] = 'bowiecountynow.com';
 
 /* steelcountrybee.etypegoogle4.com */
 $sites['steelcountrybee.etypegoogle4.com'] = 'steelcountrybee.com';
