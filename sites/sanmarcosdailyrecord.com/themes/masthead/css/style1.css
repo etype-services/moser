@@ -589,6 +589,11 @@ h3.site-slogan {
     margin-bottom: 1em;
 }
 
+/* but not in Views */
+.view .node-article .field-image {
+    margin-bottom: 0;
+}
+
 /* Teasers */
 
 .node-teaser {
