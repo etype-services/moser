@@ -219,5 +219,3 @@ function _etype_e_edition() {
   $path = 'http://etypeservices.com/' . $e_edition . '/';
   drupal_goto($path);
 }
-
-
