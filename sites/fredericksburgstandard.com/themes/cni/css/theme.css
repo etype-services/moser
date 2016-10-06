@@ -50,6 +50,7 @@ h2 {
 
 p {
     padding-bottom: 10px;
+    font-size: 0.9em;
 }
 
 table {
@@ -94,6 +95,7 @@ h3.site-slogan {
 --------------------------------------------------------------------------*/
 
 .view-slideshow {
+    font-size: 0.9em;
 }
 
 .view-slideshow .views_slideshow_main {
