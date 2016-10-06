@@ -581,6 +581,10 @@ h3.site-slogan {
     padding: 12px 12px 0 12px
 }
 
+.node-article .galleria-info-link {
+    background-position: -669px 6px;
+}
+
 .node-article .field-image {
     margin-bottom: 1em;
 }
