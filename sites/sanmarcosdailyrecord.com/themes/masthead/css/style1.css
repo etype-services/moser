@@ -1240,7 +1240,7 @@ blockquote {
 }
 
 /* hide image captions in Front Page view and Slideshow */
-.view-slideshow blockquote.image-field-caption, .node-teaser .blockquote.image-field-caption {
+.view blockquote.image-field-caption {
     display: none;
     visibility: hidden;
 }
