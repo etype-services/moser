@@ -571,6 +571,11 @@ h3.site-slogan {
     text-transform: uppercase;
 }
 
+.node-article .galleria-info-description {
+    display: none;
+    visibility: hidden;
+}
+
 /* Teasers */
 
 .node-teaser {
