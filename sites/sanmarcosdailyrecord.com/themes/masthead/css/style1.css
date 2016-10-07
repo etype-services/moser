@@ -196,6 +196,15 @@ h3.site-slogan {
     background: #f9f9f9;
 }
 
+.preface-wrapper .view-Similar-Entries .views-row {
+    background: none;
+}
+
+#block-statistics-popular .content .item-list h3 {
+    display: none;
+    visibility: hidden;
+}
+
 /* MAIN CONTENT
 --------------------------------------------------------------------------*/
 
