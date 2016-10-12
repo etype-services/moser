@@ -176,9 +176,9 @@ h3.site-slogan {
     font-size: 0.7em;
 }
 
-/* VIEWS
+/* IMAGE FIELD CAPTION
 --------------------------------------------------------------------------*/
-.view blockquote.image-field-caption {
+.view blockquote.image-field-caption, .node-teaser blockquote.image-field-caption {
     display: none;
     visibility: hidden;
 }

@@ -180,6 +180,13 @@ h3.site-slogan {
     font-size: 0.7em;
 }
 
+/* IMAGE FIELD CAPTION
+--------------------------------------------------------------------------*/
+.view blockquote.image-field-caption, .node-teaser blockquote.image-field-caption {
+    display: none;
+    visibility: hidden;
+}
+
 /* PREFACE
 --------------------------------------------------------------------------*/
 
@@ -1506,13 +1513,6 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
 
 #block-etype-own-local .block-inner .content {
     padding: 0;
-}
-
-/* SIMPLE ADS
---------------------------------------------------------------------------*/
-
-.region-main-menu .contextual-links-region #block-simpleads-ad-groups-436 {
-    text-align:center;
 }
 
 /* advanced poll block */
