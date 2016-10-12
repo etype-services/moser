@@ -1244,7 +1244,7 @@ blockquote {
     margin-left: 100px;
 }
 
-/* hide image captions in Fron Page view and Slideshow */
+/* hide image captions in Front Page view and Slideshow */
 blockquote.image-field-caption {
     display: none;
     visibility: hidden;
