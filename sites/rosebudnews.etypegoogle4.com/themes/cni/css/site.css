@@ -1,0 +1,45 @@
+/* logo */
+.site-logo {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.site-logo img {
+    width: 100%;
+    max-width: 700px;
+}
+
+/* SIMPLE ADS
+--------------------------------------------------------------------------*/
+#block-simpleads-ad-groups-415, #block-simpleads-ad-groups-418 {
+	text-align:center;
+}
+
+#block-simpleads-ad-groups-416, #block-simpleads-ad-groups-417, #block-simpleads-ad-groups-437 {
+	text-align:center;
+	margin-top: 5px;
+}
+
+#main-content .block-simpleads .block-inner {
+    padding: 0;
+	margin: 0;
+	border-style: none;
+    border-width: 0;
+	box-shadow: none;
+}
+
+/* skyscraper ads */
+#block-simpleads-ad-groups-422 .image-ad.first {
+    float: left;
+    margin-right: 55px;
+}
+
+/* hide info on webforms */
+article.node-webform .node-content-wrapper .submitted span {
+    display: none;
+}
+
+article.node-webform .node-content-wrapper h1.title {
+    margin-bottom: 0;
+}
