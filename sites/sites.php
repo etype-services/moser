@@ -234,7 +234,6 @@ $sites['lakecountryradio.net'] = 'lakecountryradio.net';
 
 /* marlindemocrat.etypegoogle4.com */
 $sites['marlindemocrat.etypegoogle4.com'] = 'marlindemocrat.etypegoogle4.com';
-$sites['marlindemocrat-cni.etypegoogle4.com'] = 'marlindemocrat.etypegoogle4.com';
 $sites['marlindemocrat.com'] = 'marlindemocrat.etypegoogle4.com';
 $sites['www.marlindemocrat.com'] = 'marlindemocrat.etypegoogle4.com';
 
