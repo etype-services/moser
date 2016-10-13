@@ -241,3 +241,5 @@ $sites['www.marlindemocrat.com'] = 'marlindemocrat.etypegoogle4.com';
 $sites['rosebudnews.etypegoogle4.com'] = 'rosebudnews.etypegoogle4.com';
 $sites['rosebudnews.net'] = 'rosebudnews.etypegoogle4.com';
 $sites['www.rosebudnews.net'] = 'rosebudnews.etypegoogle4.com';
+$sites['therosebudnews.com'] = 'rosebudnews.etypegoogle4.com';
+$sites['www.therosebudnews.com'] = 'rosebudnews.etypegoogle4.com';
