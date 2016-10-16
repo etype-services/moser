@@ -6,3 +6,6 @@ sites/*/files
 sites/*/private
 sites/*/tmp
 .idea/
+
+# Slider ads
+sites/*/Slider_ads/ads
