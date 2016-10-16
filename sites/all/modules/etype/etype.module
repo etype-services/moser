@@ -85,16 +85,16 @@ function _etype_social_content() {
   $pinterest = theme_get_setting('pinterest');
   $instagram = theme_get_setting('instagram');
   if (!empty($facebook)) {
-    $output .= '<li><a class="facebook" href="https://www.facebook.com/' . $facebook . '"></a></li>';
+    $output .= '<li><a class="facebook" target="_blank" href="https://www.facebook.com/' . $facebook . '"></a></li>';
   }
   if (!empty($twitter)) {
-    $output .= '<li><a class="twitter" href="https://twitter.com/' . $twitter . '"></a></li>';
+    $output .= '<li><a class="twitter" target="_blank" href="https://twitter.com/' . $twitter . '"></a></li>';
   }
   if (!empty($pinterest)) {
-    $output .= '<li><a class="pinterest" href="https://www.pinterest.com/' . $pinterest . '"></a></li>';
+    $output .= '<li><a class="pinterest" target="_blank" href="https://www.pinterest.com/' . $pinterest . '"></a></li>';
   }
   if (!empty($instagram)) {
-    $output .= '<li><a class="instagram" href="https://instagram.com/' . $instagram . '"></a></li>';
+    $output .= '<li><a class="instagram" target="_blank" href="https://instagram.com/' . $instagram . '"></a></li>';
   }
   $output .= '</ul></div>';
   return $output;
@@ -111,16 +111,16 @@ function _etype_follow_content() {
   $pinterest = theme_get_setting('pinterest');
   $instagram = theme_get_setting('instagram');
   if (!empty($facebook)) {
-    $output .= '<div class="facebook"><a href="https://www.facebook.com/' . $facebook . '">Like us on Facebook</a></div>';
+    $output .= '<div class="facebook"><a href="https://www.facebook.com/' . $facebook . '" target="_blank">Like us on Facebook</a></div>';
   }
   if (!empty($twitter)) {
-    $output .= '<div class="twitter"><a href="https://twitter.com/' . $twitter . '">Follow us on Twitter</a></div>';
+    $output .= '<div class="twitter"><a href="https://twitter.com/' . $twitter . '" target="_blank">Follow us on Twitter</a></div>';
   }
   if (!empty($pinterest)) {
-    $output .= '<div class="pinterest"><a href="https://www.pinterest.com/' . $pinterest . '">Follow us on Pinterest</a></div>';
+    $output .= '<div class="pinterest"><a href="https://www.pinterest.com/' . $pinterest . '" target="_blank">Follow us on Pinterest</a></div>';
   }
   if (!empty($instagram)) {
-    $output .= '<div class="instagram"><a href="https://instagram.com/' . $instagram . '">Follow us on Instagram</a></div>';
+    $output .= '<div class="instagram"><a href="https://instagram.com/' . $instagram . '" target="_blank">Follow us on Instagram</a></div>';
   }
   return $output;
 }
@@ -176,7 +176,7 @@ function _etype_e_edition_content() {
   $fixed = $arr[0];
 
   $output = '
-<p class="rtecenter" style="text-align: center;"><a href="http://etypeservices.com/' . $e_edition . '/"><img src="http://etypeservices.com/LandingPageImages/' . $fixed . '/currentpg1.jpg" width="193"></a></p><h4 class="rtecenter" style="text-align: center;"><a href="http://etypeservices.com/' . $e_edition . '/">Click here to read ' . $site_name . '</a></h4>
+<p class="rtecenter" style="text-align: center;"><a href="http://etypeservices.com/' . $e_edition . '/" target="_blank"><img src="http://etypeservices.com/LandingPageImages/' . $fixed . '/currentpg1.jpg" width="193"></a></p><h4 class="rtecenter" style="text-align: center;"><a href="http://etypeservices.com/' . $e_edition . '/" target="_blank">Click here to read ' . $site_name . '</a></h4>
 ';
   return $output;
 }
