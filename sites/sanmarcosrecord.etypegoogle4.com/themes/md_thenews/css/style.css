@@ -3044,6 +3044,17 @@ div.admin-panel .description {
     z-index: 99;
 }
 
+.region-rightad .block-simpleads {
+    overflow: hidden;
+    width: 120px;
+    height: 1100px;
+    top: 0;
+    right: 0;
+    position: fixed;
+    margin: 0;
+    z-index: 99;
+}
+
 /* IMAGE FIELD CAPTION */
 .node-article .field-type-image img {
     margin-bottom: 0;
