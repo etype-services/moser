@@ -714,8 +714,7 @@ table ul.links li {
 }
 
 #logo {
-    float: left;
-    margin: 23px 0 0 0;
+    margin: 23px auto;
 }
 
 #logo img {
@@ -883,8 +882,6 @@ table ul.links li {
 .nav-superfish #nav {
     height: 87px;
     position: relative;
-    width: 994px;
-    margin: 0 auto;
 }
 
 .subnav {

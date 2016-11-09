@@ -2,6 +2,10 @@
     .region-leftad .block-simpleads, .region-rightad .block-simpleads{
         width: 100px;
     }
+
+    #logo {
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 1017px) {
@@ -118,7 +122,6 @@
         visibility: hidden;
         display: none;
     }
-}
 }
 
 @media screen and (max-width: 760px) {
