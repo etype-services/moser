@@ -4,7 +4,12 @@
 
 <?php if ($page['slider'] || $page['headlines']): ?>
 	<div id="spotlight" class="<?php print $withheadlines;?>">
-
+<?php if ($page['leftad']): ?>
+    <?php print render($page['leftad']); ?>
+<?php endif; ?>
+<?php if ($page['rightad']): ?>
+    <?php print render($page['rightad']); ?>
+<?php endif; ?>
       <div class="wrap clearfix">
 		<?php if ($page['slider']): ?>
 			<div id="slider">
