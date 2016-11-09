@@ -2935,24 +2935,6 @@ div.admin-panel .description {
     width: auto;
 }
 
-#block-simpleads-ad_groups_76 img {
-    float: left;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    width: 200px;
-    height: 190px
-}
-
-#block-simpleads-ad_groups_77 img {
-    float: left;
-    margin-left: 35px;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    width: 400px;
-    height: 200px
-}
-
 .front #capption {
     display: none;
 }
@@ -2988,6 +2970,9 @@ div.admin-panel .description {
 }
 
 /* SIMPLE ADS */
+.region-sidebar .block-simpleads img {
+    max-width: 100%;
+}
 
 .block-simpleads .blcontent {
     border: none;
@@ -3003,6 +2988,24 @@ div.admin-panel .description {
     border-left: 2px solid #000;
     border-bottom: 2px solid #000;
     border-top: 2px solid #000;
+}
+
+#block-simpleads-ad_groups_76 img {
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 200px;
+    height: 190px
+}
+
+#block-simpleads-ad_groups_77 img {
+    float: left;
+    margin-left: 35px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 400px;
+    height: 200px
 }
 
 #block-simpleads-ad_groups_332 img {
