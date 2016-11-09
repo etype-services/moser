@@ -3032,7 +3032,6 @@ div.admin-panel .description {
 }
 
 .region-leftads .block-simpleads {
-    visibility: visible;
     overflow: hidden;
     width: 300px;
     height: 1100px;
