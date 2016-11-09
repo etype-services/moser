@@ -609,7 +609,7 @@ table ul.links li {
 /* 6.	Layout
 --------------------------------------------------------------------------*/
 .wrap{
-    width: 1000px;
+    width: 900px;
     margin: 0 auto;
 }
 #header{
@@ -650,7 +650,7 @@ table ul.links li {
     float: left;
 }
 #headlines {
-    width: 340px;
+    width: 240px;
     float: right
 }
 
@@ -681,7 +681,7 @@ table ul.links li {
 
 /* sidebar */
 #sidebar {
-    width: 340px;
+    width: 240px;
     float: right;
 }
 .sidebar-left #content,
@@ -725,7 +725,7 @@ table ul.links li {
 .design-box #nav,
 .design-box #bottom,
 .design-box #footer {
-    width: 1000px;
+    width: 900px;
     margin: 0 auto;
 }
 .design-box #nav .wrap,
