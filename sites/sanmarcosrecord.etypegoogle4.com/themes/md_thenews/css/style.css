@@ -2997,6 +2997,10 @@ div.admin-panel .description {
     padding: 0;
 }
 
+.block-simpleads img {
+    width: 100%;
+}
+
 #block-simpleads-ad_groups_332 {
     float: left;
     margin-right: 0px;
