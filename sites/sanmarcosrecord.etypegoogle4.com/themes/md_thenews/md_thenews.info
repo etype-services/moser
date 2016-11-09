@@ -10,7 +10,6 @@ stylesheets[all][] = css/style.css
 ;stylesheets[all][] = css/colors.css
 stylesheets[print][] = css/print.css
 
-
 regions[pushmenu] = Multi-level push
 regions[leaderboard] = Leaderboard
 regions[header_ads] = Header Ads
@@ -37,6 +36,9 @@ regions[bottom_3] = Bottom third column
 regions[bottom_4] = Bottom fourth column
 
 regions[footer] = Footer
+
+regions[leftad] = Left Ad
+regions[rightad] = Right Ad
 
 
 ; DEFAULT THEME SETTINGS
