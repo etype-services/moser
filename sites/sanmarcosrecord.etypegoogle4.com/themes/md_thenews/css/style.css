@@ -883,6 +883,8 @@ table ul.links li {
 .nav-superfish #nav {
     height: 87px;
     position: relative;
+    width: 994px;
+    margin: 0 auto;
 }
 
 .subnav {
@@ -3039,7 +3041,7 @@ div.admin-panel .description {
     left: 0;
     position: fixed;
     margin: 0;
-    z-index: 0;
+    z-index: 99;
 }
 
 /* IMAGE FIELD CAPTION */
