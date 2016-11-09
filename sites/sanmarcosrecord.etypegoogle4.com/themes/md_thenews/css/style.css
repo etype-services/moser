@@ -754,7 +754,7 @@ table ul.links li {
 }
 
 .withheadlines #slider {
-    width: 640px;
+    width: 600px;
     float: left;
 }
 
@@ -768,7 +768,7 @@ table ul.links li {
     background: #fff;
     border-bottom: 3px solid #E6E6E6;
     margin-bottom: 15px;
-    width: 640px;
+    width: 600px;
     float: left;
 }
 
@@ -782,7 +782,7 @@ table ul.links li {
 }
 
 #content-left {
-    width: 640px;
+    width: 600px;
     float: left;
 }
 

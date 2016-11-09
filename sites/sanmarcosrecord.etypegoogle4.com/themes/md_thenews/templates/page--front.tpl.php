@@ -3,7 +3,9 @@
 <?php include 'page.header.inc'; ?>
 
 <?php if ($page['slider'] || $page['headlines']): ?>
-	<div id="spotlight" class="<?php print $withheadlines;?>"><div class="wrap clearfix">
+	<div id="spotlight" class="<?php print $withheadlines;?>">
+
+      <div class="wrap clearfix">
 		<?php if ($page['slider']): ?>
 			<div id="slider">
 				<?php print render($page['slider']); ?>
