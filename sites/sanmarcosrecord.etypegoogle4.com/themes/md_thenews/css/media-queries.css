@@ -1,9 +1,5 @@
 @media screen and (max-width: 1139px) {
-    .region-leftad .block-simpleads {
-        width: 100px;
-    }
-
-    .region-rightad .block-simpleads {
+    .region-leftad .block-simpleads, .region-rightad .block-simpleads{
         width: 100px;
     }
 }
@@ -117,6 +113,12 @@
 	.col3-2 {
 		max-width: 62%;
 	}
+
+    .region-leftad .block-simpleads, .region-rightad .block-simpleads{
+        visibility: hidden;
+        display: none;
+    }
+}
 }
 
 @media screen and (max-width: 760px) {
