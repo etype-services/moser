@@ -2988,6 +2988,13 @@ div.admin-panel .description {
     padding-left: 0px;
 }
 
+/* SIMPLE ADS */
+
+.block-simpleads .blcontent {
+    border: none;
+    padding: 0;
+}
+
 #block-simpleads-ad_groups_332 {
     float: left;
     margin-right: 0px;
@@ -3022,6 +3029,18 @@ div.admin-panel .description {
 #block-simpleads-ad_groups_303 img {
     text-align: center;
     max-width: 100%;
+}
+
+.region-leftads .block-simpleads {
+    visibility: visible;
+    overflow: hidden;
+    width: 300px;
+    height: 1100px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    margin: 0;
+    z-index: 0;
 }
 
 /* IMAGE FIELD CAPTION */
