@@ -1,9 +1,4 @@
-<?php if ($page['leftad']): ?>
-  <?php print render($page['leftad']); ?>
-<?php endif; ?>
-<?php if ($page['rightad']): ?>
-  <?php print render($page['rightad']); ?>
-<?php endif; ?>
+<?php include 'page.railads.inc'; ?>
 
 <div id="left-flyout-nav" class="layout-left-flyout visible-sm"></div>
 <div class="layout-right-content">

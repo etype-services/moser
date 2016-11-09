@@ -1,3 +1,5 @@
+<?php include 'page.railads.inc'; ?>
+
 <div id="left-flyout-nav" class="layout-left-flyout visible-sm"></div>
 <div class="layout-right-content">
 <?php if ($page['pushmenu']): ?>
