@@ -6,7 +6,7 @@ body {
      leaves the width of the container with the 
      added width of the flyout nav even after it's been
      hidden. */
-  /*position: relative; -- removed for rail ads */
+  position: relative;
   overflow-x: hidden;
   width: 100%;
 }
