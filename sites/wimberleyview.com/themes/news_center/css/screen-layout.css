@@ -755,7 +755,7 @@ body.page-taxonomy-term .node-teaser .submitted {
 .page-node .node-article .content .field-type-image blockquote.image-field-caption {
     float: left;
     max-width: 420px;
-    margin: 5px 18px 0;
+    margin: 5px 0 0 18px;
 }
 
 blockquote.image-field-caption p {
