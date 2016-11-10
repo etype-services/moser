@@ -942,4 +942,5 @@ body.page-taxonomy-term .node-article.node-teaser img {
 
 blockquote.image-field-caption p {
     line-height: 1.5em;
+    margin: 0 0 0.6em;
 }
