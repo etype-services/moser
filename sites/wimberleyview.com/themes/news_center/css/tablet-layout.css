@@ -793,7 +793,7 @@ body.node-type-article .node-article .field-name-field-image img {
 }
 
 body.node-type-article .node-article .field-name-body {
-    padding-top: 80px;
+    padding-top: 0;
 	clear: none;
 }
 

@@ -744,3 +744,17 @@ body.page-taxonomy-term .node-teaser .submitted {
   padding-bottom: 6px;
   width: 220px;
 }
+
+/* IMAGE FIELD CAPTION
+--------------------------------------------------------------------------*/
+.view blockquote.image-field-caption, .node-teaser blockquote.image-field-caption {
+    display: none;
+    visibility: hidden;
+}
+
+.page-node .node-article .content .field-type-image blockquote.image-field-caption {
+    float: left;
+    margin: 0;
+    max-width: 420px;
+    margin-right: 18px;
+}
