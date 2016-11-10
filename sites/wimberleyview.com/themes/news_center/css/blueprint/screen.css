@@ -274,7 +274,7 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
 -------------------------------------------------------------- */
 
 /* Indentation instead of line shifts for sibling paragraphs. */
-   p + p { text-indent:0.5em; margin-top:-5em; }
+   p + p { text-indent:0.5em; margin-top: 0; }
    form p + p  { text-indent: 0; } /* Don't want this in forms. */
 
 
