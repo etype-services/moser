@@ -188,7 +188,7 @@
 	}
 
     /* subnav */
-    ul#superfish-2 li a {
+    #superfish-2 li a {
         font-size: 10px;
         padding: 0 5px;
     }
