@@ -873,13 +873,16 @@ table ul.links li {
 }
 
 /* Main menu */
+#nav {
+    background: #011B4E;
+}
+
 #superfish-1 {
     width: 841px;
     margin: 0 auto;
     height: 50px;
-    position: relative;
-    background: #011B4E;
     font-size: 1.5em;
+    position: relative;
 }
 
 ul#main-menu-links li,
