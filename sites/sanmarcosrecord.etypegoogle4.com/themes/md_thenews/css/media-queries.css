@@ -302,6 +302,12 @@
     }
 }
 
+@media screen and (min-width: 530px) {
+
+
+
+}
+
 @media screen and (max-width: 480px) {
 
 	/* disable webkit text size adjust (for iPhone) */

@@ -928,6 +928,7 @@ ul#main-menu-links li,
 .btn-navbar-navtoggle {
     top: 100px;
     left:1px;
+    position: inherit;
 }
 
 /* Secondary menu */
