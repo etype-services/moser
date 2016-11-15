@@ -20,12 +20,6 @@
 		max-width: 94%;
 	}
 
-    #nav {
-        font-size: 1.333em;
-    }
-    ul#main-menu-links li a, #nav ul.sf-menu li a {
-        padding: 0 10px;
-    }
     #slider{
         width: 100%;
     }
@@ -129,12 +123,7 @@
 	/************************************************************************************
 	STRUCTURE
 	*************************************************************************************/
-    #nav {
-        font-size: 1.250em;
-    }
-    ul#main-menu-links li a, #nav ul.sf-menu li a {
-        padding: 0 10px;
-    }
+
     #hlitemContainer .views-field, .view-latest-articles .views-field {
         padding-left: 75px;
     }
@@ -175,8 +164,9 @@
 
 @media screen and (max-width: 950px) {
 
-    ul#main-menu-links li a, #nav ul.sf-menu li a {
+    ul#superfish-1 li a {
         padding: 0 6px;
+        font-size: 1em;
     }
 }
 
