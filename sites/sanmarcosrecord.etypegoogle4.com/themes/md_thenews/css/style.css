@@ -924,6 +924,11 @@ ul#main-menu-links li,
     top: 50px;
 }
 
+/* adjustment to mobile hamburger */
+.btn-navbar-navtoggle {
+    top: 138px;
+}
+
 /* Secondary menu */
 
 #superfish-2 {
