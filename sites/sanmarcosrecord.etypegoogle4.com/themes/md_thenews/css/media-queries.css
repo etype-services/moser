@@ -200,10 +200,16 @@
 
 @media screen and (max-width: 700px) {
 
-    ul#main-menu-links li a, #nav ul.sf-menu li a {
+    #superfish-1 li a {
         padding: 0 3px;
         font-size: 0.9em;
     }
+
+    /* main menu */
+    #superfish-1 {
+        width: 580px;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
