@@ -173,12 +173,11 @@
 @media screen and (max-width: 870px) {
 
     /* main menu */
-    #superfish-2 {
-        width: 720px;
+    #superfish-1 {
+        width: 730px;
     }
 
     #superfish-1 li a {
-        font-size: 1.4em;
         padding: 0 8px;
     }
 
