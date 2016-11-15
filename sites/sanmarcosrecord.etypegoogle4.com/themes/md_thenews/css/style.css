@@ -915,16 +915,6 @@ ul#main-menu-links li a,
     text-transform: uppercase;
 }
 
-#nav ul.sf-menu li li a {
-    background: url(../images/suvnav.png) no-repeat right center;
-    border: none;
-    color: #666666;
-    font-size: 11px;
-    height: 37px;
-    line-height: 37px;
-    padding: 0 8px;
-}
-
 ul#main-menu-links li a {
     border: none;
     height: 50px;
@@ -947,43 +937,39 @@ ul#main-menu-links li.active a {
     color: #CC3333;
 }
 
-#nav ul.sf-menu li li a:hover,
-#nav ul.sf-menu li li.active-trail > a {
-    background: url(../images/suvnav.png) no-repeat right center;
-    color: #CC3333;
-}
-
-#nav ul.sf-menu li li.last a:hover,
-#nav ul.sf-menu li li.active-trail.last > a {
-    background: none;
-}
-
 .sf-navbar li:focus ul, .sf-navbar li:hover ul, .sf-navbar li:active ul, .sf-navbar li.sfHover ul, .sf-navbar li li:focus ul, .sf-navbar li li:hover ul, .sf-navbar li li:active ul, .sf-navbar li li.sfHover ul, .sf-navbar .active-trail ul {
     top: 50px;
 }
 
 /* Secondary menu */
-#main-content ul.menu li {
+ul#superfish-2 li {
     border-bottom: 1px solid #E6E6E6;
     list-style: none;
     margin: 0;
     padding: 6px 0;
 }
 
-#main-content ul.menu li.first {
-    padding-top: 0
+
+ul#superfish-2 li li a:hover,
+#nav ul.sf-menu li li.active-trail > a {
+    background: url(../images/suvnav.png) no-repeat right center;
+    color: #CC3333;
 }
 
-#main-content ul.menu li.last {
+ul#superfish-2 li.last a:hover,
+ul#superfish-2 li li.active-trail.last > a {
+    background: none;
+}
+
+
+ul#superfish-2 li a {
+    background: url(../images/suvnav.png) no-repeat right center;
     border: none;
-}
-
-#main-content ul.menu li a {
-    display: block;
-}
-
-#main-content ul.menu li a.active {
-    color: #CC3333
+    color: #666666;
+    font-size: 11px;
+    height: 37px;
+    line-height: 37px;
+    padding: 0 8px;
 }
 
 /* 8.	Block styles

@@ -188,7 +188,7 @@
 	}
 
     /* subnav */
-    #nav ul.sf-menu li li a {
+    ul#superfish-2 li a {
         font-size: 10px;
         padding: 0 5px;
     }
