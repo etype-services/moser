@@ -170,6 +170,12 @@
 	#forum td.created, #forum td.posts, #forum td.topics, #forum td.last-reply, #forum td.replies, #forum td.pager {
 		white-space: normal
 	}
+
+    /* subnav */
+    #nav ul.sf-menu li li a {
+        font-size: 10px;
+        padding: 0 5px;
+    }
 }
 
 @media screen and (max-width: 950px) {
