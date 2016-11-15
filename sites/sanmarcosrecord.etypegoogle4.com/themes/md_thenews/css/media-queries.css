@@ -116,6 +116,12 @@
         visibility: hidden;
         display: none;
     }
+
+    #superfish-1 li a {
+        padding: 0px 7px;
+        font-size: 0.9em;
+    }
+
 }
 
 @media screen and (max-width: 760px) {
