@@ -291,6 +291,11 @@
     input.form-text {
         width: 98%;
     }
+
+    #superfish-2 {
+        display: none;
+        visibility: hidden;
+    }
 }
 
 @media screen and (max-width: 480px) {
