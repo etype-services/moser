@@ -921,24 +921,17 @@ ul#superfish-1 li a.active {
 }
 
 /* Secondary menu */
+
+ul#superfish-2 {
+    width: 841px;
+    margin: 0 auto;
+}
+
 ul#superfish-2 li {
-    border-bottom: 1px solid #E6E6E6;
     list-style: none;
     margin: 0;
     padding: 6px 0;
     height: 37px;
-}
-
-
-ul#superfish-2 li a:hover,
-#nav ul.sf-menu li.active-trail > a {
-    background: url(../images/suvnav.png) no-repeat right center;
-    color: #CC3333;
-}
-
-ul#superfish-2 li.last a:hover,
-ul#superfish-2 li li.active-trail.last > a {
-    background: none;
 }
 
 ul#superfish-2 li a {
@@ -949,6 +942,19 @@ ul#superfish-2 li a {
     height: 37px;
     line-height: 37px;
     padding: 0 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+ul#superfish-2 li a:hover,
+#nav ul.sf-menu li.active-trail > a {
+    background: url(../images/suvnav.png) no-repeat right center;
+    color: #CC3333;
+}
+
+ul#superfish-2 li.last a:hover,
+ul#superfish-2 li li.active-trail.last > a {
+    background: none;
 }
 
 /* 8.	Block styles
