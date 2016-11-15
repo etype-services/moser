@@ -117,10 +117,6 @@
         display: none;
     }
 
-    #superfish-1 {
-        width: 773px;
-    }
-
 }
 
 @media screen and (max-width: 760px) {
