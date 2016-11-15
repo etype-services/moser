@@ -926,9 +926,9 @@ ul#main-menu-links li,
 
 /* adjustment to mobile hamburger */
 .btn-navbar-navtoggle {
-    top: 100px;
-    left:1px;
-    position: inherit;
+    top: 5px;
+    left: 0;
+    position: relative;
 }
 
 /* Secondary menu */
