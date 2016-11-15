@@ -161,6 +161,16 @@
 		white-space: normal
 	}
 
+    /* main menu */
+    #superfish-1 {
+        width: 678px;
+    }
+
+    #superfish-1 li a {
+        padding: 0 8px;
+        font-size: 0.9em;
+    }
+
 }
 
 @media screen and (max-width: 950px) {
