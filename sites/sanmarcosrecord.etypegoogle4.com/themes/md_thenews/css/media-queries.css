@@ -117,9 +117,8 @@
         display: none;
     }
 
-    #superfish-1 li a {
-        padding: 0px 7px;
-        font-size: 0.9em;
+    #superfish-1 {
+        width: 773px;
     }
 
 }
