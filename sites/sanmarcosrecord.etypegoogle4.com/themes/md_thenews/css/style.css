@@ -955,14 +955,18 @@ ul#main-menu-links li,
     text-transform: uppercase;
 }
 
-ul#superfish-2 li a:hover,
+#superfish-2 li a:hover,
 #nav ul.sf-menu li.active-trail > a {
     background: url(../images/suvnav.png) no-repeat right center;
     color: #CC3333;
 }
 
-ul#superfish-2 li.last a:hover,
-ul#superfish-2 li li.active-trail.last > a {
+#superfish-2 li.last a {
+    background-image: none;
+}
+
+#superfish-2 li.last a:hover,
+#superfish-2 li li.active-trail.last > a {
     background: none;
 }
 

@@ -192,6 +192,10 @@
     }
 
     /* subnav */
+    #superfish-2 {
+        width: 723px;
+    }
+
     #superfish-2 li a {
         font-size: 10px;
         padding: 0 5px;
