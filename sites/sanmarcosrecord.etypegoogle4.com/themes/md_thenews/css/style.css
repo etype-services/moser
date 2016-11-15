@@ -876,26 +876,13 @@ table ul.links li {
 #superfish-1 {
     width: 841px;
     margin: 0 auto;
+    height: 50px;
+    position: relative;
 }
 
 #nav {
     background: #011B4E;
-    height: 50px;
-    font-size: 1.500em;
-}
-
-.nav-superfish #nav {
-    height: 87px;
-    position: relative;
-}
-
-.subnav {
-    background: #fff;
-    height: 37px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50px;
+    font-size: 1.5em;
 }
 
 ul#main-menu-links li,
@@ -904,8 +891,7 @@ ul#main-menu-links li,
     margin: 0 1px 0 0;
 }
 
-ul#main-menu-links li a,
-#nav ul.sf-menu li a {
+ul#superfish-1 li a {
     border-top: 3px solid #000;
     color: #fff;
     display: block;
@@ -913,26 +899,19 @@ ul#main-menu-links li a,
     height: 47px;
     line-height: 44px;
     text-transform: uppercase;
-}
-
-ul#main-menu-links li a {
     border: none;
     height: 50px;
     line-height: 50px;
 }
 
-#nav ul.sf-menu li li.last a {
-    background: none !important;
-}
-
-ul#main-menu-links li:hover a,
-ul#main-menu-links li.active a {
+ul#superfish-1 li:hover a,
+ul#superfish-1 li.active a {
     background: #CC3333;
 }
 
-#nav ul.sf-menu li > a:hover,
-#nav ul.sf-menu li.sfHover > a,
-#nav ul.sf-menu li a.active {
+ul#superfish-1 li > a:hover,
+ul#superfish-1 li.sfHover > a,
+ul#superfish-1 li a.active {
     background: #fff;
     color: #CC3333;
 }
@@ -947,11 +926,12 @@ ul#superfish-2 li {
     list-style: none;
     margin: 0;
     padding: 6px 0;
+    height: 37px;
 }
 
 
-ul#superfish-2 li li a:hover,
-#nav ul.sf-menu li li.active-trail > a {
+ul#superfish-2 li a:hover,
+#nav ul.sf-menu li.active-trail > a {
     background: url(../images/suvnav.png) no-repeat right center;
     color: #CC3333;
 }
@@ -960,7 +940,6 @@ ul#superfish-2 li.last a:hover,
 ul#superfish-2 li li.active-trail.last > a {
     background: none;
 }
-
 
 ul#superfish-2 li a {
     background: url(../images/suvnav.png) no-repeat right center;
