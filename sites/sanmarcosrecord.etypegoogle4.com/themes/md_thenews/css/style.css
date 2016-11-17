@@ -479,16 +479,8 @@ fieldset {
     top: 12px; /* Offsets the negative margin of legends */
 }
 
-fieldset.date-combo {
-    padding: 29px 0 10px;
-}
-
 .fieldset-wrapper {
     margin-top: 25px;
-}
-
-.node-form .fieldset-wrapper {
-    margin-top: 0;
 }
 
 .filter-wrapper {
