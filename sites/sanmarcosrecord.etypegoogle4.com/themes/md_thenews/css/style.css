@@ -2942,6 +2942,7 @@ div.admin-panel .description {
 /* social icons */
 #block-social_media_links-social-media-links {
     float: right;
+    margin-right: 1em;
 }
 
 .header-ads .blcontent {
