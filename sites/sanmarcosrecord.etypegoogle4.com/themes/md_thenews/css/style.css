@@ -3008,14 +3008,14 @@ div.admin-panel .description {
     border-top: 2px solid #000;
 }
 
-#block-simpleads-ad_groups_303 {
+.region-leaderboard .block-simpleads {
     clear: both;
     display: block;
     margin-bottom: 0;
-    margin-top: 10px;
+    margin-top: 3em;
 }
 
-#block-simpleads-ad_groups_303 img {
+.region-leaderboard .block-simpleads img {
     text-align: center;
     max-width: 100%;
 }
