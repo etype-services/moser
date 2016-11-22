@@ -717,6 +717,7 @@ table ul.links li {
 
 .header-ads .block-simpleads {
     margin: 0;
+    width: 100px;
 }
 
 .region-header-ads-left .block-simpleads {
