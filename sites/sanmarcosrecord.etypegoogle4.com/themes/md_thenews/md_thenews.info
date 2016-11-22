@@ -11,9 +11,11 @@ stylesheets[all][] = css/style.css
 stylesheets[print][] = css/print.css
 
 regions[pushmenu] = Multi-level push
-regions[leaderboard] = Leaderboard
 regions[header_ads] = Header Ads
+regions[social_icons] = Social Icons
+regions[leaderboard] = Leaderboard
 regions[superfish] = Superfish menu
+regions[leaderboard] = Leaderboard
 regions[help] = Help
 regions[page_top] = Page top
 regions[page_bottom] = Page bottom

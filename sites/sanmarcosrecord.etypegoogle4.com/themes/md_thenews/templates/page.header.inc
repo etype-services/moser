@@ -39,14 +39,12 @@
       </div> <!-- /#name-and-slogan -->
     <?php endif; ?>
 
-    <?php if (!empty($page['header_ads'])): ?>
-        <div class="header-ads">
-          <?php print render($page['header_ads']);?>
+    <?php if (!empty($page['social_icons'])): ?>
+        <div class="social-icons">
+          <?php print render($page['social_icons']);?>
         </div>
     <?php endif; ?>
   </div>
-
-
 
   <?php if ($main_menu || $page['superfish']): ?>
     <div id="nav">
