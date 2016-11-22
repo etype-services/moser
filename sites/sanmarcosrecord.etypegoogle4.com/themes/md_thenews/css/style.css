@@ -2939,6 +2939,11 @@ div.admin-panel .description {
     text-align: center;
 }
 
+/* social icons */
+#block-social_media_links-social-media-links {
+    float: left;
+}
+
 .header-ads .blcontent {
     background: none;
     border: none;
