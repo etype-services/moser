@@ -1,8 +1,16 @@
 <div id="header" class="clearfix">
   <div class="wrap clearfix">
-      <?php if (!empty($page['header_ads'])): ?>
+      <?php if (($page['header_ads_left']) || ($page['header_ads_right'])): ?>
           <div class="header-ads">
-              <?php print render($page['header_ads']);?>
+              <?php print render($page['header_ads_left']);?>
+              <?php if ($logo): ?>
+                  <div id="logo">
+                      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
+                          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+                      </a>
+                  </div>
+              <?php endif; ?>
+              <?php print render($page['header_ads_right']);?>
           </div>
       <?php endif; ?>
 

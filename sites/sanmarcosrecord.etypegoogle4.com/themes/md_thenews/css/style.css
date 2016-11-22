@@ -717,11 +717,11 @@ table ul.links li {
     margin: 0;
 }
 
-.header-ads #block-simpleads-ad_groups_2712 {
+.region-header-ads-left .block-simpleads {
     order: 1;
 }
 
-.header-ads #block-simpleads-ad_groups_2713 {
+.region-header-ads-right .block-simpleads {
     order: 3;
 }
 
