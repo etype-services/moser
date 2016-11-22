@@ -171,6 +171,11 @@
         font-size: 0.9em;
     }
 
+    /* leaderboard ad */
+    .region-leaderboard .block-simpleads {
+        margin; 1em 1em 0;
+    }
+
 }
 
 @media screen and (max-width: 950px) {
