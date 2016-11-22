@@ -711,6 +711,7 @@ table ul.links li {
 
 .header-ads {
     display: flex; /* or inline-flex */
+    justify-content: space-between;
 }
 
 .header-ads .block-simpleads {
