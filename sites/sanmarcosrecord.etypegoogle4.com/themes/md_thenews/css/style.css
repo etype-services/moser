@@ -710,7 +710,7 @@ table ul.links li {
 }
 
 #logo {
-    margin: 23px auto;
+    margin: 23px auto 0 ;
 }
 
 #logo img {
@@ -2940,17 +2940,8 @@ div.admin-panel .description {
 }
 
 .header-ads .blcontent {
-    background-color: #F3F3F3;
-    background-image: none;
-    background-repeat: repeat;
-    background-attachment: scroll;
-    background-position: 0% 0%;
-    background-clip: border-box;
-    background-origin: padding-box;
-    background-size: auto auto;
-    border-bottom-width: 0px;
-    border-bottom-style: solid;
-    border-bottom-color: #e6e6e6;
+    background: none;
+    border: none;
     padding-top: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
