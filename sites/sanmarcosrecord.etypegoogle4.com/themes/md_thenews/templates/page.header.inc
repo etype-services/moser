@@ -3,16 +3,15 @@
       <?php if (!empty($page['header_ads'])): ?>
           <div class="header-ads">
               <?php print render($page['header_ads']);?>
+              <?php if ($logo): ?>
+                  <div id="logo">
+                      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
+                          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+                      </a>
+                  </div>
+              <?php endif; ?>
           </div>
       <?php endif; ?>
-
-    <?php if ($logo): ?>
-      <div id="logo">
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-        </a>
-      </div>
-    <?php endif; ?>
 
     <?php if ($site_name): ?>
       <div id="name-and-slogan"<?php if ($hide_site_name && $hide_site_slogan) { print ' class="element-invisible"'; } ?>>
