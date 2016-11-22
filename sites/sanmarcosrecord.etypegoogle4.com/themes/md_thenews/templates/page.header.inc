@@ -1,15 +1,16 @@
 <div id="header" class="clearfix">
   <div class="wrap clearfix">
+      <?php if (!empty($page['header_ads'])): ?>
+          <div class="header-ads">
+              <?php print render($page['header_ads']);?>
+          </div>
+      <?php endif; ?>
+
     <?php if ($logo): ?>
       <div id="logo">
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
           <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
         </a>
-        <?php if ($site_slogan): ?>
-          <span class="slogan<?php if ($hide_site_slogan) { print ' element-invisible'; } ?>">
-            <?php print $site_slogan; ?>
-          </span>
-        <?php endif; ?>
       </div>
     <?php endif; ?>
 
