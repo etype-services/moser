@@ -709,8 +709,24 @@ table ul.links li {
     margin-bottom: 17px;
 }
 
+.header-ads {
+    display: flex; /* or inline-flex */
+}
+
+.header-ads .block-simpleads {
+    margin: 0;
+}
+
+.header-ads #block-simpleads-ad_groups_2712 {
+    order: 1;
+}
+
+.header-ads #block-simpleads-ad_groups_2713 {
+    order: 3;
+}
+
 #logo {
-    margin: 23px auto 0 ;
+    order: 2;
 }
 
 #logo img {
@@ -720,30 +736,6 @@ table ul.links li {
 #logo a {
     font-size: 2.5em;
     font-weight: bold;
-}
-
-#logo .slogan {
-
-}
-
-.header-ads {
-    margin: 12px 12px 0;
-}
-
-.header-ads .block-simpleads {
-    margin: 0;
-}
-
-.header-ads #block-simpleads-ad_groups_2712 {
-    float: left;
-}
-
-.header-ads #block-simpleads-ad_groups_2713 {
-    float: right;
-}
-
-#main-content {
-
 }
 
 /* spotlight */
