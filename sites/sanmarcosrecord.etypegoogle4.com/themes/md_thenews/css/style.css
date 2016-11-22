@@ -3011,6 +3011,8 @@ div.admin-panel .description {
 #block-simpleads-ad_groups_303 {
     clear: both;
     display: block;
+    margin-bottom: 0;
+    margin-top: 10px;
 }
 
 #block-simpleads-ad_groups_303 img {
