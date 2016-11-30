@@ -3043,6 +3043,12 @@ div.admin-panel .description {
     z-index: 99;
 }
 
+/* DFP / GOOGLE ADS */
+.block-dfp .blcontent {
+    border: none;
+    padding: 0;
+}
+
 /* IMAGE FIELD CAPTION */
 .node-article .field-type-image img {
     margin-bottom: 0;
