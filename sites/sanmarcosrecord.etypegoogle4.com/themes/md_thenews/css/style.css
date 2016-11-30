@@ -2961,11 +2961,11 @@ div.admin-panel .description {
     padding: 0;
 }
 
-.block-simpleads .blcontent .simplead-container .image-ad {
+.block-simpleads .blcontent .simplead-container.image-ad {
     margin-bottom: 15px;
 }
 
-.block-simpleads .blcontent .simplead-container .image-ad.last {
+.block-simpleads .blcontent .simplead-container.image-ad.last {
     margin-bottom: 0;
 }
 
