@@ -2959,6 +2959,7 @@ div.admin-panel .description {
 .block-simpleads .blcontent {
     border: none;
     padding: 0;
+    margin-bottom: 0;
 }
 
 .block-simpleads .blcontent .simplead-container.image-ad {
