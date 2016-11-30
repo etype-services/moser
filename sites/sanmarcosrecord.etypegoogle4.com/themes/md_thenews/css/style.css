@@ -1624,7 +1624,7 @@ ul.quicktabs-tabs {
 .ui-accordion .ui-accordion-content {
     border: none;
     overflow: hidden;
-    padding: 15px;
+    padding: 15px 0 0;
 }
 
 .block-quicktabs .ui-widget-content {
