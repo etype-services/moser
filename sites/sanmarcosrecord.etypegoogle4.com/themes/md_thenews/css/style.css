@@ -1624,7 +1624,12 @@ ul.quicktabs-tabs {
 .ui-accordion .ui-accordion-content {
     border: none;
     overflow: hidden;
-    padding: 15px 0 0;
+    padding: 0;
+}
+
+.ui-accordion .ui-accordion-content #block-block-11 img,
+.ui-accordion .ui-accordion-content #block-views-special_sections-block img{
+    width: 100%;
 }
 
 .block-quicktabs .ui-widget-content {
