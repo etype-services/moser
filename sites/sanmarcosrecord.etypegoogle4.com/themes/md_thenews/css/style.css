@@ -3025,6 +3025,10 @@ div.admin-panel .description {
     margin-top: 3em;
 }
 
+.region-leaderboard .block-simpleads .blcontent .simplead-container.image-ad {
+    margin-bottom: 0;
+}
+
 .region-leaderboard .block-simpleads img {
     text-align: center;
     max-width: 100%;
