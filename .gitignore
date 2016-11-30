@@ -8,4 +8,4 @@ sites/*/tmp
 .idea/
 
 # Slider ads
-sites/*/Slider_ads/ads
+sites/*/Slider_ads
