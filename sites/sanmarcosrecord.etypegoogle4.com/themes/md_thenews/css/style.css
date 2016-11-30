@@ -2936,10 +2936,6 @@ div.admin-panel .description {
     clear: both;
 }
 
-.region-leaderboard .blcontent {
-    text-align: center;
-}
-
 /* social icons */
 #block-social_media_links-social-media-links {
     float: right;
@@ -2963,6 +2959,14 @@ div.admin-panel .description {
 .block-simpleads .blcontent {
     border: none;
     padding: 0;
+}
+
+.block-simpleads .blcontent .simplead-container .image-ad {
+    margin-bottom: 15px;
+}
+
+.block-simpleads .blcontent .simplead-container .image-ad.last {
+    margin-bottom: 0;
 }
 
 #block-simpleads-ad_groups_332 {
@@ -3007,6 +3011,10 @@ div.admin-panel .description {
     border-right: 2px solid #000;
     border-bottom: 2px solid #000;
     border-top: 2px solid #000;
+}
+
+.region-leaderboard .blcontent {
+    text-align: center;
 }
 
 .region-leaderboard .block-simpleads {
