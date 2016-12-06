@@ -1,7 +1,7 @@
 (function ($) {
 	$(function(){
 		
-		equalheight();
+		// equalheight();
 		
 		$('.meta_share div').each(function() {
 			var html = $(this).html();
@@ -37,13 +37,13 @@
 		photogalleryHeight = $('.view-photo-gallery .views-row').maxHeight();
 		$('.view-photo-gallery .views-content, .view-photo-gallery .views-row').css({'min-height':photogalleryHeight});
 		
-		$(window).resize(function() {
-			equalheight();
-		});
+		//$(window).resize(function() {
+		//	equalheight();
+		//});
 		
 		// Equal height slider & headline
 		function equalheight() {
-			$('#slider .blcontent, #headlines').removeAttr('style');
+			$('#slider .blcontent, #block-views-headlines-block .blcontent').removeAttr('style');
 			if ($(window).width() > 759) {
 				sliderheight = $('#slider .blcontent').height();
 				headlineheight = $('#headlines').height();
