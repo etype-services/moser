@@ -711,8 +711,7 @@ table ul.links li {
 
 #logo {
     display: flex; /* or inline-flex */
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
     margin: 0 20px;
 }
 
