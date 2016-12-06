@@ -50,7 +50,7 @@
 				if (sliderheight > headlineheight) {
 					headlineheight = sliderheight;
 				}
-				$('#slider .blcontent').height(headlineheight);
+				$('#slider .blcontent').height(headlineheight + 200);
 				$('#block-views-headlines-block .blcontent').height(headlineheight - $('#block-views-headlines-block .block-title').outerHeight() - 1);
 			}
 		}
