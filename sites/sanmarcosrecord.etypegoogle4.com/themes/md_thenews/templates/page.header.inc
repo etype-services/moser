@@ -34,12 +34,6 @@
 
       </div> <!-- /#name-and-slogan -->
     <?php endif; ?>
-
-    <?php if (!empty($page['social_icons'])): ?>
-        <div class="social-icons">
-          <?php print render($page['social_icons']);?>
-        </div>
-    <?php endif; ?>
   </div>
 
   <?php if ($main_menu || $page['superfish']): ?>
