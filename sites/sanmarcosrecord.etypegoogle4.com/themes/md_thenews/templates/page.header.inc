@@ -1,14 +1,13 @@
 <div id="header" class="clearfix">
   <div class="wrap clearfix">
-      <?php if (($page['header_ads_left']) || ($page['header_ads_right'])): ?>
-          <div class="header-ads">
-              <div id="logo">
-                  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
-                      <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-                  </a>
-              </div>
+      <?php if ($logo): ?>
+          <div id="logo">
+              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
+                  <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+              </a>
           </div>
       <?php endif; ?>
+
 
     <?php if ($site_name): ?>
       <div id="name-and-slogan"<?php if ($hide_site_name && $hide_site_slogan) { print ' class="element-invisible"'; } ?>>

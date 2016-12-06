@@ -709,13 +709,10 @@ table ul.links li {
     margin-bottom: 17px;
 }
 
-.header-ads {
+#logo {
     display: flex; /* or inline-flex */
     justify-content: space-between;
     align-items: center;
-}
-
-#logo {
     margin: 0 20px;
 }
 
