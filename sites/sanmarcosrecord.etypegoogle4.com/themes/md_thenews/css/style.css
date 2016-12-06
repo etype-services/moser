@@ -2958,7 +2958,8 @@ div.admin-panel .description {
     margin-bottom: 0;
 }
 
-.region-content-top .block-simpleads .blcontent .simplead-container.image-ad {
+.region-content-top .block-simpleads .blcontent .simplead-container.image-ad,
+.region-content-top .block-simpleads.block {
     margin-bottom: 0;
 }
 
