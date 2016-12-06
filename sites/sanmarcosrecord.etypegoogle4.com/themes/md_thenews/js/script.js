@@ -46,12 +46,12 @@
 			$('#slider .blcontent, #headlines').removeAttr('style');
 			if ($(window).width() > 759) {
 				sliderheight = $('#slider .blcontent').height();
-				headlineheight = $('#headlines').height() + 1;
+				headlineheight = $('#headlines').height();
 				if (sliderheight > headlineheight) {
 					headlineheight = sliderheight;
 				}
 				$('#slider .blcontent').height(headlineheight);
-				$('#headlines').height(headlineheight);
+				$('#block-views-headlines-block .blcontent').height(headlineheight);
 			}
 		}
 		
