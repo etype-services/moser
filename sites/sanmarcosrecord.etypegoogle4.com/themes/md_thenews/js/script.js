@@ -43,15 +43,15 @@
 		
 		// Equal height slider & headline
 		function equalheight() {
-			$('#slider .blcontent, #block-views-headlines-block .blcontent').removeAttr('style');
+			$('#slider .blcontent, #headlines').removeAttr('style');
 			if ($(window).width() > 759) {
 				sliderheight = $('#slider .blcontent').height();
-				headlineheight = $('#block-views-headlines-block .blcontent').height() + $('#block-views-headlines-block .block-title').outerHeight() + 1;
+				headlineheight = $('#headlines').height() + 1;
 				if (sliderheight > headlineheight) {
 					headlineheight = sliderheight;
 				}
-				$('#slider .blcontent').height(headlineheight + 400);
-				$('#block-views-headlines-block .blcontent').height(headlineheight - $('#block-views-headlines-block .block-title').outerHeight() - 1);
+				$('#slider .blcontent').height(headlineheight);
+				$('#headlines').height(headlineheight - $('#headlines').outerHeight() - 1);
 			}
 		}
 		
