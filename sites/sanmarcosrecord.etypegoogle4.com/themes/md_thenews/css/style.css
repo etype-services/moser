@@ -732,6 +732,10 @@ table ul.links li {
     width: 100%
 }
 
+#slider .blcontent {
+    height: 478px;
+}
+
 .withheadlines #slider {
     width: 600px;
     float: left;
@@ -2926,10 +2930,6 @@ div.admin-panel .description {
 }
 
 /* social icons */
-#block-social_media_links-social-media-links {
-
-}
-
 .social-icons .blcontent {
     background: none;
     border: none;
@@ -3006,25 +3006,9 @@ div.admin-panel .description {
     text-align: center;
 }
 
-.region-leaderboard .block-simpleads {
-    clear: both;
-    display: block;
-    margin-bottom: 0;
-    margin-top: 3em;
-}
-
-.region-leaderboard .block-simpleads .blcontent .simplead-container.image-ad {
-    margin-bottom: 0;
-}
-
-.region-leaderboard .block-simpleads img {
-    text-align: center;
-    max-width: 100%;
-}
-
 .region-leftad .block-simpleads {
     overflow: hidden;
-    width: 120px;
+    width: 150px;
     height: 1100px;
     top: 0;
     left: 0;
@@ -3035,7 +3019,7 @@ div.admin-panel .description {
 
 .region-rightad .block-simpleads {
     overflow: hidden;
-    width: 120px;
+    width: 150px;
     height: 1100px;
     top: 0;
     right: 0;
