@@ -715,19 +715,6 @@ table ul.links li {
     align-items: center;
 }
 
-.header-ads .block-simpleads {
-    margin: 0;
-    width: 100px;
-}
-
-.region-header-ads-left .block-simpleads {
-
-}
-
-.region-header-ads-right .block-simpleads {
-
-}
-
 #logo {
     margin: 0 20px;
 }
