@@ -51,7 +51,7 @@
 					headlineheight = sliderheight;
 				}
 				$('#slider .blcontent').height(headlineheight);
-				$('#headlines').height(headlineheight - $('#headlines').outerHeight() - 1);
+				$('#headlines').height(headlineheight);
 			}
 		}
 		
