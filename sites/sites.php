@@ -39,6 +39,7 @@ $sites['www.franklin-advocate.com'] = 'franklin-advocate.com';
 $sites['robconews.etypegoogle4.com'] = 'robconews.com';
 $sites['robconews.com'] = 'robconews.com';
 $sites['www.robconews.com'] = 'robconews.com';
+$sites['robconews-cni.etypegoogle4.com'] = "robconews-cni.etypegoogle4.com";
 
 $sites['groesbeckjournal.etypegoogle4.com'] = 'groesbeckjournal.com';
 $sites['groesbeckjournal.com'] = 'groesbeckjournal.com';
