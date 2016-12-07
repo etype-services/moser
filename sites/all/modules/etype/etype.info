@@ -1,6 +1,6 @@
-name = EType Services
+name = eType Services
 description = Custom module for EType Services.
-package = EType Services Custom Modules
+package = eType Services Custom Modules
 core = 7.x
 project = "etype"
 dependencies[] = entity
