@@ -1,10 +1,10 @@
 <?php
 
 /* import _url */
-$url = 'http://www.etypeclassifieds.com/highlandsxml/CNI_HIL.xml';
+$url = '';
 
 /* cron schedule */
-$cron_schedule = '30 7 * * 3';
+$cron_schedule = '';
 
 /* ad categories */
 $categories = array(
