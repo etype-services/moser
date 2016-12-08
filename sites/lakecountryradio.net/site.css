@@ -207,6 +207,12 @@ article.node-webform .node-content-wrapper h1.title {
         width: 300px;
     }
 
+    /* user-menu */
+    #block-system-user-menu {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
     #block-system-user-menu .content {
         width: 1000px;
     }
