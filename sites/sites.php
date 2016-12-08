@@ -248,3 +248,15 @@ $sites['rosebudnews.net'] = 'rosebudnews.etypegoogle4.com';
 $sites['www.rosebudnews.net'] = 'rosebudnews.etypegoogle4.com';
 $sites['therosebudnews.com'] = 'rosebudnews.etypegoogle4.com';
 $sites['www.therosebudnews.com'] = 'rosebudnews.etypegoogle4.com';
+
+/* k-lakes935.etypegoogle4.com */
+$sites['k-lakes935.etypegoogle4.com'] = 'k-lakes935.etypegoogle4.com';
+$sites['k-lakes935.net'] = 'k-lakes935.etypegoogle4.com';
+
+/* lakecountrytalkradio.etypegoogle4.com */
+$sites['lakecountrytalkradio.etypegoogle4.com'] = 'lakecountrytalkradio.etypegoogle4.com';
+$sites['lakecountrytalkradio.net'] = 'lakecountrytalkradio.etypegoogle4.com';
+
+/* q947.etypegoogle4.com */
+$sites['q947.etypegoogle4.com'] = 'q947.etypegoogle4.com';
+$sites['q947.net'] = 'q947.etypegoogle4.com';
