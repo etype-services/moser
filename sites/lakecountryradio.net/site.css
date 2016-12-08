@@ -185,3 +185,44 @@ article.node-webform .node-content-wrapper h1.title {
     height: 27px;
     line-height: 27px;
 }
+
+/* wider screens */
+@media only screen and (min-width: 959px) {
+
+    /* main menu */
+    #main-menu ul.menu {
+        margin: 0;
+    }
+
+    #main-menu ul.menu li ul {
+        top: 32px;
+    }
+
+    #main-menu ul.menu li a, #main-menu ul.menu li li a {
+        padding: 0 8px;
+        font-size: 1em;
+    }
+
+    #block-superfish-1 .content {
+        width: 300px;
+    }
+
+    #block-system-user-menu .content {
+        width: 1000px;
+    }
+
+}
+
+/* desktop browsers */
+@media only screen and (max-width: 958px) and (min-width: 768px) {
+
+    /* main menu */
+    #block-superfish-1 .content {
+        width: 290px;
+        font-size: 0.8em;
+    }
+
+}
+
+
+
