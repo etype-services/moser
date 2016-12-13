@@ -308,11 +308,6 @@ article .field-image {
     font-size: 0.9em;
 }
 
-#postscript .grid_4 {
-    width: 28%;
-    margin-left: 2em;
-}
-
 #postscript a {
     color: #dddddd;
     font-weight: normal;
@@ -1325,4 +1320,22 @@ article.node-webform .node-content-wrapper .submitted span {
 
 article.node-webform .node-content-wrapper h1.title {
     margin-bottom: 0;
+}
+
+/* Scoreboard ticker */
+#block-views-ticker-block .content {
+    background: none;
+}
+
+#block-views-ticker-block .liScroll-container .mask {
+    top: 0;
+}
+
+#block-views-ticker-block .liScroll-container {
+    width: 100%;
+}
+
+.preface-wrapper #block-views-ticker-block .content {
+    margin-top :0;
+    padding: 0;
 }
