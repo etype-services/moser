@@ -79,8 +79,11 @@
     }
 
     #block-system-user-menu .content {
-        font-size: 0.8em;
-        width: 970px;
+        width: 960px;
+    }
+
+    #block-system-user-menu ul.menu li a {
+        font-size: 0.7em;
     }
 
 }
