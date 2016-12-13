@@ -207,23 +207,14 @@ article.node-webform .node-content-wrapper h1.title {
     }
 
     #block-system-user-menu .content {
-        width: 1000px;
+        width: 989px;
     }
 
 }
 
-/* desktop browsers */
+/* smaller screens */
 @media only screen and (max-width: 768px) {
 
-    /* main menu */
-    #block-superfish-1 .content {
-        font-size: 0.8em;
-        width: 244px;
-    }
-
-    #block-system-user-menu .content {
-        width: 1000px;
-    }
 
 }
 
