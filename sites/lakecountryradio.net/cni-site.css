@@ -67,6 +67,10 @@
         width: 1000px;
     }
 
+    .container_12 .grid_8 {
+        width: 920px;
+    }
+
 }
 
 /* desktop browsers */
@@ -84,6 +88,10 @@
 
     #block-system-user-menu ul.menu li a {
         font-size: 0.7em;
+    }
+
+    .container_12 .grid_8 {
+        width: 792px;
     }
 
 }
