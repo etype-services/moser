@@ -401,6 +401,11 @@ article .field-image {
     list-style-position: inside;
 }
 
+/* font */
+#postscript p, #postscript ul {
+    font-family: 'Lato', sans-serif;
+}
+
 /* FOOTER
 --------------------------------------------------------------------------*/
 
