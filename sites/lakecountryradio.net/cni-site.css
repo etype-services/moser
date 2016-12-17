@@ -54,6 +54,21 @@
     background: none;
 }
 
+.preface-wrapper .views-row .views-field-field-image img {
+    display: block;
+    margin-right: 0;
+    border: none;
+    height: auto;
+}
+
+.preface-wrapper .views-row {
+    padding: 10px 10px 0;
+    background: none;
+    overflow: hidden;
+    float:  left;
+    width: 46%;
+}
+
 /* wide desktop browsers */
 @media only screen and (min-width: 959px) {
 
