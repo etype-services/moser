@@ -132,6 +132,10 @@
         width: 792px;
     }
 
+    .preface-wrapper .views-row {
+        height: 290px;
+    }
+
 }
 
 /* smaller screens */
