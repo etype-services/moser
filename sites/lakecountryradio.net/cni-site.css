@@ -109,6 +109,10 @@
         height: 350px;
     }
 
+    #block-views-71dbc5220f3d9ef0557142f31d9de32a .views-row-2 img {
+        padding-top: 3em;
+    }
+
 }
 
 /* desktop browsers */
@@ -137,7 +141,7 @@
     }
 
     #block-views-71dbc5220f3d9ef0557142f31d9de32a .views-row-2 img {
-        padding-top: 3em;
+        padding-top: 2.5em;
     }
 
 }
