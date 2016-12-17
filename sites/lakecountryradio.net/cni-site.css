@@ -49,6 +49,11 @@
     line-height: 27px;
 }
 
+/* preface */
+.preface-wrapper-top .block .content {
+    background: none;
+}
+
 /* wide desktop browsers */
 @media only screen and (min-width: 959px) {
 
