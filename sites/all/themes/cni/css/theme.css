@@ -404,6 +404,7 @@ article .field-image {
 /* font */
 #postscript p, #postscript ul {
     font-family: 'Lato', sans-serif;
+    font-size: 0.8em;
 }
 
 /* FOOTER
