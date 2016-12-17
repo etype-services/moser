@@ -52,6 +52,7 @@
 /* preface */
 .preface-wrapper-top .block .content {
     background: none;
+    margin-top: 0;
 }
 
 .preface-wrapper .views-row .views-field-field-image img {
@@ -67,6 +68,13 @@
     overflow: hidden;
     float:  left;
     width: 46%;
+}
+
+#main-content #block-views-71dbc5220f3d9ef0557142f31d9de32a .block-inner {
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
 }
 
 /* wide desktop browsers */
