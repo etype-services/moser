@@ -49,10 +49,6 @@
     }
 
     /* footer */
-    #postscript .grid_4 {
-        width: 300px;
-    }
-
     .postscript-wrapper {
         margin-right: 10px;
     }
@@ -163,8 +159,8 @@
     }
 
     /* footer */
-    #postscript .grid_4 {
-        width: 256px;
+    .postscript-wrapper {
+        margin-right: 10px;
     }
 
 }
@@ -276,10 +272,6 @@
     }
 
     /* FOOTER */
-    #postscript .grid_4 {
-        width: 49%;
-    }
-
     .postscript-wrapper {
         padding: 1em;
         margin: 0;
@@ -423,7 +415,6 @@
 
     /* FOOTER */
     #postscript .grid_4 {
-        width: 46%;
         margin-left: 1em;
     }
 
