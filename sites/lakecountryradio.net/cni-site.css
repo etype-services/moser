@@ -141,6 +141,10 @@
 /* smaller screens */
 @media only screen and (max-width: 768px) {
 
+    .preface-wrapper {
+        margin-bottom: 2em;
+    }
+
     .preface-wrapper .views-row {
         width: auto;
     }
