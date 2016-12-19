@@ -197,3 +197,17 @@
 	text-align:center;
 	margin-top: 5px;
 }
+
+/* crowdy sidebar ad */
+#block-block-37 img {margin-left:22px;}
+#block-block-37 iframe {margin-left:22px;}
+#block-block-37 .block-inner {
+    padding: 0;
+	margin: 0;
+	border-style: none;
+    border-width: 0;
+	box-shadow: none;
+}
+#block-block-37 {
+	margin-bottom: 10px;
+}	

@@ -859,3 +859,7 @@ h2.node-title {
 #block-dfp-tpa-southleaderboard iframe {width: 728px; height:90px; margin-left: -11px;}
 #block-dfp-tpa-southsidebar1 iframe {width: 300px; height:250px;}
 #block-dfp-tpa-southsidebar1 {padding: 0px;}
+
+/* crowdy sidebar ad */
+#block-block-12 img {margin-left:11px;}
+#block-block-12 iframe {margin-left:11px;}
