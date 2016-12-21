@@ -19,6 +19,11 @@
     background: red;
 }
 
+/* Teaser */
+article.node-teaser .links {
+    display:none;
+}
+
 /* SIMPLE ADS
 --------------------------------------------------------------------------*/
 
