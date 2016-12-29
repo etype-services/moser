@@ -35,19 +35,12 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 }
 
 .region-top-area {
-    float: right;
-    margin-right: 12px;
-    margin-bottom: 8px;
-	border: 1px solid #000; 
-	height: 105px;
-	background: none repeat scroll 0 0 #fff;
 }
 
 .region-top-area .block {
     float: left;
-    margin-bottom: 5px;padding: 5px;
-	
-	
+    margin-bottom: 5px;
+    padding: 5px;
 }
 
 #content .region {   
@@ -862,7 +855,7 @@ h2.node-title {
 #block-block-16 {margin-left: -3px; padding:0;}
 
 .region-top-area{
-	border:none !important;
+
 }
 
 .region-top-area .block{

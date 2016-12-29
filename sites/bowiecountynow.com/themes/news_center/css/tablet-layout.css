@@ -29,10 +29,8 @@ body.front h1{
 logo {
     display: block;
     float: left;
-    margin-bottom: 9px;
-    margin-left: 13px;
-    padding-top: 13px;
-    text-align: center;
+    margin-bottom: 2.5em;
+    width: 55%;
 }
 
 #page-wrapper {
@@ -72,9 +70,8 @@ logo {
 }
 
 .region-top-area {
-    float: left;
+    float: right;
     margin-right: 0;
-    margin-top: 39px;
 }
 
 

@@ -29,8 +29,8 @@ body.front h1{
 #logo {
     display: block;
     margin-bottom: 2.5em;
-    padding-top: 13px;
-    text-align: center;
+    float: left;
+    width: 52%;
 }
 
 #page-wrapper {
