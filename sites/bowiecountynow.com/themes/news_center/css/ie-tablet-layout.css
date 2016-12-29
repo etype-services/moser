@@ -26,7 +26,7 @@ body.front h1{
 	display: none;
 }
 
-#mobile-logo {
+#logo {
     display: block;
     float: left;
     margin-bottom: 9px;
@@ -39,12 +39,6 @@ body.front h1{
     margin-left: 0;
     margin-top: 10px;
 	display: none;
-}
-
-#page-wrapper {
-    max-width: 768px;
-    min-width: 768px;
-    width: 100%;
 }
 
 #main-wrapper {
