@@ -30,7 +30,7 @@ logo {
     display: block;
     float: left;
     margin-bottom: 2.5em;
-    width: 55%;
+    width: 422px;
 }
 
 #page-wrapper {
@@ -72,6 +72,7 @@ logo {
 .region-top-area {
     float: right;
     margin-right: 0;
+    width: 321px;
 }
 
 
