@@ -674,10 +674,6 @@ h2.node-title {
     width: 200px;
 }
 
-
-
-
-
 /* Footer: Common Footer Region */
 
 .region-footer {    
@@ -863,13 +859,7 @@ h2.node-title {
 
 /* ads */
 #block-block-11 {margin-left: -12px;}
-#block-block-16 {margin-left: -3px; padding:0px;}
-
-/* from page template */
-#mobile-logo {
-margin-bottom: 0px !important;
-margin-top: 0px !important;
-}
+#block-block-16 {margin-left: -3px; padding:0;}
 
 .region-top-area{
 	border:none !important;
@@ -883,7 +873,7 @@ margin-top: -17px;
 margin-top: 20px !important;
 }
 .menu{
-margin: 0px 0px 0px 0px !important;
+margin: 0 0 0 0 !important;
 }
 
 /* more ad styles Oct 2015 */

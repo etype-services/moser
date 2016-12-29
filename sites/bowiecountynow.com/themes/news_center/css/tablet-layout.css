@@ -26,19 +26,13 @@ body.front h1{
 	display: none;
 }
 
-#mobile-logo {
+logo {
     display: block;
     float: left;
     margin-bottom: 9px;
     margin-left: 13px;
     padding-top: 13px;
     text-align: center;
-}
-
-#logo {
-    margin-left: 0;
-    margin-top: 10px;
-	display: none;
 }
 
 #page-wrapper {
