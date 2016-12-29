@@ -32,7 +32,7 @@ body.front h1{
     display: block;
     margin-left: 18px;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 1em;
     width: 60%;
     float: left;
 }
