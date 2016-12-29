@@ -31,9 +31,10 @@ body.front h1{
 #logo {
     display: block;
     margin-left: 18px;
-    margin-top: 0px;
-    min-height: 73px;
-    margin-bottom: 22px;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 60%;
+    float: left;
 }
 
 #page-wrapper {
