@@ -8,7 +8,7 @@
   <?php print $scripts; ?>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
   <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->  <script language=javascript src="http://lightningstream.surfernetwork.com/Media/player/scripts/launch.js"></script>
+  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 
 <body class="<?php print $classes; ?>"<?php print $attributes;?>>
