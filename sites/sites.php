@@ -32,15 +32,13 @@ $sites['drippingspringsnews.etypegoogle4.com'] = 'drippingspringsnews.com';
 $sites['drippingspringsnews.com'] = 'drippingspringsnews.com';
 $sites['www.drippingspringsnews.com'] = 'drippingspringsnews.com';
 
-$sites['franklin-advocate.etypegoogle4.com'] = 'franklin-advocate-cni.etypegoogle4.com';
-$sites['franklin-advocate.com'] = 'franklin-advocate-cni.etypegoogle4.com';
-$sites['www.franklin-advocate.com'] = 'franklin-advocate-cni.etypegoogle4.com';
-$sites['franklin-advocate-cni.etypegoogle4.com'] = 'franklin-advocate-cni.etypegoogle4.com';
+$sites['franklin-advocate.etypegoogle4.com'] = 'franklin-advocate.etypegoogle4.com';
+$sites['franklin-advocate.com'] = 'franklin-advocate.etypegoogle4.com';
+$sites['www.franklin-advocate.com'] = 'franklin-advocate.etypegoogle4.com';
 
-$sites['robconews.etypegoogle4.com'] = 'robconews-cni.etypegoogle4.com';
-$sites['robconews.com'] = 'robconews-cni.etypegoogle4.com';
-$sites['www.robconews.com'] = 'robconews-cni.etypegoogle4.com';
-$sites['robconews-cni.etypegoogle4.com'] = "robconews-cni.etypegoogle4.com";
+$sites['robconews.etypegoogle4.com'] = 'robconews.etypegoogle4.com';
+$sites['robconews.com'] = 'robconews.etypegoogle4.com';
+$sites['www.robconews.com'] = 'robconews.etypegoogle4.com';
 
 $sites['groesbeckjournal.etypegoogle4.com'] = 'groesbeckjournal.com';
 $sites['groesbeckjournal.com'] = 'groesbeckjournal.com';
