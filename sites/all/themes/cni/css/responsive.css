@@ -70,7 +70,7 @@
         margin: 0;
     }
 
-    #main-menu ul.menu li a, #main-menu ul.menu li li a, #main-menu ul.menu li li a.active  {
+    #main-menu ul.menu li a, #main-menu ul.menu li li a, #main-menu ul.menu li li a.active {
         padding: 0 7px;
         font-size: 0.8em;
     }
@@ -196,7 +196,7 @@
         display: list-item;
     }
 
-    #main-menu ul.menu li  {
+    #main-menu ul.menu li {
         float: none;
         list-style: none;
     }
@@ -245,7 +245,6 @@
 
     /* SLIDESHOW
     --------------------------------------------------------------------------*/
-
     .view-slideshow .views_slideshow_main {
         height: 200px;
     }
@@ -275,6 +274,7 @@
         margin-left: 20px;
         margin-top: 20px;
     }
+
     .views-slideshow-controls-bottom {
         margin-top: 34px;
     }
@@ -347,7 +347,7 @@
         display: list-item;
     }
 
-    #main-menu ul.menu li  {
+    #main-menu ul.menu li {
         float: none;
         list-style: none;
     }
@@ -499,7 +499,7 @@
         display: list-item;
     }
 
-    #main-menu ul.menu li  {
+    #main-menu ul.menu li {
         float: none;
         list-style: none;
     }
@@ -618,7 +618,6 @@
     }
 
 }
-
 
 /* less granular switch for big and small */
 @media only screen and (max-width: 767px) {
