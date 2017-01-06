@@ -701,7 +701,7 @@ table ul.links li {
 /* 6.	Layout
 --------------------------------------------------------------------------*/
 .wrap {
-    width: 960px;
+    width: 860px;
     margin: 0 auto;
 }
 
@@ -737,7 +737,7 @@ table ul.links li {
 }
 
 .withheadlines #slider {
-    width: 600px;
+    width: 500px;
     float: left;
 }
 
@@ -751,7 +751,7 @@ table ul.links li {
     background: #fff;
     border-bottom: 3px solid #E6E6E6;
     margin-bottom: 15px;
-    width: 600px;
+    width: 500px;
     float: left;
 }
 
@@ -765,7 +765,7 @@ table ul.links li {
 }
 
 #content-left {
-    width: 600px;
+    width: 500px;
     float: left;
 }
 
