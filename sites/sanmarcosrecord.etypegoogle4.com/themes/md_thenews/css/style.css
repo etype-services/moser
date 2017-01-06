@@ -3013,7 +3013,7 @@ div.admin-panel .description {
 
 .region-leftad .block-simpleads {
     overflow: hidden;
-    width: 150px;
+    width: 200px;
     height: 1100px;
     top: 0;
     left: 0;
@@ -3024,7 +3024,7 @@ div.admin-panel .description {
 
 .region-rightad .block-simpleads {
     overflow: hidden;
-    width: 150px;
+    width: 200px;
     height: 1100px;
     top: 0;
     right: 0;
