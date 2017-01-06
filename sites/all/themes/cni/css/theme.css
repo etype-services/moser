@@ -1347,7 +1347,9 @@ article.node-webform .node-content-wrapper h1.title {
 }
 
 /* GALLERIA override gallleria classic theme */
-.galleria-info {
+
+/* different heights for different content types */
+.node-type-photos .galleria-info {
     top: 450px;
     left: 0;
 }
