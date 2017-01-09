@@ -3089,6 +3089,10 @@ div.admin-panel .description {
     border: none;
 }
 
+#block-views-editorspick-block .jcarousel-skin-default .jcarousel-container-horizontal {
+    height: 107px;
+}
+
 #block-views-editorspick-block .jcarousel-skin-default .jcarousel-item {
     height: 107px;
 }
