@@ -2940,6 +2940,11 @@ div.admin-panel .description {
 }
 
 /* SIMPLE ADS */
+
+.simplead-container img {
+    max-width: 100%;
+}
+
 .region-sidebar .block-simpleads img {
     max-width: 100%;
 }
