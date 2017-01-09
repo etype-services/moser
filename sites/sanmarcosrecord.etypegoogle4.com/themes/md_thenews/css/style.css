@@ -1218,13 +1218,12 @@ ul#main-menu-links li,
 
 #editorspick .views-field-field-image,
 .view-photo-gallery .views-field-photo {
-    margin: 3px 0 5px;
-    padding-right: 15px;
+    margin: 0;
 }
 
 #editorspick .views-field-title,
 .view-photo-gallery .views-field {
-    padding-right: 15px;
+
 }
 
 .view-editorspick,
