@@ -3117,7 +3117,7 @@ div.admin-panel .description {
     color: #cc3333;
 }
 
-/* widest width */
+/* widest width -- see media-queries.css for other widths */
 .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
     width: 760px;
 }
