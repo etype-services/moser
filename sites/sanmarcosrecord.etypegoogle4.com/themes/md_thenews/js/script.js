@@ -30,8 +30,8 @@
 		});
 
 		// Editor's pick height
-		editorpickHeight = $('#editorspick .views-row').maxHeight();
-		$('#editorspick .view-content, #editorspick .views-row').css({'min-height':editorpickHeight});
+		// editorpickHeight = $('#editorspick .views-row').maxHeight();
+		// $('#editorspick .view-content, #editorspick .views-row').css({'min-height':editorpickHeight});
 		
 		// Photo gallery
 		photogalleryHeight = $('.view-photo-gallery .views-row').maxHeight();

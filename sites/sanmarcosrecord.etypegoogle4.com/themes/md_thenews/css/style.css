@@ -1185,7 +1185,7 @@ ul#main-menu-links li,
 .view-photo-gallery .view-content {
     overflow: hidden;
     min-height: 189px;
-    margin-right: 5px;
+    margin-right: 0;
 }
 
 .view-photo-gallery .view-content {
