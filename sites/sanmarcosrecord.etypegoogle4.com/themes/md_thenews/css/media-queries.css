@@ -210,7 +210,9 @@
 
     /* subnav */
     #superfish-2 {
-        width: 728px;
+        width: 810px;
+        position: relative;
+        left: -60px;
     }
 
     #superfish-2 li a {
@@ -230,6 +232,17 @@
     /* main menu */
     #superfish-1 {
         width: 583px;
+    }
+
+    /* subnav */
+    #superfish-2 {
+        width: 685px;
+        position: relative;
+        left: -14px;
+    }
+
+    #superfish-2 li a {
+        padding: 0 3px;
     }
 
     /* JCarousel */
