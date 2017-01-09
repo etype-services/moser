@@ -1,8 +1,13 @@
 @media screen and (max-width: 1139px) {
+
     .region-leftad .block-simpleads, .region-rightad .block-simpleads{
         width: 100px;
     }
 
+    /* JCarousel */
+    .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
+        width: 770px;
+    }
 }
 
 @media screen and (max-width: 1017px) {
