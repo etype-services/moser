@@ -3061,3 +3061,11 @@ div.admin-panel .description {
 .jcarousel-skin-default .jcarousel-container-horizontal {
     padding: 0;
 }
+
+.jcarousel-skin-default .jcarousel-prev-horizontal {
+    left: 0;
+}
+
+.jcarousel-skin-default .jcarousel-next-horizontal {
+    right: 0
+}
