@@ -3064,7 +3064,7 @@ div.admin-panel .description {
 
 .jcarousel-skin-default .jcarousel-prev-horizontal {
     left: 0;
-    top: 36px;
+    top: 38px;
     background-position: -14px 0px;
 }
 
@@ -3083,5 +3083,5 @@ div.admin-panel .description {
 }
 
 .jcarousel-skin-default .jcarousel-next-horizontal:hover {
-    background-position: -32px -32px;
+    background-position: -36px -32px;
 }
