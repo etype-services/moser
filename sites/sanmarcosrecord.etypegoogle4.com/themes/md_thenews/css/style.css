@@ -3071,6 +3071,7 @@ div.admin-panel .description {
 .jcarousel-skin-default .jcarousel-next-horizontal {
     right: 0;
     top: 36px;
+    background-position: -4px -32px;
 }
 
 .jcarousel-skin-default .jcarousel-prev, .jcarousel-skin-default .jcarousel-next {
