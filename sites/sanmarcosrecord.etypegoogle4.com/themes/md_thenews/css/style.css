@@ -3058,7 +3058,7 @@ div.admin-panel .description {
 }
 
 /* JCAROUSEL OVERRIDE */
-#block-views-business_directory-block {
+#block-views-business_directory-block .view-content {
     min-height: inherit;
     height: 162px;
 }
