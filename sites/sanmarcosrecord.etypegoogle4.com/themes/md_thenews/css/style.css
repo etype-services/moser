@@ -3104,6 +3104,12 @@ div.admin-panel .description {
 #block-views-special_sections-block .views-field-title {
     line-height: 1.2em;
     min-height: 30px;
+    font-size: 0.917em;
+    text-transform: uppercase;
+}
+
+#block-views-special_sections-block .views-field-title a {
+    color: #cc3333;
 }
 
 /* widest width */
