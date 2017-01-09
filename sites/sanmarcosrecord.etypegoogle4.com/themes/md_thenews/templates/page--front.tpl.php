@@ -26,6 +26,12 @@
 		<?php print render($page['editorspick']); ?>
 	</div></div> <!-- #editorspick -->
 <?php endif; ?>
+
+    <?php if ($page['businessdirectory']): ?>
+        <div id="editorspick"><div class="wrap clearfix">
+                <?php print render($page['editorspick']); ?>
+            </div></div> <!-- #editorspick -->
+    <?php endif; ?>
   
 <div id="main-content" class="<?php print $mainclass;?>"><div class="wrap clearfix">
 	<div id="content-left">
