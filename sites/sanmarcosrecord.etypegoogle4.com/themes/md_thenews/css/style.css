@@ -3058,6 +3058,11 @@ div.admin-panel .description {
 }
 
 /* JCAROUSEL OVERRIDE */
+#block-views-business_directory-block {
+    min-height: inherit;
+    height: 162px;
+}
+
 .jcarousel-skin-default .jcarousel-container-horizontal {
     padding: 0 14px;
 }
