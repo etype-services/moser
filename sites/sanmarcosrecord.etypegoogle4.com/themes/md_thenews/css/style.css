@@ -3073,7 +3073,7 @@ div.admin-panel .description {
     top: 36px;
 }
 
-.jcarousel-skin-default .jcarousel-prev .jcarousel-skin-default .jcarousel-next {
+.jcarousel-skin-default .jcarousel-prev, .jcarousel-skin-default .jcarousel-next {
     width: 14px;
 }
 
