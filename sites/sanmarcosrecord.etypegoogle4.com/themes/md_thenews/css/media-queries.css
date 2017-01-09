@@ -230,7 +230,7 @@
     #superfish-2 {
         width: 731px;
         position: relative;
-        left: -19px;
+        left: 0;
     }
 }
 
@@ -250,7 +250,7 @@
     #superfish-2 {
         width: 690px;
         position: relative;
-        left: -20px;
+        left: 0;
     }
 
     #superfish-2 li a {
