@@ -2941,7 +2941,7 @@ div.admin-panel .description {
 
 /* SIMPLE ADS */
 
-.simplead-container img {
+#main-content .simplead-container img {
     max-width: 100%;
 }
 
