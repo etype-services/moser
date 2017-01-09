@@ -920,6 +920,8 @@ ul#main-menu-links li,
 #superfish-2 {
     width: 900px;
     margin: 0 auto;
+    position: relative;
+    left: -28px;
 }
 
 #superfish-2 li {
