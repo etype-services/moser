@@ -3059,7 +3059,7 @@ div.admin-panel .description {
 
 /* JCAROUSEL OVERRIDE */
 .jcarousel-skin-default .jcarousel-container-horizontal {
-    padding: 0;
+    padding: 0 20px;
 }
 
 .jcarousel-skin-default .jcarousel-prev-horizontal {
@@ -3080,4 +3080,8 @@ div.admin-panel .description {
 
 .jcarousel-skin-default .jcarousel-prev-horizontal:hover {
     background-position: -46px 0;
+}
+
+.jcarousel-skin-default .jcarousel-next-horizontal:hover {
+    background-position: -36px -32px;
 }
