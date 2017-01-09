@@ -234,7 +234,7 @@
 
     /* JCarousel */
     .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
-        width: 550px;
+        width: 540px;
     }
 
 }
@@ -367,7 +367,7 @@
 
     /* JCarousel */
     .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
-        width: 330px;
+        width: 320px;
     }
 
 }
