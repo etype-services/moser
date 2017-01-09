@@ -3079,6 +3079,7 @@ div.admin-panel .description {
 
 .jcarousel-skin-default .jcarousel-prev, .jcarousel-skin-default .jcarousel-next {
     width: 14px;
+    background-image: url(../images/arrows.png);
 }
 
 .jcarousel-skin-default .jcarousel-prev-horizontal:hover {
