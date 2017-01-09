@@ -3056,3 +3056,8 @@ div.admin-panel .description {
     display: none;
     visibility: hidden;
 }
+
+/* JCAROUSEL OVERRIDE */
+.jcarousel-skin-default .jcarousel-container-horizontal {
+    padding: 0;
+}
