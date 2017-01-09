@@ -3106,6 +3106,7 @@ div.admin-panel .description {
     min-height: 30px;
     font-size: 0.917em;
     text-transform: uppercase;
+    font-weight: normal;
 }
 
 #block-views-special_sections-block .views-field-title a {
