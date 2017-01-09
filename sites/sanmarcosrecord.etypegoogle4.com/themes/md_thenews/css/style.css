@@ -1204,7 +1204,6 @@ ul#main-menu-links li,
 
 #editorspick .views-field-field-category {
     font-size: 0.917em;
-    padding-right: 15px;
     text-transform: uppercase;
 }
 
@@ -3083,6 +3082,10 @@ div.admin-panel .description {
 
 .jcarousel-skin-default .jcarousel-next-horizontal:hover {
     background-position: -36px -32px;
+}
+
+.jcarousel-skin-default .jcarousel-item {
+    border: none;
 }
 
 /* widest width */
