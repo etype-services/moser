@@ -226,6 +226,15 @@
 }
 
 @media screen and (max-width: 700px) {
+    /* subnav */
+    #superfish-2 {
+        width: 731px;
+        position: relative;
+        left: -19px;
+    }
+}
+
+@media screen and (max-width: 700px) {
 
     #superfish-1 li a {
         padding: 0 3px;
