@@ -1184,7 +1184,7 @@ ul#main-menu-links li,
 #editorspick .view-content,
 .view-photo-gallery .view-content {
     overflow: hidden;
-    min-height: 189px;
+    min-height: 162px;
     margin-right: 0;
 }
 
@@ -3058,11 +3058,6 @@ div.admin-panel .description {
 }
 
 /* JCAROUSEL OVERRIDE */
-#block-views-business_directory-block .view-content {
-    min-height: inherit;
-    height: 162px;
-}
-
 .jcarousel-skin-default .jcarousel-container-horizontal {
     padding: 0 14px;
 }
