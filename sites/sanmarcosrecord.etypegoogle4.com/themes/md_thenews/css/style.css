@@ -1274,7 +1274,7 @@ a.cycle-next:hover {
 .rows-first {
     border-right: 1px solid #E6E6E6;
     float: left;
-    width: 49%;
+    width: 69%;
 }
 
 .rows-first .row {
@@ -1308,7 +1308,7 @@ a.cycle-next:hover {
 .rows-others {
 
     float: left;
-    width: 50%;
+    width: 30%;
 }
 
 .rows-others .rows-inner {
