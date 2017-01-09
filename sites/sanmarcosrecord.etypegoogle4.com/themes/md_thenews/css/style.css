@@ -1205,6 +1205,7 @@ ul#main-menu-links li,
 #editorspick .views-field-field-category {
     font-size: 0.917em;
     text-transform: uppercase;
+    margin-bottom: 0.5em;
 }
 
 #editorspick .views-field-field-category a {
@@ -3086,6 +3087,10 @@ div.admin-panel .description {
 
 .jcarousel-skin-default .jcarousel-item {
     border: none;
+}
+
+#block-views-editorspick-block .jcarousel-skin-default .jcarousel-item {
+    height: 107px;
 }
 
 /* widest width */
