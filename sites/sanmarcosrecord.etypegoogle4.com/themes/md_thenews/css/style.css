@@ -3073,6 +3073,10 @@ div.admin-panel .description {
     background-position: -4px -32px;
 }
 
+#block-views-editorspick-block .jcarousel-skin-default .jcarousel-next-horizontal, #block-views-editorspick-block .jcarousel-skin-default .jcarousel-next-horizontal {
+    top: 48px;
+}
+
 .jcarousel-skin-default .jcarousel-prev, .jcarousel-skin-default .jcarousel-next {
     width: 14px;
 }
