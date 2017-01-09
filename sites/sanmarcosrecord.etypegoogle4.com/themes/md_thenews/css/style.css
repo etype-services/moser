@@ -3085,3 +3085,8 @@ div.admin-panel .description {
 .jcarousel-skin-default .jcarousel-next-horizontal:hover {
     background-position: -36px -32px;
 }
+
+/* widest width */
+.jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
+    width: 840px;
+}
