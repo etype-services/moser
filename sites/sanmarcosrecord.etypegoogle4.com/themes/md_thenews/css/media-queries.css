@@ -210,6 +210,12 @@
         font-size: 10px;
         padding: 0 5px;
     }
+
+    /* JCarousel */
+    .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
+        width: 660px;
+    }
+
 }
 
 @media screen and (max-width: 700px) {
