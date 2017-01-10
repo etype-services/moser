@@ -3124,3 +3124,9 @@ div.admin-panel .description {
 .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
     width: 760px;
 }
+
+/* 411 Search */
+#block-block-19 .fouroneone {
+    float: left;
+    width: 50%;
+}
