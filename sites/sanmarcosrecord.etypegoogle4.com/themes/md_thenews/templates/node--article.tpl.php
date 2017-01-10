@@ -60,7 +60,6 @@
   <?php 
 	// FULL NODE
 	else: ?>
-  
 
 		<?php if ($display_submitted): ?>
       <div class="meta submitted">
