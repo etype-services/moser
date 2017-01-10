@@ -3130,3 +3130,11 @@ div.admin-panel .description {
     float: left;
     width: 50%;
 }
+
+#block-block-19 .fouroneone span {
+    color: #039;
+}
+
+#block-block-19 .fouroneone span:hover {
+    color: #CC3333;
+}
