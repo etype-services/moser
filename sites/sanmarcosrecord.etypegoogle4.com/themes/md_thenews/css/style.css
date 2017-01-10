@@ -3133,8 +3133,13 @@ div.admin-panel .description {
 
 #block-block-19 .fouroneone span {
     color: #039;
+    cursor: pointer;
 }
 
 #block-block-19 .fouroneone span:hover {
     color: #CC3333;
+}
+
+#block-block-19 .fouroneone h3.block-title {
+    padding-left: 0;
 }
