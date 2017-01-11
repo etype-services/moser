@@ -35,8 +35,8 @@
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
         <h1 class="title" id="page-title"<?php
-        if (isset($content['field_title_color'])) {
-            echo ' style="color:'. $content['field_title_color'] . ';"';
+        if (isset($field_title_color)) {
+            echo ' style="color:'. $field_title_color . ';"';
         }
         ?>>
           <?php print $title; ?>
