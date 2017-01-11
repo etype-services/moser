@@ -77,7 +77,7 @@
     <div class="node-content clearfix"<?php print $content_attributes; ?>>
       <?php
       /* hack alert */
-      $content['field_byline_email'] = '<a href="' . $content['field_byline_email'] . '">'. $content['field_byline_email'] . '</a>';
+      var_dump($content['field_byline_email']);
         // We hide the comments and links now so that we can render them later.
         hide($content['comments']);
         hide($content['links']);
