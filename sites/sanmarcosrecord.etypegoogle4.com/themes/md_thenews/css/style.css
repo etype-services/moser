@@ -3099,7 +3099,9 @@ div.admin-panel .description {
     content: "\201D";
     font-size: 3em;
     line-height: 0.1em;
-    vertical-align: -.45em;
+    float: right;
+    margin-top: 0.4em;
+    margin-right: 0.1em;
 }
 
 .node-article .field-name-field-byline-name, .node-article .field-name-field-byline-email, .node-article .field-name-field-byline-title {
