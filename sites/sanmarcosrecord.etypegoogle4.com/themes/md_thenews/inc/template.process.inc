@@ -746,6 +746,8 @@ function md_thenews_process_maintenance_page(&$vars) {
  */
 function md_thenews_preprocess_node(&$vars) {
 
+    var_dump($vars['field_byline_email']);
+    exit;
     /* make author email a link */
     if (isset($vars['field_byline_email'])) {
         $email = $vars['field_byline_email']['und']['0']['value'];
