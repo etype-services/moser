@@ -24,11 +24,7 @@
       <?php endif; ?>
       <div class="article-info">
       	<?php if (($node_display == 5) || ($node_display == 6)):?>
-          <h2<?php print $title_attributes; ?> class="article-title"<?php
-            if (isset($content['field_title_color'])) {
-                echo ' style="color:'. $content['field_title_color'] . ';"';
-            }
-            ?>>
+          <h2<?php print $title_attributes; ?> class="article-title">
             <a href="<?php print $node_url; ?>"><?php print $title; ?></a>
           </h2>
           

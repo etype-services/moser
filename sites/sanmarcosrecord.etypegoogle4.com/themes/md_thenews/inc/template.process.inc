@@ -641,6 +641,9 @@ function md_thenews_process_page(&$vars) {
  * Implements hook_preprocess_page().
  */
 function md_thenews_preprocess_page(&$vars) {
+
+    var_dump($vars);
+
 	$blogcolumnclass = "";
 	$photocolumnclass = "";
 	$videocolumnclass = "";
