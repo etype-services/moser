@@ -642,8 +642,12 @@ function md_thenews_process_page(&$vars) {
  */
 function md_thenews_preprocess_page(&$vars) {
 
-    echo $vars['node']->nid;
-    var_dump($vars['page']['content']['system_main']['nodes'][0]);
+    /* to set title color */
+    if (isset ($vars['node'])) {
+        $nid = $vars['node']->nid;
+        var_dump($vars['page']['content']['system_main']['nodes'][$nid]['field_title_color']);
+    }
+
     exit;
 
 	$blogcolumnclass = "";
