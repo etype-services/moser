@@ -738,7 +738,7 @@ function md_thenews_process_maintenance_page(&$vars) {
 function md_thenews_preprocess_node(&$vars) {
 
 
-    var_dump($vars['byline_email']);
+    var_dump($vars);
     exit;
 
 	if (theme_get_setting('extra_article_classes')) {
