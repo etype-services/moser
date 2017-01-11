@@ -75,7 +75,7 @@
     ?>
 
     <div class="node-content clearfix"<?php print $content_attributes; ?>>
-        print render($content['field_image']);
+        <?php print render($content['field_image']); ?>
         <!-- AddToAny BEGIN -->
         <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
             <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
