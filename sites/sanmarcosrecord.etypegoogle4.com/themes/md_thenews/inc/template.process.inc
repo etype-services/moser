@@ -22,7 +22,7 @@ function md_thenews_preprocess_html(&$vars) {
 	}
 
 	drupal_add_js(drupal_get_path('theme', 'md_thenews') . '/js/jquery.cycle2.min.js');
-  drupal_add_js(drupal_get_path('theme', 'md_thenews') . '/js/owl.carousel.min.js');
+    drupal_add_js(drupal_get_path('theme', 'md_thenews') . '/js/owl.carousel.min.js');
 	drupal_add_js(drupal_get_path('theme', 'md_thenews') . '/js/jquery.cycle2.carousel.js');
 	drupal_add_js('jQuery.fn.cycle.defaults.autoSelector = \'.mdslideshow\';', "inline");
 	drupal_add_js(drupal_get_path('theme', 'md_thenews') . '/js/script.js');
@@ -737,6 +737,8 @@ function md_thenews_process_maintenance_page(&$vars) {
  */
 function md_thenews_preprocess_node(&$vars) {
 
+    var_dump($vars['field_byline_email']);
+    exit;
 
     if (isset($vars['field_byline_email'])) {
         $email = $vars['field_byline_email']['value'];
