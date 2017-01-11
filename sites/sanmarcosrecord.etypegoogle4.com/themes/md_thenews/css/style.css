@@ -3066,6 +3066,10 @@ div.admin-panel .description {
 }
 
 /* ARTICLE FORMATTING */
+.node-article {
+    position: relative;
+}
+
 .node-article  .field-name-field-slugline {
     font-weight: bold;
     font-size: 1.2em;
@@ -3079,6 +3083,16 @@ div.admin-panel .description {
 
 .node-article .field-name-body {
     clear: left;
+}
+
+.node-article .field-name-field-photo-overlay-text {
+    position: absolute;
+    top: 49px;
+    left: 20px;
+    padding: 1em;
+    font-size: 1.2em;
+    background-color: rgba(155, 155, 155, 0.8);
+    font-family: GnuolaneFreeRegular, Georgia, "Times New Roman", Times, serif;
 }
 
 /* JCAROUSEL OVERRIDE */
