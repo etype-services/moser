@@ -642,7 +642,7 @@ function md_thenews_process_page(&$vars) {
  */
 function md_thenews_preprocess_page(&$vars) {
 
-    /* to set title color */
+    /* to set title color in page template */
     if (isset ($vars['node'])) {
         $nid = $vars['node']->nid;
         if (isset($vars['page']['content']['system_main']['nodes'][$nid]['body']['#object']->field_title_color)) {
@@ -747,9 +747,9 @@ function md_thenews_process_maintenance_page(&$vars) {
 function md_thenews_preprocess_node(&$vars) {
 
     if (isset($vars['field_byline_email'])) {
-        $email = $vars['field_byline_email'][0]['value'];
+        $email = $vars['field_byline_email']['und']['0']['value'];
         $string = '<a href="mailto:' . $email . '">' . $email . '</a>';
-        $vars['field_byline_email'][0]['value'] = $string;
+        $vars['field_byline_email']['und']['0']['value'] = $string;
     }
 
 	if (theme_get_setting('extra_article_classes')) {
