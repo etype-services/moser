@@ -3072,8 +3072,34 @@ div.admin-panel .description {
 
 .node-article  .field-name-field-slugline {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.6em;
     font-family: GnuolaneFreeRegular, Georgia, "Times New Roman", Times, serif;
+}
+
+.node-article .field-name-field-pull-quote {
+    margin: 2px;
+    float: right;
+    border: 1px solid #660000;
+    padding: 2em;
+    font-size: 1.2em;
+    max-width: 50%;
+}
+
+.node-article .field-name-field-pull-quote .field-items:before {
+    color: #bbb;
+    content: "\201C";
+    font-size: 3em;
+    line-height: 0.1em;
+    margin-right: 0.2em;
+    vertical-align: -.4em;
+}
+
+.node-article .field-name-field-pull-quote .field-items:after {
+    color: #bbb;
+    content: "\201D";
+    font-size: 3em;
+    line-height: 0.1em;
+    vertical-align: -.45em;
 }
 
 .node-article .field-name-field-byline-name, .node-article .field-name-field-byline-email, .node-article .field-name-field-byline-title {
