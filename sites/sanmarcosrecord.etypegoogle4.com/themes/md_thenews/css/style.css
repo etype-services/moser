@@ -381,6 +381,7 @@ blockquote:after {
     line-height: 0.1em;
     vertical-align: -.45em;
 }*/
+
 blockquote :first-child {
     display: inline;
 }
@@ -3056,11 +3057,28 @@ div.admin-panel .description {
 
 .node-article .field-type-image .image-field-caption {
     margin-bottom: 1em;
+    font-style: oblique;
 }
 
 .view blockquote.image-field-caption, .node-teaser blockquote.image-field-caption {
     display: none;
     visibility: hidden;
+}
+
+/* ARTICLE FORMATTING */
+.node-article  .field-name-field-slugline {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.node-article .field-name-field-byline-name, .node-article .field-name-field-byline-email, .node-article .field-name-field-byline-title {
+    float: left;
+    margin-right: 0.4em;
+    margin-bottom: 1em;
+}
+
+.node-article .field-name-body {
+    clear: left;
 }
 
 /* JCAROUSEL OVERRIDE */
