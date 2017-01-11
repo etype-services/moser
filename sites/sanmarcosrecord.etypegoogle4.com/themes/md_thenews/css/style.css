@@ -3066,7 +3066,7 @@ div.admin-panel .description {
 }
 
 /* ARTICLE FORMATTING */
-.node-article {
+#node-internal {
     position: relative;
 }
 
