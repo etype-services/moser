@@ -751,7 +751,7 @@ function md_thenews_preprocess_node(&$vars) {
     if (isset($vars['field_byline_email'])) {
         $email = $vars['field_byline_email'][0]['value'];
         $string = '<a href="mailto:' . $email . '">' . $email . '</a>';
-        $vars['field_byline_email'][0]['value'] = $string;
+        $vars['field_byline_email'][0]['safe_value'] = $string;
     }
 
 	if (theme_get_setting('extra_article_classes')) {
