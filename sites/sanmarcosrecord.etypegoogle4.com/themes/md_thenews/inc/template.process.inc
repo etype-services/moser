@@ -743,7 +743,6 @@ function md_thenews_preprocess_node(&$vars) {
         $vars['field_byline_email'][0]['value'] = $string;
     }
 
-
 	if (theme_get_setting('extra_article_classes')) {
     if (module_exists('translation')) {
       if ($vars['node']->language) {

@@ -34,7 +34,11 @@
       <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
-        <h1 class="title" id="page-title">
+        <h1 class="title" id="page-title"<?php
+        if (isset($content['field_title_color'])) {
+            echo ' style="color:'. $content['field_title_color'] . ';"';
+        }
+        ?>>
           <?php print $title; ?>
         </h1>
       <?php endif; ?>
