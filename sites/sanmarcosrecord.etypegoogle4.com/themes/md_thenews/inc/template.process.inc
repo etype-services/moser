@@ -642,7 +642,7 @@ function md_thenews_process_page(&$vars) {
  */
 function md_thenews_preprocess_page(&$vars) {
 
-    var_dump($vars['page']['content']['system_main']['nodes'][0]);
+    var_dump($vars['page']['content']['system_main']['nodes']);
     exit;
 
 	$blogcolumnclass = "";
