@@ -747,12 +747,13 @@ function md_thenews_process_maintenance_page(&$vars) {
 function md_thenews_preprocess_node(&$vars) {
 
 
-    /* make author email a link */
+    /* make author email a link -- :-(
     if (isset($vars['field_byline_email'])) {
         $email = $vars['field_byline_email'][0]['value'];
         $string = '<a href="mailto:' . $email . '">' . $email . '</a>';
         $vars['field_byline_email'][0]['safe_value'] = $string;
     }
+     */
 
 	if (theme_get_setting('extra_article_classes')) {
     if (module_exists('translation')) {
