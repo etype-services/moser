@@ -3073,6 +3073,7 @@ div.admin-panel .description {
 .node-article  .field-name-field-slugline {
     font-weight: bold;
     font-size: 1.2em;
+    font-family: GnuolaneFreeRegular, Georgia, "Times New Roman", Times, serif;
 }
 
 .node-article .field-name-field-byline-name, .node-article .field-name-field-byline-email, .node-article .field-name-field-byline-title {
