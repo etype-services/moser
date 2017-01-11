@@ -32,15 +32,6 @@
         <div id="breadcrumb"><?php print $breadcrumb; ?></div>
       <?php endif; ?>
       <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
-            <!-- AddToAny BEGIN -->
-            <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-                <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-                <a class="a2a_button_facebook"></a>
-                <a class="a2a_button_twitter"></a>
-                <a class="a2a_button_google_plus"></a>
-            </div>
-            <script async src="https://static.addtoany.com/menu/page.js"></script>
-            <!-- AddToAny END -->
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
         <h1 class="title" id="page-title"<?php
