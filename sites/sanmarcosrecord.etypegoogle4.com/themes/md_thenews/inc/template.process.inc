@@ -647,9 +647,9 @@ function md_thenews_preprocess_page(&$vars) {
         $nid = $vars['node']->nid;
         if (isset($vars['page']['content']['system_main']['nodes'][$nid]['body']['#object']->field_title_color)) {
             $vars['title_color'] = $vars['page']['content']['system_main']['nodes'][$nid]['body']['#object']->field_title_color['und']['0']['value'];
-            echo $vars['title_color'];
         }
     }
+
 	$blogcolumnclass = "";
 	$photocolumnclass = "";
 	$videocolumnclass = "";
