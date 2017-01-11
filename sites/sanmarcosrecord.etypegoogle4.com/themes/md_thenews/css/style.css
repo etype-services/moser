@@ -3079,6 +3079,8 @@ div.admin-panel .description {
     float: left;
     margin-right: 0.4em;
     margin-bottom: 1em;
+    font-style: oblique;
+    color: #4f4f4f;
 }
 
 .node-article .field-name-body {
