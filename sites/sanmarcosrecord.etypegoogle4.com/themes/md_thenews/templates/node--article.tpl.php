@@ -85,8 +85,7 @@
                     <a class="a2a_button_twitter"></a>
                     <a class="a2a_button_google_plus"></a>
                 </div>
-                <script async
-                        src="https://static.addtoany.com/menu/page.js"></script>
+                <script async src="https://static.addtoany.com/menu/page.js"></script>
                 <!-- AddToAny END -->
                 <?php
                 // We hide the comments and links now so that we can render them later.
