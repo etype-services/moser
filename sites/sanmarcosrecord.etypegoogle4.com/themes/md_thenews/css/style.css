@@ -3068,10 +3068,6 @@ div.admin-panel .description {
 }
 
 /* ARTICLE FORMATTING */
-#node-internal {
-    position: relative;
-}
-
 .node-article  .field-name-field-slugline {
     font-weight: bold;
     font-size: 1.6em;
@@ -3129,6 +3125,10 @@ div.admin-panel .description {
 }
 
 /* SHARE BUTTONS */
+#node-internal {
+    position: relative;
+}
+
 .a2a_default_style {
     line-height: 32px;
     width: 32px;
