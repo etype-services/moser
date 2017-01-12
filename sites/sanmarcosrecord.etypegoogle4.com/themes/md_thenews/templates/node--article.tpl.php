@@ -70,9 +70,9 @@
         <?php endif; ?>
 
         <?php
-        if (($node_share_position == 1) && ($facebook_display || $twitter_display || $gplus_display || $pinterest_display || $stumble_display)):
+        /*if (($node_share_position == 1) && ($facebook_display || $twitter_display || $gplus_display || $pinterest_display || $stumble_display)):
             require_once DRUPAL_ROOT . '/' . drupal_get_path('theme', 'md_thenews') . '/inc/node.meta_share.inc';
-        endif;
+        endif;*/
         ?>
 
         <div class="node-content clearfix"<?php print $content_attributes; ?>>
