@@ -3024,7 +3024,8 @@ div.admin-panel .description {
 
 .region-leftad .block-simpleads {
     overflow: hidden;
-    width: 200px;
+    max-width: 200px;
+    width: 14%;
     height: 1100px;
     top: 0;
     left: 0;
@@ -3035,7 +3036,8 @@ div.admin-panel .description {
 
 .region-rightad .block-simpleads {
     overflow: hidden;
-    width: 200px;
+    max-width: 200px;
+    width: 14%;
     height: 1100px;
     top: 0;
     right: 0;
@@ -3118,12 +3120,20 @@ div.admin-panel .description {
 
 .node-article .field-name-field-photo-overlay-text {
     position: absolute;
-    top: 49px;
+    top: -110px;
     left: 20px;
     padding: 1em;
     font-size: 1.2em;
     background-color: rgba(155, 155, 155, 0.8);
     font-family: GnuolaneFreeRegular, Georgia, "Times New Roman", Times, serif;
+}
+
+/* SHARE BUTTONS */
+.a2a_default_style {
+    line-height: 32px;
+    width: 32px;
+    position: absolute;
+    left: -38px;
 }
 
 /* JCAROUSEL OVERRIDE */
