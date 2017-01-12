@@ -80,7 +80,7 @@
             </div>
         <?php endif; ?>
         <?php if ($page['footer']): ?>
-            <?php print render($page['footer']); ?>
+        	<?php print render($page['footer']); ?>
         <?php endif; ?>
     </div>
 </div><!-- page -->

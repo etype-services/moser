@@ -177,6 +177,11 @@ h3.site-slogan {
     font-size: 0.7em;
 }
 
+/* override module defaults */
+.views-slideshow-pager-fields > div{
+    padding-left: 0;
+}
+
 /* IMAGE FIELD CAPTION
 --------------------------------------------------------------------------*/
 .view blockquote.image-field-caption, .node-teaser blockquote.image-field-caption {
@@ -892,6 +897,11 @@ article .field-image {
 
 #search-block-form input:focus {
     box-shadow: 0 0 0 0 #22d7cc;
+}
+
+#search-form .archive_message {
+    padding-top: 21px;
+    font-style: italic;
 }
 
 /* SOCIAL
