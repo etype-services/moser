@@ -3219,3 +3219,8 @@ div.admin-panel .description {
 #block-block-19 .fouroneone h3.block-title {
     padding-left: 0;
 }
+
+/* mobile nav */
+.btn-navbar .icon-bar {
+    background-color: #999;
+}
