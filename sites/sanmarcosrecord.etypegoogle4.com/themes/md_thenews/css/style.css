@@ -3201,6 +3201,12 @@ div.admin-panel .description {
     color: #cc3333;
 }
 
+/* sports twitter block */
+#block-block-22 .blcontent {
+    border: 1px solid #E6E6E6;
+    padding: 4px 0;
+}
+
 /* widest width -- see media-queries.css for other widths */
 .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
     width: 760px;
