@@ -1291,13 +1291,13 @@ a.cycle-next:hover {
     color: #666;
 }
 
-.rows-first .views-field-field-image {
+.rows-first .views-field-field-image, .rows-first .views-field-field-photo {
     float: left;
     padding: 0;
     width: 116px;
 }
 
-.rows-first .views-field-field-image img {
+.rows-first .views-field-field-image img, .rows-first .views-field-field-photo img {
     width: 100%;
     height: auto;
 }
