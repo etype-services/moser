@@ -2066,6 +2066,11 @@ ul.links {
     background-color: #fff;
 }
 
+.galleria-theme-classic .galleria-thumbnails .galleria-image {
+    width: 50px;
+    height: 50px;
+}
+
 /* 10	Comments
 --------------------------------------------------------------------------*/
 .comment h2.title {
