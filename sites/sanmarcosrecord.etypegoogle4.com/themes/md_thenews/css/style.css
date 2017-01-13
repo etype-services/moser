@@ -1838,7 +1838,9 @@ ul.links {
 }
 
 .article-info {
-    padding-left: 215px;
+    padding: 0 0 0 14px;
+    float: left;
+    width: 256px;
 }
 
 .article-type-article-teaser {
@@ -3203,7 +3205,7 @@ div.admin-panel .description {
 
 /* sports twitter block */
 #block-block-22 .blcontent {
-    border: 1px solid #E6E6E6;
+    border: 1px solid #e6e6e6;
     padding: 4px 0;
 }
 
