@@ -917,8 +917,7 @@ ul#main-menu-links li,
 #superfish-2 {
     width: 900px;
     margin: 0 auto;
-    position: relative;
-    left: -28px;
+    clear: both;
 }
 
 #superfish-2 li {
@@ -3220,8 +3219,8 @@ div.admin-panel .description {
     background-color: #999;
 }
 
-/* node forms for adding content */
-.fieldset-wrapper {
+/* node forms for adding content -- style tweaks */
+.filter-wrapper .fieldset-wrapper {
     margin-top: 0;
 }
 
