@@ -2062,7 +2062,7 @@ ul.links {
     display: none;
 }
 
-.galleria-thumb-nav-left:hover, .galleria-thumb-nav-right:hover {
+.galleria-theme-classic.notouch .galleria-thumb-nav-left:hover, .galleria-theme-classic.notouch .galleria-thumb-nav-right:hover {
     background-color: #fff;
 }
 
