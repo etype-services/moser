@@ -2053,12 +2053,12 @@ ul.links {
     background-image: url(../../../../all/themes/cni/images/classic-map-cni.png);
 }
 
-.galleria-info-text {
+.galleria-theme-classic .galleria-info-text {
     display: block;
     opacity: 0.5;
 }
 
-.galleria-info-link {
+.galleria-theme-classic .galleria-info-link {
     display: none;
 }
 
