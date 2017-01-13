@@ -2062,6 +2062,10 @@ ul.links {
     display: none;
 }
 
+.galleria-thumb-nav-left:hover, .galleria-thumb-nav-right:hover {
+    background-color: #fff;
+}
+
 /* 10	Comments
 --------------------------------------------------------------------------*/
 .comment h2.title {
