@@ -3012,9 +3012,7 @@ div.admin-panel .description {
     border-top: 2px solid #000;
 }
 
-.region-leaderboard {
-    margin-top: 42px;
-}
+17
 
 .region-leaderboard .blcontent {
     text-align: center;
@@ -3168,6 +3166,11 @@ div.admin-panel .description {
 
 .jcarousel-skin-default .jcarousel-item {
     border: none;
+}
+
+/* BLOCKS */
+#block-block-17 .blcontent {
+    padding: 0;
 }
 
 #block-views-editorspick-block .jcarousel-skin-default .jcarousel-container-horizontal {
