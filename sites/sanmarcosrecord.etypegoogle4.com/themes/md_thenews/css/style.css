@@ -415,7 +415,6 @@ a.button,
     *display: inline;
     text-align: center;
     background-color: #CC3333;
-    background-image: -moz-linear-gradient(63% 0% -90deg, rgb(208, 70, 70) 0%, rgb(205, 54, 54) 99%);
     background-image: -webkit-gradient(linear, 63% 0%, 63% 100%, color-stop(0, rgb(208, 70, 70)), color-stop(0.99, rgb(205, 54, 54)));
     background-image: -webkit-linear-gradient(-90deg, rgb(208, 70, 70) 0%, rgb(205, 54, 54) 99%);
     background-image: -o-linear-gradient(-90deg, rgb(208, 70, 70) 0%, rgb(205, 54, 54) 99%);
@@ -424,9 +423,9 @@ a.button,
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    -moz-box-shadow: 0px 1px 0px rgb(163, 41, 41), 0px 2px 2px rgba(0, 0, 0, 0.21);
-    -webkit-box-shadow: 0px 1px 0px rgb(163, 41, 41), 0px 2px 2px rgba(0, 0, 0, 0.21);
-    box-shadow: 0px 1px 0px rgb(163, 41, 41), 0px 2px 2px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 0 1px 0 rgb(163, 41, 41), 0 2px 2px rgba(0, 0, 0, 0.21);
+    -webkit-box-shadow: 0 1px 0 rgb(163, 41, 41), 0 2px 2px rgba(0, 0, 0, 0.21);
+    box-shadow: 0 1px 0 rgb(163, 41, 41), 0 2px 2px rgba(0, 0, 0, 0.21);
     -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffd04646, endColorstr=#ffcd3636, GradientType=0) progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=1, Color=#ffa32929, Positive=true) progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2, Color=#36000000, Positive=true);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffd04646, endColorstr=#ffcd3636, GradientType=0) progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=1, Color=#ffa32929, Positive=true) progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2, Color=#36000000, Positive=true);
 }
@@ -436,7 +435,6 @@ a.button:hover,
 .link-wrapper a:hover {
     color: white;
     background-color: #29acd4;
-    background-image: -moz-linear-gradient(63% 0% -90deg, rgb(205, 54, 54) 0%, rgb(192, 48, 48) 99%);
     background-image: -webkit-gradient(linear, 63% 0%, 63% 100%, color-stop(0, rgb(205, 54, 54)), color-stop(0.99, rgb(192, 48, 48)));
     background-image: -webkit-linear-gradient(-90deg, rgb(205, 54, 54) 0%, rgb(192, 48, 48) 99%);
     background-image: -o-linear-gradient(-90deg, rgb(205, 54, 54) 0%, rgb(192, 48, 48) 99%);
@@ -450,15 +448,14 @@ input.form-submit:active,
 a.button:active,
 .link-wrapper a:active {
     color: white;
-    background-image: -moz-linear-gradient(63% 0% -90deg, rgb(192, 48, 48) 0%, rgb(206, 58, 58) 98%);
     background-image: -webkit-gradient(linear, 63% 0%, 63% 100%, color-stop(0, rgb(192, 48, 48)), color-stop(0.98, rgb(206, 58, 58)));
     background-image: -webkit-linear-gradient(-90deg, rgb(192, 48, 48) 0%, rgb(206, 58, 58) 98%);
     background-image: -o-linear-gradient(-90deg, rgb(192, 48, 48) 0%, rgb(206, 58, 58) 98%);
     background-image: -ms-linear-gradient(-90deg, rgb(192, 48, 48) 0%, rgb(206, 58, 58) 98%);
     background-image: linear-gradient(-90deg, rgb(192, 48, 48) 0%, rgb(206, 58, 58) 98%);
-    -moz-box-shadow: 0px 1px 0px rgb(163, 41, 41);
-    -webkit-box-shadow: 0px 1px 0px rgb(163, 41, 41);
-    box-shadow: 0px 1px 0px rgb(163, 41, 41);
+    -moz-box-shadow: 0 1px 0 rgb(163, 41, 41);
+    -webkit-box-shadow: 0 1px 0 rgb(163, 41, 41);
+    box-shadow: 0 1px 0 rgb(163, 41, 41);
     -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffc03030, endColorstr=#ffce3a3a, GradientType=0) progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=-1, Color=#ffa32929, Positive=true);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffc03030, endColorstr=#ffce3a3a, GradientType=0) progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=-1, Color=#ffa32929, Positive=true);
 }
@@ -1577,7 +1574,7 @@ ul.quicktabs-tabs {
 
 .quicktabs_main {
     background: #222;
-    border-bottom: 0px solid #E6E6E6;
+    border-bottom: 0 solid #E6E6E6;
     padding: 25px;
 }
 
@@ -2391,7 +2388,6 @@ ul.pager-links {
     background-repeat: no-repeat;
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
     background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
-    background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
     background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
     background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
     background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
@@ -2934,10 +2930,10 @@ div.admin-panel .description {
 .social-icons .blcontent {
     background: none;
     border: none;
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-left: 0px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
 }
 
 #block-social_media_links-social-media-links img {
@@ -2976,7 +2972,7 @@ div.admin-panel .description {
 
 #block-simpleads-ad_groups_332 {
     float: left;
-    margin-right: 0px;
+    margin-right: 0;
     clear: none;
     width: 145px;
     height: 115px;
@@ -3142,7 +3138,7 @@ div.admin-panel .description {
 .jcarousel-skin-default .jcarousel-prev-horizontal {
     left: 0;
     top: 38px;
-    background-position: -14px 0px;
+    background-position: -14px 0;
 }
 
 .jcarousel-skin-default .jcarousel-next-horizontal {
