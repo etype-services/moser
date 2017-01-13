@@ -3224,3 +3224,12 @@ div.admin-panel .description {
 .btn-navbar .icon-bar {
     background-color: #999;
 }
+
+/* node forms */
+.fieldset-wrapper {
+    margin-top: 0;
+}
+
+.filter-guidelines {
+    padding: 0 1.5em 1em 0.5em;
+}
