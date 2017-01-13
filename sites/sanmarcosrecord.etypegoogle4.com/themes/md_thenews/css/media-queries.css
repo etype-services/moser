@@ -228,12 +228,7 @@
 }
 
 @media screen and (max-width: 700px) {
-    /* subnav */
-    #superfish-2 {
-        width: 731px;
-        position: relative;
-        left: 3px;
-    }
+
 }
 
 @media screen and (max-width: 700px) {
@@ -249,15 +244,6 @@
     }
 
     /* subnav */
-    #superfish-2 {
-        width: 690px;
-        position: relative;
-        left: -16px;
-    }
-
-    #superfish-2 li a {
-        padding: 0 3px;
-    }
 
     /* JCarousel */
     .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
