@@ -123,73 +123,6 @@
 
 }
 
-@media screen and (max-width: 760px) {
-
-	/************************************************************************************
-	STRUCTURE
-	*************************************************************************************/
-
-    #hlitemContainer .views-field, .view-latest-articles .views-field {
-        padding-left: 75px;
-    }
-    #hlitemContainer .views-field-field-image, .view-latest-articles .views-field-field-image {
-        width: 60px;
-    }
-
-	#slider,
-    .withheadlines #slider,
-    #headlines,
-	#content,
-    #content-left {
-		width: 100%;
-		max-width: 100%;
-		float: none;
-		clear: both;
-	}
-
-    #slider .blcontent {
-        height: auto;
-    }
-	
-	/* sidebar */
-	#sidebar {
-		width: 100%;
-		max-width: 100%;
-		float: none;
-		clear: both;
-		padding-top: 20px;
-	}
-
-    #sidebar .view-hot-videos .views-row-first {
-        border: none;
-        width: 310px;
-    }
-
-	#forum td.created, #forum td.posts, #forum td.topics, #forum td.last-reply, #forum td.replies, #forum td.pager {
-		white-space: normal
-	}
-
-    /* main menu */
-    #superfish-1 {
-        width: 678px;
-    }
-
-    #superfish-1 li a {
-        padding: 0 8px;
-        font-size: 0.9em;
-    }
-
-    /* leaderboard ad */
-    .region-leaderboard .block-simpleads {
-        margin: 1em 1em 0;
-    }
-
-    #header {
-        margin-bottom: 0;
-    }
-
-}
-
 @media screen and (max-width: 950px) {
 
     #superfish-1 {
@@ -227,7 +160,70 @@
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 760px) {
+
+    /************************************************************************************
+    STRUCTURE
+    *************************************************************************************/
+
+    #hlitemContainer .views-field, .view-latest-articles .views-field {
+        padding-left: 75px;
+    }
+    #hlitemContainer .views-field-field-image, .view-latest-articles .views-field-field-image {
+        width: 60px;
+    }
+
+    #slider,
+    .withheadlines #slider,
+    #headlines,
+    #content,
+    #content-left {
+        width: 100%;
+        max-width: 100%;
+        float: none;
+        clear: both;
+    }
+
+    #slider .blcontent {
+        height: auto;
+    }
+
+    /* sidebar */
+    #sidebar {
+        width: 100%;
+        max-width: 100%;
+        float: none;
+        clear: both;
+        padding-top: 20px;
+    }
+
+    #sidebar .view-hot-videos .views-row-first {
+        border: none;
+        width: 310px;
+    }
+
+    #forum td.created, #forum td.posts, #forum td.topics, #forum td.last-reply, #forum td.replies, #forum td.pager {
+        white-space: normal
+    }
+
+    /* main menu */
+    #superfish-1 {
+        width: 678px;
+    }
+
+    #superfish-1 li a {
+        padding: 0 8px;
+        font-size: 0.9em;
+    }
+
+    /* leaderboard ad */
+    .region-leaderboard .block-simpleads {
+        margin: 1em 1em 0;
+    }
+
+    #header {
+        margin-bottom: 0;
+    }
 
 }
 
@@ -244,6 +240,19 @@
     }
 
     /* subnav */
+    #superfish-2 {
+        width: 612px;
+    }
+
+    #superfish-2 li {
+        margin: 0;
+    }
+
+    #superfish-2 li a {
+        padding: 0 3px;
+        font-size: 9px;
+    }
+
 
     /* JCarousel */
     .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
@@ -338,12 +347,6 @@
     }
 }
 
-@media screen and (min-width: 530px) {
-
-
-
-}
-
 @media screen and (max-width: 480px) {
 
 	/* disable webkit text size adjust (for iPhone) */
@@ -382,11 +385,5 @@
     .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
         width: 324px;
     }
-
-}
-
-@media screen and (min-width: 481px) {
-
-	
 
 }
