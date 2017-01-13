@@ -2049,11 +2049,7 @@ ul.links {
     right: 0;
 }
 
-.galleria-thumb-nav-left,
-.galleria-thumb-nav-right,
-.galleria-info-close,
-.galleria-image-nav-left,
-.galleria-image-nav-right {
+.galleria-theme-classic .galleria-thumb-nav-left, .galleria-theme-classic .galleria-thumb-nav-right, .galleria-theme-classic .galleria-info-link, .galleria-theme-classic .galleria-info-close, .galleria-theme-classic .galleria-image-nav-left, .galleria-theme-classic .galleria-image-nav-right {
     background-image: url(../../../../all/themes/cni/images/classic-map-cni.png);
 }
 
