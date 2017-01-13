@@ -2058,6 +2058,10 @@ ul.links {
     opacity: 0.5;
 }
 
+.galleria-info-link {
+    display: none;
+}
+
 /* 10	Comments
 --------------------------------------------------------------------------*/
 .comment h2.title {
