@@ -2934,9 +2934,13 @@ div.admin-panel .description {
     padding-left: 0;
 }
 
-#block-social_media_links-social-media-links img {
+#block-social_media_links-social-media-links img, #block-block-21 img {
     height: 30px;
     width: 30px;
+}
+
+#block-block-21 .blcontent {
+    padding: 0;
 }
 
 /* SIMPLE ADS */
