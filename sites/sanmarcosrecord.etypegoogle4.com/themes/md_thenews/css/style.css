@@ -2049,6 +2049,14 @@ ul.links {
     right: 0;
 }
 
+.galleria-thumb-nav-left,
+.galleria-thumb-nav-right,
+.galleria-info-close,
+.galleria-image-nav-left,
+.galleria-image-nav-right {
+    background-image: url(../../../../all/themes/cni/images/classic-map-cni.png);
+}
+
 /* 10	Comments
 --------------------------------------------------------------------------*/
 .comment h2.title {
