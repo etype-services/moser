@@ -970,7 +970,11 @@ ul#main-menu-links li,
     text-transform: uppercase;
 }
 
-.blockhover h3.block-title {
+.block h3.block-title a {
+    color: #000;
+}
+
+.blockhover h3.block-title, .block h3.block-title a {
     color: #CC3333;
 }
 
