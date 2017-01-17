@@ -57,6 +57,12 @@
         width: 286px;
     }
 
+    /* galleria */
+    .galleria-theme-classic .galleria-info {
+        left: 0;
+        width: 150px;
+    }
+
 }
 
 /* desktop browsers */
@@ -169,6 +175,12 @@
 
     .container_12 #postscript .grid_4 {
         width: 222px;
+    }
+
+    /* galleria */
+    .galleria-theme-classic .galleria-info {
+        left: 0;
+        width: 150px;
     }
 
 }
