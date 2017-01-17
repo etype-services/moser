@@ -652,4 +652,9 @@
         visibility: hidden;
     }
 
+    /* space for Follow Block */
+    .region-postscript-3 .block {
+        margin-top: 1em;
+    }
+
 }
