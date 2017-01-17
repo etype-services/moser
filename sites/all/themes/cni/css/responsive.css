@@ -476,6 +476,13 @@
         visibility: hidden;
     }
 
+    /* galleria fixes */
+    .galleria-theme-classic .galleria-info {
+        width: 100%;
+        top: 10px;
+        left: 0;
+    }
+
 }
 
 /* smaller phones */
