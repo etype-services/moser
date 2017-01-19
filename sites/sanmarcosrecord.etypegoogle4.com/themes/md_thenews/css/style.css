@@ -139,7 +139,6 @@ tr.odd {
 
 img {
     outline: 0;
-    max-width: 100%;
 }
 
 code,
@@ -713,6 +712,10 @@ table ul.links li {
     margin: 0 20px;
 }
 
+#logo img {
+    max-width: 100%;
+}
+
 #logo a {
     font-size: 2.5em;
     font-weight: bold;
@@ -753,7 +756,8 @@ table ul.links li {
     padding: 15px;
 }
 
-#content img {
+#main-content img {
+    max-width: 100%;
     height: auto;
 }
 
