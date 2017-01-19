@@ -3267,11 +3267,11 @@ div.admin-panel .description {
 #block-block-19 .blcontent {
     justify-content: space-between;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 #block-block-19 .fouroneone, #block-block-19 .archive {
-    flex: 1 1 30%;
+    flex: 0 1 30%;
 }
 
 #block-block-19 .fouroneone span {
