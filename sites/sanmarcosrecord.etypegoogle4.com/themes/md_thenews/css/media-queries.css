@@ -264,6 +264,10 @@
         width: 100%;
     }
 
+    #block-block-19 .blcontent {
+        padding-right: 15px;
+    }
+
 }
 
 @media screen and (max-width: 600px) {

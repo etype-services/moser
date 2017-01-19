@@ -3264,7 +3264,7 @@ div.admin-panel .description {
     margin: 0;
 }
 
-#block-block-19 .fouroneone {
+#block-block-19 .fouroneone, #block-block-19 .archive {
     float: left;
     width: 33%;
 }
