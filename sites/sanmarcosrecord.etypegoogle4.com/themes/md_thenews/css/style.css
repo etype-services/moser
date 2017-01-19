@@ -3264,12 +3264,9 @@ div.admin-panel .description {
     margin: 0;
 }
 
-#block-block-19 .fouroneone {
-    float: left;
-}
-
-#block-block-19 .archive {
-    float: left;
+#block-block-19 .blcontent {
+    justify-content: space-between;
+    display: flex;
 }
 
 #block-block-19 .fouroneone span {
@@ -3283,6 +3280,10 @@ div.admin-panel .description {
 
 #block-block-19 .fouroneone h3.block-title {
     padding-left: 0;
+}
+
+#block-block-19 .archive {
+    margin: 1em 0 0;
 }
 
 /* mobile nav */
