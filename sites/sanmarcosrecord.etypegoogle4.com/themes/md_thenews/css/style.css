@@ -3291,6 +3291,15 @@ div.admin-panel .description {
     margin: 1em 0 0;
 }
 
+/* Archive link on search pages */
+#block-block-23.block {
+    margin-bottom: 0;
+}
+
+#block-block-23 .blcontent {
+    border: none;
+}
+
 /* mobile nav */
 .btn-navbar .icon-bar {
     background-color: #999;
