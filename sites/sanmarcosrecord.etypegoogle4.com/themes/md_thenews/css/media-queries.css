@@ -349,6 +349,11 @@
     .region-leaderboard {
         margin-top: 0;
     }
+
+    /* 411 Search */
+    #block-block-19 .fouroneone, #block-block-19 .archive {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 480px) {
