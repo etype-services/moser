@@ -979,9 +979,7 @@ ul#main-menu-links li,
 }
 
 #content-bottom {
-    background: url(../images/page-title.png) repeat-x scroll 0 0;
-    padding: 12px 0 0;
-    margin: 20px 0 0;
+
 }
 
 .blcontent {
@@ -3190,6 +3188,11 @@ div.admin-panel .description {
 }
 
 /* JCAROUSEL OVERRIDE */
+/* JCarousel */
+.jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
+    width: 760px;
+}
+
 .jcarousel-skin-default .jcarousel-container-horizontal {
     padding: 0 14px;
 }
@@ -3274,7 +3277,7 @@ div.admin-panel .description {
 
 /* widest width -- see media-queries.css for other widths */
 .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
-    width: 760px;
+    width: 750px;
 }
 
 /* 411 Search */

@@ -59,10 +59,6 @@
         width: 40%;
         padding: 0;
     }
-    #editorspick .views-field-title,
-    .view-photo-gallery .views-field {
-
-    }
 	
 	#sidebar,
     #headlines{
@@ -301,7 +297,7 @@
     }
     #editorspick .views-field-field-category {
         font-size: 0.750em;
-        padding-right:  0;
+        padding-right: 0;
     }
 	
 	.rows-first {
