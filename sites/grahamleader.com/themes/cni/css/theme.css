@@ -1447,7 +1447,12 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
     visibility: hidden;
 }
 
-/* own local */
+/* show captions */
+.galleria-theme-classic .galleria-info-text {
+    display: block;
+}
+
+    /* own local */
 #block-etype-own-local .block-inner {
     padding: 0;
     margin: 0;
