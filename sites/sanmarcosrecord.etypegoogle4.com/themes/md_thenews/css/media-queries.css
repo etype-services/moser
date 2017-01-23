@@ -406,7 +406,17 @@
 
     /* JCarousel */
     .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
-        width: 324px;
+        width: 380px;
     }
 
+}
+
+@media screen and (max-width: 420px) {
+
+    /* JCarousel */
+    .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
+        width: 320px;
+    }
+
+}
 }
