@@ -103,7 +103,7 @@ a:visited {
 a:hover,
 a:active,
 a:focus {
-    color: #CC3333;
+    color: #660000;
 }
 
 h1,
@@ -346,7 +346,7 @@ ul.quicktabs-tabs,
 }
 
 .highlight {
-    background-color: #CC3333;
+    background-color: #660000;
     color: #FFFFFF;
     padding: 0 2px;
 }
@@ -525,7 +525,7 @@ fieldset legend {
 }
 
 fieldset legend a {
-    color: #CC3333;
+    color: #660000;
 }
 
 fieldset legend a:hover,
@@ -887,14 +887,14 @@ ul#main-menu-links li,
 
 #superfish-1 li:hover a,
 #superfish-1 li.active a {
-    background: #CC3333;
+    background: #660000;
 }
 
 #superfish-1 li > a:hover,
 #superfish-1 li.sfHover > a,
 #superfish-1 li a.active {
     background: #fff;
-    color: #CC3333;
+    color: #660000;
 }
 
 #superfish-1 li.active-trail {
@@ -942,7 +942,7 @@ ul#main-menu-links li,
 #superfish-2 li a:hover,
 #nav ul.sf-menu li.active-trail > a {
     background: url(../images/suvnav.png) no-repeat right center;
-    color: #CC3333;
+    color: #660000;
 }
 
 #superfish-2 li.last a {
@@ -975,7 +975,7 @@ ul#main-menu-links li,
 }
 
 .blockhover h3.block-title, .blockhover h3.block-title a {
-    color: #cc3333;
+    color: ##660000;
 }
 
 #content-bottom {
@@ -1093,7 +1093,7 @@ ul#main-menu-links li,
 }
 
 #slider .views-field-view-node a {
-    color: #CC3333;
+    color: #660000;
 }
 
 #slider .views-field-view-node a:hover {
@@ -1216,7 +1216,7 @@ ul#main-menu-links li,
 }
 
 #editorspick .views-field-field-category a {
-    color: #CC3333;
+    color: #660000;
 }
 
 #editorspick .views-field-field-category a:hover {
@@ -1388,7 +1388,7 @@ a.cycle-next:hover {
 }
 
 .view-hot-videos .views-field-title a:hover {
-    color: #CC3333;
+    color: #660000;
 }
 
 #sidebar .view-hot-videos .views-row-first {
@@ -1579,7 +1579,7 @@ ul.quicktabs-tabs {
 
 .item-list ul.quicktabs-tabs li a:hover,
 .item-list ul.quicktabs-tabs li.active a {
-    color: #CC3333;
+    color: #660000;
 }
 
 .quicktabs_main {
@@ -1607,7 +1607,7 @@ ul.quicktabs-tabs {
 }
 
 .ui-accordion .ui-accordion-header.ui-state-active {
-    background: #CC3333;
+    background: #660000;
     border: none;
 }
 
@@ -1719,7 +1719,7 @@ h1#page-title {
 }
 
 .node-content a {
-    color: #CC3333;
+    color: #660000;
 }
 
 .node-content a:hover,
@@ -2133,7 +2133,7 @@ ul.links {
 }
 
 .comment .username {
-    color: #CC3333;
+    color: #660000;
     font-weight: bold;
     white-space: nowrap;
 }
@@ -2148,7 +2148,7 @@ ul.links {
 }
 
 .comment .date-time a:hover {
-    color: #CC3333;
+    color: #660000;
 }
 
 .comment .submitted .comment-permalink {
@@ -2157,7 +2157,7 @@ ul.links {
 }
 
 .comment .new {
-    color: #CC3333;
+    color: #660000;
 }
 
 .indented {
@@ -2472,8 +2472,8 @@ ul.pager-links {
 }
 
 .pager li.pager-current {
-    background-color: #CC3333;
-    border: 1px solid #CC3333;
+    background-color: #660000;
+    border: 1px solid #660000;
     color: #fff;
     display: inline-block;
     font-size: 1.083em;
@@ -2661,7 +2661,7 @@ ol.search-results {
 .cycle-pager span:hover,
 #headlines .holder a:hover,
 #headlines .holder a.jp-current {
-    background: #CC3333;
+    background: #660000;
 }
 
 .cycle-pager > * {
@@ -3255,7 +3255,7 @@ div.admin-panel .description {
 #block-views-editorspick-block .views-field-title a,
 #block-views-special_sections-block .views-field-title a,
 #block-views-business_directory-block .views-field-title a {
-    color: #cc3333;
+    color: #660000;
 }
 
 /* sports twitter block */
@@ -3264,15 +3264,7 @@ div.admin-panel .description {
     padding: 4px 0;
 }
 
-/* widest width -- see media-queries.css for other widths */
-.jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
-    width: 450px;
-}
-
-#block-views-editorspick-block .jcarousel-skin-default .jcarousel-container-horizontal,
-#block-views-editorspick-block .jcarousel-skin-default .jcarousel-clip-horizontal {
-    width: 754px;
-}
+hover
 
 /* 411 Search */
 #block-block-19 p {
@@ -3295,7 +3287,7 @@ div.admin-panel .description {
 }
 
 #block-block-19 .fouroneone span:hover {
-    color: #CC3333;
+    color: #660000;
 }
 
 #block-block-19 .fouroneone h3.block-title {
