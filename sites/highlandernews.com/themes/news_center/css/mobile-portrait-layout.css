@@ -305,7 +305,7 @@ h2, h3, h4, h5, h6 {
 
 .view-id-home_page .views-slideshow-controls-bottom .views-slideshow-pager-field-item {
     display: inline-block;
-    margin-right: -3px;
+    margin-right: -4px;
     overflow: hidden;
     padding: 5px 4px 9px 5px;
     opacity: 0.4;
