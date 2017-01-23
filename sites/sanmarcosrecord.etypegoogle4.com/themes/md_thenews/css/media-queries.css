@@ -118,7 +118,7 @@
 
     #block-views-business_directory-block .jcarousel-skin-default .jcarousel-container-horizontal,
     #block-views-business_directory-block .jcarousel-skin-default .jcarousel-clip-horizontal {
-        max-width: 450px;
+       width: 450px;
     }
 
 
