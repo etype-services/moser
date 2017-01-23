@@ -757,7 +757,7 @@ table ul.links li {
 }
 
 #main-content img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -1624,8 +1624,9 @@ ul.quicktabs-tabs {
 
 .ui-accordion .ui-accordion-content #block-block-11 img,
 .ui-accordion .ui-accordion-content #block-views-special_sections-block img{
-    width: 100%;
+    width: 99%;
     height: auto;
+    border: 1px solid #cccccc;
 }
 
 .block-quicktabs .ui-widget-content {
