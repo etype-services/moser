@@ -859,7 +859,7 @@ table ul.links li {
 }
 
 #superfish-1 {
-    width: 780px;
+    width: 795px;
     margin: 0 auto;
     height: 50px;
     font-size: 1.5em;
@@ -3129,7 +3129,6 @@ div.admin-panel .description {
 .node-article .field-name-field-pull-quote {
     margin: 2px;
     float: right;
-    border: 1px solid #660000;
     padding: 2em;
     font-size: 1.2em;
     max-width: 50%;
