@@ -832,6 +832,12 @@ h2.node-title {
     margin-bottom: 10px;
 }
 
+/* restrict simple ad image width */
+.block-simpleads img {
+    max-width: 100%;
+    height: auto;
+}
+
 .calendar-calendar {
     margin-top: -20px;
 }
