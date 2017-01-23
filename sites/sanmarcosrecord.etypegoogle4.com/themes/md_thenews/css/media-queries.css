@@ -270,6 +270,10 @@
         padding-right: 15px;
     }
 
+    /* JCarousel */
+    .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
+        width: 440px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -361,6 +365,11 @@
         margin-top: 0;
     }
 
+    /* JCarousel */
+    .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
+        width: 440px;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -411,5 +420,4 @@
         width: 320px;
     }
 
-}
 }
