@@ -145,6 +145,11 @@ body.front h1 {
 
 /* SlideShow Block Styles */
 
+#block-views-home-page-block {
+    display: block;
+    visibility: visible;
+}
+
 .image-show {
     background: none repeat scroll 0 0 #000000;
     color: #AAAAAA;
