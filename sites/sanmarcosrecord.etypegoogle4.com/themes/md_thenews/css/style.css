@@ -3212,7 +3212,9 @@ div.admin-panel .description {
 #block-views-editorspick-block .jcarousel-skin-default .jcarousel-prev-horizontal,
 #block-views-editorspick-block .jcarousel-skin-default .jcarousel-next-horizontal,
 #block-views-special_sections-block .jcarousel-skin-default .jcarousel-prev-horizontal,
-#block-views-special_sections-block .jcarousel-skin-default .jcarousel-next-horizontal{
+#block-views-special_sections-block .jcarousel-skin-default .jcarousel-next-horizontal,
+#block-views-business_directory-block .jcarousel-skin-default .jcarousel-prev-horizontal,
+#block-views-business_directory-block .jcarousel-skin-default .jcarousel-next-horizontal {
     top: 48px;
 }
 
@@ -3241,22 +3243,26 @@ div.admin-panel .description {
 }
 
 #block-views-editorspick-block .jcarousel-skin-default .jcarousel-container-horizontal,
-#block-views-special_sections-block .jcarousel-skin-default .jcarousel-container-horizontal {
+#block-views-special_sections-block .jcarousel-skin-default .jcarousel-container-horizontal,
+#block-views-business_directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
     height: 107px;
 }
 
 #block-views-editorspick-block .jcarousel-skin-default .jcarousel-item,
-#block-views-special_sections-block .jcarousel-skin-default .jcarousel-item {
+#block-views-special_sections-block .jcarousel-skin-default .jcarousel-item,
+#block-views-business_directory-block .jcarousel-skin-default .jcarousel-item {
     height: 107px;
 }
 
 #block-views-editorspick-block .jcarousel-skin-default .jcarousel-item,
-#block-views-special_sections-block .jcarousel-skin-default .jcarousel-item {
+#block-views-special_sections-block .jcarousel-skin-default .jcarousel-item,
+#block-views-business_directory-block .jcarousel-skin-default .jcarousel-item {
     height: 220px;
 }
 
 #block-views-editorspick-block .views-field-title,
-#block-views-special_sections-block .views-field-title {
+#block-views-special_sections-block .views-field-title,
+#block-views-business_directory-block .views-field-title {
     line-height: 1.2em;
     min-height: 30px;
     font-size: 0.917em;
@@ -3265,7 +3271,8 @@ div.admin-panel .description {
 }
 
 #block-views-editorspick-block .views-field-title a,
-#block-views-special_sections-block .views-field-title a {
+#block-views-special_sections-block .views-field-title a,
+#block-views-business_directory-block .views-field-title a {
     color: #cc3333;
 }
 
