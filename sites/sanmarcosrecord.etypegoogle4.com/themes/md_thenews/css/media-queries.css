@@ -116,6 +116,12 @@
         width: 650px;
     }
 
+    #block-views-business_directory-block .jcarousel-skin-default .jcarousel-container-horizontal,
+    #block-views-business_directory-block .jcarousel-skin-default .jcarousel-clip-horizontal {
+        max-width: 450px;
+    }
+
+
 }
 
 @media screen and (max-width: 950px) {
