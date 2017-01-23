@@ -3266,12 +3266,12 @@ div.admin-panel .description {
 
 /* widest width -- see media-queries.css for other widths */
 .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
-    width: 754px;
+    width: 450px;
 }
 
-#block-views-business_directory-block .jcarousel-skin-default .jcarousel-container-horizontal,
-#block-views-business_directory-block .jcarousel-skin-default .jcarousel-clip-horizontal {
-    width: 450px;
+#block-views-editorspick-block .jcarousel-skin-default .jcarousel-container-horizontal,
+#block-views-editorspick-block .jcarousel-skin-default .jcarousel-clip-horizontal {
+    width: 754px;
 }
 
 /* 411 Search */
