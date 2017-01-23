@@ -3269,6 +3269,11 @@ div.admin-panel .description {
     width: 754px;
 }
 
+#block-views-business_directory-block .jcarousel-skin-default .jcarousel-container-horizontal,
+#block-views-business_directory-block .jcarousel-skin-default .jcarousel-clip-horizontal {
+    width: 450px;
+}
+
 /* 411 Search */
 #block-block-19 p {
     margin: 0;
