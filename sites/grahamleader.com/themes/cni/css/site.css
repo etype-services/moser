@@ -219,7 +219,8 @@
 }
 
 .galleria-theme-classic .galleria-info {
-    top: 5px;
-    left: 5px;
     width: 100%;
+    bottom: 53px;
+    top: inherit;
+    left: 5px;
 }
