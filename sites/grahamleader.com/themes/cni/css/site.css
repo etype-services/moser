@@ -210,4 +210,16 @@
 }
 #block-block-37 {
 	margin-bottom: 10px;
-}	
+}
+
+/* GALLERIA */
+.galleria-theme-classic .galleria-info-text {
+    background-image: url(../images/trans.png);
+    padding: 2px;
+}
+
+.galleria-theme-classic .galleria-info {
+    top: 5px;
+    left: 5px;
+    width: 100%;
+}
