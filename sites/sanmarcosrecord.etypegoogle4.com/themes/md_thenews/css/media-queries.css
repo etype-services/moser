@@ -254,10 +254,6 @@
         width: 536px;
     }
 
-    .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
-        width: 540px;
-    }
-
     /* 411 Search */
     #block-block-19 .blcontent {
         display: block;
@@ -275,10 +271,6 @@
         padding-right: 15px;
     }
 
-    /* JCarousel */
-    .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
-        width: 460px;
-    }
 }
 
 @media screen and (max-width: 600px) {
@@ -415,18 +407,9 @@
         visibility: hidden;*/
     }
 
-    /* JCarousel */
-    .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
-        width: 380px;
-    }
-
 }
 
 @media screen and (max-width: 420px) {
 
-    /* JCarousel */
-    .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
-        width: 320px;
-    }
 
 }
