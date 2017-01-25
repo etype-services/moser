@@ -230,6 +230,11 @@
         margin-bottom: 0;
     }
 
+    /* JCarousel */
+    #block-views-editorspick-block .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
+        width: 540px;
+    }
+
 }
 
 @media screen and (max-width: 700px) {
@@ -261,11 +266,6 @@
     /* this might need to be only the home page */
     .blcontent {
         padding: 0;
-    }
-
-    /* JCarousel */
-    #block-views-editorspick-block .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
-        width: 540px;
     }
 
     /* 411 Search */
