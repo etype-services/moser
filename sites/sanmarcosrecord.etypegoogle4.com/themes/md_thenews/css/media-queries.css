@@ -275,23 +275,6 @@
         padding: 0 0 15px;
     }
 
-    /* 411 Search */
-    #block-block-19 .blcontent {
-        display: block;
-    }
-
-    #block-block-19 .fouroneone, #block-block-19 .archive {
-        width: 100%;
-    }
-
-    #block-block-19 .fouroneone .form-text {
-        width: 60%;
-    }
-
-    #block-block-19 .blcontent {
-        padding-right: 15px;
-    }
-
 }
 
 @media screen and (max-width: 600px) {

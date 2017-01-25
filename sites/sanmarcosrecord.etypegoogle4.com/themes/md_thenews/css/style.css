@@ -3196,7 +3196,7 @@ div.admin-panel .description {
 
 #block-views-special_sections-block .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal,
 #block-views-business_directory-block .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
-    width: 540px;
+    width: 410px;
 }
 
 .jcarousel-skin-default .jcarousel-container-horizontal {
@@ -3277,15 +3277,6 @@ hover
     margin: 0;
 }
 
-#block-block-19 .blcontent {
-    justify-content: space-between;
-    display: flex;
-    align-items: flex-start;
-}
-
-#block-block-19 .fouroneone, #block-block-19 .archive {
-    flex: 0 1 30%;
-}
 
 #block-block-19 .fouroneone span {
     color: #039;
@@ -3302,6 +3293,22 @@ hover
 
 #block-block-19 .archive {
     margin: 1em 0 0;
+}
+
+#block-block-19 .blcontent {
+    display: block;
+}
+
+#block-block-19 .fouroneone, #block-block-19 .archive {
+    width: 100%;
+}
+
+#block-block-19 .fouroneone .form-text {
+    width: 60%;
+}
+
+#block-block-19 .blcontent {
+    padding-right: 15px;
 }
 
 /* Archive link on search pages */
