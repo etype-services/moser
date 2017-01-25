@@ -123,6 +123,11 @@
     #superfish-1 {
         width: 795px; /* wider because rail ads are hidden */
     }
+
+    /* JCarousel */
+    #block-views-editorspick-block .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
+        width: 756px;
+    }
 }
 
 @media screen and (max-width: 870px) {
