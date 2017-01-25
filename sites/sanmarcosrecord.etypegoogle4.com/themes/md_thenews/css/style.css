@@ -1287,6 +1287,7 @@ a.cycle-next:hover {
 }
 
 .rows-first .row {
+    clear: left;
     padding-right: 15px;
 }
 

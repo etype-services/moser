@@ -412,6 +412,10 @@
         width: 380px;
     }
 
+    #block-views-editorspick-block .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
+        width: 326px;
+    }
+
 }
 
 @media screen and (max-width: 420px) {
