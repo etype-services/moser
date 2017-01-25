@@ -158,6 +158,11 @@
     .mdslideshow .views-field-field-image img {
         width: 100%;
     }
+
+    /* JCarousel */
+    #block-views-editorspick-block .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
+        width: 650px;
+    }
 }
 
 @media screen and (max-width: 760px) {
