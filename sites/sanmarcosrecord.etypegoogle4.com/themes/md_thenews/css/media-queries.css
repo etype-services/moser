@@ -4,6 +4,11 @@
         width: 100px;
     }
 
+    /* JCarousel */
+    #block-views-editorspick-block .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
+        width: 650px;
+    }
+
 }
 
 @media screen and (max-width: 1017px) {
@@ -215,11 +220,6 @@
         margin-bottom: 0;
     }
 
-    /* JCarousel */
-    .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
-        width: 600px;
-    }
-
 }
 
 @media screen and (max-width: 700px) {
@@ -367,10 +367,6 @@
     }
 
     /* JCarousel */
-    .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
-        width: 400px;
-    }
-
     #block-views-editorspick-block .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
         width: 326px;
     }
