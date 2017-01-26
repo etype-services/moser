@@ -73,12 +73,14 @@
 
 /* 411 Search */
 (function($) {
-    $('#fouroneone_popular').click(function() {
-        var el = $('#pgmenu2');
-        el.style.display = (el.style.display == 'block' ? 'none' : 'block'); return false;
-    });
-    $('#fouroneone_local').click(function() {
-        var el = $('#pgmenu3');
-        el.style.display = (el.style.display == 'block' ? 'none' : 'block'); return false;
+    $(function(){
+        $('#fouroneone_popular').click(function() {
+            var el = $('#pgmenu2');
+            el.style.display = (el.style.display == 'block' ? 'none' : 'block'); return false;
+        });
+        $('#fouroneone_local').click(function() {
+            var el = $('#pgmenu3');
+            el.style.display = (el.style.display == 'block' ? 'none' : 'block'); return false;
+        });
     });
 })(jQuery);
