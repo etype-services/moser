@@ -24,15 +24,14 @@ body.front h1{
 	display: block;
 }
 
-#mobile-logo{
-	display: none;
+#logo {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
 }
 
-#logo {
-    display: block;
-    margin-left: 18px;
-    margin-top: 0px;
-    min-height: 73px;
+#logo img {
+    max-width: 100%;
 }
 
 #page-wrapper {
