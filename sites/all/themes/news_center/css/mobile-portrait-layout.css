@@ -193,6 +193,9 @@ h2, h3, h4, h5, h6 {
 
 
 /* SlideShow Block Styles */
+block-views-home-page-block {
+    position: relative;
+}
 
 .image-show {
     background: none repeat scroll 0 0 #000000;
@@ -327,11 +330,11 @@ h2, h3, h4, h5, h6 {
 .view-id-home_page .views-slideshow-controls-bottom {
     height: 60px;
     margin-top: 0;
-    left: 11px;
+    left: 0;
     width: 300px;
     z-index: 500;
     position: absolute;
-    top: 541px;
+    top: 430px;
     overflow: hidden;
 }
 
