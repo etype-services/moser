@@ -183,8 +183,8 @@ body.front h1{
     background: none repeat-x scroll 0 bottom #333333;
     color: #FFFFFF;
     position: absolute;
-    top: 270px;
-    width: 500px;
+    top: 296px;
+    width: 460px;
     z-index: 200;
 }
 
@@ -291,12 +291,12 @@ body.front h1{
 
 .views_slideshow_cycle_main {
     background: none repeat scroll 0 0 #333333;
-    height: 500px;
+    height: 520px;
     width: 460px;
 }
 
 .view-id-home_page .views-slideshow-controls-bottom {
-    top: 580px;
+    top: 606px;
     left: 43px;
     width: 460px;
     display: flex;
