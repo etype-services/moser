@@ -277,16 +277,18 @@ body.front h1{
 
 .views_slideshow_cycle_main {
     background: none repeat scroll 0 0 #333333;
-    height: 295px; 
-	padding-bottom: 150px;   
+    height: 575px;
+	padding-bottom: 0;
     width: 462px;
 }
 
 .view-id-home_page .views-slideshow-controls-bottom {
-    border: 1px solid #333333;
-    width: 460px;
-	border-top: none;
-	height: 60px;
+    border: none;
+    width: 428px;
+    border-top: none;
+    height: 60px;
+    left: 36px;
+    top: 727px;
 }
 
 .view-id-home_page .views-slideshow-controls-bottom .views-slideshow-pager-field-item {
@@ -337,7 +339,15 @@ body.front h1{
     margin-left: 10px;
 }
 
-#block-views-top-news-block {width: 220px; float: right;margin-top:-525px;}
+#block-views-home-page-block {
+    float: left;
+}
+
+#block-views-top-news-block {
+    width: 225px;
+    float: left;
+    margin-left: 12px;
+}
 
 
 /*
