@@ -820,11 +820,11 @@ h2.node-title {
 
 .ui-accordion .ui-accordion-content
 {
-  padding-top: 0em;
-  padding-right: 0em;
-  padding-bottom: 0em;
-  padding-left: 0em;
-  border-top-width: 0px;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  border-top-width: 0;
   border-top-style: none;
   margin-top: -7px;
   position: relative;
