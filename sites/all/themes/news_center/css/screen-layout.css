@@ -181,7 +181,8 @@ body.front h1{
 }
 
 #views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame-row-item .views-field-field-image {
-    margin-left: -23px;
+    margin-left: 0;
+    width: 460px;
 }
 
 #views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame .slideshow-overlay {
