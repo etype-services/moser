@@ -859,11 +859,13 @@ table ul.links li {
 }
 
 #superfish-1 {
-    width: 795px;
+    width: 100%;
     margin: 0 auto;
     height: 50px;
     font-size: 1.5em;
     position: relative;
+    display: flex;
+    justify-content: space-around;
 }
 
 ul#main-menu-links li,
@@ -915,9 +917,11 @@ ul#main-menu-links li,
 /* Secondary menu */
 
 #superfish-2 {
-    width: 821px;
+    width: 100%;
     margin: 0 auto;
     clear: both;
+    display: flex;
+    justify-content: space-around;
 }
 
 #superfish-2 li {

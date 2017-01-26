@@ -121,7 +121,7 @@
 @media screen and (max-width: 950px) {
 
     #superfish-1 {
-        width: 795px; /* wider because rail ads are hidden */
+        /* width: 795px; wider because rail ads are hidden */
     }
 
     /* JCarousel */
@@ -134,7 +134,7 @@
 
     /* main menu */
     #superfish-1 {
-        width: 755px;
+        /* width: 755px; */
     }
 
     #superfish-1 li a {
@@ -143,7 +143,7 @@
 
     /* subnav */
     #superfish-2 {
-        width: 676px;
+        /* width: 676px; */
     }
 
     #superfish-2 li a {
@@ -213,7 +213,7 @@
 
     /* main menu */
     #superfish-1 {
-        width: 696px;
+        /* width: 696px; */
     }
 
     #superfish-1 li a {
@@ -248,12 +248,12 @@
 
     /* main menu */
     #superfish-1 {
-        width: 597px;
+        /* width: 597px; */
     }
 
     /* subnav */
     #superfish-2 {
-        width: 632px;
+        /* width: 632px; */
     }
 
     #superfish-2 li {
