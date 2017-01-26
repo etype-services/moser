@@ -222,9 +222,9 @@ h2, h3, h4, h5, h6 {
     color: #FFFFFF;
     position: absolute;
     top: 250px;
+    left: 0;
     width: 300px;
     z-index: 200;
-	padding-bottom: 6px;
 }
 
 #views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame .slideshow-overlay a{    
@@ -323,19 +323,18 @@ h2, h3, h4, h5, h6 {
 
 .views_slideshow_cycle_main {
     background: none repeat scroll 0 0 #333333;
-    height: 540px;
+    height: 490px;
     width: 301px;
 }
 
 .view-id-home_page .views-slideshow-controls-bottom {
-    height: 48px;
+    height: 60px;
     margin-top: 0;
-    position: relative;
-    right: 0;
+    left: 16px;
     width: 300px;
     z-index: 500;
     position: absolute;
-    top: 480px;
+    top: 541px;
     overflow: hidden;
 }
 
