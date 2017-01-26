@@ -1,4 +1,4 @@
-/* HTML 
+/* HTML
 --------------------------------------------------------------------------*/
 
 body {
@@ -65,7 +65,7 @@ td {
     border: 1px solid #dddddd;
 }
 
-/* HEADER 
+/* HEADER
 --------------------------------------------------------------------------*/
 
 .header-wrapper-inner {
@@ -91,7 +91,7 @@ h3.site-slogan {
 	float: left;
 }
 
-/* SLIDESHOW 
+/* SLIDESHOW
 --------------------------------------------------------------------------*/
 
 .view-slideshow {
@@ -176,7 +176,7 @@ h3.site-slogan {
     margin-right: 0;
 }
 
-/* PREFACE 
+/* PREFACE
 --------------------------------------------------------------------------*/
 
 .preface-wrapper .views-row {
@@ -242,7 +242,7 @@ h3.site-slogan {
 }
 
 .preface-wrapper .block-inner .views-field-title h3 a {
-	
+
 }
 
 .preface-wrapper .block-inner .views-field-body p {
@@ -255,7 +255,7 @@ h3.site-slogan {
     font-style: italic;
 }
 
-/* MAIN CONTENT 
+/* MAIN CONTENT
 --------------------------------------------------------------------------*/
 
 .main-content-wrapper {
@@ -275,7 +275,7 @@ article .field-image {
 	margin-bottom: 1em;
 }
 
-/* SIDEBARS 
+/* SIDEBARS
 --------------------------------------------------------------------------*/
 
 .sidebar .content {
@@ -292,7 +292,7 @@ article .field-image {
     margin-bottom: 0;
 }
 
-/* POSTSCRIPT 
+/* POSTSCRIPT
 --------------------------------------------------------------------------*/
 
 #postscript {
@@ -387,7 +387,7 @@ article .field-image {
 --------------------------------------------------------------------------*/
 
 
-/* LISTS 
+/* LISTS
 --------------------------------------------------------------------------*/
 
 .item-list ul {
@@ -1447,7 +1447,12 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
     visibility: hidden;
 }
 
-/* own local */
+/* show captions */
+.galleria-theme-classic .galleria-info-text {
+    display: block;
+}
+
+    /* own local */
 #block-etype-own-local .block-inner {
     padding: 0;
     margin: 0;

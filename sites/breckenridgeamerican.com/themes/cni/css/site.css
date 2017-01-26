@@ -123,11 +123,11 @@
 		border-width: 0;
 		box-shadow: none;
 	}
-	
+
 	#block-simpleads-ad-groups-427 img {
 		max-width:100%;
 	}
-	
+
 	#block-simpleads-ad-groups-484 .block-inner {
 		padding: 0;
 		margin: 0;
@@ -135,11 +135,11 @@
 		border-width: 0;
 		box-shadow: none;
 	}
-	
+
 	#block-simpleads-ad-groups-484 img {
 		max-width:100%;
 	}
-	
+
 	#block-simpleads-ad-groups-485 .block-inner {
 		padding: 0;
 		margin: 0;
@@ -147,11 +147,11 @@
 		border-width: 0;
 		box-shadow: none;
 	}
-	
+
 	#block-simpleads-ad-groups-485 img {
 		max-width:100%;
 	}
-	
+
 	#block-simpleads-ad-groups-486 .block-inner {
 		padding: 0;
 		margin: 0;
@@ -159,18 +159,18 @@
 		border-width: 0;
 		box-shadow: none;
 	}
-	
+
 	#block-simpleads-ad-groups-486 img {
 		max-width:100%;
 	}
-	
+
 
 /* Google DFP Ads
 --------------------------------------------------------------------------*/
 
 #block-dfp-tpa-northsidebar {
 	margin-bottom: 10px;
-}	
+}
 
 #block-dfp-tpa-northsidebar .block-inner {
     padding: 0;
@@ -183,4 +183,17 @@
 #block-dfp-tpa-northleaderboard {
 	text-align:center;
 	margin-top: 5px;
+}
+
+/* GALLERIA */
+.galleria-theme-classic .galleria-info-text {
+    background-image: url(../images/trans.png);
+    padding: 2px;
+}
+
+.galleria-theme-classic .galleria-info {
+    width: 100%;
+    bottom: 53px;
+    top: inherit;
+    left: 5px;
 }

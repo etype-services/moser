@@ -223,7 +223,7 @@
 
 #block-dfp-tpa-northsidebar {
 	margin-bottom: 10px;
-}	
+}
 
 #block-dfp-tpa-northsidebar .block-inner {
     padding: 0;
@@ -238,3 +238,15 @@
 	margin-top: 5px;
 }
 
+/* GALLERIA */
+.galleria-theme-classic .galleria-info-text {
+    background-image: url(../images/trans.png);
+    padding: 2px;
+}
+
+.galleria-theme-classic .galleria-info {
+    width: 100%;
+    bottom: 53px;
+    top: inherit;
+    left: 5px;
+}
