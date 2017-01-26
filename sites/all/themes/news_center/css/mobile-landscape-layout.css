@@ -265,6 +265,22 @@ body.front h1{
 	height: 295px !important;
 }
 
+#views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame .slideshow-overlay .views-field-field-rate,
+#views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame .slideshow-overlay .views-field-comment-count {
+    display: block;
+    visibility: visible;
+}
+
+
+#views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame .slideshow-overlay .views-field-field-rate .field-content {
+    margin-top: 0 !important;
+}
+
+views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame .slideshow-overlay .views-field-field-rate .field-content .form-item {
+    margin: 0 !important;
+}
+
+
 .bottom-shadow {
     background: url("../images/bottom-shadow.png") repeat-x scroll 0 0 transparent;
     bottom: -6px;
@@ -278,7 +294,7 @@ body.front h1{
 .views_slideshow_cycle_main {
     background: none repeat scroll 0 0 #333333;
     height: 306px;
-    width: 458px;
+    width: 460px;
 }
 
 .view-id-home_page .views-slideshow-controls-bottom {
