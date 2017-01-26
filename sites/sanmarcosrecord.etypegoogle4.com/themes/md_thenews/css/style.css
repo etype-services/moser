@@ -856,6 +856,8 @@ table ul.links li {
 /* Main menu */
 #nav {
     background: #660000;
+    height: 48px;
+    margin-bottom: 34px;
 }
 
 #superfish-1 {

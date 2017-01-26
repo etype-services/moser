@@ -212,10 +212,6 @@
     }
 
     /* main menu */
-    #superfish-1 {
-        /* width: 696px; */
-    }
-
     #superfish-1 li a {
         padding: 0 8px;
         font-size: 0.9em;
@@ -241,21 +237,13 @@
 
 @media screen and (max-width: 700px) {
 
+    /* main menu */
     #superfish-1 li a {
         padding: 0 3px;
         font-size: 0.9em;
     }
 
-    /* main menu */
-    #superfish-1 {
-        /* width: 597px; */
-    }
-
     /* subnav */
-    #superfish-2 {
-        /* width: 632px; */
-    }
-
     #superfish-2 li {
         margin: 0;
     }
@@ -278,6 +266,11 @@
 }
 
 @media screen and (max-width: 600px) {
+
+    #nav {
+        height: 59px;
+        margin: 0;
+    }
 
 	ul#main-menu-links li a, #nav ul.sf-menu li a {
 		padding: 0 6px;
