@@ -364,8 +364,12 @@ h2, h3, h4, h5, h6 {
     width: 51px;
 }
 
-#views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame-row-item .views-field-field-image {
+#views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame-row-item .views-field-field-image .field-content {
     margin-left: -23px;
+}
+
+#views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame-row-item .views-field-field-image {
+    margin-top: 0;
 }
 
 #views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame-row-item .views-field-field-image img {
