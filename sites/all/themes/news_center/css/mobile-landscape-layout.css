@@ -298,12 +298,11 @@ views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame .sl
 
 .view-id-home_page .views-slideshow-controls-bottom {
     background: none repeat scroll 0 0 #555555;
-    border: medium none;
-    height: 46px;
-    margin-top: -178px;
+    height: 60px;
     position: absolute;
-    right: 11px;
-    width: 234px;
+    top: 396px;
+    left: 11px;
+    width: 460px;
     z-index: 500;
 }
 
