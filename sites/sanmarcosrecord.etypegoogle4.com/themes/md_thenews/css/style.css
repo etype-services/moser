@@ -3270,13 +3270,15 @@ div.admin-panel .description {
     padding: 4px 0;
 }
 
-hover
-
 /* 411 Search */
 #block-block-19 p {
     margin: 0;
 }
 
+#block-block-19 .fouroneone span {
+    width: 50%;
+    float: left;
+}
 
 #block-block-19 .fouroneone span {
     color: #039;
@@ -3291,16 +3293,8 @@ hover
     padding-left: 0;
 }
 
-#block-block-19 .archive {
-    margin: 1em 0 0;
-}
-
 #block-block-19 .blcontent {
     display: block;
-}
-
-#block-block-19 .fouroneone, #block-block-19 .archive {
-    width: 100%;
 }
 
 #block-block-19 .fouroneone .form-text {
