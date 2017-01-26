@@ -1,7 +1,7 @@
 /*
  *	News Center v1.0
  *	Media Layout for MaxDeviceWidth 320px
- *	
+ *
  *  This stylesheet works only on a 320px width device. i.e. an iPhone on Portrait mode.
 */
 
@@ -26,19 +26,13 @@ body.front h1{
 	display: none;
 }
 
-#mobile-logo {
-    display: block;
-    float: left;
-    margin-bottom: 9px;
-    margin-left: 13px;
-    padding-top: 13px;
-    text-align: center;
+#logo {
+    margin-top: 10px;
+    width: 100%;
 }
 
-#logo {
-    margin-left: 0;
-    margin-top: 10px;
-	display: none;
+#logo img {
+    max-width: 700px;
 }
 
 #page-wrapper {
@@ -48,9 +42,9 @@ body.front h1{
 }
 
 #main-wrapper {
-    background: none repeat scroll 0 0 transparent;    
+    background: none repeat scroll 0 0 transparent;
     padding: 10px 10px 0;
-	width: 748px;		
+	width: 748px;
 }
 
 .sidebar-second #content {
@@ -128,7 +122,7 @@ body.front h1{
     width: 100%;
 }
 
-#block-menu-menu-news-categories ul {    
+#block-menu-menu-news-categories ul {
     margin-bottom: 0;
     margin-right: 0;
     margin-top: -6px;
@@ -196,17 +190,17 @@ body.front h1{
     bottom: 0;
     color: #FFFFFF;
     position: absolute;
-    top: auto;
+    top: 296px;
     width: 745px;
     z-index: 200;
 }
 
-#views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame .slideshow-overlay a{    
+#views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame .slideshow-overlay a{
 	color: #CCCCCC;
 }
 
-#views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame .views-field-title {    
-    display: block;   
+#views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame .views-field-title {
+    display: block;
     z-index: 1;
 }
 
@@ -223,12 +217,12 @@ body.front h1{
 }
 
 #views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame .views-field-title h2 a {
-   text-decoration: none;   
+   text-decoration: none;
    text-shadow: 1px 1px 1px #000000;
    color: #FFFFFF;
    display: block;
    height: auto;
-   overflow: visible;    
+   overflow: visible;
    width: 724px;
 }
 
@@ -246,8 +240,8 @@ body.front h1{
     display: block;
     font-size: 0.8em;
     margin-left: 10px;
-    padding-left: 20px; 
-	float: left;	
+    padding-left: 20px;
+	float: left;
 	margin-right: 10px;
 	margin-bottom: 0;
 }
@@ -265,15 +259,15 @@ body.front h1{
 }
 
 #views_slideshow_cycle_main_home_page-block .views-field-created{
-    background: url("../images/date.png") no-repeat scroll 0 0 transparent;   
+    background: url("../images/date.png") no-repeat scroll 0 0 transparent;
 }
 
 #views_slideshow_cycle_main_home_page-block .views-field-term-node-tid{
-    background: url("../images/tag.png") no-repeat scroll 0 0 transparent;    
+    background: url("../images/tag.png") no-repeat scroll 0 0 transparent;
 }
 
 #views_slideshow_cycle_main_home_page-block .views-field-name{
-	background: url("../images/author.png") no-repeat scroll 0 0 transparent;   
+	background: url("../images/author.png") no-repeat scroll 0 0 transparent;
 }
 
 #views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame{
@@ -290,21 +284,21 @@ body.front h1{
 	display: block;
 }
 
-
 .views_slideshow_cycle_main {
     background: none repeat scroll 0 0 #333333;
-    height: 295px;    
+    height: 525px;
     width: 747px;
 }
 
 .view-id-home_page .views-slideshow-controls-bottom {
-    border: 1px solid #333333;
+    border: none;
     height: 60px;
     margin-top: 0;
-    position: relative;
-    right: 0;
+    position: absolute;
+    left: 82px;
     width: 745px;
-    z-index: 0;
+    z-index: 200;
+    top: 684px;
 }
 
 .view-id-home_page .views-slideshow-controls-bottom .views-slideshow-pager-field-item {
@@ -333,13 +327,13 @@ body.front h1{
 #views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame-row-item .views-field-field-image img {
     height: auto;
     margin-left: 23px;
-    width: auto;
+    width: 745px;
 }
 
 .view-id-home_page .views-slideshow-controls-bottom .views-slideshow-pager-field-item img {
     height: auto;
     margin-left: 0;
-    width: auto;
+    width: 745px;
 }
 
 #views_slideshow_pager_field_item_bottom_home_page-block_4 .views-field-field-image .views-content-field-image {
@@ -347,7 +341,7 @@ body.front h1{
 }
 
 
-/* 
+/*
  * "Last Week Most Popular"
  */
 
@@ -361,13 +355,13 @@ body.front h1{
 }
 
 /*
- * Articles Blocks 
+ * Articles Blocks
  */
 
 #block-views-articles-categories-block-block, #block-views-articles-block-4-block{
 	clear: both;
 }
- 
+
 #block-views-articles-categories-block-block, #block-views-articles-block-2-block, #block-views-articles-block-3-block, #block-views-articles-block-4-block, #block-views-articles-block-5-block, #block-views-articles-block-6-block {
     float: left;
     margin-right: 20px !important;
@@ -376,7 +370,7 @@ body.front h1{
     width: 236px;
 }
 
-#block-views-articles-categories-block-block .content, 
+#block-views-articles-categories-block-block .content,
 #block-views-articles-block-2-block .content,
 #block-views-articles-block-4-block .content,
 #block-views-articles-block-5-block .content{
@@ -385,24 +379,24 @@ body.front h1{
     width: 100%;
 }
 
-#block-views-articles-block-2-block img, 
+#block-views-articles-block-2-block img,
 #block-views-articles-block-3-block img,
 #block-views-articles-block-4-block img,
 #block-views-articles-block-5-block img,
 #block-views-articles-block-6-block img{
-   
+
 }
 
 #block-views-articles-categories-block-block .views-field-body-1, #block-views-articles-block-2-block .views-field-body-1, #block-views-articles-block-3-block .views-field-body-1, #block-views-articles-block-4-block .views-field-body-1, #block-views-articles-block-5-block .views-field-body-1, #block-views-articles-block-6-block .views-field-body-1, #block-views-featured-article-block .views-field-body-1 {
-    font-size: 1.2em;    
+    font-size: 1.2em;
 }
 
-#block-views-articles-categories-block-block .views-field-totalcount, #block-views-articles-block-2-block  .views-field-totalcount, #block-views-articles-block-3-block  .views-field-totalcount, #block-views-articles-block-4-block  .views-field-totalcount, #block-views-articles-block-5-block  .views-field-totalcount, #block-views-articles-block-6-block  .views-field-totalcount{    
-    display: none;    
+#block-views-articles-categories-block-block .views-field-totalcount, #block-views-articles-block-2-block  .views-field-totalcount, #block-views-articles-block-3-block  .views-field-totalcount, #block-views-articles-block-4-block  .views-field-totalcount, #block-views-articles-block-5-block  .views-field-totalcount, #block-views-articles-block-6-block  .views-field-totalcount{
+    display: none;
 }
 
 .region-content0 .block.odd{
-	margin-right: 0 !important; 
+	margin-right: 0 !important;
 }
 
 #block-views-articles-categories-block-block, #block-views-articles-block-3-block, #block-views-articles-block-5-block{
@@ -492,8 +486,8 @@ a.back-to-top {
 }
 
 a.back-to-top:hover, a.back-to-top:active {
-    background: url("../images/up.png") no-repeat scroll 5px 6px #999999;  
-	color: #EEEEEE;	
+    background: url("../images/up.png") no-repeat scroll 5px 6px #999999;
+	color: #EEEEEE;
 }
 
 .region-slideshow{
@@ -571,16 +565,16 @@ a.back-to-top:hover, a.back-to-top:active {
 
 
 #block-views-articles-images-block .view-footer {
-    clear: both;    
+    clear: both;
 }
 
-/* 
- * RIGHT SIDEBAR REGION BLOCKS 
+/*
+ * RIGHT SIDEBAR REGION BLOCKS
  *
- * These are the blocks located at the right side of every page. 
+ * These are the blocks located at the right side of every page.
  *
- */ 
- 
+ */
+
  /* Search Form */
 
 
@@ -590,7 +584,7 @@ a.back-to-top:hover, a.back-to-top:active {
 }
 
 #block-search-form #edit-submit{
-	
+
 }
 
 #block-search-form .form-text {
@@ -618,14 +612,14 @@ a.back-to-top:hover, a.back-to-top:active {
     height: 30px;
     width: 30px;
 }
- 
-/* 
- * Sidebar Advertisement Styles 
+
+/*
+ * Sidebar Advertisement Styles
  */
- 
+
 #block-views-ads-sidebar-block-block .view-header em.advertisement {
 	display: none !important;
-} 
+}
 
 #block-views-ads-sidebar-block-block .view-content{
 	clear: both;
@@ -655,8 +649,8 @@ a.back-to-top:hover, a.back-to-top:active {
     padding-bottom: 7px;
 }
 
-.region-sidebar-second .block {   
-    clear: both;    
+.region-sidebar-second .block {
+    clear: both;
 }
 
 #block-views-ads-sidebar-block-block .views-field-title {
@@ -726,12 +720,12 @@ a.back-to-top:hover, a.back-to-top:active {
     width: 344px;
 }
 
-#block-views-most-popular-all-time-block, #block-views-top-rated-articles-block {    
+#block-views-most-popular-all-time-block, #block-views-top-rated-articles-block {
     margin-right: 0;
 }
 
 #block-views-most-popular-today-block, #block-views-most-commented-block{
-    clear: both;    
+    clear: both;
 }
 
 /* Footer: Region "First Column" */
@@ -751,7 +745,7 @@ a.back-to-top:hover, a.back-to-top:active {
 }
 
 .region-footer-second-column, .region-footer-fourth-column {
-    margin-right: 0;    
+    margin-right: 0;
 }
 
 .region-footer-fourth-column{
@@ -780,7 +774,7 @@ a.back-to-top:hover, a.back-to-top:active {
     width: 100%;
 }
 
-#block-views-recent-posts-block .view-recent-posts {    
+#block-views-recent-posts-block .view-recent-posts {
     width: 100%;
 }
 

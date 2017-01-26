@@ -17,15 +17,15 @@ body.front h1{
 	display: block;
 }
 
-#mobile-logo{
-	display: none;
+#logo {
+    margin-top: 10px;
+    width: 700px;
+    text-align: center;
+    float: left;
 }
 
-#logo {
-    display: block;
-    margin-left: 18px;
-    margin-top: 10px;
-    min-height: 73px;
+#logo img {
+    width: 700px;
 }
 
 #page-wrapper {
