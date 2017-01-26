@@ -193,7 +193,7 @@ h2, h3, h4, h5, h6 {
 
 
 /* SlideShow Block Styles */
-block-views-home-page-block {
+#block-views-home-page-block {
     position: relative;
 }
 
