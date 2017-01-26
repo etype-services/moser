@@ -266,12 +266,8 @@ body.front h1{
 }
 
 .bottom-shadow {
-    background: url("../images/bottom-shadow.png") repeat-x scroll 0 0 transparent;
-    bottom: -6px;
-    height: 6px;
-    position: absolute;
-    width: 460px;
-    z-index: 9;
+    display: none;
+    visibility: hidden;
 }
 
 
