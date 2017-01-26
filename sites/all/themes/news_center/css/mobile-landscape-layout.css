@@ -270,15 +270,14 @@ body.front h1{
     visibility: visible;
 }
 
-
 #views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame .slideshow-overlay .views-field-field-rate .field-content {
     margin-top: 0 !important;
+    float: left;
 }
 
-views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame .slideshow-overlay .views-field-field-rate .field-content .form-item {
+#views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame .slideshow-overlay .field-content .form-item {
     margin: 0 !important;
 }
-
 
 .bottom-shadow {
     background: url("../images/bottom-shadow.png") repeat-x scroll 0 0 transparent;
@@ -297,13 +296,11 @@ views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame .sl
 }
 
 .view-id-home_page .views-slideshow-controls-bottom {
-    background: none repeat scroll 0 0 #555555;
-    height: 60px;
-    position: absolute;
-    top: 396px;
-    left: 11px;
+    top: 499px;
+    left: 43px;
     width: 460px;
-    z-index: 500;
+    display: flex;
+    justify-content: space-around;
 }
 
 .view-id-home_page .views-slideshow-controls-bottom .views-slideshow-pager-field-item img {
