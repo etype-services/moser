@@ -231,9 +231,12 @@ h2, h3, h4, h5, h6 {
 	color: #CCCCCC;
 }
 
-#views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame .slideshow-overlay .views-field-field-rate .field-content {
-    margin-bottom: 0 !important;
+#views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame .slideshow-overlay .views-field-field-rate,
+#views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame .slideshow-overlay .views-field-comment-count {
+    display: none;
+    visibility: hidden;
 }
+
 
 #views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame .views-field-title {    
     display: block;   
