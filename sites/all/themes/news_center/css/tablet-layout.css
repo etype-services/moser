@@ -32,7 +32,7 @@ body.front h1{
 }
 
 #logo img {
-    width: 100%;
+    max-width: 700px;
 }
 
 #page-wrapper {
