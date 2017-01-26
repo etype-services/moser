@@ -292,9 +292,9 @@ body.front h1{
 }
 
 .view-id-home_page .views-slideshow-controls-bottom {
-    top: 606px;
-    left: 43px;
-    width: 460px;
+    top: 454px;
+    left: 50px;
+    width: 400px;
     display: flex;
     justify-content: space-around;
 }
