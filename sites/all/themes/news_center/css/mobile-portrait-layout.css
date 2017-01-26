@@ -220,6 +220,8 @@ h2, h3, h4, h5, h6 {
 #views_slideshow_cycle_main_home_page-block .views-slideshow-cycle-main-frame .slideshow-overlay {
     background: none repeat-x scroll 0 bottom #333333;
     color: #FFFFFF;
+    position: absolute;
+    top: 250px;
     width: 300px;
     z-index: 200;
 	padding-bottom: 6px;
