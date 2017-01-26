@@ -3305,6 +3305,10 @@ div.admin-panel .description {
     padding-right: 15px;
 }
 
+#pgmenu2, #pgmenu3 {
+    display: none;
+}
+
 /* Archive link on search pages */
 #block-block-23.block {
     margin-bottom: 0;
