@@ -61,8 +61,12 @@
         padding-left: 45%;
     }
     .rows-first .views-field-field-image {
+         width: 40%;
+         padding: 0;
+     }
+    .rows-first .views-field-field-photo {
         width: 40%;
-        padding: 0 !important;
+        padding: 0;
     }
 	
 	#sidebar,
