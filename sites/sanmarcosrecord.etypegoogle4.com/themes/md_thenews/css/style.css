@@ -1198,6 +1198,20 @@ ul#main-menu-links li,
     margin-right: 0;
 }
 
+#block-views-editorspick-block li {
+     position: relative;
+ }
+
+#block-views-editorspick-block li .views-field-field-photo-overlay-text {
+    position: absolute;
+    top: 22px;
+    line-height: 1.4em;
+    left: 0;
+    color: #fff;
+    background: #000;
+    opacity: 0.5;
+}
+
 .view-photo-gallery .view-content {
     min-height: 131px;
     overflow: hidden;
