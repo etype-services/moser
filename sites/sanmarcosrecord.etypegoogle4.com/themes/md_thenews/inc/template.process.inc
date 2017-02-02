@@ -645,7 +645,8 @@ function md_thenews_preprocess_page(&$vars) {
     /* to set title color in page template */
     if (isset ($vars['node'])) {
         $nid = $vars['node']->nid;
-        if (isset($vars['page']['content']['system_main']['nodes'][$nid]['body']['#object']->field_title_color)) {
+        if (isset($vars['page']['content']['system_main']['nodes'][$nid]['body']['#object']->field_title_color['und'])) {
+
             $vars['title_color'] = $vars['page']['content']['system_main']['nodes'][$nid]['body']['#object']->field_title_color['und']['0']['value'];
         }
     }
