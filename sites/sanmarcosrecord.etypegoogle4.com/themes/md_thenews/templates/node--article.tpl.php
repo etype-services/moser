@@ -69,12 +69,6 @@
             </div>
         <?php endif; ?>
 
-        <?php
-        /*if (($node_share_position == 1) && ($facebook_display || $twitter_display || $gplus_display || $pinterest_display || $stumble_display)):
-            require_once DRUPAL_ROOT . '/' . drupal_get_path('theme', 'md_thenews') . '/inc/node.meta_share.inc';
-        endif;*/
-        ?>
-
         <div class="node-content clearfix"<?php print $content_attributes; ?>>
             <?php print render($content['field_image']); ?>
             <div id="node-internal">
@@ -92,6 +86,7 @@
                 hide($content['comments']);
                 hide($content['links']);
                 hide($content['field_image']);
+                hide($content['photo_overlay_text']);
                 print render($content);
                 ?>
             </div>
