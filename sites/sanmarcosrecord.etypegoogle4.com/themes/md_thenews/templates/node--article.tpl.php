@@ -86,7 +86,7 @@
                 hide($content['comments']);
                 hide($content['links']);
                 hide($content['field_image']);
-                hide($content['photo_overlay_text']);
+                hide($content['field_photo_overlay_text']);
                 print render($content);
                 ?>
             </div>
