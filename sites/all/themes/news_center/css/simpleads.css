@@ -18,6 +18,19 @@
     overflow: hidden;
 }
 
+.region-content2 .block-simpleads > div > div > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* ad formatting in region-content2 */
+.region-sidebar-second .block-simpleads > div > div > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 @media only screen and (min-width: 901px) {
 
     .region-slideshow .block-simpleads {
@@ -33,7 +46,7 @@
     }
 
     .region-content2 .simplead-container {
-        width: 48%;
+        width: 29%;
     }
 
     .region-sidebar-second .block-simpleads,
@@ -46,15 +59,8 @@
 
 @media only screen and (max-width: 900px) {
 
-    /* ad formatting in region-content2 / sidebar */
-    .region-sidebar-second .block-simpleads > div > div > div {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .region-sidebar-second .simplead-container {
-        width: 31%;
+    .region-content .simplead-container {
+        width: 29%;
     }
 
     .region-sidebar-second .simplead-container {
