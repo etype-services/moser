@@ -402,6 +402,11 @@
         margin: 0;
     }
 
+    /* because of the picture */
+    .region-content0 .block-views.odd {
+        min-height: 171px;
+    }
+
     /* three columns to one column */
     .region-content1 .block-views {
         width: 100%;
