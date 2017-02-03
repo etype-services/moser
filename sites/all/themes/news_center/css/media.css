@@ -103,8 +103,11 @@
         flex-wrap: wrap;
     }
 
-    .region-content1 .block-views {
+    .region-content1 .block {
         width: 30%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin: 0;
     }
 
     /* sidebar */
