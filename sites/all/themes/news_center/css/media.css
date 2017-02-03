@@ -96,6 +96,17 @@
         margin: 0 0 10px 0;
     }
 
+    /* bottom content blocks three wide in bottom area */
+    .region-content1 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .region-content1 .block-views {
+        width: 30%;
+    }
+
     /* sidebar */
     .region-sidebar-second .block {
         padding: 6px;
