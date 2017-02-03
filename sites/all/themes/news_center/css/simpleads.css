@@ -46,7 +46,7 @@
 
 @media only screen and (max-width: 900px) {
 
-    /* ad formatting in region-content2 / sidebar */
+    /* ad formatting in region-content2 / sidebar -- add to local.css with correct block id
     #ad_groups_33,
     .region-sidebar-second .block-simpleads > div > div > div >div  {
         display: flex;
@@ -56,7 +56,7 @@
 
     #ad_groups_33 .simplead-container {
         width: 31%;
-    }
+    } */
 
     .region-sidebar-second .simplead-container {
         width: 49%;
