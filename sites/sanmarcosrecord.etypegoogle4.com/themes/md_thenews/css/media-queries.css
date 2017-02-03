@@ -5,7 +5,8 @@
     }
 
     /* JCarousel */
-    #block-views-editorspick-block .jcarousel-skin-default .jcarousel-container-horizontal, .jcarousel-skin-default .jcarousel-clip-horizontal {
+    #block-views-editorspick-block .jcarousel-skin-default .jcarousel-container-horizontal,
+    #block-views-editorspick-block .jcarousel-skin-default .jcarousel-clip-horizontal {
         width: 650px;
     }
 
