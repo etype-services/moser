@@ -396,7 +396,8 @@
     }
 
     /* three columns to one column */
-    .region-content0 .block-views {
+    .region-content0 .block-views.odd,
+    .region-content0 .block-views.even {
         width: 100%;
         margin: 0;
     }
