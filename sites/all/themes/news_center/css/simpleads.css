@@ -1,4 +1,4 @@
-/* SIMPLE ADS */
+/* SIMPLE ADS -- AND DFP */
 
 /* line up ads */
 #header .block-simpleads .adslist > div > div {
@@ -16,4 +16,50 @@
 .block-dfp {
     width: 100% !important;
     overflow: hidden;
+}
+
+@media only screen and (min-width: 901px) {
+
+    .region-slideshow .block-simpleads {
+        width: 100%;
+        margin: 0 0 1em 0;
+    }
+
+    /* ad formatting in region-content2 */
+    .region-content2 .block-simpleads > div > div > div >div  {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .region-content2 .simplead-container {
+        width: 48%;
+    }
+
+    .region-sidebar-second .block-simpleads,
+    .region-sidebar-second .block-dfp {
+        padding: 0;
+        border: none;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+    /* ad formatting in region-content2 / sidebar */
+    #ad_groups_33,
+    .region-sidebar-second .block-simpleads > div > div > div >div  {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #ad_groups_33 .simplead-container {
+        width: 31%;
+    }
+
+    .region-sidebar-second .simplead-container {
+        width: 49%;
+    }
+
 }
