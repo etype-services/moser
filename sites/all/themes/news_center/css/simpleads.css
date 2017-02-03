@@ -1,0 +1,13 @@
+/* SIMPLE ADS */
+
+/* line up ads */
+#header .block-simpleads .adslist > div > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.simplead-container img {
+    height: auto;
+    width: 100%;
+}
