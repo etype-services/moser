@@ -36,8 +36,8 @@
     }
 
     #logo {
-        width: inherit;
-        margin: 0 1em;
+        width: 70%;
+        margin: 0 auto;
         display: block;
     }
 
