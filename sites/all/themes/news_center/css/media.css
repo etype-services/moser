@@ -102,6 +102,11 @@
         border: 1px solid #ccc;
     }
 
+    .region-sidebar-second #block-block-8 {
+        padding: 0;
+        border: none;
+    }
+
     /* jump back block */
     .region-sidebar-second #block-block-4 {
         display: none;
