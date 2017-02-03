@@ -104,7 +104,8 @@ h2.block-title {
     padding-bottom: 5px;
 }
 
-.region-content0 .block-views .views-field-field-image img {
+.region-content0 .block-views .views-field-field-image img,
+.region-content1 .block-views .views-field-field-image img {
     border: 1px solid #CCCCCC;
     margin-right: 10px;
     padding: 3px;
