@@ -111,6 +111,7 @@ h2.block-title {
     float: left;
     position: relative;
     top: 0;
+    max-width: 98%; /* because of the padding and border */
 }
 
 /* this block has larger thumbs */
