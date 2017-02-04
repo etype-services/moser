@@ -150,8 +150,9 @@
     /* Main Menu */
     #block-superfish-1, #superfish-1, .superfish-1 {
         background: #000000;
-        /*display: flex;*/
+        display: flex;
         justify-content: space-between;
+        flex-wrap: nowrap;
         margin-bottom: 0;
         z-index: 99;
     }
@@ -173,6 +174,10 @@
         line-height: 1.5em;
         text-transform: uppercase;
         border-bottom: 1px solid black;
+    }
+
+    .sf-menu.sf-style-default a {
+        padding: 0.75em 0.8em;
     }
 
     #block-superfish-1 ul li a.active, #block-superfish-1 ul li a:hover, #block-menu-menu-news-categories ul li a:hover {
