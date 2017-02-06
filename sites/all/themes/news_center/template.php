@@ -58,7 +58,7 @@
  *   and http://drupal.org/node/190815#template-suggestions
  */
 
-function news_center_head_alter(&$head_elements) {
+function news_center_html_head_alter(&$head_elements) {
 
     var_dump($head_elements);
     exit;
