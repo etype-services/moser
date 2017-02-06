@@ -58,70 +58,19 @@
  *   and http://drupal.org/node/190815#template-suggestions
  */
 
+function MYTHEME_news_center_head_alter(&$head_elements) {
 
-/**
- * Override or insert variables into the html templates.
- *
- * @param $variables
- *   An array of variables to pass to the theme template.
- * @param $hook
- *   The name of the template being rendered ("html" in this case.)
- */
-
-function news_center_preprocess_html(&$variables, $hook) {
-
-    /* add site-specific css */
     $base_path = base_path();
     $conf_path = conf_path();
-    $site_css = $base_path . $conf_path . '/local.css';
-
-    if (file_exists($_SERVER['DOCUMENT_ROOT'] . $site_css)) {
-        drupal_add_css(
-            $site_css,
-            array(
-                'type' => 'file',
-                'media' => 'all',
-                'preprocess' => FALSE,
-                'every_page' => TRUE,
-                'weight' => 999,
-                'group' => CSS_THEME
-            )
-        );
-    }
-
-    /* add site setting css */
-    $nav_color = theme_get_setting('nav_color');
-    if (!empty($nav_color)) {
-        drupal_add_css(
-            '#block-superfish-1 {background: '. $nav_color .' !important;}',
-            array(
-                'group' => CSS_THEME,
-                'type' => 'inline',
-                'media' => 'screen',
-                'preprocess' => FALSE,
-                'weight' => '9999',
-            )
-        );
-    }
-
-    $body_background = theme_get_setting('body_background');
-    if (!empty($body_background)) {
-        drupal_add_css(
-            'body {background: '. $body_background .' !important;}',
-            array(
-                'group' => CSS_THEME,
-                'type' => 'inline',
-                'media' => 'screen',
-                'preprocess' => FALSE,
-                'weight' => '9999',
-            )
-        );
-    }
 
     /* add favicons if they exist */
     $icon_path = $base_path . $conf_path .'/files/favicons';
 
     if (is_dir($_SERVER['DOCUMENT_ROOT'] . $icon_path)) {
+
+        /* remove current favicon */
+        $default_favicon_element = 'drupal_add_html_head_link:shortcut icon:' . $base_path . '/misc/favicon.ico';
+        unset($head_elements[$default_favicon_element]);
 
         $icon_path .= '/';
 
@@ -202,6 +151,66 @@ function news_center_preprocess_html(&$variables, $hook) {
             drupal_add_html_head($appletouchicon, 'apple-touch-icon');
         }
 
+    }
+}
+
+/**
+ * Override or insert variables into the html templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("html" in this case.)
+ */
+
+function news_center_preprocess_html(&$variables, $hook) {
+
+    /* add site-specific css */
+    $base_path = base_path();
+    $conf_path = conf_path();
+    $site_css = $base_path . $conf_path . '/local.css';
+
+    if (file_exists($_SERVER['DOCUMENT_ROOT'] . $site_css)) {
+        drupal_add_css(
+            $site_css,
+            array(
+                'type' => 'file',
+                'media' => 'all',
+                'preprocess' => FALSE,
+                'every_page' => TRUE,
+                'weight' => 999,
+                'group' => CSS_THEME
+            )
+        );
+    }
+
+    /* add site setting css */
+    $nav_color = theme_get_setting('nav_color');
+    if (!empty($nav_color)) {
+        drupal_add_css(
+            '#block-superfish-1 {background: '. $nav_color .' !important;}',
+            array(
+                'group' => CSS_THEME,
+                'type' => 'inline',
+                'media' => 'screen',
+                'preprocess' => FALSE,
+                'weight' => '9999',
+            )
+        );
+    }
+
+    $body_background = theme_get_setting('body_background');
+    if (!empty($body_background)) {
+        drupal_add_css(
+            'body {background: '. $body_background .' !important;}',
+            array(
+                'group' => CSS_THEME,
+                'type' => 'inline',
+                'media' => 'screen',
+                'preprocess' => FALSE,
+                'weight' => '9999',
+            )
+        );
     }
 
 
