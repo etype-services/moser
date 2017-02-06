@@ -69,8 +69,8 @@ function MYTHEME_news_center_head_alter(&$head_elements) {
     if (is_dir($_SERVER['DOCUMENT_ROOT'] . $icon_path)) {
 
         /* remove current favicon */
-        $default_favicon_element = 'drupal_add_html_head_link:shortcut icon:' . $base_path . '/misc/favicon.ico';
-        unset($head_elements[$default_favicon_element]);
+        $favicon = 'drupal_add_html_head_link:shortcut icon:' . $base_path . '/misc/favicon.ico';
+        unset($head_elements[$favicon]);
 
         $icon_path .= '/';
 
