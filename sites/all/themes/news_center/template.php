@@ -121,7 +121,8 @@ function news_center_preprocess_html(&$variables, $hook) {
     /* add favicons if they exist */
     $icon_path = $base_path . $conf_path .'/files/favicons';
 
-    if (is_dir($icon_path)) {
+    //if (is_dir($icon_path)) {
+
         $icon_path .= '/';
 
         $theme_color = array(
@@ -201,7 +202,7 @@ function news_center_preprocess_html(&$variables, $hook) {
             drupal_add_html_head($appletouchicon, 'apple-touch-icon');
         }
 
-    }
+    //}
 
 
   // The body tag's classes are controlled by the $classes_array variable. To
