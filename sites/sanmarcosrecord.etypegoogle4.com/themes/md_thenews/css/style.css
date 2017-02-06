@@ -3020,14 +3020,15 @@ div.admin-panel .description {
     padding: 0;
 }
 
-/* images constraints */
+
+/* image constraints */
 #main-content .simplead-container img,
 .region-sidebar .block-simpleads img{
     max-width: 100%;
     height: auto;
 }
 
-/* deal with teaser-default */
+/* deal with teaser-default images on homepage views */
 #block-views-headlines-block .views-field-field-image .field-content img {
     width: 60px;
     height: auto;
