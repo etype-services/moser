@@ -324,14 +324,24 @@ blockquote.image-field-caption p {
     border-top: 1px solid #000000;
     color: #cccccc;
     padding: 1em;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;
+}
+
+#footer .region-footer-ad {
+    width: 100%;
 }
 
 #footer .region-footer-closure {
     width: 100%;
     margin: 0;
+}
+
+#footer .block-simpleads {
+    width: 100%;
 }
 
 #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
