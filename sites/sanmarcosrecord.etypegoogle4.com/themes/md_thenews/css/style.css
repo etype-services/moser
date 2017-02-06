@@ -3020,15 +3020,14 @@ div.admin-panel .description {
     padding: 0;
 }
 
+/* images constraints */
+#main-content .simplead-container img,
+views-field-field-image .field-content,
+.region-sidebar .block-simpleads img{
+    max-width: 100%;
+}
+
 /* SIMPLE ADS */
-
-#main-content .simplead-container img {
-    max-width: 100%;
-}
-
-.region-sidebar .block-simpleads img {
-    max-width: 100%;
-}
 
 .block-simpleads .blcontent {
     border: none;
