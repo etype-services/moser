@@ -71,6 +71,8 @@ function news_center_html_head_alter(&$head_elements) {
     /* add favicons if they exist */
     $icon_path = $base_path . $conf_path .'/files/favicons';
 
+    echo $_SERVER['DOCUMENT_ROOT'] . $icon_path;
+
     if (is_dir($_SERVER['DOCUMENT_ROOT'] . $icon_path)) {
 
         /* remove current favicon */
