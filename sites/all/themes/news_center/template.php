@@ -58,10 +58,11 @@
  *   and http://drupal.org/node/190815#template-suggestions
  */
 
+/**
+ * @param $head_elements
+ */
 function news_center_html_head_alter(&$head_elements) {
 
-    var_dump($head_elements);
-    exit;
 
     $base_path = base_path();
     $conf_path = conf_path();
