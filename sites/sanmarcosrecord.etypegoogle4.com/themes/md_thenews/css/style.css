@@ -3101,6 +3101,11 @@ div.admin-panel .description {
 
 .region-leaderboard .blcontent {
     text-align: center;
+    padding: 0;
+}
+
+.region-leaderboard .block {
+    margin: 0;
 }
 
 .region-leftad .block-simpleads {
