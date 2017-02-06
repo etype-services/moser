@@ -64,19 +64,18 @@
 function news_center_html_head_alter(&$head_elements) {
 
     var_dump($head_elements);
-
-    $base_path = base_path();
+    global $base_url;
     $conf_path = conf_path();
 
     /* add favicons if they exist */
-    $icon_path = $base_path . $conf_path .'/files/favicons';
+    $icon_path = $conf_path .'/files/favicons';
 
     echo $_SERVER['DOCUMENT_ROOT'] . $icon_path;
 
     if (is_dir($_SERVER['DOCUMENT_ROOT'] . $icon_path)) {
 
         /* remove current favicon */
-        $favicon = 'drupal_add_html_head_link:shortcut icon:' . $base_path . $conf_path . '/misc/favicon.ico';
+        $favicon = 'drupal_add_html_head_link:shortcut icon:' . $base_url . '/misc/favicon.ico';
 
         echo $favicon;
         exit;
