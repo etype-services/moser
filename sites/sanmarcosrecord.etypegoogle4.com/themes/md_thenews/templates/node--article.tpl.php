@@ -22,6 +22,10 @@
                 <div class="article-image">
                     <a href="<?php print $node_url; ?>"><?php print $articleimage; ?></a>
                 </div>
+            <?php else: ?>
+                <div class="article-image">
+                    <a href="<?php print $node_url; ?>"><img class="teaser-default" src="/sites/sanmarcosdailyrecord.com/files/teaser_default.png" /></a>
+                </div>
             <?php endif; ?>
             <div class="article-info">
                 <?php if (($node_display == 5) || ($node_display == 6)): ?>
