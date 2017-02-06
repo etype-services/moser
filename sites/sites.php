@@ -1,7 +1,7 @@
 <?php
 /* test.etypegoogle4.com */
 // $sites['test.etypegoogle4.com'] = 'cni-theme-test';
-$sites['test.etypegoogle4.com'] = 'cameronrecord.com';
+$sites['test.etypegoogle4.com'] = 'cameronherald.com';
 
 $sites['bosquecountytoday.etypegoogle4.com'] = 'bosquecountytoday.com';
 $sites['bosquecountytoday.com'] = 'bosquecountytoday.com';
