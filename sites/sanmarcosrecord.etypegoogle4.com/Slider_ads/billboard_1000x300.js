@@ -1,6 +1,5 @@
 ﻿var timerlen = 5;
 var slideAniLen = 250;
-//var TILE_ID = 211
 var timerID = new Array();
 var startTime = new Array();
 var obj = new Array();
@@ -10,18 +9,6 @@ var dir = new Array();
 var mousedover = false;
 //// START PREVIEW OPEN ///////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-(function($) {
-    $('#ad1').onmouseover = function()
-    {
-        slidedown('ad2');
-    }
-    $('#ad1').onmouseout = function()
-    {
-        slideup('ad2');
-    }
-})(jQuery);
-
 function preview(objname){
 	if(moving[objname])
 		return;
@@ -31,7 +18,7 @@ function preview(objname){
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	//var cookie = getcookie("sbb");
-//alert(cookie);
+// alert(cookie);
 if(cookie)
  {
   document.getElementById(objname).style.display = 'none';
@@ -54,7 +41,7 @@ return unescape(cookiestring.substring(index1+cookiename.length+1,index2));
 	}
 //// END - SET COOKIE FOR PREVIEW FUNCTION //////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	
+
 }
 function previewdown(objname){
         if(moving[objname])
@@ -84,7 +71,7 @@ function slidedown(objname){
         moving[objname] = true;
         dir[objname] = "down";
         startslide(objname);
-        
+
 if (!mousedover) {
 mousedover = true;
 var img = new Image();
@@ -135,35 +122,12 @@ function endSlide(objname){
         delete(dir[objname]);
         return;
 }
-var expandingAd = new Object();
-//** Below input the Tile Id number, and for the ad_rollover_counter also change the Tile ID number to match ad_url
-expandingAd.filesdir = "/sites/sanmarcosrecord.etypegoogle4.com/Slider_ads/ads/"; // your website folder where you files are will go here....
-// Small SWF size
-expandingAd.smallwidth = '100%';
-expandingAd.smallheight = '45px';
-expandingAd.smallid =  "billboard_628x45";
-// Large SWF size
-expandingAd.largewidth = '100%';
-expandingAd.largeheight = '300px';
-expandingAd.largeid = "billboard_628x300";
-//expandingAd.expandableAdUrl = escape('http://www.mysite.com/');
-expandingAd.expandableAdUrl = 'http://www.gradcollege.txstate.edu/fair';
-//expandingAd.expandableAdUrl = escape('http://localhost/adv_tile_redirect.php?tileID=' +TILE_ID + '&adurl=http://www.mysite.com/');
-expandingAd.big_params_2 = '&expandable_ad_url=' + expandingAd.expandableAdUrl;
-expandingAd.putObjects = function () {
-	document.write('<div id="ad1" style="width:'+ expandingAd.smallwidth +'; padding:0;">');
-	document.write('<a href="'+ expandingAd.expandableAdUrl +'" target="_blank">'); // comment out this line to unlink the small banner
-	document.write('<img style="width:'+ expandingAd.smallwidth +';" id="'+ expandingAd.smallid +'"');
-    document.write(' src="'+ expandingAd.filesdir + expandingAd.smallid +'.jpg" />');
-	document.write('</a>') // comment out this line to unlink the small banner
-	document.write(' </div> ');
-	//****** Next DIV ******//
-	
-	document.write(' <div id="ad2" style="position:relative; width:'+ expandingAd.largewidth +'; display:none; overflow:hidden;">');
-	//document.write('<a href="'+ expandingAd.expandableAdUrl +'" >');
-	document.write('<img style="width:'+ expandingAd.largewidth +';" id="'+ expandingAd.largeid +'"');
-    document.write(' src="'+ expandingAd.filesdir + expandingAd.largeid +'.jpg" />');
-	//document.write('</a>')
-    document.write(' </div> ');
-}
-expandingAd.putObjects();
+
+(function($) {
+    $('#adone').mouseover(function() {
+        slidedown('adtwo');
+    });
+    $('#adone').mouseout(function() {
+        slideup('adtwo');
+    });
+})(jQuery);

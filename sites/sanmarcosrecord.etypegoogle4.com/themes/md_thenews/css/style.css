@@ -3354,3 +3354,9 @@ div.admin-panel .description {
 .filter-guidelines {
     padding: 0 1.5em 1em 0.5em;
 }
+
+/* slider ads */
+#block-block-24 {
+    max-width: 830px;
+    margin: 0 auto;
+}
