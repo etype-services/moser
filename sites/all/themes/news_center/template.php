@@ -76,7 +76,7 @@ function news_center_html_head_alter(&$head_elements) {
     if (is_dir($_SERVER['DOCUMENT_ROOT'] . $icon_path)) {
 
         /* remove current favicon */
-        $favicon = 'drupal_add_html_head_link:shortcut icon:' . base_path . $conf_path . '/misc/favicon.ico';
+        $favicon = 'drupal_add_html_head_link:shortcut icon:' . $base_path . $conf_path . '/misc/favicon.ico';
 
         echo $favicon;
         exit;
