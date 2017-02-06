@@ -3022,9 +3022,14 @@ div.admin-panel .description {
 
 /* images constraints */
 #main-content .simplead-container img,
-.views-field-field-image .field-content img,
 .region-sidebar .block-simpleads img{
     max-width: 100%;
+    height: auto;
+}
+
+/* deal with teaser-default */
+#block-views-headlines-block {
+    width: 60px;
     height: auto;
 }
 
