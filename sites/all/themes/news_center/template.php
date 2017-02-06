@@ -60,6 +60,9 @@
 
 function MYTHEME_news_center_head_alter(&$head_elements) {
 
+    var_dump($head_elements);
+    exit;
+
     $base_path = base_path();
     $conf_path = conf_path();
 
