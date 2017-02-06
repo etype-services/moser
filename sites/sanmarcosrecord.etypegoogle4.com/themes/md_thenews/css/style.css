@@ -3025,6 +3025,7 @@ div.admin-panel .description {
 views-field-field-image .field-content,
 .region-sidebar .block-simpleads img{
     max-width: 100%;
+    height: auto;
 }
 
 /* SIMPLE ADS */
