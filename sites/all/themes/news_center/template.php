@@ -118,85 +118,91 @@ function news_center_preprocess_html(&$variables, $hook) {
         );
     }
 
-    /* add favicons */
-    $icon_path = $base_path . $conf_path .'/files/favicons/';
+    /* add favicons if they exist */
+    $icon_path = $base_path . $conf_path .'/files/favicons';
 
-    $theme_color = array(
-        '#type' => 'html_tag',
-        '#tag' => 'meta',
-        '#attributes' => array(
-            'name' => 'theme-color',
-            'content' => '#ffffff',
-        )
-    );
-    drupal_add_html_head($theme_color, 'theme_color');
+    if (file_exists($icon_path)) {
+        $icon_path .= '/';
 
-    if (file_exists($_SERVER['DOCUMENT_ROOT'] . $icon_path . 'safari-pinned-tab.svg')) {
-        $mask_icon = array(
+        $theme_color = array(
             '#type' => 'html_tag',
-            '#tag' => 'link',
+            '#tag' => 'meta',
             '#attributes' => array(
-                'rel' => 'mask-icon',
-                'href' => $icon_path . 'safari-pinned-tab.svg',
-                'color' => '#5bbad5',
+                'name' => 'theme-color',
+                'content' => '#ffffff',
             )
         );
-        drupal_add_html_head($mask_icon, 'mask_icon');
+        drupal_add_html_head($theme_color, 'theme_color');
+
+        if (file_exists($_SERVER['DOCUMENT_ROOT'] . $icon_path . 'safari-pinned-tab.svg')) {
+            $mask_icon = array(
+                '#type' => 'html_tag',
+                '#tag' => 'link',
+                '#attributes' => array(
+                    'rel' => 'mask-icon',
+                    'href' => $icon_path . 'safari-pinned-tab.svg',
+                    'color' => '#5bbad5',
+                )
+            );
+            drupal_add_html_head($mask_icon, 'mask_icon');
+
+        }
+
+        if (file_exists($_SERVER['DOCUMENT_ROOT'] . $icon_path . 'manifest.json')) {
+            $manifest = array(
+                '#type' => 'html_tag',
+                '#tag' => 'link',
+                '#attributes' => array(
+                    'rel' => 'manifest',
+                    'href' => $icon_path . 'manifest.json',
+                )
+            );
+            drupal_add_html_head($manifest, 'manifest');
+        }
+
+        if (file_exists($_SERVER['DOCUMENT_ROOT'] . $icon_path . 'favicon-16x16.png')) {
+            $icon16 = array(
+                '#type' => 'html_tag',
+                '#tag' => 'link',
+                '#attributes' => array(
+                    'rel' => 'icon',
+                    'type' => 'image/png',
+                    'sizes' => '16x16',
+                    'href' => $icon_path . 'favicon-16x16.png',
+                )
+            );
+            drupal_add_html_head($icon16, 'icon16');
+        }
+
+        if (file_exists($_SERVER['DOCUMENT_ROOT'] . $icon_path . 'favicon-32x32.png')) {
+            $icon32 = array(
+                '#type' => 'html_tag',
+                '#tag' => 'link',
+                '#attributes' => array(
+                    'rel' => 'icon',
+                    'type' => 'image/png',
+                    'sizes' => '32x32',
+                    'href' => $icon_path . 'favicon-32x32.png',
+                )
+            );
+            drupal_add_html_head($icon32, 'icon32');
+        }
+
+        if (file_exists($_SERVER['DOCUMENT_ROOT'] . $icon_path . 'apple-touch-icon.png')) {
+            $appletouchicon = array(
+                '#type' => 'html_tag',
+                '#tag' => 'link',
+                '#attributes' => array(
+                    'rel' => 'apple-touch-icon',
+                    'sizes' => '180x180',
+                    'href' => $icon_path . 'apple-touch-icon.png',
+                )
+            );
+            drupal_add_html_head($appletouchicon, 'apple-touch-icon');
+        }
 
     }
 
-    if (file_exists($_SERVER['DOCUMENT_ROOT'] . $icon_path . 'manifest.json')) {
-        $manifest = array(
-            '#type' => 'html_tag',
-            '#tag' => 'link',
-            '#attributes' => array(
-                'rel' => 'manifest',
-                'href' => $icon_path . 'manifest.json',
-            )
-        );
-        drupal_add_html_head($manifest, 'manifest');
-    }
-
-    if (file_exists($_SERVER['DOCUMENT_ROOT'] . $icon_path . 'favicon-16x16.png')) {
-        $icon16 = array(
-            '#type' => 'html_tag',
-            '#tag' => 'link',
-            '#attributes' => array(
-                'rel' => 'icon',
-                'type' => 'image/png',
-                'sizes' => '16x16',
-                'href' => $icon_path . 'favicon-16x16.png',
-            )
-        );
-        drupal_add_html_head($icon16, 'icon16');
-    }
-
-    if (file_exists($_SERVER['DOCUMENT_ROOT'] . $icon_path . 'favicon-32x32.png')) {
-        $icon32 = array(
-            '#type' => 'html_tag',
-            '#tag' => 'link',
-            '#attributes' => array(
-                'rel' => 'icon',
-                'type' => 'image/png',
-                'sizes' => '32x32',
-                'href' => $icon_path . 'favicon-32x32.png',
-            )
-        );
-        drupal_add_html_head($icon32, 'icon32');
-    }
-
-    if (file_exists($_SERVER['DOCUMENT_ROOT'] . $icon_path . 'apple-touch-icon.png')) {
-        $appletouchicon = array(
-            '#type' => 'html_tag',
-            '#tag' => 'link',
-            '#attributes' => array(
-                'rel' => 'apple-touch-icon',
-                'sizes' => '180x180',
-                'href' => $icon_path . 'apple-touch-icon.png',
-            )
-        );
-        drupal_add_html_head($appletouchicon, 'apple-touch-icon');
-    }
 
   // The body tag's classes are controlled by the $classes_array variable. To
   // remove a class from $classes_array, use array_diff().
