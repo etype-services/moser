@@ -148,6 +148,10 @@
     }
 
     /* Main Menu */
+    #superfish-1 {
+        width: 100%;
+    }
+
     #block-superfish-1, #superfish-1, .superfish-1 {
         background: #000000;
         display: flex;
