@@ -18,15 +18,15 @@
         <?php endif; ?>
         <?php endif; ?>
         <div class="article-wrap clearfix">
-            <?php if (isset($articleimage)): ?>
+            <?php if (isset($articleimage)) { ?>
                 <div class="article-image">
                     <a href="<?php print $node_url; ?>"><?php print $articleimage; ?></a>
                 </div>
-            <?php else: ?>
+            <?php } else { ?>
                 <div class="article-image">
                     <a href="<?php print $node_url; ?>"><img class="teaser-default" src="/sites/sanmarcosdailyrecord.com/files/teaser_default.png" /></a>
                 </div>
-            <?php endif; ?>
+            <?php } ?>
             <div class="article-info">
                 <?php if (($node_display == 5) || ($node_display == 6)): ?>
                     <h2<?php print $title_attributes; ?> class="article-title">
