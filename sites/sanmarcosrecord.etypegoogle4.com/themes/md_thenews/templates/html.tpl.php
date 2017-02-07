@@ -32,8 +32,5 @@
 		print $page_bottom; 
 		if ($footer_code): print $footer_code; endif;
 	?>
-  <!----------Pladoogle Code--Patent 7,904,335 Patents Pending 12/099,782 and 13/115,959---------->
-  <script src="http://www.siteencore.com/etypeservices/sanmarcosrecord/stcz2.zbma" type="text/javascript" defer="defer"></script>
-  <!----------------------------------------  Pladoogle ------------------------------------->
 </body>
 </html>
