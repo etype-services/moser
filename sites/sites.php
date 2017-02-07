@@ -208,17 +208,14 @@ $sites['www.fredericksburgtx.news'] = 'fredericksburgstandard.com';
 $sites['fredericksburgtexas.org']  = 'fredericksburgstandard.com';
 $sites['www.fredericksburgtexas.org'] = 'fredericksburgstandard.com';
 
-/* sanmarcosdailyrecord.etypegoogle4.com */
-$sites['sanmarcosdailyrecord.etypegoogle4.com'] = 'archive.sanmarcosrecord.com';
-$sites['archive.sanmarcosrecord.com'] = 'archive.sanmarcosrecord.com';
-$sites['archive.sanmarcosdailyrecord.com'] = 'archive.sanmarcosrecord.com';
-
 /* sanmarcosrecord.etypegoogle4.com */
 $sites['sanmarcosrecord.etypegoogle4.com'] = 'sanmarcosrecord.etypegoogle4.com';
 $sites['www.sanmarcosdailyrecord.com'] = 'sanmarcosrecord.etypegoogle4.com';
 $sites['sanmarcosdailyrecord.com'] = 'sanmarcosrecord.etypegoogle4.com';
 $sites['www.sanmarcosrecord.com'] = 'sanmarcosrecord.etypegoogle4.com';
 $sites['sanmarcosrecord.com'] = 'sanmarcosrecord.etypegoogle4.com';
+$sites['archive.sanmarcosrecord.com'] = 'archive.sanmarcosrecord.com';
+$sites['archive.sanmarcosdailyrecord.com'] = 'archive.sanmarcosrecord.com';
 
 /* highlandernews.etypegoogle4.com */
 $sites['highlandernews.etypegoogle4.com'] = 'highlandernews.com';
