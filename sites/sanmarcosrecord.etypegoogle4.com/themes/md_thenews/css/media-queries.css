@@ -18,6 +18,10 @@
         height: 172px;
     }
 
+    #block-views-special_sections-block img {
+        height: 120px;
+    }
+
 }
 
 @media screen and (max-width: 1017px) {
