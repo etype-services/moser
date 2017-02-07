@@ -934,7 +934,7 @@ ul#main-menu-links li,
 }
 
 #superfish-2 li a {
-    background: url(../images/suvnav.png) no-repeat right center;
+    background: none;
     border: none;
     color: #666666;
     font-size: 11px;
