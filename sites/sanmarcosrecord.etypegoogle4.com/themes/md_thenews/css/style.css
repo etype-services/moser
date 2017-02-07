@@ -1643,10 +1643,15 @@ ul.quicktabs-tabs {
     padding: 0;
 }
 
-.ui-accordion .ui-accordion-content #block-block-11 img,
+.ui-accordion .ui-accordion-content #block-block-11 img {
+     width: 99%;
+     height: auto;
+     border: 1px solid #cccccc;
+ }
+
 .ui-accordion .ui-accordion-content #block-views-special_sections-block img{
     width: 99%;
-    height: auto;
+    height: 120px;
     border: 1px solid #cccccc;
 }
 
