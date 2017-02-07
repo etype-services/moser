@@ -10,6 +10,10 @@
         width: 650px;
     }
 
+    #block-views-special_sections-block .jcarousel-skin-default .jcarousel-container-horizontal {
+        height: 200px;
+    }
+
 }
 
 @media screen and (max-width: 1017px) {
