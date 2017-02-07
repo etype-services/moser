@@ -10,18 +10,6 @@
         width: 650px;
     }
 
-    #block-views-special_sections-block .jcarousel-skin-default .jcarousel-container-horizontal {
-        height: 200px;
-    }
-
-    #block-views-special_sections-block .jcarousel-skin-default .jcarousel-item {
-        height: 172px;
-    }
-
-    #block-views-special_sections-block .views-field-field-image img {
-        height: 120px;
-    }
-
 }
 
 @media screen and (max-width: 1017px) {
