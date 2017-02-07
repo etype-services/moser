@@ -14,6 +14,10 @@
         height: 200px;
     }
 
+    #block-views-special_sections-block .jcarousel-skin-default .jcarousel-item {
+        height: 172px;
+    }
+
 }
 
 @media screen and (max-width: 1017px) {
