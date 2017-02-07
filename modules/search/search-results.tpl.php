@@ -32,7 +32,7 @@
 <?php else : ?>
   <h2><?php print t('Your search yielded no results');?></h2>
     <ul>
-        <li>Check if your spelling is correct. Remove quotes around phrases to search for each word individually. For example, bike shed will often show more results than "bike shed." Also, consider loosening your query with "OR"  as bike OR shed will often show more results than bike shed. If you think your article was posted before Feb. 6, 2017, check out our digital archive records from our <a href="http://archive.sanmarcosrecord.com">old website</a> on the button below. If you still can\'t find what you\'re looking for there, feel free to contact us and we\'ll do our best to find what it is you seek.</li>
+        <li>Check if your spelling is correct. Remove quotes around phrases to search for each word individually. For example, bike shed will often show more results than “bike shed.” Also, consider loosening your query with “OR”  as bike OR shed will often show more results than bike shed. If you think your article was posted before February 6th, 2017, check out our digital archive records from our <a href="http://archive.sanmarcosrecord.com">old website</a> on the button below. If you still can’t find what you're looking for there, feel free to contact us and we’ll do our best to find what it is you seek.</li>
         <li>Thank you for your support, the San Marcos Daily Record.</li>
     </ul>
 <?php endif; ?>
