@@ -7,6 +7,10 @@
         margin: 2em auto;
     }
 
+    #block-menu-menu-secondary-menu {
+        margin-right: 0;
+    }
+
 }
 
 /* desktop break */
@@ -23,6 +27,7 @@
     #block-menu-menu-secondary-menu {
         float: right;
         height: 30px;
+        margin-right: 1em;
     }
 
     .region-header {
