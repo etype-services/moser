@@ -1650,8 +1650,7 @@ ul.quicktabs-tabs {
  }
 
 .ui-accordion .ui-accordion-content #block-views-special_sections-block img {
-    width: 99%;
-    height: 120px;
+    width: 100%;
     border: 1px solid #cccccc;
 }
 
@@ -3245,7 +3244,6 @@ div.admin-panel .description {
 }
 
 #block-views-special_sections-block .jcarousel-skin-default .jcarousel-container-horizontal,
-#block-views-special_sections-block .jcarousel-skin-default .jcarousel-clip-horizontal,
 #block-views-business_directory-block .jcarousel-skin-default .jcarousel-container-horizontal,
 #block-views-business_directory-block .jcarousel-skin-default .jcarousel-clip-horizontal {
     width: 410px;
