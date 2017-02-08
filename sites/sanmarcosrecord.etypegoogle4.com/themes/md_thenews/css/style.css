@@ -3304,7 +3304,7 @@ div.admin-panel .description {
 
 #block-views-editorspick-block .views-field-title a,
 #block-views-business_directory-block .views-field-title a,
-#block-quicktabs-accordion_block .blcontent a {
+#block-quicktabs-accordion_block .blcontent .blcontent a {
     color: #660000;
 }
 
