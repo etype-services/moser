@@ -24,7 +24,7 @@
                 </div>
             <?php } else { ?>
                 <div class="article-image">
-                    <a href="<?php print $node_url; ?>"><img class="teaser-default" src="/sites/sanmarcosdailyrecord.com/files/teaser_default.png" /></a>
+                    <a href="<?php print $node_url; ?>"><img class="teaser-default" src="/sites/sanmarcosrecord.etypegoogle4.com/files/teaser_default.png" /></a>
                 </div>
             <?php } ?>
             <div class="article-info">
