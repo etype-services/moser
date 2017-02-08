@@ -1218,8 +1218,7 @@ ul#main-menu-links li,
     margin-right: 0;
 }
 
-#editorspick .views-row,
-#block-views-special_sections-block .views-row {
+#editorspick .views-row {
     float: left;
     width: 140px;
 }
