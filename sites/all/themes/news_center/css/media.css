@@ -194,6 +194,16 @@
         color: #333333;
     }
 
+    #block-menu-menu-secondary-menu ul li.leaf,
+    #block-menu-menu-secondary-menu ul li.expanded {
+        padding: 0 0 0.3em 0.6em;
+    }
+
+    #block-menu-menu-secondary-menu ul li.leaf.last,
+    #block-menu-menu-secondary-menu ul li.expanded.last {
+        padding: 0 0 0.3em 0;
+    }
+
     a.back-to-top {
         display: none;
         visibility: hidden;
