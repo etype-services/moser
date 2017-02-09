@@ -1191,11 +1191,22 @@ ul#main-menu-links li,
     height: auto;
 }
 
-#editorspick .view-content,
+#editorspick .view-content {
+    overflow: hidden;
+    min-height: 162px;
+    margin-right: 0;
+}
+
 #block-views-special_sections-block .view-content {
     overflow: hidden;
     min-height: 162px;
     margin-right: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#block-views-special_sections-block .view-content .views-row {
+    width: 47%;
 }
 
 #block-views-editorspick-block li {
