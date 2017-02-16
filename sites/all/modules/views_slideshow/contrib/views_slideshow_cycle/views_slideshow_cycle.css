@@ -1,9 +1,9 @@
 
 .views_slideshow_cycle_no_display,
 .views_slideshow_cycle_hidden,
-.views_slideshow_cycle_controls,
+/*.views_slideshow_cycle_controls,
 .views-slideshow-controls-bottom,
-.views-slideshow-controls-top,
+.views-slideshow-controls-top,*/
 .views_slideshow_cycle_image_count {
   display: none;
 }
