@@ -5,5 +5,5 @@ body {
 
 /* marketplace nav item */
 #main-menu ul.menu li#menu-2444-1 {
-    background-color: orange;
+    background-color: orange !important;
 }
