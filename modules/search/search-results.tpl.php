@@ -31,6 +31,10 @@
   <?php print $pager; ?>
 <?php else : ?>
   <h2><?php print t('Your search yielded no results');?></h2>
-    <?php print search_help('search#noresults', drupal_help_arg()); ?>
+    <?php
+  global $site_name;
+  echo $site_name;
+  print search_help('search#noresults', drupal_help_arg());
+  ?>
 <?php endif; ?>
 
