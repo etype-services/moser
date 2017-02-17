@@ -97,6 +97,35 @@ function cni_preprocess_html(&$vars) {
         );
     }
 
+  /* add site setting css */
+  $nav_color = theme_get_setting('nav_color');
+  if (!empty($nav_color)) {
+    drupal_add_css(
+      '#block-superfish-1, .sf-menu.sf-style-space li, .sf-menu.sf-style-space li li, .sf-menu.sf-style-space li li li, .sf-menu.sf-style-space.sf-navbar {background: '. $nav_color .' !important;}',
+      array(
+        'group' => CSS_THEME,
+        'type' => 'inline',
+        'media' => 'screen',
+        'preprocess' => FALSE,
+        'weight' => '9999',
+      )
+    );
+  }
+
+  $body_background = theme_get_setting('body_background');
+  if (!empty($body_background)) {
+    drupal_add_css(
+      'body {background: '. $body_background .' !important;}',
+      array(
+        'group' => CSS_THEME,
+        'type' => 'inline',
+        'media' => 'screen',
+        'preprocess' => FALSE,
+        'weight' => '9999',
+      )
+    );
+  }
+
     /* add favicons */
     $icon_path = $base_path . $conf_path .'/files/favicons/';
 
