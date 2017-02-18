@@ -41,6 +41,7 @@ regions[content_bottom] = Content Bottom
 regions[postscript_1] = Postscript First
 regions[postscript_2] = Postscript Second
 regions[postscript_3] = Postscript Third
+regions[postscript_banner] = Postscript Banner
 regions[footer] = Footer
 
 settings[style] = 1

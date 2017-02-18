@@ -99,10 +99,15 @@
 
         <?php print render($page['content_bottom']); ?>
 
-        <?php if ($page['postscript_1'] || $page['postscript_2'] || $page['postscript_3'] || $page['postscript_4']): ?>
+        <?php if ($page['postscript_1'] || $page['postscript_2'] || $page['postscript_3']): ?>
             <div class="postscript-wrapper clearfix">
                 <div class="postscript-wrapper-inner">
                     <div class="postscript-wrapper-inner-inner">
+                        <section id="postscript">
+                            <div class="grid_4"><?php print render($page['postscript_1']); ?></div>
+                            <div class="grid_4"><?php print render($page['postscript_2']); ?></div>
+                            <div class="grid_4"><?php print render($page['postscript_3']); ?></div>
+                        </section>
                         <section id="postscript">
                             <div class="grid_4"><?php print render($page['postscript_1']); ?></div>
                             <div class="grid_4"><?php print render($page['postscript_2']); ?></div>
