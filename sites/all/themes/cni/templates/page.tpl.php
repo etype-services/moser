@@ -69,8 +69,7 @@
                             <?php endif; ?>
 
                             <?php if ($page['highlighted']): ?>
-                                <div
-                                        id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
+                                <div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
                             <?php print render($tabs); ?>
                             <?php if (!isset($node)): ?>
                                 <?php print render($title_prefix); ?>
@@ -83,8 +82,7 @@
                             <?php print render($page['help']); ?>
                             <?php print render($page['content']); ?>
                             <?php if ($action_links): ?>
-                                <ul
-                                        class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+                                <ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
                         </div>
 
                         <aside class="sidebar second-sidebar grid_4 clearfix">
@@ -108,11 +106,11 @@
                             <div class="grid_4"><?php print render($page['postscript_2']); ?></div>
                             <div class="grid_4"><?php print render($page['postscript_3']); ?></div>
                         </section>
-                      <?php if ($page['postscript_banner']): ?>
+
                         <section id="postscript_banner">
                             <div class="grid_12"><?php print render($page['postscript_banner']); ?></div>
                         </section>
-                      <?php endif; ?>
+
                     </div>
                 </div>
             </div>
