@@ -108,11 +108,11 @@
                             <div class="grid_4"><?php print render($page['postscript_2']); ?></div>
                             <div class="grid_4"><?php print render($page['postscript_3']); ?></div>
                         </section>
-                        <section id="postscript">
-                            <div class="grid_4"><?php print render($page['postscript_1']); ?></div>
-                            <div class="grid_4"><?php print render($page['postscript_2']); ?></div>
-                            <div class="grid_4"><?php print render($page['postscript_3']); ?></div>
+                      <?php if ($page['postscript_banner']) ;?>
+                        <section id="postscript_banner">
+                            <div class="grid_12"><?php print render($page['postscript_banner']); ?></div>
                         </section>
+                      <?php endif; ?>
                     </div>
                 </div>
             </div>
