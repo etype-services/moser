@@ -108,7 +108,7 @@
                             <div class="grid_4"><?php print render($page['postscript_2']); ?></div>
                             <div class="grid_4"><?php print render($page['postscript_3']); ?></div>
                         </section>
-                      <?php if ($page['postscript_banner']) ;?>
+                      <?php if ($page['postscript_banner']): ?>
                         <section id="postscript_banner">
                             <div class="grid_12"><?php print render($page['postscript_banner']); ?></div>
                         </section>
