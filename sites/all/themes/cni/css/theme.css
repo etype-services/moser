@@ -417,12 +417,12 @@ article .field-image {
 }
 
 /* font */
-#postscript p, #postscript div {
+#postscript p, #postscript a {
     font-family: 'Lato', sans-serif;
     font-size: 0.8em;
 }
 
-#postscript p > a {
+#postscript p a {
     font-size: 1em;
 }
 
