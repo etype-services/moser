@@ -422,6 +422,10 @@ article .field-image {
     font-size: 0.8em;
 }
 
+#postscript p > a {
+    font-size: 1em;
+}
+
 /* full width area in postscript */
 .region-postscript-banner {
     display: flex;
