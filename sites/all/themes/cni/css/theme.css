@@ -1345,6 +1345,11 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
     margin-bottom: 20px;
 }
 
+.region-main-menu-second-level .block-simpleads {
+    width: 728px;
+    margin: 20px auto 0;
+}
+
 /* center ads */
 .block-simpleads > div > div > div {
     display: flex;
