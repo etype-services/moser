@@ -1331,25 +1331,22 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
 }
 
 .region-main-menu .block-simpleads {
-    text-align: center;
     margin-bottom: 20px;
 }
 
 /* banner below menu */
 .region-main-menu-second-level .block-simpleads {
-    text-align: center;
     margin-top: 20px;
 }
 
 .slideshow-wrapper-inner .block-simpleads {
-    text-align: center;
     margin-bottom: 20px;
 }
 
-/* margin top and bottom */
+/* margin bottom */
 .region-content-bottom .block-simpleads {
     width: 728px;
-    margin: 0 auto 20px;
+    margin-bottom: 20px;
 }
 
 /* center ads */
