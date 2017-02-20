@@ -112,10 +112,11 @@ function cni_preprocess_html(&$vars) {
     );
   }
 
+  /* not using media to get smaller desktop browsers as well */
   $max_nav_width = theme_get_setting('max_nav_width');
   if (!empty($max_nav_width)) {
     drupal_add_css(
-      '@media only screen and (min-width: 959px) {#main-menu ul.menu {max-width: '. $max_nav_width .' !important;}}',
+      '#main-menu ul.menu {max-width: '. $max_nav_width .' !important;}',
       array(
         'group' => CSS_THEME,
         'type' => 'inline',
