@@ -12,7 +12,7 @@
         white-space: nowrap;
     }
 
-    #main-menu ul.menu li {
+    #main-menu ul.menu li, .sf-menu.sf-style-space {
         float: none;
     }
 
