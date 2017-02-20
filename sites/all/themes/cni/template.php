@@ -112,6 +112,20 @@ function cni_preprocess_html(&$vars) {
     );
   }
 
+  $max_nav_width = theme_get_setting('max_nav_width');
+  if (!empty($nav_color)) {
+    drupal_add_css(
+      '@media only screen and (min-width: 959px) {#main-menu ul.menu {max-width: '. $max_nav_width .' !important;}}',
+      array(
+        'group' => CSS_THEME,
+        'type' => 'inline',
+        'media' => 'screen',
+        'preprocess' => FALSE,
+        'weight' => '9999',
+      )
+    );
+  }
+
   $body_background = theme_get_setting('body_background');
   if (!empty($body_background)) {
     drupal_add_css(
