@@ -78,12 +78,23 @@
 /* desktop browsers */
 @media only screen and (max-width: 958px) and (min-width: 768px) {
 
+
+    /* main menu */
+    #block-superfish-1 .content {
+        width: 100%;
+    }
+
     #block-superfish-1 ul #menu-1797-1 {
         display: none;
     }
 
     #main-menu ul.menu {
         margin: 0;
+        white-space: nowrap;
+    }
+
+    #main-menu ul.menu li, .sf-menu.sf-style-space {
+        float: none;
     }
 
     #main-menu ul.menu li a, #main-menu ul.menu li li a, #main-menu ul.menu li li a.active {
