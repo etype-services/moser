@@ -12,6 +12,10 @@
         white-space: nowrap;
     }
 
+    #main-menu ul.menu li {
+        float: none;
+    }
+
     #main-menu ul.menu li ul {
         top: 32px;
     }
