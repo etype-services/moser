@@ -324,15 +324,6 @@
         background: none;
     }
 
-    .region-postscript-2 {
-        display: none;
-        visibility: hidden;
-    }
-
-    .region-postscript-4 {
-        margin-top: 1em;
-    }
-
     /* weather block */
     #block-block-1 .block-inner {
         border: none;
