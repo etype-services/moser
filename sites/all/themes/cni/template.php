@@ -81,7 +81,7 @@ function cni_preprocess_html(&$vars) {
     /* add site-specific css */
     $base_path = base_path();
     $conf_path = conf_path();
-    $site_css = $base_path . $conf_path . '/cni-site.css';
+    $site_css = $base_path . $conf_path . '/local.css';
 
     if (file_exists($_SERVER['DOCUMENT_ROOT'] . $site_css)) {
         drupal_add_css(
