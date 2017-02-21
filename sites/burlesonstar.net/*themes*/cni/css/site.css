@@ -1,0 +1,252 @@
+/* logo */
+.site-logo {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1152px;
+}
+
+.site-logo img {
+    width: 100%;
+    max-width: 1152px;
+}
+
+/* jCAROUSEL for PROMOS
+--------------------------------------------------------------------------*/
+
+#block-views-promos-block .views-row {
+    background: none;
+    border: none;
+    padding: 0;
+    width: 49%;
+}
+
+#block-views-promos-block .content {
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+
+#block-views-promos-block .content img{
+    width: 100%;
+    height: auto;
+}
+
+/* SIMPLE ADS
+--------------------------------------------------------------------------*/
+
+#block-simpleads-ad-groups-415 {
+    text-align: center;
+}
+
+#block-simpleads-ad-groups-415 img {
+    max-width: 100%;
+}
+
+#block-simpleads-ad-groups-416 {
+    text-align: center;
+    margin-top: 5px;
+}
+
+#block-simpleads-ad-groups-416 img {
+    max-width: 100%;
+}
+
+#block-simpleads-ad-groups-417 {
+    text-align: center;
+    margin-top: 5px;
+}
+
+#block-simpleads-ad-groups-417 img {
+    max-width: 100%;
+}
+
+#block-simpleads-ad-groups-418 {
+    text-align: center;
+}
+
+#block-simpleads-ad-groups-418 img {
+    max-width: 100%;
+}
+
+#block-simpleads-ad-groups-419 .block-inner {
+    padding: 0;
+    margin: 0;
+    border-style: none;
+    border-width: 0;
+    box-shadow: none;
+}
+
+#block-simpleads-ad-groups-419 img {
+    max-width: 100%;
+}
+
+#block-simpleads-ad-groups-420 .block-inner {
+    padding: 0;
+    margin: 0;
+    border-style: none;
+    border-width: 0;
+    box-shadow: none;
+}
+
+#block-simpleads-ad-groups-420 img {
+    max-width: 100%;
+}
+
+#block-simpleads-ad-groups-421 .block-inner {
+    padding: 0;
+    margin: 0;
+    border-style: none;
+    border-width: 0;
+    box-shadow: none;
+}
+
+#block-simpleads-ad-groups-421 img {
+    max-width: 100%;
+}
+
+#block-simpleads-ad-groups-422 .block-inner {
+    padding: 0;
+    margin: 0;
+    border-style: none;
+    border-width: 0;
+    box-shadow: none;
+}
+
+#block-simpleads-ad-groups-422 img {
+    max-width: 100%;
+}
+
+#block-simpleads-ad-groups-541 {
+    text-align: center;
+    margin-top: 5px;
+}
+
+#block-simpleads-ad-groups-541 img {
+    max-width: 100%;
+}
+
+#block-simpleads-ad-groups-426 .block-inner {
+    padding: 0;
+	margin: 0;
+	border-style: none;
+    border-width: 0;
+	box-shadow: none;
+}
+
+#block-simpleads-ad-groups-426 img {
+	max-width:100%;
+}
+
+#block-simpleads-ad-groups-427 .block-inner {
+    padding: 0;
+	margin: 0;
+	border-style: none;
+    border-width: 0;
+	box-shadow: none;
+}
+
+#block-simpleads-ad-groups-427 img {
+	max-width:100%;
+}
+
+#block-simpleads-ad-groups-541 {
+	text-align:center;
+	margin-top: 5px;
+}
+
+#block-simpleads-ad-groups-541 img {
+	max-width:100%;
+}
+
+#block-simpleads-ad-groups-542 .block-inner {
+    padding: 0;
+	margin: 0;
+	border-style: none;
+    border-width: 0;
+	box-shadow: none;
+}
+
+#block-simpleads-ad-groups-542 img {
+	max-width:100%;
+}
+
+#block-simpleads-ad-groups-543 .block-inner {
+    padding: 0;
+	margin: 0;
+	border-style: none;
+    border-width: 0;
+	box-shadow: none;
+}
+
+#block-simpleads-ad-groups-543 img {
+	max-width:100%;
+}
+
+#block-simpleads-ad-groups-874 .block-inner {
+    padding: 0;
+	margin: 0;
+	border-style: none;
+    border-width: 0;
+	box-shadow: none;
+}
+
+#block-simpleads-ad-groups-874 img {
+	max-width:100%;
+}
+
+#block-simpleads-ad-groups-875 .block-inner {
+    padding: 0;
+	margin: 0;
+	border-style: none;
+    border-width: 0;
+	box-shadow: none;
+}
+
+#block-simpleads-ad-groups-875 img {
+	max-width:100%;
+}
+
+#block-simpleads-ad-groups-876 .block-inner {
+    padding: 0;
+	margin: 0;
+	border-style: none;
+    border-width: 0;
+	box-shadow: none;
+}
+
+#block-simpleads-ad-groups-876 img {
+	max-width:100%;
+}
+
+/* Google DFP Ads
+--------------------------------------------------------------------------*/
+
+#block-dfp-tpa-northsidebar {
+	margin-bottom: 10px;
+}
+
+#block-dfp-tpa-northsidebar .block-inner {
+    padding: 0;
+	margin: 0;
+	border-style: none;
+    border-width: 0;
+	box-shadow: none;
+}
+
+#block-dfp-tpa-northleaderboard {
+	text-align:center;
+	margin-top: 5px;
+}
+
+/* GALLERIA */
+.galleria-theme-classic .galleria-info-text {
+    background-image: url(../images/trans.png);
+    padding: 2px;
+}
+
+.galleria-theme-classic .galleria-info {
+    width: 100%;
+    bottom: 53px;
+    top: inherit;
+    left: 5px;
+}
