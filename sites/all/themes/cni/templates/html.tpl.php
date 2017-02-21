@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?php print $language->language; ?>"
-      dir="<?php print $language->dir; ?>" <?php print $rdf_namespaces; ?>>
+<html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" <?php print $rdf_namespaces; ?>>
 
 <head>
     <?php print $head; ?>
@@ -14,6 +13,7 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script language=javascript src="http://lightningstream.surfernetwork.com/Media/player/scripts/launch.js"> </script>
 </head>
 
 <body class="<?php print $classes; ?>"<?php print $attributes; ?>>
