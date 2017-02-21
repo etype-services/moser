@@ -173,6 +173,13 @@ function bones_form_system_theme_settings_alter(&$form, $form_state) {
     '#default_value' => theme_get_setting('googleplus'),
   );
 
+  $form['advanced_settings']['misc_settings']['rssfeed'] = array(
+    '#type' => 'textfield',
+    '#title' => t('RSS Feed'),
+    '#size' => 10,
+    '#default_value' => theme_get_setting('rssfeed'),
+  );
+
   $form['advanced_settings']['misc_settings']['e_edition'] = array(
     '#type' => 'textfield',
     '#title' => t('e-Edition'),
