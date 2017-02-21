@@ -631,10 +631,6 @@
         width: 49% !important;
     }
 
-    .region-postscript-4 {
-        margin-top: 1em;
-    }
-
     /* weather block */
     #block-block-1 .block-inner {
         border: none;
@@ -663,8 +659,8 @@
         visibility: hidden;
     }
 
-    /* space for Follow Block */
-    .region-postscript-3 .block {
+    /* space for Menus and Follow Blocks */
+    .region-postscript-2, .region-postscript-3 {
         margin-top: 1em;
     }
 
