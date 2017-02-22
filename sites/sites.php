@@ -127,6 +127,7 @@ $sites['www.aransaspassprogress.net'] = 'aransaspassprogress.com';
 $sites['jacksonconews.etypegoogle4.com'] = 'jacksonconews.com';
 $sites['www.jacksonconews.com'] = 'jacksonconews.com';
 $sites['jacksonconews.com'] = 'jacksonconews.com';
+$sites['jacksonconewscni.etypegoogle4.com'] = 'jacksonconews.etypegoogle4.com';
 
 /* atlantacitizensjournal.etypegoogle4.com */
 $sites['atlantacitizensjournal.etypegoogle4.com'] = 'atlantacitizensjournal.com';

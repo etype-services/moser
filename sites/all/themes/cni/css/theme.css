@@ -1007,6 +1007,10 @@ article .field-image {
     background: url(../images/instagram.png) no-repeat;
 }
 
+.googleplus {
+    background: url(../images/googleplus.png) no-repeat;
+}
+
 /* MISC
 --------------------------------------------------------------------------*/
 
@@ -1317,7 +1321,45 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
     margin: 0 auto 20px;
 }
 
-.preface-wrapper .block-dfp .content, .sidebar .block-dfp .content {
+.preface-wrapper .block-dfp .content, .sidebar .block-dfp .content  {
+    padding: 0;
+}
+
+/* SIMPLE ADS
+--------------------------------------------------------------------------*/
+
+#main-content .block-simpleads .block-inner {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.region-main-menu .block-simpleads {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.region-main-menu-second-level .block-simpleads {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.slideshow-wrapper-inner .block-simpleads {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* OWN LOCAL
+--------------------------------------------------------------------------*/
+#block-etype-own-local .block-inner {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+}
+
+#block-etype-own-local .block-inner .content {
     padding: 0;
 }
 
