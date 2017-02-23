@@ -357,7 +357,7 @@ article .field-image {
 .postscript-wrapper h3 {
     display: block;
     margin-bottom: 0.4em;
-    line-height: 1.4em;
+    line-height: 1.4em; /* for titles that go to second line */
 }
 
 .postscript-wrapper h3 span {
