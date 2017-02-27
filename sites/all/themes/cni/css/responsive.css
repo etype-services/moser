@@ -79,8 +79,9 @@
 
     /* galleria */
     .galleria-theme-classic .galleria-info {
-        left: 0;
-        width: 215px;
+        left: 12px;
+        width: 555px;
+        bottom: 90px;
     }
 
 }
