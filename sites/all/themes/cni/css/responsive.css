@@ -213,8 +213,9 @@
 
     /* galleria */
     .galleria-theme-classic .galleria-info {
-        left: 0;
-        width: 150px;
+        left: 12px;
+        width: 400px;
+        bottom: 90px;
     }
 
 }
