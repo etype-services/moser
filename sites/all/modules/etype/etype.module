@@ -186,12 +186,13 @@ function _etype_ownlocal_content() {
 }
 
 function _etype_e_edition_content() {
-    $e_edition = theme_get_setting('e_edition');
-    $site_name = variable_get('site_name', 'Drupal');
-    $arr = preg_split("/ID[0-9]+/", $e_edition);
-    $fixed = $arr[0];
-    $output = '
-<p class="rtecenter" style="text-align: center;"><a href="http://etypeservices.com/' . $e_edition . '/"><img src="http://etypeservices.com/LandingPageImages/' . $fixed . '/currentpg1.jpg" width="193"></a></p><h4 class="rtecenter" style="text-align: center;"><a href="http://etypeservices.com/' . $e_edition . '/">Click here to read ' . $site_name . '</a></h4>
+  $e_edition = theme_get_setting('e_edition');
+  $site_name = variable_get('site_name', 'Drupal');
+  $arr = preg_split("/ID[0-9]+/", $e_edition);
+  $fixed = $arr[0];
+
+  $output = '
+<p class="rtecenter" style="text-align: center;"><a href="https://etypeservices.com/' . $e_edition . '/"><img src="https://etypeservices.com/LandingPageImages/' . $fixed . '/currentpg1.jpg" width="193"></a></p><h4 class="rtecenter" style="text-align: center;"><a href="https://etypeservices.com/' . $e_edition . '/">Click here to read ' . $site_name . '</a></h4>
 ';
     return $output;
 }
@@ -246,19 +247,6 @@ function etype_cronapi($op, $job = NULL) {
     return $items;
 }
 
-  $output = '
-<p class="rtecenter" style="text-align: center;"><a href="https://etypeservices.com/' . $e_edition . '/"><img src="https://etypeservices.com/LandingPageImages/' . $fixed . '/currentpg1.jpg" width="193"></a></p><h4 class="rtecenter" style="text-align: center;"><a href="https://etypeservices.com/' . $e_edition . '/">Click here to read ' . $site_name . '</a></h4>
-';
-  return $output;
-}
-
-$ownlocal_path = drupal_get_path('module', 'etype') . '/ownlocal/ownlocal.js';
-if (file_exists($ownlocal_path)) {
-    drupal_add_js(drupal_get_path('module', 'etype') . '/ownlocal/ownlocal.js', 'file');
-    drupal_add_css(drupal_get_path('module', 'etype') . '/ownlocal/ownlocal.css', array('group' => CSS_THEME, 'type' => 'file'));
-
-}
-
 /**
  * add e-Edition link to user menu
  * @return array
@@ -267,6 +255,7 @@ function etype_menu() {
 
   $items = array();
 
+  /* add e-Edition link to user menu */
   $items['e-edition'] = array(
     'title' => 'e-Edition',
     'description' => 'Link to e-Edition.',
