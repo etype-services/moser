@@ -1,6 +1,34 @@
 <?php
 
 /**
+ * add e-Edition link to user menu
+ * @return array
+ */
+function etype_menu() {
+
+  $items = array();
+
+  /* add e-Edition link to user menu */
+  $items['e-edition'] = array(
+    'title' => 'e-Edition',
+    'description' => 'Link to e-Edition.',
+    'page callback' => '_etype_e_edition',
+    'access arguments' => array('access content'),
+    'menu_name' => 'user-menu',
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  $items['etype-node-cleanup'] = array(
+    'title' => t('Cleanup Classified Ads'),
+    'page callback' => 'etype_node_cleanup',
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access administration pages')
+  );
+
+  return $items;
+}
+
+/**
  * Implements hook_block_info().
  */
 function etype_block_info() {
@@ -248,34 +276,6 @@ function etype_cronapi($op, $job = NULL) {
 }
 
 /**
- * add e-Edition link to user menu
- * @return array
- */
-function etype_menu() {
-
-  $items = array();
-
-  /* add e-Edition link to user menu */
-  $items['e-edition'] = array(
-    'title' => 'e-Edition',
-    'description' => 'Link to e-Edition.',
-    'page callback' => '_etype_e_edition',
-    'access arguments' => array('access content'),
-    'menu_name' => 'user-menu',
-    'type' => MENU_NORMAL_ITEM,
-  );
-
-  $items['etype-node-cleanup'] = array(
-    'title' => t('Cleanup Classified Ads'),
-    'page callback' => 'etype_node_cleanup',
-    'type' => MENU_CALLBACK,
-    'access arguments' => array('access administration pages')
-    );
-
-  return $items;
-}
-
-/**
  * redirect to e-Edition
  */
 function _etype_e_edition() {
@@ -296,7 +296,6 @@ function etype_node_cleanup() {
         node_delete_multiple($nids);
     }
 }
-
 
 function etype_site_path() {
   $path = $_SERVER['DOCUMENT_ROOT'] . base_path() . conf_path();
