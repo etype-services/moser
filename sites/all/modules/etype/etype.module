@@ -296,3 +296,9 @@ function etype_node_cleanup() {
         node_delete_multiple($nids);
     }
 }
+
+
+function etype_site_path() {
+  $path = $_SERVER['DOCUMENT_ROOT'] . base_path() . conf_path();
+  return $path;
+}
