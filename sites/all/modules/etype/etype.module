@@ -80,24 +80,28 @@ function _etype_social_content() {
   $output = '
 <div id="social">
     <ul class="social-links">';
-  $facebook = theme_get_setting('facebook');
-  $twitter = theme_get_setting('twitter');
-  $pinterest = theme_get_setting('pinterest');
-  $instagram = theme_get_setting('instagram');
-  if (!empty($facebook)) {
-    $output .= '<li><a class="facebook" target="_blank" href="https://www.facebook.com/' . $facebook . '"></a></li>';
-  }
-  if (!empty($twitter)) {
-    $output .= '<li><a class="twitter" target="_blank" href="https://twitter.com/' . $twitter . '"></a></li>';
-  }
-  if (!empty($pinterest)) {
-    $output .= '<li><a class="pinterest" target="_blank" href="https://www.pinterest.com/' . $pinterest . '"></a></li>';
-  }
-  if (!empty($instagram)) {
-    $output .= '<li><a class="instagram" target="_blank" href="https://instagram.com/' . $instagram . '"></a></li>';
-  }
-  $output .= '</ul></div>';
-  return $output;
+    $facebook = theme_get_setting('facebook');
+    $twitter = theme_get_setting('twitter');
+    $pinterest = theme_get_setting('pinterest');
+    $instagram = theme_get_setting('instagram');
+    $googleplus = theme_get_setting('googleplus');
+    if (!empty($facebook)) {
+        $output .= '<li><a class="facebook" href="https://www.facebook.com/' . $facebook . '"></a></li>';
+    }
+    if (!empty($twitter)) {
+        $output .= '<li><a class="twitter" href="https://twitter.com/' . $twitter . '"></a></li>';
+    }
+    if (!empty($pinterest)) {
+        $output .= '<li><a class="pinterest" href="https://www.pinterest.com/' . $pinterest . '"></a></li>';
+    }
+    if (!empty($instagram)) {
+        $output .= '<li><a class="instagram" href="https://instagram.com/' . $instagram . '"></a></li>';
+    }
+    if (!empty($googleplus)) {
+        $output .= '<li><a class="googleplus" href="https://plus.google.com/' . $googleplus . '"></a></li>';
+    }
+    $output .= '</ul></div>';
+    return $output;
 }
 
 /**
@@ -105,24 +109,28 @@ function _etype_social_content() {
  * @return null
  */
 function _etype_follow_content() {
-  $output = '';
-  $facebook = theme_get_setting('facebook');
-  $twitter = theme_get_setting('twitter');
-  $pinterest = theme_get_setting('pinterest');
-  $instagram = theme_get_setting('instagram');
-  if (!empty($facebook)) {
-    $output .= '<div class="facebook"><a href="https://www.facebook.com/' . $facebook . '" target="_blank">Like us on Facebook</a></div>';
-  }
-  if (!empty($twitter)) {
-    $output .= '<div class="twitter"><a href="https://twitter.com/' . $twitter . '" target="_blank">Follow us on Twitter</a></div>';
-  }
-  if (!empty($pinterest)) {
-    $output .= '<div class="pinterest"><a href="https://www.pinterest.com/' . $pinterest . '" target="_blank">Follow us on Pinterest</a></div>';
-  }
-  if (!empty($instagram)) {
-    $output .= '<div class="instagram"><a href="https://instagram.com/' . $instagram . '" target="_blank">Follow us on Instagram</a></div>';
-  }
-  return $output;
+    $output = '';
+    $facebook = theme_get_setting('facebook');
+    $twitter = theme_get_setting('twitter');
+    $pinterest = theme_get_setting('pinterest');
+    $instagram = theme_get_setting('instagram');
+    $googleplus = theme_get_setting('googleplus');
+    if (!empty($facebook)) {
+        $output .= '<div class="facebook"><a href="https://www.facebook.com/' . $facebook . '">Like us on Facebook</a></div>';
+    }
+    if (!empty($twitter)) {
+        $output .= '<div class="twitter"><a href="https://twitter.com/' . $twitter . '">Follow us on Twitter</a></div>';
+    }
+    if (!empty($pinterest)) {
+        $output .= '<div class="pinterest"><a href="https://www.pinterest.com/' . $pinterest . '">Follow us on Pinterest</a></div>';
+    }
+    if (!empty($instagram)) {
+        $output .= '<div class="instagram"><a href="https://instagram.com/' . $instagram . '">Follow us on Instagram</a></div>';
+    }
+    if (!empty($googleplus)) {
+        $output .= '<div class="googleplus"><a href="https://plus.google.com/' . $googleplus . '">Follow us on Google Plus</a></div>';
+    }
+    return $output;
 }
 
 /**
@@ -160,20 +168,75 @@ function _etype_twitter_content() {
  * @return string
  */
 function _etype_ownlocal_content() {
-  $output = '';
-  $path = path_to_theme();
-  $file = '/data/web/public/drupal/' . $path . '/templates/ownlocal.html';
-  if (file_exists($file)) {
-    $output .= file_get_contents($file);
-  }
-  return $output;
+    $output = '';
+    $path = etype_site_path();
+    $file = $path . '/ownlocal.html';
+    if (file_exists($file)) {
+        $output .= file_get_contents($file);
+    }
+    return $output;
 }
 
 function _etype_e_edition_content() {
-  $e_edition = theme_get_setting('e_edition');
-  $site_name = variable_get('site_name', 'Drupal');
-  $arr = preg_split("/ID[0-9]+/", $e_edition);
-  $fixed = $arr[0];
+    $e_edition = theme_get_setting('e_edition');
+    $site_name = variable_get('site_name', 'Drupal');
+    $arr = preg_split("/ID[0-9]+/", $e_edition);
+    $fixed = $arr[0];
+    $output = '
+<p class="rtecenter" style="text-align: center;"><a href="http://etypeservices.com/' . $e_edition . '/"><img src="http://etypeservices.com/LandingPageImages/' . $fixed . '/currentpg1.jpg" width="193"></a></p><h4 class="rtecenter" style="text-align: center;"><a href="http://etypeservices.com/' . $e_edition . '/">Click here to read ' . $site_name . '</a></h4>
+';
+    return $output;
+}
+
+$etype_site_path = etype_site_path();
+$own_local_file = $etype_site_path . '/ownlocal/ownlocal.js';
+if (file_exists($own_local_file)) {
+    drupal_add_js($etype_site_path . '/ownlocal/ownlocal.js', 'file');
+    drupal_add_css($etype_site_path . '/ownlocal/ownlocal.css', array(
+        'group' => CSS_THEME,
+        'type' => 'file'
+    ));
+}
+
+/**
+ * Cron Jobs
+ * @param $op
+ * @param null $job
+ * @return mixed
+ */
+function etype_cronapi($op, $job = NULL) {
+
+    $cron_schedule = ''; // set in include file, just to avoid IDE errors
+    $etype_site_path = etype_site_path();
+    include($etype_site_path . '/etype_settings.php');
+
+    /* run job at 7:30am Eastern every Wednesday */
+    $items['etype_cron'] = array(
+        'title' => 'Import Classified Ads',
+        'module' => 'etype',
+        'callback' => 'etype_classified_ad_importer',
+        'scheduler' => array(
+            'name' => 'crontab',
+            'crontab' => array(
+                'rules' => array($cron_schedule),
+            ),
+        ),
+    );
+
+    $items['cache_clear_cron'] = array(
+        'title' => 'Clear Cache',
+        'module' => 'etype',
+        'callback' => 'etype_clear_cache',
+        'scheduler' => array(
+            'name' => 'crontab',
+            'crontab' => array(
+                'rules' => array('*/30 * * * *'),
+            ),
+        ),
+    );
+
+    return $items;
+}
 
   $output = '
 <p class="rtecenter" style="text-align: center;"><a href="https://etypeservices.com/' . $e_edition . '/"><img src="https://etypeservices.com/LandingPageImages/' . $fixed . '/currentpg1.jpg" width="193"></a></p><h4 class="rtecenter" style="text-align: center;"><a href="https://etypeservices.com/' . $e_edition . '/">Click here to read ' . $site_name . '</a></h4>
