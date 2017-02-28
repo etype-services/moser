@@ -1462,3 +1462,16 @@ article.node-webform .node-content-wrapper h1.title {
 .galleria-theme-classic .galleria-thumb-nav-right, .galleria-theme-classic .galleria-thumb-nav-keft {
     top: 4px;
 }
+
+/* flexslider */
+.flexslider {
+    font: 0.8em/1.4 lato;
+}
+
+.flex-direction-nav {
+    list-style: none;
+}
+
+ul.slides {
+    margin: 0;
+}
