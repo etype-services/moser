@@ -1478,6 +1478,8 @@ ul.flex-direction-nav {
     list-style: none;
 }
 
+.content .node-page ul.slides,
+.content .node-article ul.slides,
 ul.slides {
     margin: 0;
 }
