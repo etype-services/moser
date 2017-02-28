@@ -76,9 +76,9 @@ if($Password==$resp->GetPasswordByUserNameResult)
        <!-- <h4  style="background:gray;line-height: 2.0em;font-size: 16px;"><center>My Account</center></h4>-->
       
      
-            <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-                          <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-                          <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+            <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+                          <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+                          <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
                           
                           <script>
                           $(function() {
