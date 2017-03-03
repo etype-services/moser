@@ -28,9 +28,39 @@ function cni_preprocess_node(&$variables) {
         $variables['classes_array'] = array_merge($variables['classes_array'], $node->classes_array);
     }
 
-    if (node_is_page($node) !== FALSE) {
-        drupal_add_js('//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56e774978692f861', 'external');
-    }
+  // include login and sub templates
+  $alias = drupal_get_path_alias();
+  $theme_path = path_to_theme();
+  $path = $_SERVER['DOCUMENT_ROOT'] . '/' . $theme_path . '/templates/';
+  switch ($alias) {
+    case 'login':
+      $replace_file = $path . 'login.tpl.php';
+      break;
+
+    case 'forgot-password':
+      $replace_file = $path . 'forgot-password.tpl.php';
+      break;
+
+    case 'my-account':
+      $replace_file = $path . 'my-account.tpl.php';
+      break;
+  }
+
+  if (isset($replace_file)) {
+    $variables['replace_file'] = $replace_file;
+  }
+
+  /* add extra classes */
+  $node = $variables['node'];
+  if (!empty($node->classes_array)) {
+    $variables['classes_array'] = array_merge($variables['classes_array'], $node->classes_array);
+  }
+
+  /* add addthis script to pages, ie, not teasers */
+  if (node_is_page($node) !== FALSE) {
+    drupal_add_js('//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56e774978692f861', 'external');
+  }
+
 }
 
 /* Breadcrumbs */

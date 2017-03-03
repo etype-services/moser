@@ -77,13 +77,6 @@
         width: 286px;
     }
 
-    /* galleria */
-    .galleria-theme-classic .galleria-info {
-        left: 12px;
-        width: 555px;
-        bottom: 90px;
-    }
-
 }
 
 /* desktop browsers */
@@ -209,13 +202,6 @@
 
     .container_12 #postscript .grid_4 {
         width: 30%;
-    }
-
-    /* galleria */
-    .galleria-theme-classic .galleria-info {
-        left: 0;
-        width: 450px;
-        bottom: 95px;
     }
 
 }
@@ -349,13 +335,6 @@
     .region-content-bottom .block-dfp, .region-main-menu-second-level .block-dfp {
         display: none;
         visibility: hidden;
-    }
-
-    /* galleria fixes */
-    .galleria-theme-classic .galleria-info {
-        width: 100%;
-        top: 10px;
-        left: 0;
     }
 }
 
@@ -509,13 +488,6 @@
         visibility: hidden;
     }
 
-    /* galleria fixes */
-    .galleria-theme-classic .galleria-info {
-        width: 100%;
-        top: 10px;
-        left: 0;
-    }
-
 }
 
 /* smaller phones */
@@ -665,12 +637,6 @@
         visibility: hidden;
     }
 
-    /* galleria fixes */
-    .galleria-theme-classic .galleria-info {
-        width: 100%;
-        top: 10px;
-        left: 0;
-    }
 }
 
 /* less granular switch for big and small */
