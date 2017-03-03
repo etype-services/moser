@@ -13,7 +13,7 @@
     }
 
     #main-menu ul.menu li, .sf-menu.sf-style-space {
-        float: left;
+        float: none;
     }
 
     #main-menu ul.menu li ul {
