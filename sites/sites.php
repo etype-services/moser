@@ -77,6 +77,7 @@ $sites['www.wimberleyview.com'] = 'wimberleyview.com';
 
 $sites['century-news.com'] = 'wimberleyview.com';
 $sites['www.century-news.com'] = 'wimberleyview.com';
+$sites['sliderads.etypegoogle4.com'] = 'wimberleyview.com';
 
 /* olneyenterprise.etypegoogle4.com */
 $sites['olneyenterprise.etypegoogle4.com'] = 'olneyenterprise.com';
