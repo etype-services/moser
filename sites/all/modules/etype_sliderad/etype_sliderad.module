@@ -22,9 +22,17 @@ function etype_sliderad_block_view($delta = '') {
 
     case 'Slider Ad':
       $block['subject'] = '';
-      $block['content'] = 'Add here';
+      $block['content'] = etype_sliderad_content();
       break;
   }
 
   return $block;
+}
+
+/**
+ *
+ */
+function etype_sliderad_content() {
+  $output = "<p>Slider Ad</p>";
+  return $output;
 }
