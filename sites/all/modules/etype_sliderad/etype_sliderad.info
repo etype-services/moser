@@ -1,0 +1,6 @@
+name = eType Services Slider Ad Block
+description = Adds a Slider Ad Block and Content Type.
+package = eType Services Custom Modules
+core = 7.x
+project = "etype"
+dependencies[] = entity

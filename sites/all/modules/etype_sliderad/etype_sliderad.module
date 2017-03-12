@@ -1,0 +1,30 @@
+<?php
+
+
+/**
+ * Implements hook_block_info().
+ */
+function etype_block_info() {
+  $blocks = array();
+
+  $blocks['Slider Ad'] = array(
+    'info' => t('Slider Ad'),
+  );
+
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function etype_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+
+    case 'Slider Ad':
+      $block['subject'] = '';
+      $block['content'] = '';
+      break;
+  }
+
+  return $block;
+}
