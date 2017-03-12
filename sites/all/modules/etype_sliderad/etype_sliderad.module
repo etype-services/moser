@@ -22,7 +22,7 @@ function etype_block_view($delta = '') {
 
     case 'Slider Ad':
       $block['subject'] = '';
-      $block['content'] = '';
+      $block['content'] = 'Add here';
       break;
   }
 
