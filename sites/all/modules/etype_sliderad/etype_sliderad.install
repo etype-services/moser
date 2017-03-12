@@ -159,7 +159,7 @@ function etype_sliderad_install() {
     'entity_type' => 'node',
     'bundle' => 'sliderad',
     'label' => $t('Status'),
-    'description' => $t('Please use this field to show or hide ads even if the ad is active and published.'),
+    'description' => $t('Please use this field to show or hide ads.'),
     'required' => FALSE,
     'widget' => array(
       'type' => 'options_onoff',
