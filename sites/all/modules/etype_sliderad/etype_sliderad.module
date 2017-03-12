@@ -1,8 +1,6 @@
 <?php
-
-
 /**
- * Implements hook_block_info().
+ * Implements hook_block_info()
  */
 function etype_sliderad_block_info() {
   $blocks = array();
@@ -14,7 +12,9 @@ function etype_sliderad_block_info() {
 }
 
 /**
- * Implements hook_block_view().
+ * @param string $delta
+ * @return array
+ * Implements hook_block_view()
  */
 function etype_sliderad_block_view($delta = '') {
   $block = array();
