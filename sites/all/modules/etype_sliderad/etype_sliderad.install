@@ -27,7 +27,7 @@ function etype_sliderad_install() {
 
   node_type_save($node_type); // Save the node type object
 
-  // not creating fields are we will user Simple Ad Fields
+  // not creating fields are we will use Simple Ad Fields
 
   // Add Image Instance
   $instance = array(
