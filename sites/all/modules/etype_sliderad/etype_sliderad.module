@@ -42,7 +42,7 @@ function etype_sliderad_content() {
     ->execute();
   $nodes = node_load_multiple(array_keys($result['node']));
 
-  print_r($nodes);
+  // print_r($nodes);
 
   $output = "<p>Slider Ad</p>";
   return $output;
