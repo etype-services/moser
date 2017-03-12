@@ -9,7 +9,7 @@
 (function ($) {
     Drupal.behaviors.sliderad = {
         attach: function(context) {
-            $('#edit-field-ad-end-date').show();
+            $('.node-sliderad-form #edit-field-ad-end-date').show();
         }
     };
 }(jQuery));
