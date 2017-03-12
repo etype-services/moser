@@ -9,6 +9,8 @@ function etype_sliderad_block_info() {
     'info' => t('Slider Ad'),
   );
 
+  return $blocks;
+
 }
 
 /**
