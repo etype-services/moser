@@ -35,6 +35,15 @@ function etype_sliderad_block_view($delta = '') {
  *
  */
 function etype_sliderad_content() {
+
+  $query = new EntityFieldQuery();
+  $result = $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'sliderad')
+    ->execute();
+  $nodes = node_load_multiple(array_keys($result['node']));
+
+  print_r($nodes);
+
   $output = "<p>Slider Ad</p>";
   return $output;
 }
