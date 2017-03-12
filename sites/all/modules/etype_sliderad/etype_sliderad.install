@@ -200,7 +200,7 @@ function etype_sliderad_install() {
 /**
  * Implements hook_uninstall().
  */
-function etype_slider_uninstall()
+function etype_sliderad_uninstall()
 {
 
   // Remove existing content
