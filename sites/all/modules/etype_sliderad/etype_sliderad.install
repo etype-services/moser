@@ -41,8 +41,34 @@ function etype_sliderad_install() {
   node_type_save($node_type); // Save the node type object
 
   // not creating all fields are we will use some Simple Ad Fields
+  $fields = array(
+    array(
+      'field_name' => 'field_sliderad_start_time',
+      'type' => 'text',
+      'cardinality' => 1,
+      'translatable' => TRUE,
+      'settings' => array(
+        'max_length' => 255,
+      ),
+      'translatable' => TRUE,
+      'entity_types' => array(),
+    ),
+    array(
+      'field_name' => 'field_sliderad_end_time',
+      'type' => 'text',
+      'cardinality' => 1,
+      'translatable' => TRUE,
+      'settings' => array(
+        'max_length' => 255,
+      ),
+      'translatable' => TRUE,
+      'entity_types' => array(),
+    ),
+  );
 
-  // field_sliderad_end_date because field_ad_end_date has some
+  foreach ($fields as $field) {
+    field_create_field($field);
+  }
 
   // Add Image Instance
   $instance = array(
@@ -215,8 +241,7 @@ function etype_sliderad_install() {
 /**
  * Implements hook_uninstall().
  */
-function etype_sliderad_uninstall()
-{
+function etype_sliderad_uninstall() {
 
   // Remove existing content
   $query = 'SELECT nid ';
@@ -229,7 +254,10 @@ function etype_sliderad_uninstall()
     $nids[] = $row->nid;
   }
 
-  node_delete_multiple( $nids );
+  node_delete_multiple($nids);
+
+  field_delete_field('field_sliderad_start_time');
+  field_delete_field('field_sliderad_end_time');
 
   // Delete fields instances
   foreach( field_info_instances('node', 'sliderad') as $field_name	=> $instance ) {
@@ -240,6 +268,8 @@ function etype_sliderad_uninstall()
   node_type_delete('sliderad');
 
   // Purge field batch
-  field_purge_batch(1000); // Purge delete fields data
+  field_purge_batch(1000); // Purge deleted fields data
+
+  node_types_rebuild();
 
 }
