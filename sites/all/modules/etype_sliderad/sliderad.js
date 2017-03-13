@@ -28,6 +28,19 @@
             var dir = new Array();
             var mousedover = false;
 
+            function slidetick(objname) {
+                var elapsed = (new Date()).getTime() - startTime[objname];
+                if (elapsed > slideAniLen) {
+                    endSlide(objname);
+                } else {
+                    var d =Math.round(elapsed / slideAniLen * endHeight[objname]);
+                    if(dir[objname] == "up")
+                        d = endHeight[objname] - d;
+                    obj[objname].style.height = d + "px";
+                }
+                return;
+            }
+
             function slidedown(objname){
                 if(moving[objname])
                     return;
@@ -43,6 +56,7 @@
 //img.src = "http://localhost/add_mouseover_counter.php?tileID=" + TILE_ID;
                 }
             }
+
             function slideup(objname){
                 if(moving[objname])
                     return;
@@ -52,7 +66,8 @@
                 dir[objname] = "up";
                 startslide(objname);
             }
-            function startslide(objname){
+
+            function startslide(objname) {
                 obj[objname] = document.getElementById(objname);
                 endHeight[objname] = parseInt(obj[objname].style.height);
                 startTime[objname] = (new Date()).getTime();
@@ -62,18 +77,7 @@
                 obj[objname].style.display = "block";
                 timerID[objname] = setInterval('slidetick(\'' + objname + '\');',timerlen);
             }
-            function slidetick(objname){
-                var elapsed = (new Date()).getTime() - startTime[objname];
-                if (elapsed > slideAniLen)
-                    endSlide(objname)
-                else {
-                    var d =Math.round(elapsed / slideAniLen * endHeight[objname]);
-                    if(dir[objname] == "up")
-                        d = endHeight[objname] - d;
-                    obj[objname].style.height = d + "px";
-                }
-                return;
-            }
+
             function endSlide(objname){
                 clearInterval(timerID[objname]);
                 if(dir[objname] == "up")
