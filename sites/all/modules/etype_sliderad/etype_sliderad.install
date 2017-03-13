@@ -41,7 +41,29 @@ function etype_sliderad_install() {
 
   node_type_save($node_type); // Save the node type object
 
-  // not creating fields -- use some SimpleAd Fields
+  // not creating all fields are we will use some Simple Ad Fields
+  $fields = array(
+    array(
+      'field_name' => 'field_ad_large_image',
+      'type' => 'image',
+      'cardinality' => 1,
+      'translatable' => TRUE,
+      'locked' => FALSE,
+      'indexes' => array('fid' => array('fid')),
+      'settings' => array(
+        'uri_scheme' => 'public',
+        'default_image' => FALSE,
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+      ),
+    )
+  );
+
+  foreach ($fields as $field) {
+    field_create_field($field);
+  }
 
   // Add Image Instance
   $instance = array(
@@ -49,7 +71,52 @@ function etype_sliderad_install() {
     'entity_type' => 'node',
     'label' => $t('Slider Ad Image'),
     'bundle' => 'sliderad',
-    'description' => $t('Upload an image for this Ad.'),
+    'description' => $t('Upload a collapsed image for this Ad.'),
+    'required' => FALSE,
+
+    'settings' => array(
+      'file_directory' => 'field/image',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'alt_field' => TRUE,
+      'title_field' => '',
+    ),
+
+    'widget' => array(
+      'type' => 'image_image',
+      'settings' => array(
+        'progress_indicator' => 'throbber',
+        'preview_image_style' => 'thumbnail',
+      ),
+      'weight' => -2,
+    ),
+
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'type' => 'image',
+        'settings' => array('image_style' => 'large', 'image_link' => ''),
+        'weight' => -1,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'type' => 'image',
+        'settings' => array('image_style' => 'medium', 'image_link' => 'content'),
+        'weight' => -1,
+      ),
+    ),
+  );
+  field_create_instance($instance);
+
+  // Add Large Image Instance
+  $instance = array(
+    'field_name' => 'field_ad_large_image',
+    'entity_type' => 'node',
+    'label' => $t('Slider Ad Large Image'),
+    'bundle' => 'sliderad',
+    'description' => $t('Upload a large image for this Ad.'),
     'required' => FALSE,
 
     'settings' => array(
@@ -228,6 +295,8 @@ function etype_sliderad_uninstall() {
   }
 
   node_delete_multiple($nids);
+
+  field_delete_field('field_ad_large_image');
 
   // Delete fields instances
   foreach( field_info_instances('node', 'sliderad') as $field_name	=> $instance ) {

@@ -72,7 +72,14 @@ function etype_sliderad_content() {
   $image = $wrapper->field_ad_image->value();
   $path = file_create_url($image['uri']);
 
-  $output = "<p>Slider Ad  $start_date $end_date <img src=\"$path\" alt='\"Advertisement\" />'</p>";
+  $output = "
+  <div id=\"topslider\">
+<div id=\"adone\" style=\"width:100%; padding:0;\">
+<a href=\"http://www.cfdn.org\" target=\"_blank\" class=\"external-processed\"><img style=\"width:100%;\" id=\"billboard_628x45\" src=\"$path\"></a></div> 
+<div id=\"adtwo\" style=\"position: relative; width: 100%; display: none; overflow: hidden;\"><img style=\"width:100%;\" id=\"billboard_628x300\" src=\"/sites/default/Slider_ads/ads/billboard_628x300.jpg\"></div>
+</div>
+<script src=\"/sites/default/Slider_ads/billboard_1000x300.js\" type=\"text/javascript\"></script>
+";
   return $output;
 }
 
