@@ -45,6 +45,8 @@ function etype_sliderad_content() {
     ->range(0,1)
     ->execute();
   $nodes = node_load(array_keys($result['node']));
+  print_r($nodes);
+  exit;
 
   $node = $nodes[0];
   $wrapper = entity_metadata_wrapper('node', $node);
