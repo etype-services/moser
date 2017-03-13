@@ -73,7 +73,7 @@ function etype_sliderad_content() {
 
     $image = $wrapper->field_ad_image->value();
     $path = file_create_url($image['uri']);
-    $large_image = $wrapper->field_ad_image->value();
+    $large_image = $wrapper->field_ad_large_image->value();
     $large_path = file_create_url($large_image['uri']);
 
     $output = "
