@@ -49,7 +49,8 @@ function etype_sliderad_content() {
 }
 
 /**
- * Implements hook_node_presave().
+ * Implements hook_node_presave()
+ * Formats dates for storing in db
  */
 function etype_sliderad_node_presave($node) {
 
