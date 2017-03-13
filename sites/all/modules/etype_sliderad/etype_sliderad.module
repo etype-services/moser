@@ -48,16 +48,17 @@ function etype_sliderad_content() {
 
   $node = $nodes[0];
   $wrapper = entity_metadata_wrapper('node', $node);
-  $start_date = $wrapper->field_ad_start_date->value();
+  //$start_date = $wrapper->field_ad_start_date->value();
   $tmp = print_r($node);
 
-  $output = "<p>Slider Ad $start_date </p>" . $tmp;
+  $output = "<p>Slider Ad  </p>" . $tmp;
   return $output;
 }
 
 /**
  * Implements hook_node_presave()
  * Format date fields or storing
+ * TODO: Set Premium Content Level to 'none'
  */
 function etype_sliderad_node_presave($node) {
 
