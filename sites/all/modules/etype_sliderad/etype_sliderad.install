@@ -42,35 +42,6 @@ function etype_sliderad_install() {
   node_type_save($node_type); // Save the node type object
 
   // not creating all fields are we will use some Simple Ad Fields
-  // TODO: make these datetime fields
-  $fields = array(
-    array(
-      'field_name' => 'field_sliderad_start_time',
-      'type' => 'text',
-      'cardinality' => 1,
-      'translatable' => TRUE,
-      'settings' => array(
-        'max_length' => 255,
-      ),
-      'translatable' => TRUE,
-      'entity_types' => array(),
-    ),
-    array(
-      'field_name' => 'field_sliderad_end_time',
-      'type' => 'text',
-      'cardinality' => 1,
-      'translatable' => TRUE,
-      'settings' => array(
-        'max_length' => 255,
-      ),
-      'translatable' => TRUE,
-      'entity_types' => array(),
-    ),
-  );
-
-  foreach ($fields as $field) {
-    field_create_field($field);
-  }
 
   // Add Image Instance
   $instance = array(
@@ -311,9 +282,6 @@ function etype_sliderad_uninstall() {
   }
 
   node_delete_multiple($nids);
-
-  field_delete_field('field_sliderad_start_time');
-  field_delete_field('field_sliderad_end_time');
 
   // Delete fields instances
   foreach( field_info_instances('node', 'sliderad') as $field_name	=> $instance ) {
