@@ -69,12 +69,12 @@ function etype_sliderad_content() {
     }
   }
 
-  $image_source = $wrapper->field_ad_image->value();
-  print_r($image_source);
+  $image = $wrapper->field_ad_image->value();
+  $path = file_create_url($image['uri']);
 
   exit;
 
-  $output = "<p>Slider Ad  $start_date $end_date $image_source</p>";
+  $output = "<p>Slider Ad  $start_date $end_date <img src=\"$image_source\" alt='\"Advertisement\" />'</p>";
   return $output;
 }
 
