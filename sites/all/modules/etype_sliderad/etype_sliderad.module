@@ -49,7 +49,7 @@ function etype_sliderad_content() {
   $node = $nodes[0];
   $wrapper = entity_metadata_wrapper('node', $node);
   //$start_date = $wrapper->field_ad_start_date->value();
-  $tmp = print_r($node);
+  $tmp = print_r($nodes);
 
   $output = "<p>Slider Ad  </p>" . $tmp;
   return $output;
