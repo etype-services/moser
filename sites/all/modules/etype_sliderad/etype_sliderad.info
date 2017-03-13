@@ -5,4 +5,5 @@ core = 7.x
 project = "etype"
 dependencies[] = entity
 dependencies[] = simpleads
+#dependencies[] = date
 scripts[] = sliderad.js

@@ -41,8 +41,6 @@ function etype_sliderad_content() {
     ->entityCondition('bundle', 'sliderad')
     ->propertyCondition('status', NODE_PUBLISHED)
     ->fieldCondition('field_ad_status', 'value', '1', '=')
-    ->fieldCondition('field_ad_start_date', 'value', date(''), '<') // end date before now
-    ->fieldCondition('field_ad_end_date', 'value', date(''), '>') // end date after now
     ->execute();
   $nodes = node_load_multiple(array_keys($result['node']));
 

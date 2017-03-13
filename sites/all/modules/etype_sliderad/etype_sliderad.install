@@ -42,6 +42,7 @@ function etype_sliderad_install() {
   node_type_save($node_type); // Save the node type object
 
   // not creating all fields are we will use some Simple Ad Fields
+  // TODO: make these datetime fields
   $fields = array(
     array(
       'field_name' => 'field_sliderad_start_time',
