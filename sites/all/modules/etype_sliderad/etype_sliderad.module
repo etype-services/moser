@@ -44,7 +44,7 @@ function etype_sliderad_content() {
     ->propertyOrderBy('changed', 'DESC')
     ->range(0,1)
     ->execute();
-  $nodes = node_load(array_keys($result['node']));
+  $nodes = node_load_multiple(array_keys($result['node']));
   print_r($nodes);
   exit;
 
