@@ -41,12 +41,17 @@ function etype_sliderad_content() {
     ->entityCondition('bundle', 'sliderad')
     ->propertyCondition('status', NODE_PUBLISHED)
     ->fieldCondition('field_ad_status', 'value', '1', '=')
+    ->propertyOrderBy('changed', 'DESC')
+    ->range(0,1)
     ->execute();
   $nodes = node_load_multiple(array_keys($result['node']));
 
-  $tmp = print_r($nodes);
+  $node = $nodes[0];
+  $wrapper = entity_metadata_wrapper('node', $node);
+  $start_date = $wrapper->field_ad_start_date->value();
+  $tmp = print_r($node);
 
-  $output = "<p>Slider Ad</p>" . $tmp;
+  $output = "<p>Slider Ad $start_date </p>" . $tmp;
   return $output;
 }
 
