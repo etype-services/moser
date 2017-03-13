@@ -80,17 +80,17 @@ function etype_sliderad_node_presave($node) {
     $end_time = strtotime($end_time);
 
     if ($start_date != 0) {
-      $node->field_ad_start_date[$node->language][0]['value'] = format_date($start_date, 'custom', 'm/d/Y h:i a');
+      $node->field_ad_start_date[$node->language][0]['value'] = format_date($start_date, 'custom', 'm/d/Y h:i');
     }
     if ($end_date != 0) {
-      $node->field_ad_end_date[$node->language][0]['value'] = format_date($end_date, 'custom', 'm/d/Y h:i a');
+      $node->field_ad_end_date[$node->language][0]['value'] = format_date($end_date, 'custom', 'm/d/Y h:i');
     }
 
     if ($start_time != 0) {
-      $node->field_sliderad_start_time[$node->language][0]['value'] = format_date($start_time, 'custom', 'm/d/Y h:i a');
+      $node->field_sliderad_start_time[$node->language][0]['value'] = format_date($start_time, 'custom', 'h:i');
     }
     if ($end_time != 0) {
-      $node->field_sliderad_end_time[$node->language][0]['value'] = format_date($end_time, 'custom', 'm/d/Y h:i a');
+      $node->field_sliderad_end_time[$node->language][0]['value'] = format_date($end_time, 'custom', 'h:i');
     }
   }
 }
