@@ -32,9 +32,12 @@ function etype_sliderad_block_view($delta = '') {
 }
 
 /**
- *
+ * Get most recent Slider Ad node and display it
  */
 function etype_sliderad_content() {
+
+  /* default output */
+  $output = "";
 
   $query = new EntityFieldQuery();
   $result = $query->entityCondition('entity_type', 'node')
@@ -48,9 +51,25 @@ function etype_sliderad_content() {
   $node = node_load($nid);
 
   $wrapper = entity_metadata_wrapper('node', $node);
-  $start_date = strtotime($wrapper->field_ad_start_date->value());
+  $start_date = $wrapper->field_ad_start_date->value();
+  $end_date = $wrapper->field_ad_end_date->value();
 
-  $output = "<p>Slider Ad  $start_date</p>";
+  $now = time();
+  if (! empty($start_date)) {
+    $start_date = strtotime($start_date);
+    if ($start_date > $now) {
+      return $output;
+    }
+  }
+
+  if (! empty($end_date)) {
+    $end_date = strtotime($end_date);
+    if ($end_date < $now) {
+      return $output;
+    }
+  }
+
+  $output = "<p>Slider Ad  $start_date $end_date</p>";
   return $output;
 }
 
