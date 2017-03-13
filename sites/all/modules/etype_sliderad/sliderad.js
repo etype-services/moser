@@ -52,8 +52,6 @@
 
                 if (!mousedover) {
                     mousedover = true;
-                    var img = new Image();
-//img.src = "http://localhost/add_mouseover_counter.php?tileID=" + TILE_ID;
                 }
             }
 
@@ -75,7 +73,8 @@
                     obj[objname].style.height = "px";
                 }
                 obj[objname].style.display = "block";
-                timerID[objname] = setInterval('slidetick(\'' + objname + '\');',timerlen);
+                var int = slidetick(objname);
+                timerID[objname] = setInterval(int, timerlen);
             }
 
             function endSlide(objname){
