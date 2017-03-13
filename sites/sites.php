@@ -256,4 +256,4 @@ $sites['q947.net'] = 'q947.etypegoogle4.com';
 
 /* branches */
 $sites['sliderads.etypegoogle4.com'] = 'wimberleyview.com';
-$sites['photogallery.etypegoogle4.com'] = 'grahameleader.com';
+$sites['photogallery.etypegoogle4.com'] = 'grahamleader.com';
