@@ -70,6 +70,9 @@ function etype_sliderad_content() {
   }
 
   $image_source = $wrapper->field_ad_image->value();
+  print_r($image_source);
+
+  exit;
 
   $output = "<p>Slider Ad  $start_date $end_date $image_source</p>";
   return $output;
