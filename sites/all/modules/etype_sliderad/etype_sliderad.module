@@ -134,6 +134,8 @@ function etype_sliderad_node_presave($node) {
     }
 
     // set Premium Level
-    $node->premium = "free";
+    if (module_exists('premium_content')) {
+      $node->premium = "free";
+    }
   }
 }
