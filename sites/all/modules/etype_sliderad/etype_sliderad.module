@@ -132,5 +132,8 @@ function etype_sliderad_node_presave($node) {
     if ($end_time != 0) {
       $node->field_sliderad_end_time[$node->language][0]['value'] = format_date($end_time, 'custom', 'h:i a');
     }
+
+    // set Premium Level
+    $node->premium = "free";
   }
 }
