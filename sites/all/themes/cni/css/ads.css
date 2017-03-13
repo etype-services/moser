@@ -32,7 +32,17 @@
     justify-content: space-around;
 }
 
+/* experimntal code for http://jacksonconewscni.etypegoogle4.com/ */
+.region-preface-1 .block-simpleads .content {
+    padding: 1em;
+}
+.region-preface-1  .block-simpleads > div > div > div > div > div {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* css for etype google DFP bottom leaderboard */
+
 #div-gpt-ad-1487352373268-0 {
     margin: 0 auto 20px;
     width: 728px;
