@@ -146,7 +146,7 @@ function etype_sliderad_install() {
     'field_name' => 'field_ad_start_date',
     'entity_type' => 'node',
     'bundle' => 'sliderad',
-    'label' => $t('Active Date'),
+    'label' => $t('Campaign Start Date'),
     'description' => $t('Allowed date formats: now, tomorrow, next week, 10 September 2011, +1 day, +1 week, +1 year, +1 week 2 days 4 hours 2 seconds, next Monday, last Friday, mm/dd/yyyy hh:mm am/pm'),
     'required' => FALSE,
     'widget' => array(
@@ -173,7 +173,7 @@ function etype_sliderad_install() {
     'field_name' => 'field_ad_end_date',
     'entity_type' => 'node',
     'bundle' => 'sliderad',
-    'label' => $t('End Date'),
+    'label' => $t('Campaign End Date'),
     'description' => $t('Allowed date formats: now, tomorrow, next week, 10 September 2011, +1 day, +1 week, +1 year, +1 week 2 days 4 hours 2 seconds, next Monday, last Friday, mm/dd/yyyy hh:mm am/pm'),
     'required' => FALSE,
     'widget' => array(
@@ -201,7 +201,7 @@ function etype_sliderad_install() {
     'entity_type' => 'node',
     'bundle' => 'sliderad',
     'label' => $t('Daily Start Time'),
-    'description' => $t('Allowed date formats: 09:00:00'),
+    'description' => $t('Allowed date formats: 09:00:00.'),
     'required' => FALSE,
     'widget' => array(
       'type' => 'text_textfield',
@@ -255,7 +255,7 @@ function etype_sliderad_install() {
     'entity_type' => 'node',
     'bundle' => 'sliderad',
     'label' => $t('Status'),
-    'description' => $t('Please use this field to show or hide ads.'),
+    'description' => $t('Show or hide ads.'),
     'required' => FALSE,
     'widget' => array(
       'type' => 'options_onoff',
