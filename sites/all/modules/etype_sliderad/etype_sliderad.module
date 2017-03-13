@@ -72,9 +72,7 @@ function etype_sliderad_content() {
   $image = $wrapper->field_ad_image->value();
   $path = file_create_url($image['uri']);
 
-  exit;
-
-  $output = "<p>Slider Ad  $start_date $end_date <img src=\"$image_source\" alt='\"Advertisement\" />'</p>";
+  $output = "<p>Slider Ad  $start_date $end_date <img src=\"$path\" alt='\"Advertisement\" />'</p>";
   return $output;
 }
 
