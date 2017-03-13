@@ -72,16 +72,14 @@ function etype_sliderad_content() {
     }
 
     $image = $wrapper->field_ad_image->value();
-    print_r($image);
-    exit;
     $path = file_create_url($image['uri']);
     $large_image = $wrapper->field_ad_large_image->value();
     $large_path = file_create_url($large_image['uri']);
 
     $output = "
 <div id=\"adone\" style=\"width:100%; padding:0;\">
-<a href=\"$url\" target=\"_blank\"><img src=\"$path\"></a></div> 
-<div id=\"adtwo\" style=\"display: none;\"><img src=\"$large_path\"></div>
+<a href=\"$url\" target=\"_blank\"><img src=\"$path\" alt=\"" . $image['alt'] . "\"></a></div> 
+<div id=\"adtwo\" style=\"display: none;\"><img src=\"$large_path\" alt=\"" . $large_image['alt'] . "\"></div>
 ";
   }
 
