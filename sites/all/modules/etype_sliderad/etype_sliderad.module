@@ -58,18 +58,20 @@ function etype_sliderad_content() {
   if (! empty($start_date)) {
     $start_date = strtotime($start_date);
     if ($start_date > $now) {
-      return $output;
+      return $output; // empty block
     }
   }
 
   if (! empty($end_date)) {
     $end_date = strtotime($end_date);
     if ($end_date < $now) {
-      return $output;
+      return $output;  // empty block
     }
   }
 
-  $output = "<p>Slider Ad  $start_date $end_date</p>";
+  $image_source = $wrapper->field_ad_url->entity->url();
+
+  $output = "<p>Slider Ad  $start_date $end_date <img src=\"$image_source\" alt=\"Advertisement\" />></p>";
   return $output;
 }
 
