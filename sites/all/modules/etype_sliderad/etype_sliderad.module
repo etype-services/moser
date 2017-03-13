@@ -48,38 +48,41 @@ function etype_sliderad_content() {
     ->range(0,1)
     ->execute();
   $nid = current($result['node'])->nid;
-  $node = node_load($nid);
+  if ($nid > 0) {
+    $node = node_load($nid);
 
-  $wrapper = entity_metadata_wrapper('node', $node);
-  $start_date = $wrapper->field_ad_start_date->value();
-  $end_date = $wrapper->field_ad_end_date->value();
-  $url = $wrapper->field_ad_url->value();
+    $wrapper = entity_metadata_wrapper('node', $node);
+    $start_date = $wrapper->field_ad_start_date->value();
+    $end_date = $wrapper->field_ad_end_date->value();
+    $url = $wrapper->field_ad_url->value();
 
-  $now = time();
-  if (! empty($start_date)) {
-    $start_date = strtotime($start_date);
-    if ($start_date > $now) {
-      return $output; // empty block
+    $now = time();
+    if (! empty($start_date)) {
+      $start_date = strtotime($start_date);
+      if ($start_date > $now) {
+        return $output; // empty block
+      }
     }
-  }
 
-  if (! empty($end_date)) {
-    $end_date = strtotime($end_date);
-    if ($end_date < $now) {
-      return $output;  // empty block
+    if (! empty($end_date)) {
+      $end_date = strtotime($end_date);
+      if ($end_date < $now) {
+        return $output;  // empty block
+      }
     }
-  }
 
-  $image = $wrapper->field_ad_image->value();
-  $path = file_create_url($image['uri']);
-  $large_image = $wrapper->field_ad_image->value();
-  $large_path = file_create_url($large_image['uri']);
+    $image = $wrapper->field_ad_image->value();
+    $path = file_create_url($image['uri']);
+    $large_image = $wrapper->field_ad_image->value();
+    $large_path = file_create_url($large_image['uri']);
 
-  $output = "
+    $output = "
 <div id=\"adone\" style=\"width:100%; padding:0;\">
 <a href=\"$url\" target=\"_blank\"><img style=\"width:100%;\" src=\"$path\"></a></div> 
 <div id=\"adtwo\" style=\"position: relative; width: 100%; display: none; overflow: hidden;\"><img style=\"width:100%;\" src=\"$large_path\"></div>
 ";
+  }
+
   return $output;
 }
 
