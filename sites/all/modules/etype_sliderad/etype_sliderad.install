@@ -201,7 +201,7 @@ function etype_sliderad_install() {
     'entity_type' => 'node',
     'bundle' => 'sliderad',
     'label' => $t('Daily Start Time'),
-    'description' => $t('Allowed date formats: 09:00:00.'),
+    'description' => $t('Allowed date formats: 09:00'),
     'required' => FALSE,
     'widget' => array(
       'type' => 'text_textfield',
@@ -228,7 +228,7 @@ function etype_sliderad_install() {
     'entity_type' => 'node',
     'bundle' => 'sliderad',
     'label' => $t('Daily End Time'),
-    'description' => $t('Allowed date formats: 09:00:00'),
+    'description' => $t('Allowed date formats: 09:00'),
     'required' => FALSE,
     'widget' => array(
       'type' => 'text_textfield',
