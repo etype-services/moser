@@ -31,7 +31,7 @@ function etype_sliderad_install() {
   $content_type = array(
     'type'          => 'sliderad',
     'name'          => $t('Slider Ad'),
-    'description'   => $t('Slider Ad Content Type and Block'),
+    'description'   => $t('Creates Slider Ad Content Type and Block'),
     'title_label'   => $t('Advertisement Name'),
     'base'          => 'node_content',
     'custom'        => TRUE,
