@@ -44,14 +44,12 @@ function etype_sliderad_content() {
     ->propertyOrderBy('changed', 'DESC')
     ->range(0,1)
     ->execute();
+  $nodes = node_load(array_keys($result['node']));
 
-  print_r($result);
-  exit;
-  $node = node_load(array_keys($result['node']));
-
+  $node = $nodes[0];
   $wrapper = entity_metadata_wrapper('node', $node);
   //$start_date = $wrapper->field_ad_start_date->value();
-  $tmp = print_r($node);
+  $tmp = print_r($nodes);
 
   $output = "<p>Slider Ad  </p>" . $tmp;
   return $output;
