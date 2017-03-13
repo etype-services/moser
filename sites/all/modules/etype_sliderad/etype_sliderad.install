@@ -11,9 +11,22 @@
  */
 function etype_sliderad_install() {
 
+  // Find out the weight of the Simple Ads module
+  $weight = db_select('system', 's')
+    ->fields('s', array('weight'))
+    ->condition('name', 'simpleads', '=')
+    ->execute()
+    ->fetchField();
+
+  // Set our module to a weight 1 heavier, so ours moves lower in execution order
+  db_update('system')
+    ->fields(array('weight' => $weight + 1))
+    ->condition('name', 'etype_sliderad', '=')
+    ->execute();
+
   $t = get_t(); // We need to instantiate the t() function as it’s not available in the installation phase
 
-  // Step 1 - Defining the content type and saving it
+  // Define and save the content type
   $content_type = array(
     'type'          => 'sliderad',
     'name'          => $t('Slider Ad'),
@@ -27,7 +40,9 @@ function etype_sliderad_install() {
 
   node_type_save($node_type); // Save the node type object
 
-  // not creating fields are we will use Simple Ad Fields
+  // not creating all fields are we will use some Simple Ad Fields
+
+  // field_sliderad_end_date because field_ad_end_date has some
 
   // Add Image Instance
   $instance = array(
