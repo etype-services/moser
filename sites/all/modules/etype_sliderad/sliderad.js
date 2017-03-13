@@ -92,10 +92,10 @@
             }
 
             $('#adone').mouseover(function() {
-                slidedown('adtwo');
+                $('#adtwo').slideDown();
             });
             $('#adone').mouseout(function() {
-                slideup('adtwo');
+                $('#adtwo').slideUp();
             });
 
         }
