@@ -78,8 +78,8 @@ function etype_sliderad_content() {
 
     $output = "
 <div id=\"adone\" style=\"width:100%; padding:0;\">
-<a href=\"$url\" target=\"_blank\"><img style=\"width:100%;\" src=\"$path\"></a></div> 
-<div id=\"adtwo\" style=\"position: relative; width: 100%; display: none; overflow: hidden;\"><img style=\"width:100%;\" src=\"$large_path\"></div>
+<a href=\"$url\" target=\"_blank\"><img src=\"$path\"></a></div> 
+<div id=\"adtwo\" style=\"display: none;\"><img src=\"$large_path\"></div>
 ";
   }
 

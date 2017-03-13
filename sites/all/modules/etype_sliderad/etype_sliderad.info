@@ -6,3 +6,4 @@ project = "etype"
 dependencies[] = entity
 dependencies[] = simpleads
 scripts[] = sliderad.js
+stylesheets[all][] = sliderad.css
