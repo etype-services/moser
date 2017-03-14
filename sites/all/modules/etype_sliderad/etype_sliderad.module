@@ -1,0 +1,141 @@
+<?php
+/**
+ * Implements hook_block_info()
+ */
+function etype_sliderad_block_info() {
+  $blocks = array();
+
+  $blocks['Slider Ad'] = array(
+    'info' => t('Slider Ad'),
+  );
+
+  return $blocks;
+
+}
+
+/**
+ * @param string $delta
+ * @return array
+ * Implements hook_block_view()
+ */
+function etype_sliderad_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+
+    case 'Slider Ad':
+      $block['subject'] = '';
+      $block['content'] = etype_sliderad_content();
+      break;
+  }
+
+  return $block;
+}
+
+/**
+ * Get most recent Slider Ad node and display it
+ */
+function etype_sliderad_content() {
+
+  /* default output */
+  $output = "";
+
+  $query = new EntityFieldQuery();
+  $result = $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'sliderad')
+    ->propertyCondition('status', NODE_PUBLISHED)
+    ->fieldCondition('field_ad_status', 'value', '1', '=')
+    ->propertyOrderBy('changed', 'DESC')
+    ->range(0,1)
+    ->execute();
+  $nid = current($result['node'])->nid;
+  if ($nid > 0) {
+    $node = node_load($nid);
+
+    $wrapper = entity_metadata_wrapper('node', $node);
+    $start_date = $wrapper->field_ad_start_date->value();
+    $end_date = $wrapper->field_ad_end_date->value();
+    $url = $wrapper->field_ad_url->value();
+
+    $now = time();
+    if (! empty($start_date)) {
+      $start_date = strtotime($start_date);
+      if ($start_date > $now) {
+        return $output; // empty block
+      }
+    }
+
+    if (! empty($end_date)) {
+      $end_date = strtotime($end_date);
+      if ($end_date < $now) {
+        return $output;  // empty block
+      }
+    }
+
+    $image = $wrapper->field_ad_image->value();
+    $path = file_create_url($image['uri']);
+    $large_image = $wrapper->field_ad_large_image->value();
+    $large_path = file_create_url($large_image['uri']);
+
+    $output = "
+<div id=\"adone\" style=\"width:100%; padding:0;\">
+<a href=\"$url\" target=\"_blank\"><img src=\"$path\" alt=\"" . $image['alt'] . "\"></a></div> 
+<div id=\"adtwo\" style=\"display: none;\"><img src=\"$large_path\" alt=\"" . $large_image['alt'] . "\"></div>
+";
+  }
+
+  return $output;
+}
+
+/**
+ * Implements hook_node_presave()
+ * Format date fields or storing
+ * TODO: Set Premium Content Level to 'none'
+ */
+function etype_sliderad_node_presave($node) {
+
+  if ($node->type == 'sliderad') {
+
+    $start_date = 0;
+    $end_date = 0;
+    $start_time = 0;
+    $end_time = 0;
+
+    if (isset($node->field_ad_start_date[$node->language]) && !empty($node->field_ad_start_date[$node->language][0]['value'])) {
+      $start_date = $node->field_ad_start_date[$node->language][0]['value'];
+    }
+    if (isset($node->field_ad_end_date[$node->language]) && !empty($node->field_ad_end_date[$node->language][0]['value'])) {
+      $end_date = $node->field_ad_end_date[$node->language][0]['value'];
+    }
+
+    if (isset($node->field_sliderad_start_time[$node->language]) && !empty($node->field_sliderad_start_time[$node->language][0]['value'])) {
+      $start_time = $node->field_sliderad_start_time[$node->language][0]['value'];
+    }
+    if (isset($node->field_sliderad_end_time[$node->language]) && !empty($node->field_sliderad_end_time[$node->language][0]['value'])) {
+      $end_time = $node->field_sliderad_end_time[$node->language][0]['value'];
+    }
+
+    $start_date = strtotime($start_date);
+    $end_date = strtotime($end_date);
+    $start_time = strtotime($start_time);
+    $end_time = strtotime($end_time);
+
+    if ($start_date != 0) {
+      $node->field_ad_start_date[$node->language][0]['value'] = format_date($start_date, 'custom', 'm/d/Y h:i a');
+    }
+    if ($end_date != 0) {
+      $node->field_ad_end_date[$node->language][0]['value'] = format_date($end_date, 'custom', 'm/d/Y h:i a');
+    }
+
+    if ($start_time != 0) {
+      $node->field_sliderad_start_time[$node->language][0]['value'] = format_date($start_time, 'custom', 'h:i a');
+    }
+    if ($end_time != 0) {
+      $node->field_sliderad_end_time[$node->language][0]['value'] = format_date($end_time, 'custom', 'h:i a');
+    }
+
+    // set Premium Level
+    if (module_exists('premium_content')) {
+      $node->premium = "free";
+    }
+  }
+}

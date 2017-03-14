@@ -1,0 +1,314 @@
+<?php
+
+/**
+ * @file
+ * eType Sider Ad Install.
+ */
+
+
+/**
+ * Implements hook_install().
+ */
+function etype_sliderad_install() {
+
+  // Find out the weight of the Simple Ads module
+  $weight = db_select('system', 's')
+    ->fields('s', array('weight'))
+    ->condition('name', 'simpleads', '=')
+    ->execute()
+    ->fetchField();
+
+  // Set our module to a weight 1 heavier, so ours moves lower in execution order
+  // this is to make javascript work
+  db_update('system')
+    ->fields(array('weight' => $weight + 1))
+    ->condition('name', 'etype_sliderad', '=')
+    ->execute();
+
+  $t = get_t(); // We need to instantiate the t() function as it’s not available in the installation phase
+
+  // Define and save the content type
+  $content_type = array(
+    'type'          => 'sliderad',
+    'name'          => $t('Slider Ad'),
+    'description'   => $t('Creates Slider Ad Content Type and Block'),
+    'title_label'   => $t('Advertisement Name'),
+    'base'          => 'node_content',
+    'custom'        => TRUE,
+  );
+
+  $node_type = node_type_set_defaults($content_type); // Return a node type object with default values
+
+  node_type_save($node_type); // Save the node type object
+
+  // not creating all fields are we will use some Simple Ad Fields
+  $fields = array(
+    array(
+      'field_name' => 'field_ad_large_image',
+      'type' => 'image',
+      'cardinality' => 1,
+      'translatable' => TRUE,
+      'locked' => FALSE,
+      'indexes' => array('fid' => array('fid')),
+      'settings' => array(
+        'uri_scheme' => 'public',
+        'default_image' => FALSE,
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+      ),
+    )
+  );
+
+  foreach ($fields as $field) {
+    field_create_field($field);
+  }
+
+  // Add Image Instance
+  $instance = array(
+    'field_name' => 'field_ad_image',
+    'entity_type' => 'node',
+    'label' => $t('Slider Ad Image'),
+    'bundle' => 'sliderad',
+    'description' => $t('Upload a collapsed image for this Ad.'),
+    'required' => FALSE,
+
+    'settings' => array(
+      'file_directory' => 'field/image',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'alt_field' => TRUE,
+      'title_field' => '',
+    ),
+
+    'widget' => array(
+      'type' => 'image_image',
+      'settings' => array(
+        'progress_indicator' => 'throbber',
+        'preview_image_style' => 'thumbnail',
+      ),
+      'weight' => -2,
+    ),
+
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'type' => 'image',
+        'settings' => array('image_style' => 'large', 'image_link' => ''),
+        'weight' => -1,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'type' => 'image',
+        'settings' => array('image_style' => 'medium', 'image_link' => 'content'),
+        'weight' => -1,
+      ),
+    ),
+  );
+  field_create_instance($instance);
+
+  // Add Large Image Instance
+  $instance = array(
+    'field_name' => 'field_ad_large_image',
+    'entity_type' => 'node',
+    'label' => $t('Slider Ad Large Image'),
+    'bundle' => 'sliderad',
+    'description' => $t('Upload a large image for this Ad.'),
+    'required' => FALSE,
+
+    'settings' => array(
+      'file_directory' => 'field/image',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'alt_field' => TRUE,
+      'title_field' => '',
+    ),
+
+    'widget' => array(
+      'type' => 'image_image',
+      'settings' => array(
+        'progress_indicator' => 'throbber',
+        'preview_image_style' => 'thumbnail',
+      ),
+      'weight' => -2,
+    ),
+
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'type' => 'image',
+        'settings' => array('image_style' => 'large', 'image_link' => ''),
+        'weight' => -1,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'type' => 'image',
+        'settings' => array('image_style' => 'medium', 'image_link' => 'content'),
+        'weight' => -1,
+      ),
+    ),
+  );
+  field_create_instance($instance);
+
+  $instance = array(
+    'field_name' => 'field_ad_url',
+    'entity_type' => 'node',
+    'bundle' => 'sliderad',
+    'label' => $t('URL Address'),
+    'required' => FALSE,
+    'widget' => array(
+      'type' => 'text_textfield',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'weight' => 1,
+    ),
+    'settings' => array(
+      'text_processing' => 0,
+    ),
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'type' => 'text_default',
+        'settings' => array(),
+      ),
+    ),
+  );
+  field_create_instance($instance);
+
+  $instance = array(
+    'field_name' => 'field_ad_start_date',
+    'entity_type' => 'node',
+    'bundle' => 'sliderad',
+    'label' => $t('Campaign Start Date'),
+    'description' => $t('Allowed date formats: now, tomorrow, next week, 10 September 2011, +1 day, +1 week, +1 year, +1 week 2 days 4 hours 2 seconds, next Monday, last Friday, mm/dd/yyyy hh:mm am/pm'),
+    'required' => FALSE,
+    'widget' => array(
+      'type' => 'text_textfield',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'weight' => 3,
+    ),
+    'settings' => array(
+      'text_processing' => 0,
+    ),
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'type' => 'text_default',
+        'settings' => array(),
+      ),
+    ),
+  );
+  field_create_instance($instance);
+
+  $instance = array(
+    'field_name' => 'field_ad_end_date',
+    'entity_type' => 'node',
+    'bundle' => 'sliderad',
+    'label' => $t('Campaign End Date'),
+    'description' => $t('Allowed date formats: now, tomorrow, next week, 10 September 2011, +1 day, +1 week, +1 year, +1 week 2 days 4 hours 2 seconds, next Monday, last Friday, mm/dd/yyyy hh:mm am/pm'),
+    'required' => FALSE,
+    'widget' => array(
+      'type' => 'text_textfield',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'weight' => 3,
+    ),
+    'settings' => array(
+      'text_processing' => 0,
+    ),
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'type' => 'text_default',
+        'settings' => array(),
+      ),
+    ),
+  );
+  field_create_instance($instance);
+
+  $instance = array(
+    'field_name' => 'field_ad_status',
+    'entity_type' => 'node',
+    'bundle' => 'sliderad',
+    'label' => $t('Status'),
+    'description' => $t('Show or hide ads.'),
+    'required' => FALSE,
+    'widget' => array(
+      'type' => 'options_onoff',
+      'settings' => array(
+        'display_label' => 0,
+      ),
+      'weight' => 5,
+      'module' => 'options',
+    ),
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'type' => 'list_default',
+        'module' => 'list',
+        'settings' => array(),
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+  );
+  field_create_instance($instance);
+
+  node_types_rebuild();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function etype_sliderad_uninstall() {
+
+  // Remove existing content
+  $query = 'SELECT nid ';
+  $query .= 'FROM {node} ';
+  $query .= 'WHERE {node}.type = :type ';
+  $result = db_query( $query, array(':type'	=> 'sliderad') );
+  $nids = array();
+
+  foreach( $result as $row ) {
+    $nids[] = $row->nid;
+  }
+
+  node_delete_multiple($nids);
+
+  field_delete_field('field_ad_large_image');
+
+  // Delete fields instances
+  foreach( field_info_instances('node', 'sliderad') as $field_name	=> $instance ) {
+    field_delete_instance($instance);
+  }
+
+  // Delete content type
+  node_type_delete('sliderad');
+
+  // Purge field batch
+  field_purge_batch(1000); // Purge deleted fields data
+
+  node_types_rebuild();
+
+}
