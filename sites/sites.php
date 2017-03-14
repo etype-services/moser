@@ -252,7 +252,3 @@ $sites['lakecountrytalkradio.net'] = 'lakecountrytalkradio.etypegoogle4.com';
 /* q947.etypegoogle4.com */
 $sites['q947.etypegoogle4.com'] = 'q947.etypegoogle4.com';
 $sites['q947.net'] = 'q947.etypegoogle4.com';
-
-/* branches */
-$sites['sliderads.etypegoogle4.com'] = 'wimberleyview.com';
-$sites['photogallery.etypegoogle4.com'] = 'grahamleader.com';
