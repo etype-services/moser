@@ -69,9 +69,9 @@ function etype_sliderad_install() {
   $instance = array(
     'field_name' => 'field_ad_image',
     'entity_type' => 'node',
-    'label' => $t('Slider Ad Image'),
+    'label' => $t('Slider Ad Pencil Image'),
     'bundle' => 'sliderad',
-    'description' => $t('Upload a collapsed image for this Ad.'),
+    'description' => $t('Upload a Pencil image for this Ad.'),
     'required' => FALSE,
 
     'settings' => array(
