@@ -1,0 +1,15 @@
+#adone {
+    width:100%;
+    padding:0;
+    margin: 0;
+}
+
+#adtwo {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#adone img, #adtwo img {
+    width:100%;
+}
