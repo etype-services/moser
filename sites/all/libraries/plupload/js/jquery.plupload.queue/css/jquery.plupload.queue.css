@@ -2,10 +2,6 @@
    Plupload
 ------------------------------------------------------------------- */
 
-.plupload_wrapper * {
-	box-sizing: content-box;
-}
-
 .plupload_button {
 	display: -moz-inline-box; /* FF < 3*/
 	display: inline-block;
@@ -111,11 +107,7 @@
 }
 .plupload_file_size, .plupload_file_status, .plupload_file_action {text-align: right;}
 
-.plupload_filelist .plupload_file_name {
-	width: 205px;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-}
+.plupload_filelist .plupload_file_name {width: 205px}
 
 .plupload_file_action {
 	float: right;
