@@ -1,5 +1,4 @@
-<article id="node-<?php print $node->nid; ?>"
-         class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
     <?php if (isset($content['field_image'])): ?>
         <div class="field-image">
@@ -18,9 +17,7 @@
         <?php print render($title_prefix); ?>
 
         <?php if (!$page): ?>
-            <h2 class="title"<?php print $title_attributes; ?>><a
-                        href="<?php print $node_url; ?>"><?php print $title; ?></a>
-            </h2>
+            <h2 class="title"<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
         <?php endif; ?>
 
         <?php if ($page): ?>

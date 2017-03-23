@@ -1,8 +1,13 @@
 <?php
 
 /**
- * add e-Edition link to user menu
- * @return array
+ * @file
+ * Custom functions and hooks for Etype Services
+ *
+ */
+
+/**
+ * Implements hook_menu().
  */
 function etype_menu() {
 
@@ -194,10 +199,19 @@ function _etype_twitter_content() {
   if (!empty($twitter)) {
     $output .= '
 <a class="twitter-timeline" data-height="300" href="https://twitter.com/' . $twitter . '">Tweets by ' . $twitter . '</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>';
+    }
 
   }
 
   return $output;
+}
+
+/**
+ * Function to get path to site folder
+ * @return string
+ */
+function etype_site_path() {
+    return $_SERVER['DOCUMENT_ROOT'] . base_path() . conf_path();
 }
 
 /**
@@ -245,32 +259,40 @@ function etype_cronapi($op, $job = NULL) {
 
     $cron_schedule = ''; // set in include file, just to avoid IDE errors
     $etype_site_path = etype_site_path();
-    include($etype_site_path . '/etype_settings.php');
+    $settings_file = $etype_site_path . '/etype_settings.php';
+    if (file_exists($settings_file)) {
 
-    /* run job at 7:30am Eastern every Wednesday */
-    $items['etype_cron'] = array(
-        'title' => 'Import Classified Ads',
-        'module' => 'etype',
-        'callback' => 'etype_classified_ad_importer',
-        'scheduler' => array(
+      include($etype_site_path . '/etype_settings.php');
+
+      if (!empty($cron_schedule)) {
+        /* Classified importer */
+        $items['etype_cron'] = array(
+          'title' => 'Import Classified Ads',
+          'module' => 'etype',
+          'callback' => 'etype_classified_ad_importer',
+          'scheduler' => array(
             'name' => 'crontab',
             'crontab' => array(
-                'rules' => array($cron_schedule),
+              'rules' => array($cron_schedule),
             ),
-        ),
-    );
+          ),
+        );
+      }
 
-    $items['cache_clear_cron'] = array(
+    }
+
+
+    /*$items['cache_clear_cron'] = array(
         'title' => 'Clear Cache',
         'module' => 'etype',
         'callback' => 'etype_clear_cache',
         'scheduler' => array(
             'name' => 'crontab',
             'crontab' => array(
-                'rules' => array('*/30 * * * *'),
+                'rules' => array('*//*30 * * * *'),
             ),
         ),
-    );
+    );*/
 
     return $items;
 }
@@ -295,9 +317,4 @@ function etype_node_cleanup() {
         }
         node_delete_multiple($nids);
     }
-}
-
-function etype_site_path() {
-  $path = $_SERVER['DOCUMENT_ROOT'] . base_path() . conf_path();
-  return $path;
 }

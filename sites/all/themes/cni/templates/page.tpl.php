@@ -73,8 +73,7 @@
                             <?php print render($tabs); ?>
                             <?php if (!isset($node)): ?>
                                 <?php print render($title_prefix); ?>
-                                <?php if ($title): ?><h1 class="title"
-                                                         id="page-title">
+                                <?php if ($title): ?><h1 class="title" id="page-title">
                                     <span><?php print $title; ?></span>
                                     </h1><?php endif; ?>
                                 <?php print render($title_suffix); ?>
