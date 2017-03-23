@@ -199,10 +199,7 @@ function _etype_twitter_content() {
   if (!empty($twitter)) {
     $output .= '
 <a class="twitter-timeline" data-height="300" href="https://twitter.com/' . $twitter . '">Tweets by ' . $twitter . '</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>';
-    }
-
   }
-
   return $output;
 }
 
