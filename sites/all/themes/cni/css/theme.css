@@ -102,7 +102,6 @@ h3.site-slogan {
     max-width: 700px;
 }
 
-
 /* SLIDESHOW
 --------------------------------------------------------------------------*/
 .view-slideshow .views_slideshow_main {
@@ -191,7 +190,7 @@ h3.site-slogan {
 }
 
 /* override module defaults */
-.views-slideshow-pager-fields > div{
+.views-slideshow-pager-fields > div {
     padding-left: 0;
 }
 
@@ -434,7 +433,6 @@ article .field-image {
     justify-content: space-around;
     margin-top: 1em;
 }
-
 
 /* FOOTER
 --------------------------------------------------------------------------*/

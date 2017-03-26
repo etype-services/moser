@@ -187,6 +187,20 @@ function bones_form_system_theme_settings_alter(&$form, $form_state) {
     '#default_value' => theme_get_setting('e_edition'),
   );
 
+  $form['advanced_settings']['misc_settings']['pub'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Pub'),
+    '#size' => 10,
+    '#default_value' => theme_get_setting('pub'),
+  );
+
+  $form['advanced_settings']['misc_settings']['ptype'] = array(
+    '#type' => 'textfield',
+    '#title' => t('PType'),
+    '#size' => 10,
+    '#default_value' => theme_get_setting('ptype'),
+  );
+
   $form['advanced_settings']['misc_settings']['nav_color'] = array(
       '#type' => 'textfield',
       '#title' => t('Navigation Background Color'),
