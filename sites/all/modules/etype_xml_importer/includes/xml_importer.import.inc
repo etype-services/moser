@@ -191,8 +191,8 @@ function etype_xml_importer_olive_import() {
                   'title' => $array['title'],
                   'summary' => strip_tags($array['description']),
                   'body' => $array['body'],
-                  'field_slugline' => $array['slugline'],
-                  'field_byline_name' => $array['byline'],
+                  'field_kicker' => $array['slugline'],
+                  'field_dateline' => $array['byline'],
                   'images' => $array['images'],
                 );
                 // print_r($node);
