@@ -13,29 +13,29 @@ function etype_menu() {
 
   $items = array();
 
-    /* add e-Edition link to user menu */
-    $items['e-edition'] = array(
-        'title' => 'e-Edition',
-        'description' => 'Link to e-Edition.',
-        'page callback' => '_etype_e_edition',
-        'access arguments' => array('access content'),
-        'menu_name' => 'user-menu',
-        'type' => MENU_NORMAL_ITEM,
-    );
+  /* add e-Edition link to user menu */
+  $items['e-edition'] = array(
+    'title' => 'e-Edition',
+    'description' => 'Link to e-Edition.',
+    'page callback' => '_etype_e_edition',
+    'access arguments' => array('access content'),
+    'menu_name' => 'user-menu',
+    'type' => MENU_NORMAL_ITEM,
+  );
 
-    $items['etype-classified-import'] = array(
-        'title' => t('Import Classified Ads'),
-        'page callback' => 'etype_classified_ad_importer',
-        'type' => MENU_CALLBACK,
-        'access arguments' => array('access administration pages')
-    );
+  $items['etype-classified-import'] = array(
+    'title' => t('Import Classified Ads'),
+    'page callback' => 'etype_classified_ad_importer',
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access administration pages')
+  );
 
-    $items['etype-node-cleanup'] = array(
-        'title' => t('Clean up nodes'),
-        'page callback' => 'etype_node_cleanup',
-        'type' => MENU_CALLBACK,
-        'access arguments' => array('access administration pages')
-    );
+  $items['etype-node-cleanup'] = array(
+    'title' => t('Clean up nodes'),
+    'page callback' => 'etype_node_cleanup',
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access administration pages')
+  );
 
   return $items;
 }
@@ -79,37 +79,37 @@ function etype_block_view($delta = '') {
   $block = array();
   switch ($delta) {
 
-        case 'Social':
-            $block['subject'] = '';
-            $block['content'] = _etype_social_content();
-            break;
+    case 'Social':
+      $block['subject'] = '';
+      $block['content'] = _etype_social_content();
+      break;
 
-        case 'Follow':
-            $block['subject'] = 'Follow Us';
-            $block['content'] = _etype_follow_content();
-            break;
+    case 'Follow':
+      $block['subject'] = 'Follow Us';
+      $block['content'] = _etype_follow_content();
+      break;
 
-        case 'Facebook':
-            $block['subject'] = 'Facebook';
-            $block['content'] = _etype_facebook_content();
-            break;
+    case 'Facebook':
+      $block['subject'] = 'Facebook';
+      $block['content'] = _etype_facebook_content();
+      break;
 
-        case 'Twitter':
-            $block['subject'] = 'Twitter';
-            $block['content'] = _etype_twitter_content();
-            break;
+    case 'Twitter':
+      $block['subject'] = 'Twitter';
+      $block['content'] = _etype_twitter_content();
+      break;
 
-        case 'Own Local':
-            $block['subject'] = '';
-            $block['content'] = _etype_ownlocal_content();
-            break;
+    case 'Own Local':
+      $block['subject'] = '';
+      $block['content'] = _etype_ownlocal_content();
+      break;
 
-        case 'e-Edition':
-            $block['subject'] = '';
-            $block['content'] = _etype_e_edition_content();
-            break;
-    }
-    return $block;
+    case 'e-Edition':
+      $block['subject'] = '';
+      $block['content'] = _etype_e_edition_content();
+      break;
+  }
+  return $block;
 }
 
 /**
@@ -117,7 +117,7 @@ function etype_block_view($delta = '') {
  * @return null
  */
 function _etype_social_content() {
-    $output = '
+  $output = '
 <div id="social">
     <ul class="social-links">';
   $facebook = theme_get_setting('facebook');
@@ -173,7 +173,7 @@ function _etype_follow_content() {
     $output .= '<div class="instagram"><a href="https://instagram.com/' . $instagram . '">Follow us on Instagram</a></div>';
   }
   if (!empty($googleplus)) {
-      $output .= '<div class="googleplus"><a href="https://plus.google.com/' . $googleplus . '">Follow us on Google Plus</a></div>';
+    $output .= '<div class="googleplus"><a href="https://plus.google.com/' . $googleplus . '">Follow us on Google Plus</a></div>';
   }
   if (!empty($rssfeed)) {
     $output .= '<div class="rss"><a href="/rss.xml">RSS Feed</a></div>';
@@ -185,29 +185,29 @@ function _etype_follow_content() {
  * @return string
  */
 function _etype_facebook_content() {
-    $output = '';
-    $facebook = theme_get_setting('facebook', 'cni');
-    if (!empty($facebook)) {
-        $output .= '
+  $output = '';
+  $facebook = theme_get_setting('facebook', 'cni');
+  if (!empty($facebook)) {
+    $output .= '
  <div class="fb-page" data-href="https://www.facebook.com/' . $facebook . '" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
     ';
-    }
+  }
 
-    return $output;
+  return $output;
 }
 
 /**
  * @return string
  */
 function _etype_twitter_content() {
-    $output = '';
-    $twitter = theme_get_setting('twitter');
-    if (!empty($twitter)) {
-        $output .= '
+  $output = '';
+  $twitter = theme_get_setting('twitter');
+  if (!empty($twitter)) {
+    $output .= '
 <a class="twitter-timeline" data-height="300" href="https://twitter.com/' . $twitter . '">Tweets by ' . $twitter . '</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>';
-    }
+  }
 
-    return $output;
+  return $output;
 }
 
 /**
@@ -215,31 +215,31 @@ function _etype_twitter_content() {
  * @return string
  */
 function etype_site_path() {
-    return $_SERVER['DOCUMENT_ROOT'] . base_path() . conf_path();
+  return $_SERVER['DOCUMENT_ROOT'] . base_path() . conf_path();
 }
 
 /**
  * @return string
  */
 function _etype_ownlocal_content() {
-    $output = '';
-    $path = etype_site_path();
-    $file = $path . '/ownlocal.html';
-    if (file_exists($file)) {
-        $output .= file_get_contents($file);
-    }
-    return $output;
+  $output = '';
+  $path = etype_site_path();
+  $file = $path . '/ownlocal.html';
+  if (file_exists($file)) {
+    $output .= file_get_contents($file);
+  }
+  return $output;
 }
 
 function _etype_e_edition_content() {
-    $e_edition = theme_get_setting('e_edition');
-    $site_name = variable_get('site_name', 'Drupal');
-    $arr = preg_split("/ID[0-9]+/", $e_edition);
-    $fixed = $arr[0];
-    $output = '
+  $e_edition = theme_get_setting('e_edition');
+  $site_name = variable_get('site_name', 'Drupal');
+  $arr = preg_split("/ID[0-9]+/", $e_edition);
+  $fixed = $arr[0];
+  $output = '
 <p class="rtecenter"><a href="/e-edition"><img src="https://etypeservices.com/LandingPageImages/' . $fixed . '/currentpg1.jpg"></a></p><h4 class="rtecenter"><a href="/e-edition">Click here to read ' . $site_name . '</a></h4>
 ';
-    return $output;
+  return $output;
 }
 
 /*$own_local_file = drupal_get_path('module', 'etype') . '/ownlocal/ownlocal.js';
@@ -259,102 +259,98 @@ if (file_exists($own_local_file)) {
  */
 function etype_cronapi($op, $job = NULL) {
 
-    $cron_schedule = ''; // set in include file, just to avoid IDE errors
-    $etype_site_path = etype_site_path();
-    $settings_file = $etype_site_path . '/etype_settings.php';
-    if (file_exists($settings_file)) {
-
-      include($etype_site_path . '/etype_settings.php');
-
-      if (!empty($cron_schedule)) {
-        /* Classified importer */
-        $items['etype_cron'] = array(
-          'title' => 'Import Classified Ads',
-          'module' => 'etype',
-          'callback' => 'etype_classified_ad_importer',
-          'scheduler' => array(
-            'name' => 'crontab',
-            'crontab' => array(
-              'rules' => array($cron_schedule),
-            ),
+  $cron_schedule = ''; // set in include file, just to avoid IDE errors
+  $etype_site_path = etype_site_path();
+  $settings_file = $etype_site_path . '/etype_settings.php';
+  if (file_exists($settings_file)) {
+    include($etype_site_path . '/etype_settings.php');
+    if (!empty($cron_schedule)) {
+      /* Classified importer */
+      $items['etype_cron'] = array(
+        'title' => 'Import Classified Ads',
+        'module' => 'etype',
+        'callback' => 'etype_classified_ad_importer',
+        'scheduler' => array(
+          'name' => 'crontab',
+          'crontab' => array(
+            'rules' => array($cron_schedule),
           ),
-        );
-      }
-
+        ),
+      );
     }
-
-    return $items;
+  }
 }
+
 
 /**
  * redirect to e-Edition
  */
 function _etype_e_edition() {
-    $uid = user_is_logged_in();
-    $e_edition = theme_get_setting('e_edition');
-    if ($uid > 0) {
-      global $user;
-      $pub = theme_get_setting('pub');
-      $ptype = theme_get_setting('ptype');
-      if (! empty ($pub)) {
-        $path = 'http://etypeservices.com/ReadTheEdition.aspx?Username=' . $user->name . "&Pub=" . $pub ."&PType=" . $ptype;
-      } else {
-        $path = 'http://etypeservices.com/' . $e_edition . '/';
-      }
-    } else {
-      $path = 'http://etypeservices.com/' . $e_edition . '/';
+  $uid = user_is_logged_in();
+  $e_edition = theme_get_setting('e_edition');
+  if ($uid > 0) {
+    global $user;
+    $pub = theme_get_setting('pub');
+    $ptype = theme_get_setting('ptype');
+    if (!empty ($pub)) {
+      $path = 'https://etypeservices.com/ReadTheEdition.aspx?Username=' . $user->name . "&Pub=" . $pub . "&PType=" . $ptype;
     }
-    drupal_goto($path);
+    else {
+      $path = 'https://etypeservices.com/' . $e_edition . '/';
+    }
+  }
+  else {
+    $path = 'https://etypeservices.com/' . $e_edition . '/';
+  }
+  drupal_goto($path);
 }
 
 /**
- * node cleanup
+ * Clean up node table
  */
 function etype_node_cleanup() {
-    $res = db_query('SELECT n.nid FROM node n LEFT JOIN node_revision nr ON nr.nid = n.nid WHERE nr.vid IS NULL');
-    if (count($res) > 0) {
-        $nids = array();
-        foreach ($res as $record) {
-            // Do something with each $record
-            $nids[] = $record->nid;
-        }
-        node_delete_multiple($nids);
+  $res = db_query('SELECT n.nid FROM node n LEFT JOIN node_revision nr ON nr.nid = n.nid WHERE nr.vid IS NULL');
+  if (count($res) > 0) {
+    $nids = array();
+    foreach ($res as $record) {
+      // Do something with each $record
+      $nids[] = $record->nid;
     }
+    node_delete_multiple($nids);
+  }
 }
 
 /**
- * map xml classified categories to Drupal taxonomy items
- * @param FeedsSource $source
- * @param $entity
- * @param $item
- * @param $entity_id
+ * @param $vid
+ * @return int|mixed|void
+ * Map xml classified categories to Drupal taxonomy items
  */
 function etype_classfied_mapping($vid) {
 
-    $categories = array(); // set in include file, just to avoid IDE errors
-    $etype_site_path = etype_site_path();
-    include($etype_site_path . '/etype_settings.php');
+  $categories = array(); // set in include file, just to avoid IDE errors
+  $etype_site_path = etype_site_path();
+  include($etype_site_path . '/etype_settings.php');
 
-    if (!isset($vid)) {
-        drupal_set_message(t("No category id for item"), 'error');
-        return;
+  if (!isset($vid)) {
+    drupal_set_message(t("No category id for item"), 'error');
+    return;
+  }
+  else {
+
+    $ad_cat = 0;
+
+    foreach ($categories as $k => $v) {
+      if ($vid == $k) {
+        $ad_cat = $v;
+        continue;
+      }
     }
-    else {
 
-        $ad_cat = 0;
-
-        foreach ($categories as $k => $v) {
-            if ($vid == $k) {
-                $ad_cat = $v;
-                continue;
-            }
-        }
-
-        if ($ad_cat == 0) {
-            drupal_set_message(t("$vid not matched"), 'error');
-        }
+    if ($ad_cat == 0) {
+      drupal_set_message(t("$vid not matched"), 'error');
     }
-    return $ad_cat;
+  }
+  return $ad_cat;
 
 }
 
@@ -366,27 +362,27 @@ function etype_classfied_mapping($vid) {
  */
 function etype_entity_create($item = array(), $values = array(), $entity_type = 'node') {
 
-    $entity = entity_create($entity_type, $values);
-    $ewrapper = entity_metadata_wrapper($entity_type, $entity);
-    if (count($item) > 0) {
-        foreach ($item as $k => $v) {
-            switch ($k) {
+  $entity = entity_create($entity_type, $values);
+  $ewrapper = entity_metadata_wrapper($entity_type, $entity);
+  if (count($item) > 0) {
+    foreach ($item as $k => $v) {
+      switch ($k) {
 
-                case 'body':
-                    $ewrapper->body->set(array('value' => $v));
-                    break;
+        case 'body':
+          $ewrapper->body->set(array('value' => $v));
+          break;
 
-                case 'category':
-                    $v = intval($v);
-                    $ewrapper->classified_category->set($v);
-                    break;
+        case 'category':
+          $v = intval($v);
+          $ewrapper->classified_category->set($v);
+          break;
 
-                default:
-                    $ewrapper->$k->set($v);
-            }
-        }
-        $ewrapper->save(TRUE);
+        default:
+          $ewrapper->$k->set($v);
+      }
     }
+    $ewrapper->save(TRUE);
+  }
 }
 
 /**
@@ -394,9 +390,9 @@ function etype_entity_create($item = array(), $values = array(), $entity_type = 
  */
 function etype_classified_ad_importer() {
 
-    global $user;
-    $url = ''; // set in include file, just to avoid IDE errors
-    $etype_site_path = etype_site_path();
+  global $user;
+  $url = ''; // set in include file, just to avoid IDE errors
+  $etype_site_path = etype_site_path();
     $settings_file = $etype_site_path . '/etype_settings.php';
 
     if (file_exists($settings_file)) {
@@ -477,8 +473,8 @@ function etype_classified_ad_importer() {
 }
 
 function etype_clear_cache() {
-    drupal_flush_all_caches();
-    watchdog('etype', "Cache cleared", $variables = array(), $severity = WATCHDOG_NOTICE);
+  drupal_flush_all_caches();
+  watchdog('etype', "Cache cleared", $variables = array(), $severity = WATCHDOG_NOTICE);
 }
 
 /**
@@ -488,10 +484,31 @@ function etype_clear_cache() {
  * For Nassau
  * TODO; show only on Nassau
  */
-function etype_form_contact_site_form_alter(&$form, &$form_state, $form_id){
+function etype_form_contact_site_form_alter(&$form, &$form_state, $form_id) {
   $form['phone'] = array(
     '#title' => t('Phone number'),
     '#type' => 'textfield',
     '#required' => TRUE
   );
 }
+
+/**
+ * @param $node
+ * @param $teaser
+ * @return bool
+ * override premium level for shoutem feeds
+ */
+function etype_premium_access(&$node, $teaser) {
+  $permitido = array(
+    '/news-mobile.xml',
+    '/sports-mobile.xml',
+    '/lifestyle-mobile.xml',
+    '/obits-mobile.xml',
+    '/commentary-mobile.xml'
+  );
+  $solicitud = request_uri();
+  if (in_array($solicitud, $permitido)) {
+    return TRUE;
+  }
+}
+

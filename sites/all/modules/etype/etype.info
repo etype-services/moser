@@ -1,5 +1,5 @@
 name = eType Services
-description = Custom module for EType Services.
+description = Custom module for eType Services.
 package = eType Services Custom Modules
 core = 7.x
 project = "etype"
