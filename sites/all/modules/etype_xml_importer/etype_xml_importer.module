@@ -1,0 +1,23 @@
+<?php
+
+
+/**
+ * add e-Edition link to user menu
+ * @return array
+ */
+function etype_xml_importer_menu() {
+
+  $items = array();
+
+  $items['import_xml'] = array(
+    'title' => 'Import XML',
+    'description' => 'XML Importer',
+    'page callback' => 'etype_xml_importer_import',
+    'access arguments' => array('access administration pages'),
+    'menu_name' => 'user-menu',
+    'type' => MENU_NORMAL_ITEM,
+    'file' => 'includes/xml_importer.import.inc'
+  );
+
+  return $items;
+}
