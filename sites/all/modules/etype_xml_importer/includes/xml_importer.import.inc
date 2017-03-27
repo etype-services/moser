@@ -54,7 +54,7 @@ function etype_xml_importer_entity_create($item = array(), $values = array(), $e
 /**
  * Parse Olive XML Files
  */
-function etype_xml_importer_import() {
+function etype_xml_importer_olive_import() {
 
   global $user;
   $rand = md5(time());

@@ -9,10 +9,10 @@ function etype_xml_importer_menu() {
 
   $items = array();
 
-  $items['import_xml'] = array(
+  $items['import_olive_xml'] = array(
     'title' => 'Import XML',
     'description' => 'XML Importer',
-    'page callback' => 'etype_xml_importer_import',
+    'page callback' => 'etype_xml_importer_olive_import',
     'access arguments' => array('access administration pages'),
     'menu_name' => 'user-menu',
     'type' => MENU_NORMAL_ITEM,
