@@ -266,6 +266,8 @@ function etype_xml_importer_etype_import() {
 
     foreach ($entries as $entry) {
       $xml = file_get_contents($extract_dir . $entry);
+      print_r($xml);
+      exit;
       if ($xml !== FALSE) {
         /* parse xml in each file */
         $obj = simplexml_load_string($xml, 'SimpleXMLElement', LIBXML_NOCDATA);
