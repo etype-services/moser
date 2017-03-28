@@ -244,6 +244,9 @@ function etype_xml_importer_etype_import() {
     $entries[] = $fileInfo->getFilename();
   }
 
+  print_r($entries);
+  exit;
+
   /* Loop over found files and do the extraction */
   if (count($entries) > 0) {
 
