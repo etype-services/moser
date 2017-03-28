@@ -241,7 +241,9 @@ function etype_xml_importer_etype_import() {
    * Loop over directory and get the Files
    * Files in xml directory in extract directory
    */
-  $fileSystemIterator = new FilesystemIterator($extract_dir . '/xml');
+
+  $extract_dir = $extract_dir . '/xml';
+  $fileSystemIterator = new FilesystemIterator($extract_dir);
   $entries = array();
   foreach ($fileSystemIterator as $fileInfo) {
     $entry = $fileInfo->getFilename();
@@ -249,9 +251,6 @@ function etype_xml_importer_etype_import() {
       $entries[] = $fileInfo->getFilename();
     }
   }
-
-  print_r($entries);
-  exit;
 
   /* Loop over found files and do the extraction */
   if (count($entries) > 0) {
