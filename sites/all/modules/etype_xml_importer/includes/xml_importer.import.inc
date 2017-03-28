@@ -244,7 +244,10 @@ function etype_xml_importer_etype_import() {
   $fileSystemIterator = new FilesystemIterator($extract_dir . '/xml');
   $entries = array();
   foreach ($fileSystemIterator as $fileInfo) {
-    $entries[] = $fileInfo->getFilename();
+    $entry = $fileInfo->getFilename();
+    if(strpos($entry, '.xml') !== FALSE) {
+      $entries[] = $fileInfo->getFilename();
+    }
   }
 
   print_r($entries);
