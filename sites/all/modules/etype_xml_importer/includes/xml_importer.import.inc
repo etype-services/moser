@@ -237,8 +237,11 @@ function etype_xml_importer_etype_import() {
     exit;
   }
 
-  /* Loop over directory and get the Files */
-  $fileSystemIterator = new FilesystemIterator($extract_dir);
+  /*
+   * Loop over directory and get the Files
+   * Files in xml directory in extract directory
+   */
+  $fileSystemIterator = new FilesystemIterator($extract_dir . '/xml');
   $entries = array();
   foreach ($fileSystemIterator as $fileInfo) {
     $entries[] = $fileInfo->getFilename();
