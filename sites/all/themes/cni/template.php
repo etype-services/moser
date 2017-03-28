@@ -91,14 +91,21 @@ function cni_breadcrumb($variables) {
   }
 }
 
-/* Span Tag on Links */
-
+/**
+ * @param $variables
+ * @return string
+ * Span Tag on Links
+ */
 function cni_link($variables) {
   return '<a href="' . check_plain(url($variables['path'], $variables['options'])) . '"' . drupal_attributes($variables['options']['attributes']) . '><span>' . ($variables['options']['html'] ? $variables['text'] : check_plain($variables['text'])) . '</span></a>';
 }
 
-/* Some text in ye old Search Form */
-
+/**
+ * @param $form
+ * @param $form_state
+ * @param $form_id
+ * Some text in the main Search Form
+ */
 function cni_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'search_block_form') {
     // Prevent user from searching the default text
@@ -138,6 +145,11 @@ function cni_preprocess_html(&$variables) {
         'group' => CSS_THEME
       )
     );
+  }
+
+  $extra_dfp_code = theme_get_setting('extra_dfp_code');
+  if ($extra_dfp_code == '1') {
+    $variables['dfp_file'] = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'templates/dfp.inc';
   }
 
   /* add site setting css */
