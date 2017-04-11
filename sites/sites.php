@@ -39,9 +39,10 @@ $sites['robconews.etypegoogle4.com'] = 'robconews.etypegoogle4.com';
 $sites['robconews.com'] = 'robconews.etypegoogle4.com';
 $sites['www.robconews.com'] = 'robconews.etypegoogle4.com';
 
-$sites['groesbeckjournal.etypegoogle4.com'] = 'groesbeckjournal.com';
-$sites['groesbeckjournal.com'] = 'groesbeckjournal.com';
-$sites['www.groesbeckjournal.com'] = 'groesbeckjournal.com';
+$sites['groesbeckjournal.etypegoogle4.com'] = 'archive.groesbeckjournal.com';
+$sites['groesbeckjournal.com'] = 'archive.groesbeckjournal.com';
+$sites['www.groesbeckjournal.com'] = 'archive.groesbeckjournal.com';
+$sites['archive.groesbeckjournal.com'] = 'archive.groesbeckjournal.com';
 $sites['groesbeckjournalcni.etypegoogle4.com'] = 'groesbeckjournal.etypegoogle4.com';
 
 
