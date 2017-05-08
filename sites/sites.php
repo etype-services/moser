@@ -129,7 +129,7 @@ $sites['www.jacksonconews.com'] = 'jacksonconews.com';
 $sites['jacksonconews.com'] = 'jacksonconews.com';
 $sites['jacksonconewscni.etypegoogle4.com'] = 'jacksonconews.etypegoogle4.com';
 
-/* atlantacitizensjournal.etypegoogle4.com */
+/* cacccountynow.etypegoogle4.com */
 $sites['atlantacitizensjournal.etypegoogle4.com'] = 'archive.casscountynow.com';
 $sites['www.atlantacitizensjournal.com'] = 'archive.casscountynow.com';
 $sites['atlantacitizensjournal.com'] = 'archive.casscountynow.com';
@@ -146,6 +146,8 @@ $sites['theatlantacitizensjournal.com'] = 'archive.casscountynow.com';
 
 $sites['www.lindensun.com'] = 'archive.casscountynow.com';
 $sites['lindensun.com'] = 'archive.casscountynow.com';
+
+$sites['casscountycni.etypegoogle4.com'] = 'casscountynow.etypegoogle4.com';
 
 /* campcountynow.etypegoogle4.com */
 $sites['campcountynow.etypegoogle4.com'] = 'campcountynow.com';
