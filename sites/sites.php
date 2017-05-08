@@ -136,6 +136,7 @@ $sites['atlantacitizensjournal.com'] = 'archive.casscountynow.com';
 
 $sites['www.casscountynow.com'] = 'archive.casscountynow.com';
 $sites['casscountynow.com'] = 'archive.casscountynow.com';
+$sites['archive.casscountynow.com'] = 'archive.casscountynow.com';
 
 $sites['www.casscountysun.com'] = 'archive.casscountynow.com';
 $sites['casscountysun.com'] = 'archive.casscountynow.com';
