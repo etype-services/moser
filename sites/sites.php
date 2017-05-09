@@ -17,13 +17,13 @@ $sites['www.meridiantribune.com'] = 'bosquecountytoday.com';
 $sites['dewittcountytoday.etypegoogle4.com'] = 'dewittcountytoday.com';
 $sites['dewittcountytoday.com'] = 'dewittcountytoday.com';
 $sites['www.dewittcountytoday.com'] = 'dewittcountytoday.com';
+$sites['archive.dewittcountytoday.com'] = 'dewittcountytoday.com';
 $sites['yorktownnews-view.com'] = 'dewittcountytoday.com';
 $sites['www.yorktownnews-view.com'] = 'dewittcountytoday.com';
 $sites['yorktownnewsview.com'] = 'dewittcountytoday.com';
 $sites['www.yorktownnewsview.com'] = 'dewittcountytoday.com';
 $sites['cuerorecord.com'] = 'dewittcountytoday.com';
 $sites['www.cuerorecord.com'] = 'dewittcountytoday.com';
-
 $sites['dewittcountytodaycni.etypegoogle4.com'] = 'dewittcountytoday.etypegoogle4.com';
 
 /* drippingspringsnews.etypegoogle4.com */
