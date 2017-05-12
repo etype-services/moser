@@ -47,43 +47,45 @@ function etype_sliderad_content() {
     ->propertyOrderBy('changed', 'DESC')
     ->range(0,1)
     ->execute();
-  $nid = current($result['node'])->nid;
-  if ($nid > 0) {
-    $node = node_load($nid);
 
-    $wrapper = entity_metadata_wrapper('node', $node);
-    $start_date = $wrapper->field_ad_start_date->value();
-    $end_date = $wrapper->field_ad_end_date->value();
-    $url = $wrapper->field_ad_url->value();
+  if (isset($result['node'])) {
+    $nid = current($result['node'])->nid;
+    if ($nid > 0) {
+      $node = node_load($nid);
 
-    $now = time();
-    if (! empty($start_date)) {
-      $start_date = strtotime($start_date);
-      if ($start_date > $now) {
-        return $output; // empty block
+      $wrapper = entity_metadata_wrapper('node', $node);
+      $start_date = $wrapper->field_ad_start_date->value();
+      $end_date = $wrapper->field_ad_end_date->value();
+      $url = $wrapper->field_ad_url->value();
+
+      $now = time();
+      if (! empty($start_date)) {
+        $start_date = strtotime($start_date);
+        if ($start_date > $now) {
+          return $output; // empty block
+        }
       }
-    }
 
-    if (! empty($end_date)) {
-      $end_date = strtotime($end_date);
-      if ($end_date < $now) {
-        return $output;  // empty block
+      if (! empty($end_date)) {
+        $end_date = strtotime($end_date);
+        if ($end_date < $now) {
+          return $output;  // empty block
+        }
       }
-    }
 
-    $image = $wrapper->field_ad_image->value();
-    $path = file_create_url($image['uri']);
-    $large_image = $wrapper->field_ad_large_image->value();
-    $large_path = file_create_url($large_image['uri']);
+      $image = $wrapper->field_ad_image->value();
+      $path = file_create_url($image['uri']);
+      $large_image = $wrapper->field_ad_large_image->value();
+      $large_path = file_create_url($large_image['uri']);
 
-    $output = "
+      $output = "
 <div id=\"adone\" style=\"width:100%; padding:0;\">
-<a href=\"$url\" target=\"_blank\"><img src=\"$path\" alt=\"" . $image['alt'] . "\"></a></div> 
+<a href=\"$url\" target=\"_blank\"><img src=\"$path\" alt=\"" . $image['alt'] . "\"></a></div>
 <div id=\"adtwo\" style=\"display: none;\"><img src=\"$large_path\" alt=\"" . $large_image['alt'] . "\"></div>
 ";
+      return $output;
+    }
   }
-
-  return $output;
 }
 
 /**
