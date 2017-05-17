@@ -41,6 +41,7 @@ $sites['www.robconews.com'] = 'robconews.etypegoogle4.com';
 $sites['groesbeckjournal.etypegoogle4.com'] = 'groesbeckjournal.etypegoogle4.com';
 $sites['groesbeckjournal.com'] = 'groesbeckjournal.etypegoogle4.com';
 $sites['www.groesbeckjournal.com'] = 'groesbeckjournal.etypegoogle4.com';
+$sites['photos.etypegoogle4.com'] = 'groesbeckjournal.etypegoogle4.com';
 $sites['archive.groesbeckjournal.com'] = 'archive.groesbeckjournal.com';
 
 $sites['burnetbulletin.etypegoogle4.com'] = 'burnetbulletin.com';
