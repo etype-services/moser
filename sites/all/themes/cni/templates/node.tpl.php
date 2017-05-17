@@ -2,7 +2,7 @@
          class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php if (isset($content['field_image'])): ?>
-      <div class="field-image">
+      <div class="field-image">IMAGE
         <?php print render($content['field_image']); ?>
       </div>
   <?php endif; ?>
