@@ -44,7 +44,7 @@
           }
           else {
             // We hide the comments and links now so that we can render them later.
-            //hide($content['field_image']);
+            hide($content['field_image']);
             hide($content['field_video']);
             hide($content['comments']);
             hide($content['links']);
