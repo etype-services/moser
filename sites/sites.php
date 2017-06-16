@@ -130,22 +130,22 @@ $sites['jacksonconews.com'] = 'jacksonconews.com';
 $sites['jacksonconewscni.etypegoogle4.com'] = 'jacksonconews.etypegoogle4.com';
 
 /* cacccountynow.etypegoogle4.com */
-$sites['atlantacitizensjournal.etypegoogle4.com'] = 'archive.casscountynow.com';
-$sites['www.atlantacitizensjournal.com'] = 'archive.casscountynow.com';
-$sites['atlantacitizensjournal.com'] = 'archive.casscountynow.com';
+$sites['atlantacitizensjournal.etypegoogle4.com'] = 'casscountynow.etypegoogle4.com';
+$sites['www.atlantacitizensjournal.com'] = 'casscountynow.etypegoogle4.com';
+$sites['atlantacitizensjournal.com'] = 'casscountynow.etypegoogle4.com';
 
-$sites['www.casscountynow.com'] = 'archive.casscountynow.com';
-$sites['casscountynow.com'] = 'archive.casscountynow.com';
+$sites['www.casscountynow.com'] = 'casscountynow.etypegoogle4.com';
+$sites['casscountynow.com'] = 'casscountynow.etypegoogle4.com';
 $sites['archive.casscountynow.com'] = 'archive.casscountynow.com';
 
-$sites['www.casscountysun.com'] = 'archive.casscountynow.com';
-$sites['casscountysun.com'] = 'archive.casscountynow.com';
+$sites['www.casscountysun.com'] = 'casscountynow.etypegoogle4.com';
+$sites['casscountysun.com'] = 'casscountynow.etypegoogle4.com';
 
-$sites['www.theatlantacitizensjournal.com'] = 'archive.casscountynow.com';
-$sites['theatlantacitizensjournal.com'] = 'archive.casscountynow.com';
+$sites['www.theatlantacitizensjournal.com'] = 'casscountynow.etypegoogle4.com';
+$sites['theatlantacitizensjournal.com'] = 'casscountynow.etypegoogle4.com';
 
-$sites['www.lindensun.com'] = 'archive.casscountynow.com';
-$sites['lindensun.com'] = 'archive.casscountynow.com';
+$sites['www.lindensun.com'] = 'casscountynow.etypegoogle4.com';
+$sites['lindensun.com'] = 'casscountynow.etypegoogle4.com';
 
 $sites['casscountycni.etypegoogle4.com'] = 'casscountynow.etypegoogle4.com';
 
