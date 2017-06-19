@@ -64,11 +64,14 @@
     margin-bottom: 20px;
 }
 
-/* center ads -- first line might not be necessary */
-.block-simpleads > div > div > div,
-.block-simpleads > div > div > div > div > div {
+/* center ads */
+.block-simpleads > div > div > div {
     display: flex;
     justify-content: space-around;
+}
+
+.block-simpleads > div > div > div > div > div {
+    justify-content: space-between;
 }
 
 /* styles for preface tile ads */
