@@ -64,7 +64,7 @@
     margin-bottom: 20px;
 }
 
-/* center ads */
+/* center ads -- first line might not be necessary */
 .block-simpleads > div > div > div,
 .block-simpleads > div > div > div > div > div {
     display: flex;
