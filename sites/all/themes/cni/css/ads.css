@@ -83,8 +83,12 @@
     justify-content: space-between;
 }
 
-/* OWN LOCAL
---------------------------------------------------------------------------*/
+.preface-wrapper .block.block-simpleads .content {
+    background: none;
+}
+
+    /* OWN LOCAL
+    --------------------------------------------------------------------------*/
 #block-etype-own-local .block-inner {
     padding: 0;
     margin: 0;
