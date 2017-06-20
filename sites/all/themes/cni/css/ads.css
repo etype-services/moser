@@ -79,6 +79,12 @@
     width: 100%;
 }
 
+/* header banner */
+.region-main-menu .block-simpleads > div > div > div > div > div {
+    display: flex;
+    justify-content: center;
+}
+
 /* styles for preface tile ads */
 .preface-wrapper .region-preface-1 .block-simpleads .content {
     padding: 1em;
