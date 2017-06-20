@@ -75,6 +75,10 @@
     justify-content: space-between;
 }
 
+.block-simpleads .adslist > div {
+    width: 100%;
+}
+
 /* styles for preface tile ads */
 .preface-wrapper .region-preface-1 .block-simpleads .content {
     padding: 1em;
