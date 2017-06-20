@@ -80,7 +80,13 @@
 }
 
 /* ad spacing */
+.simplead-container {
+    margin-left: 0.1em;
+}
 
+.simplead-container.first {
+    margin-left: 0;
+}
 
 /* header banner */
 .region-main-menu .block-simpleads > div > div > div > div > div {
