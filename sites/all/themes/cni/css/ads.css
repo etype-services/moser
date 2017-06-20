@@ -79,6 +79,9 @@
     width: 100%;
 }
 
+/* ad spacing */
+
+
 /* header banner */
 .region-main-menu .block-simpleads > div > div > div > div > div {
     display: flex;
@@ -93,25 +96,12 @@
 .region-preface-1 .block-simpleads > div > div > div > div > div,
 .region-preface-3 .block-simpleads > div > div > div > div > div {
     display: flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     justify-content: space-between;
 }
 
 .preface-wrapper .block.block-simpleads .content {
     background: none;
-}
-
-    /* OWN LOCAL
-    --------------------------------------------------------------------------*/
-#block-etype-own-local .block-inner {
-    padding: 0;
-    margin: 0;
-    border: none;
-    box-shadow: none;
-}
-
-#block-etype-own-local .block-inner .content {
-    padding: 0;
 }
 
 /* css for Crowdy news sidebar ads */
@@ -121,7 +111,6 @@
 }
 
 /* css for etype google DFP sidebar ads */
-
 #div-gpt-ad-1487352373268-1 {
     margin: -20px;
 }
@@ -130,4 +119,14 @@
 #div-gpt-ad-1487352373268-0 {
     margin: 0 auto 20px;
     width: 728px;
+}
+
+@media only screen and (max-width: 767px) {
+    .region-main-menu .block-simpleads {
+        margin-bottom: 0;
+    }
+
+    .region-main-menu-second-level .block-simpleads {
+        margin-top: 0;
+    }
 }
