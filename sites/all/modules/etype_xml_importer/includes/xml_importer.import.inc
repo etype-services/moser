@@ -146,12 +146,16 @@ function etype_xml_importer_olive_import() {
                 preg_match("'<xhtml:p prism:class=\"deck\">(.*?)</xhtml:p>'s", $ar_xml, $coincidencias);
                 if (isset($coincidencias[1])) {
                   $array['slugline'] = trim(strip_tags($coincidencias[1]));
+                } else {
+                  $array['slugline'] = '';
                 }
 
                 // get the byline
                 preg_match("'<xhtml:p prism:class=\"byline\">(.*?)<xhtml:br />'s", $ar_xml, $coincidencias);
                 if (isset($coincidencias[1])) {
                   $array['byline'] = trim(ucwords(strtolower(strip_tags($coincidencias[1]))));
+                } else {
+                  $array['byline'] = '';
                 }
 
                 // echo $ar_xml;
@@ -164,13 +168,15 @@ function etype_xml_importer_olive_import() {
                   $images = array();
                   foreach ($matches as $item) {
                     preg_match("/<dc:format>([^<]+)/", $item, $imatches);
-                    if ($imatches[1] == 'image/jpg') {
-                      $iarray = array();
+                    if (isset($imatches[1]) && $imatches[1] == 'image/jpg') {
                       preg_match("'<pam:mediaReference pam:refid=\"(.*)\" />'", $item, $arr);
-                      $iarray['image'] = $arr[1];
-                      preg_match("'<pam:caption>(.*?)</pam:caption>'s", $item, $arr);
-                      $iarray['caption'] = trim(strip_tags($arr[1]));
-                      $images[] = $iarray;
+                      if (isset($arr[1])) {
+                        $iarray = array();
+                        $iarray['image'] = $arr[1];
+                        preg_match("'<pam:caption>(.*?)</pam:caption>'s", $item, $arr);
+                        $iarray['caption'] = trim(strip_tags($arr[1]));
+                        $images[] = $iarray;
+                      }
                     }
                   }
                 }
