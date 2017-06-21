@@ -60,7 +60,7 @@ function etype_xml_importer_olive_import() {
   $rand = md5(time());
   $zip_file = "/tmp/" . $rand . ".zip";
   // $import_url = 'http://test.etypegoogle4.com/xml-import/ercn_2017_01_12.zip';
-  $import_url = 'http://test.etypegoogle4.com/xml-import/esmdr_2017_03_19.zip';
+  $import_url = theme_get_setting('xml_import_url');;
   $extract_dir = '/tmp/' . $rand . '/';
 
   /* Copy Zip file from url */
