@@ -174,7 +174,11 @@ function etype_xml_importer_olive_import() {
                         $iarray = array();
                         $iarray['image'] = $arr[1];
                         preg_match("'<pam:caption>(.*?)</pam:caption>'s", $item, $arr);
-                        $iarray['caption'] = trim(strip_tags($arr[1]));
+                        if (isset($arr[1])) {
+                          $iarray['caption'] = trim(strip_tags($arr[1]));
+                        } else {
+                          $iarray['caption'] = '';
+                        }
                         $images[] = $iarray;
                       }
                     }
