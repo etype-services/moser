@@ -161,11 +161,11 @@ function etype_xml_importer_olive_import() {
                 // echo $ar_xml;
 
                 /* Images */
+                $images = array();
                 preg_match_all("'<pam:media>(.*?)</pam:media>'s", $ar_xml, $coincidencias);
                 // loop over matches and extracat data
                 if (! empty($coincidencias[1])) {
                   $matches = $coincidencias[1];
-                  $images = array();
                   foreach ($matches as $item) {
                     preg_match("/<dc:format>([^<]+)/", $item, $imatches);
                     if (isset($imatches[1]) && $imatches[1] == 'image/jpg') {
