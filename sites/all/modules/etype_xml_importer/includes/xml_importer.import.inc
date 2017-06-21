@@ -144,11 +144,15 @@ function etype_xml_importer_olive_import() {
 
                 // get the slugline
                 preg_match("'<xhtml:p prism:class=\"deck\">(.*?)</xhtml:p>'s", $ar_xml, $coincidencias);
-                $array['slugline'] = trim(strip_tags($coincidencias[1]));
+                if (isset($coincidencias[1])) {
+                  $array['slugline'] = trim(strip_tags($coincidencias[1]));
+                }
 
                 // get the byline
                 preg_match("'<xhtml:p prism:class=\"byline\">(.*?)<xhtml:br />'s", $ar_xml, $coincidencias);
-                $array['byline'] = ucwords(strtolower(strip_tags($coincidencias[1])));
+                if (isset($coincidencias[1])) {
+                  $array['byline'] = trim(ucwords(strtolower(strip_tags($coincidencias[1]))));
+                }
 
                 // echo $ar_xml;
 
