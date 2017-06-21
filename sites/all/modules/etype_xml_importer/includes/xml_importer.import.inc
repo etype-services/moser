@@ -185,10 +185,10 @@ function etype_xml_importer_olive_import() {
                   }
                 }
 
-                //print_r ($images);
+                // print_r ($images);
 
+                $array['images'] = array();
                 if (count($images) > 0) {
-                  $array['images'] = array();
                   foreach ($images as $image) {
                     $ipath = $extract_dir . 'img/' . $image['image'];
                     $array['images'][] = array(
