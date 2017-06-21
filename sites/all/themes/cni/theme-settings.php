@@ -138,6 +138,14 @@ function cni_form_system_theme_settings_alter(&$form, $form_state) {
     '#default_value' => theme_get_setting('logo_width'),
   );
 
+  $form['advanced_settings']['misc_settings']['xml_import_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Import XML Url'),
+    '#description' => t('URL from which to Import XML content'),
+    '#size' => 10,
+    '#default_value' => theme_get_setting('xml_import_url'),
+  );
+
   // Grid Settings
   $form['advanced_settings']['grid_settings'] = array(
     '#type' => 'fieldset',
