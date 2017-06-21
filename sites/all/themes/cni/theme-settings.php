@@ -78,20 +78,22 @@ function cni_form_system_theme_settings_alter(&$form, $form_state) {
   $form['advanced_settings']['misc_settings']['rssfeed'] = array(
     '#type' => 'textfield',
     '#title' => t('RSS Feed'),
+    '#description' => t('Enter Yes to activate'),
     '#size' => 10,
     '#default_value' => theme_get_setting('rssfeed'),
   );
 
   $form['advanced_settings']['misc_settings']['e_edition'] = array(
-    '#type' => 'textfield',
+    '#type' => 'textarea',
     '#title' => t('e-Edition'),
-    '#size' => 10,
+    '#description' => t('For one paper enter the e-Edition like <code>Mitchell%20News-JournalID617</code>, for more than one format like this: <code>Mitchell%20News-JournalID617|Mitchell News Journal,The%20Yorktown%20News-ViewID84|The Yorktown News View</code>'),
     '#default_value' => theme_get_setting('e_edition'),
   );
 
   $form['advanced_settings']['misc_settings']['pub'] = array(
     '#type' => 'textfield',
     '#title' => t('Pub'),
+    '#description' => t('Separate multiple entries with a comma, in the same order as the e-Editions'),
     '#size' => 10,
     '#default_value' => theme_get_setting('pub'),
   );
@@ -99,6 +101,7 @@ function cni_form_system_theme_settings_alter(&$form, $form_state) {
   $form['advanced_settings']['misc_settings']['ptype'] = array(
     '#type' => 'textfield',
     '#title' => t('PType'),
+    '#description' => t('Separate multiple entries with a comma, in the same order as the e-Editions'),
     '#size' => 10,
     '#default_value' => theme_get_setting('ptype'),
   );
@@ -106,29 +109,33 @@ function cni_form_system_theme_settings_alter(&$form, $form_state) {
   $form['advanced_settings']['misc_settings']['nav_color'] = array(
     '#type' => 'textfield',
     '#title' => t('Navigation Background Color'),
+    '#description' => t('Optional, include initial #'),
     '#size' => 10,
     '#default_value' => theme_get_setting('nav_color'),
   );
 
   $form['advanced_settings']['misc_settings']['max_nav_width'] = array(
     '#type' => 'textfield',
-    '#title' => t('Max Main Navigation Width'),
+    '#title' => t('Max Main Menu Width'),
+    '#description' => t('Optionally constrain main menu width'),
     '#size' => 10,
     '#default_value' => theme_get_setting('max_nav_width'),
+  );
+
+  $form['advanced_settings']['misc_settings']['max_user_nav_width'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Max User Menu Width'),
+    '#description' => t('Optionally constrain user menu width'),
+    '#size' => 10,
+    '#default_value' => theme_get_setting('max_user_nav_width'),
   );
 
   $form['advanced_settings']['misc_settings']['logo_width'] = array(
     '#type' => 'textfield',
     '#title' => t('Logo Width'),
+    '#description' => t('Optional maximum allowed width for logo'),
     '#size' => 10,
     '#default_value' => theme_get_setting('logo_width'),
-  );
-
-  $form['advanced_settings']['misc_settings']['extra_dfp_code'] = array(
-    '#type' => 'radios',
-    '#title' => t('Add Extra DFP Code in Header'),
-    '#options' => array('0'  => "No", '1' => "Yes"),
-    '#default_value' => theme_get_setting('extra_dfp_code'),
   );
 
   // Grid Settings

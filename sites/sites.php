@@ -14,17 +14,16 @@ $sites['meridiantribune.com'] = 'bosquecountytoday.com';
 $sites['www.meridiantribune.com'] = 'bosquecountytoday.com';
 
 /* dewittcountytoday.etypegoogle4.com */
-$sites['dewittcountytoday.etypegoogle4.com'] = 'dewittcountytoday.com';
-$sites['dewittcountytoday.com'] = 'dewittcountytoday.com';
-$sites['www.dewittcountytoday.com'] = 'dewittcountytoday.com';
-$sites['yorktownnews-view.com'] = 'dewittcountytoday.com';
-$sites['www.yorktownnews-view.com'] = 'dewittcountytoday.com';
-$sites['yorktownnewsview.com'] = 'dewittcountytoday.com';
-$sites['www.yorktownnewsview.com'] = 'dewittcountytoday.com';
-$sites['cuerorecord.com'] = 'dewittcountytoday.com';
-$sites['www.cuerorecord.com'] = 'dewittcountytoday.com';
-
-$sites['dewittcountytodaycni.etypegoogle4.com'] = 'dewittcountytoday.etypegoogle4.com';
+$sites['dewittcountytoday.etypegoogle4.com'] = 'dewittcountytoday.etypegoogle4.com';
+$sites['dewittcountytoday.com'] = 'dewittcountytoday.etypegoogle4.com';
+$sites['www.dewittcountytoday.com'] = 'dewittcountytoday.etypegoogle4.com';
+$sites['archive.dewittcountytoday.com'] = 'archive.dewittcountytoday.com';
+$sites['yorktownnews-view.com'] = 'dewittcountytoday.etypegoogle4.com';
+$sites['www.yorktownnews-view.com'] = 'dewittcountytoday.etypegoogle4.com';
+$sites['yorktownnewsview.com'] = 'dewittcountytoday.etypegoogle4.com';
+$sites['www.yorktownnewsview.com'] = 'dewittcountytoday.etypegoogle4.com';
+$sites['cuerorecord.com'] = 'dewittcountytoday.etypegoogle4.com';
+$sites['www.cuerorecord.com'] = 'dewittcountytoday.etypegoogle4.com';
 
 /* drippingspringsnews.etypegoogle4.com */
 $sites['drippingspringsnews.etypegoogle4.com'] = 'drippingspringsnews.com';
@@ -39,9 +38,11 @@ $sites['robconews.etypegoogle4.com'] = 'robconews.etypegoogle4.com';
 $sites['robconews.com'] = 'robconews.etypegoogle4.com';
 $sites['www.robconews.com'] = 'robconews.etypegoogle4.com';
 
-$sites['groesbeckjournal.etypegoogle4.com'] = 'groesbeckjournal.com';
-$sites['groesbeckjournal.com'] = 'groesbeckjournal.com';
-$sites['www.groesbeckjournal.com'] = 'groesbeckjournal.com';
+$sites['groesbeckjournal.etypegoogle4.com'] = 'groesbeckjournal.etypegoogle4.com';
+$sites['groesbeckjournal.com'] = 'groesbeckjournal.etypegoogle4.com';
+$sites['www.groesbeckjournal.com'] = 'groesbeckjournal.etypegoogle4.com';
+$sites['photos.etypegoogle4.com'] = 'groesbeckjournal.etypegoogle4.com';
+$sites['archive.groesbeckjournal.com'] = 'archive.groesbeckjournal.com';
 
 $sites['burnetbulletin.etypegoogle4.com'] = 'burnetbulletin.com';
 $sites['burnetbulletin.com'] = 'burnetbulletin.com';
@@ -123,27 +124,31 @@ $sites['www.aransaspassprogress.com'] = 'aransaspassprogress.com';
 $sites['aransaspassprogress.net'] = 'aransaspassprogress.com';
 $sites['www.aransaspassprogress.net'] = 'aransaspassprogress.com';
 
-$sites['jacksonconews.etypegoogle4.com'] = 'jacksonconews.com';
-$sites['www.jacksonconews.com'] = 'jacksonconews.com';
-$sites['jacksonconews.com'] = 'jacksonconews.com';
+$sites['jacksonconews.etypegoogle4.com'] = 'archive.jacksonconews.com';
+$sites['www.jacksonconews.com'] = 'archive.jacksonconews.com';
+$sites['jacksonconews.com'] = 'archive.jacksonconews.com';
+$sites['archive.jacksonconews.com'] = 'archive.jacksonconews.com';
 $sites['jacksonconewscni.etypegoogle4.com'] = 'jacksonconews.etypegoogle4.com';
 
-/* atlantacitizensjournal.etypegoogle4.com */
-$sites['atlantacitizensjournal.etypegoogle4.com'] = 'atlantacitizensjournal.com';
-$sites['www.atlantacitizensjournal.com'] = 'atlantacitizensjournal.com';
-$sites['atlantacitizensjournal.com'] = 'atlantacitizensjournal.com';
+/* cacccountynow.etypegoogle4.com */
+$sites['atlantacitizensjournal.etypegoogle4.com'] = 'casscountynow.etypegoogle4.com';
+$sites['www.atlantacitizensjournal.com'] = 'casscountynow.etypegoogle4.com';
+$sites['atlantacitizensjournal.com'] = 'casscountynow.etypegoogle4.com';
 
-$sites['www.casscountynow.com'] = 'atlantacitizensjournal.com';
-$sites['casscountynow.com'] = 'atlantacitizensjournal.com';
+$sites['www.casscountynow.com'] = 'casscountynow.etypegoogle4.com';
+$sites['casscountynow.com'] = 'casscountynow.etypegoogle4.com';
+$sites['archive.casscountynow.com'] = 'archive.casscountynow.com';
 
-$sites['www.casscountysun.com'] = 'atlantacitizensjournal.com';
-$sites['casscountysun.com'] = 'atlantacitizensjournal.com';
+$sites['www.casscountysun.com'] = 'casscountynow.etypegoogle4.com';
+$sites['casscountysun.com'] = 'casscountynow.etypegoogle4.com';
 
-$sites['www.theatlantacitizensjournal.com'] = 'atlantacitizensjournal.com';
-$sites['theatlantacitizensjournal.com'] = 'atlantacitizensjournal.com';
+$sites['www.theatlantacitizensjournal.com'] = 'casscountynow.etypegoogle4.com';
+$sites['theatlantacitizensjournal.com'] = 'casscountynow.etypegoogle4.com';
 
-$sites['www.lindensun.com'] = 'atlantacitizensjournal.com';
-$sites['lindensun.com'] = 'atlantacitizensjournal.com';
+$sites['www.lindensun.com'] = 'casscountynow.etypegoogle4.com';
+$sites['lindensun.com'] = 'casscountynow.etypegoogle4.com';
+
+$sites['casscountycni.etypegoogle4.com'] = 'casscountynow.etypegoogle4.com';
 
 /* campcountynow.etypegoogle4.com */
 $sites['campcountynow.etypegoogle4.com'] = 'campcountynow.com';

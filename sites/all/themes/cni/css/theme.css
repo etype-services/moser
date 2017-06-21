@@ -90,21 +90,23 @@ h3.site-slogan {
 
 /* SLIDESHOW
 --------------------------------------------------------------------------*/
+
+/* override #main-content .block-inner */
+#main-content #block-views-slideshow-block .block-inner {
+    padding: 0 0 20px 0;
+}
+
 .view-slideshow .views_slideshow_main {
     position: relative;
-    height: 400px;
+    height: 420px;
 }
 
 .view-slideshow .views_slideshow_main .views-field-field-image {
     position: absolute;
-    top: -20px;
-    left: -20px;
 }
 
 .view-slideshow .views_slideshow_main .views-field-field-video {
     position: absolute;
-    top: -20px;
-    left: -20px;
 }
 
 .view-slideshow .views_slideshow_main .views-field-field-image img {
@@ -116,8 +118,6 @@ h3.site-slogan {
     position: absolute;
     padding: 20px;
     width: 578px;
-    top: -20px;
-    left: -20px;
     background: url(../images/trans.png);
     color: #ffffff;
     font-family: 'Lato', sans-serif;
@@ -136,7 +136,6 @@ h3.site-slogan {
     width: 578px;
     padding: 20px;
     top: 290px;
-    left: -20px;
     background: url(../images/trans.png);
     color: #ffffff;
 }
@@ -149,8 +148,7 @@ h3.site-slogan {
 
 .view-slideshow .views-slideshow-controls-bottom .views-field-field-image img, .view-slideshow .views-slideshow-controls-bottom .views-field-field-video img {
     display: block;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin: 0;
     float: left;
     opacity: 0.5;
     border: 1px solid #333333;
@@ -159,7 +157,7 @@ h3.site-slogan {
 
 .view-slideshow .views-slideshow-controls-bottom .views-field-field-image img:hover, .view-slideshow .views-slideshow-controls-bottom .views-field-field-video img:hover {
     opacity: 1;
-    border: 1px solid #000
+    border: 1px solid #000;
 }
 
 .view-slideshow .views-slideshow-controls-bottom .active .views-field-field-image img, .view-slideshow .views-slideshow-controls-bottom .active .views-field-field-video img {
@@ -174,6 +172,13 @@ h3.site-slogan {
     font-family: 'Lato', sans-serif;
     font-size: 0.7em;
 }
+
+#widget_pager_bottom_slideshow-block_1 {
+    display: flex;
+    margin: 0;
+    justify-content: space-around;
+}
+
 
 /* override module defaults */
 .views-slideshow-pager-fields > div {
@@ -195,7 +200,8 @@ h3.site-slogan {
     overflow: hidden;
 }
 
-.preface-wrapper .views-row .views-field-field-image img {
+.preface-wrapper .views-row .views-field-field-image img,
+.preface-wrapper .views-row .views-field-field-mugshot img {
     display: block;
     float: left;
     margin-right: 10px;
@@ -254,7 +260,7 @@ h3.site-slogan {
 --------------------------------------------------------------------------*/
 
 .front .main-content-wrapper {
-    margin-top: 10px;
+    /*margin-top: 10px;*/
 }
 
 #main-content .block-inner, #preface .block-inner, h1#page-title {
@@ -263,6 +269,10 @@ h3.site-slogan {
     border: 1px solid #ddd;
     border-bottom: 3px solid #111111;
     background: #ffffff;
+}
+
+#main-content #block-system-main .block-inner {
+    padding: 0 20px 20px;
 }
 
 #main-content #block-system-main .block-inner {
@@ -466,25 +476,45 @@ article .field-image {
 
 /* USER MENU
 --------------------------------------------------------------------------*/
+.region-user-menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 0.6em;
+    background-color: #f3f1f1;
+}
 
 #user-menu {
     margin: 0;
-    border-bottom: 1px solid #dddddd;
-    background: #f5f5f5;
+    font-family: 'Lato', sans-serif;
+}
+
+#user-menu ul.menu {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#user-menu ul.menu li {
+    float: none;
 }
 
 #user-menu ul.menu li a {
     display: block;
-    line-height: 25px;
+    line-height: 36px;
     font-size: 11px;
-    padding: 0 20px;
+    padding: 0 12px;
     text-transform: uppercase;
     border-right: 1px solid #dddddd;
     color: #111111;
 }
 
+#user-menu ul.menu li.last a {
+    border-right: none;
+}
+
 #user-menu ul.menu li a:hover {
-    background: #eeeeee;
+    background: #f3f1f1;
     text-decoration: none;
 }
 
@@ -522,7 +552,7 @@ article .field-image {
 }
 
 #user-menu ul.menu li li a:hover, #user-menu ul.menu li li a.active:hover {
-    background: #eeeeee;
+    background: #f3f1f1;
 }
 
 #main-menu ul.menu li ul ul {
@@ -600,13 +630,13 @@ article .field-image {
 
 #main-menu ul.menu li a:hover {
     color: #333333;
-    background: #eeeeee;
+    background: #f3f1f1;
     text-decoration: none;
 }
 
 #main-menu ul.menu li a.active {
     color: #222222;
-    background-color: #cccccc;
+    background-color: #f3f1f1;
 }
 
 #main-menu ul.menu li ul li a {
@@ -695,7 +725,7 @@ article .field-image {
 }
 
 #main-menu-second-level ul.menu li li a:hover, #main-menu-second-level ul.menu li li a.active:hover {
-    background: #eeeeee;
+    background: #f3f1f1;
     font-size: 0.9em;
 }
 
@@ -730,13 +760,14 @@ article .field-image {
 /* NODES
 --------------------------------------------------------------------------*/
 
-.node .field-name-field-image img {
+/* image display on article page with flexslider override */
+.node .field-name-field-image img,
+.flexslider .slides img {
     display: block;
-    margin-top: 0;
-    margin-left: 0;
-    margin-bottom: 0;
-    width: 100%;
-    height: auto
+    height: auto;
+    width: initial;
+    max-width: 100%;
+    margin: auto;
 }
 
 .node .field-name-field-video iframe {
@@ -760,7 +791,7 @@ article .field-image {
     font-weight: bold;
     padding: 0 5px 0 5px;
     font-size: 0.9em;
-    background: #eeeeee;
+    background: #f3f1f1;
 }
 
 .node ul.links li.node-readmore a {
@@ -800,7 +831,8 @@ article .field-image {
     display: block;
 }
 
-.node-teaser .field-image .field-name-field-image .field-items .field-item:first-child img {
+.node-teaser .field-image .field-name-field-image .field-items .field-item:first-child img,
+.node-teaser .field-name-field-mugshot .field-items .field-item:first-child img {
     display: block;
     padding: 10px;
     float: left;
@@ -885,16 +917,16 @@ article .field-image {
 /* SEARCH FORM
 --------------------------------------------------------------------------*/
 
-.region-search-box {
-    float: right;
+#block-search-form {
+    padding: 0 8px;
+    flex-grow: 2;
 }
 
 #search-block-form {
     margin-top: 0;
     background: 0;
     line-height: 25px;
-    border-left: 1px solid #dddddd;
-    background: #ffffff;
+    float: right;
 }
 
 #search-block-form h2, #search-block-form label {
@@ -917,22 +949,22 @@ article .field-image {
 #search-block-form .form-submit {
     display: inline-block;
     width: auto;
-    height: 25px;
-    font-size: 0.8em;
+    height: 36px;
+    font-size: 11px;
     padding: 0 5px;
     border-radius: 0;
     text-transform: uppercase;
     background: 0;
     font-weight: normal;
-    background: #ffffff;
 }
 
 #search-block-form .form-text {
-    padding: 0 10px;
-    width: 200px;
+    padding: 0;
     color: #999999;
     font-style: italic;
-    background: #ffffff;
+    background-color: #ffffff;
+    position: relative;
+    top: 1px;
 }
 
 #search-block-form input:focus {
@@ -951,17 +983,10 @@ article .field-image {
 /* SOCIAL
 --------------------------------------------------------------------------*/
 
-#social {
-    float: left;
-    padding-left: 10px;
-    margin-right: -10px;
-    padding-top: 4px;
-    margin-bottom: -4px;
-}
-
-#social ul {
+ul.social-links {
     padding: 0;
     margin: 0;
+    height: 36px;
 }
 
 .social-links li {
@@ -971,10 +996,12 @@ article .field-image {
 }
 
 .social-links li a {
-    display: inline-block;
-    padding-left: 10px;
-    width: 16px;
-    height: 16px;
+    display: block;
+    width: 40px;
+    height: 36px;
+    background-size: 35px;
+    position: relative;
+    top: 2px;
 }
 
 .facebook {
@@ -1139,11 +1166,6 @@ ul.quicktabs-tabs.quicktabs-style-nostyle li.active a {
     padding: 0 0 0 0;
 }
 
-.field-name-field-mugshot {
-    float: left;
-    margin-right: 10px;
-}
-
 .field-name-field-mug {
     float: right;
 }
@@ -1277,6 +1299,10 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
     margin-left: 168px;
 }
 
+.node-article .submitted {
+    margin-left: 0;
+}
+
 /* ADVANCED POLL
 --------------------------------------------------------------------------*/
 #block-advpoll-advpoll-recent h2.title {
@@ -1339,7 +1365,8 @@ article.node-webform .node-content-wrapper h1.title {
 /* flexslider overrides */
 .flexslider {
     font: 0.8em/1.4 lato;
-    margin: 0;
+    margin: 0 0 6em 0;
+    border: none;
 }
 
 .flex-control-nav {
@@ -1367,4 +1394,11 @@ li.views-fluid-grid-item {
     color: inherit;
     background: none;
     border: none;
+}
+
+/* override date.css from date module
+ * theme makes class from title which invokes calendar css
+ */
+.node-type-article.calendar {
+    width: inherit;
 }
