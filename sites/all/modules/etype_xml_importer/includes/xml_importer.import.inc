@@ -226,6 +226,8 @@ function etype_xml_importer_olive_import() {
 
       }
     }
+  } else {
+    watchdog('etype_xml_importer', "XML import setting empty", $variables = array(), $severity = WATCHDOG_NOTICE);
   }
 }
 
