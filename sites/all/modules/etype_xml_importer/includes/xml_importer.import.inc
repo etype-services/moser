@@ -76,7 +76,7 @@ function etype_xml_importer_olive_import() {
       /* Copy Zip file from url */
       $import_file = $base_import_url . trim($item);
       if (!file_put_contents($zip_file, file_get_contents($import_file))) {
-        watchdog('etype_xml_importer', "Could not import " . $import_file . ".", $variables = array(), $severity = WATCHDOG_NOTICE);
+        watchdog('etype_xml_importer', "Could not import " . $import_file . ".", $variables = array(), $severity = WATCHDOG_WARNING);
         continue;
       }
 
@@ -87,7 +87,7 @@ function etype_xml_importer_olive_import() {
         $zip->extractTo($extract_dir);
         $zip->close();
       } else {
-        watchdog('etype', "eType XML Importer could not open Zip Archive %file", $variables = array('%file' => $zip_file), $severity = WATCHDOG_NOTICE);
+        watchdog('etype', "eType XML Importer could not open Zip Archive %file", $variables = array('%file' => $zip_file), $severity = WATCHDOG_WARNING);
         exit;
       }
 
@@ -113,6 +113,7 @@ function etype_xml_importer_olive_import() {
           'language' => LANGUAGE_NONE,
         );
 
+        $i = 0;
         foreach ($entries as $entry) {
           $xml = file_get_contents($extract_dir . $entry);
           if ($xml !== FALSE) {
@@ -233,8 +234,9 @@ function etype_xml_importer_olive_import() {
               }
             }
           }
+          $i++;
         }
-
+        watchdog('etype', "eType XML Importer imported %num stories.", $variables = array('%num' => $i), $severity = WATCHDOG_NOTICE);
       }
     }
   }
