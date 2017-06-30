@@ -238,9 +238,9 @@ function etype_xml_importer_olive_import() {
             }
           }
         }
-        watchdog('etype', "eType XML Importer imported %num stories.", $variables = array('%num' => $i), $severity = WATCHDOG_NOTICE);
       }
     }
+    watchdog('etype', "eType XML Importer imported %num stories.", $variables = array('%num' => $i), $severity = WATCHDOG_NOTICE);
   }
 }
 
