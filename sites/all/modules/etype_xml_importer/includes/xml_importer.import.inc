@@ -77,6 +77,7 @@ function etype_xml_importer_olive_import() {
       $import_file = $base_import_url . trim($item);
       if (!file_put_contents($zip_file, file_get_contents($import_file))) {
         watchdog('etype_xml_importer', "Could not import " . $import_file . ".", $variables = array(), $severity = WATCHDOG_NOTICE);
+        continue;
       }
 
       /* Extract Zip Archive */
