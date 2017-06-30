@@ -45,7 +45,7 @@ function etype_xml_importer_cronapi($op, $job = NULL) {
     $items['etype_xml_importer_cron'] = array(
       'description' => 'Import Content via XML from Olive',
       'rule' => $xml_cron_schedule,
-      'callback' => 'etype_xml_importer_etype_import',
+      'callback' => 'etype_xml_importer_olive_import',
       'file' => 'includes/xml_importer.import.inc'
     );
     return $items;
