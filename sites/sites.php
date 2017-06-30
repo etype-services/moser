@@ -124,11 +124,10 @@ $sites['www.aransaspassprogress.com'] = 'aransaspassprogress.com';
 $sites['aransaspassprogress.net'] = 'aransaspassprogress.com';
 $sites['www.aransaspassprogress.net'] = 'aransaspassprogress.com';
 
-$sites['jacksonconews.etypegoogle4.com'] = 'archive.jacksonconews.com';
-$sites['www.jacksonconews.com'] = 'archive.jacksonconews.com';
-$sites['jacksonconews.com'] = 'archive.jacksonconews.com';
+$sites['jacksonconews.etypegoogle4.com'] = 'jacksonconews.etypegoogle4.com';
+$sites['www.jacksonconews.com'] = 'jacksonconews.etypegoogle4.com';
+$sites['jacksonconews.com'] = 'jacksonconews.etypegoogle4.com';
 $sites['archive.jacksonconews.com'] = 'archive.jacksonconews.com';
-$sites['jacksonconewscni.etypegoogle4.com'] = 'jacksonconews.etypegoogle4.com';
 
 /* cacccountynow.etypegoogle4.com */
 $sites['atlantacitizensjournal.etypegoogle4.com'] = 'casscountynow.etypegoogle4.com';
