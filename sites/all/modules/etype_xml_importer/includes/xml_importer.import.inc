@@ -67,6 +67,7 @@ function etype_xml_importer_olive_import() {
 
   if (count($import_file_array > 0)) {
 
+    $i = 0;
     foreach ($import_file_array as $item) {
 
       $rand = md5(time());
@@ -113,7 +114,6 @@ function etype_xml_importer_olive_import() {
           'language' => LANGUAGE_NONE,
         );
 
-        $i = 0;
         foreach ($entries as $entry) {
           $xml = file_get_contents($extract_dir . $entry);
           if ($xml !== FALSE) {
