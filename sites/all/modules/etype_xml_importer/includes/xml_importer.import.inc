@@ -113,7 +113,6 @@ function etype_xml_importer_olive_import() {
           'language' => LANGUAGE_NONE,
         );
 
-        $i = 0;
         foreach ($entries as $entry) {
           $xml = file_get_contents($extract_dir . $entry);
           if ($xml !== FALSE) {
@@ -125,6 +124,7 @@ function etype_xml_importer_olive_import() {
                 $item = $stub->item;
                 /* xml object processing of stub which contains link, title, and description */
                 foreach ($item as $k => $v) {
+                  $i = 0;
                   $array = (array) $v;
                   // print_r($array);
                   // title is not an object if the stub is valid
@@ -230,11 +230,11 @@ function etype_xml_importer_olive_import() {
                     etype_xml_importer_entity_create($node, $values);
                     //exit;
                   }
+                  $i++;
                 }
               }
             }
           }
-          $i++;
         }
         watchdog('etype', "eType XML Importer imported %num stories.", $variables = array('%num' => $i), $severity = WATCHDOG_NOTICE);
       }
