@@ -60,6 +60,10 @@ function etype_xml_importer_olive_import() {
   $rand = md5(time());
   $zip_file = "/tmp/" . $rand . ".zip";
   $import_files = theme_get_setting('xml_import_url');
+  if (empty($import_files)) {
+    watchdog('etype_xml_importer', "XML import setting empty", $variables = array(), $severity = WATCHDOG_NOTICE);
+    return;
+  }
   $base_import_url = 'http://test.etypegoogle4.com/xml-import/';
   $extract_dir = '/tmp/' . $rand . '/';
   $import_file_array = explode(',', $import_files);
@@ -226,8 +230,6 @@ function etype_xml_importer_olive_import() {
 
       }
     }
-  } else {
-    watchdog('etype_xml_importer', "XML import setting empty", $variables = array(), $severity = WATCHDOG_NOTICE);
   }
 }
 
