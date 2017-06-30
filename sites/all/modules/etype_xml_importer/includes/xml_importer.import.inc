@@ -61,7 +61,7 @@ function etype_xml_importer_olive_import() {
   $zip_file = "/tmp/" . $rand . ".zip";
   $import_files = theme_get_setting('xml_import_url');
   if (empty($import_files)) {
-    watchdog('etype_xml_importer', "XML import setting empty", $variables = array(), $severity = WATCHDOG_NOTICE);
+    watchdog('etype_xml_importer', "XML import setting empty.", $variables = array(), $severity = WATCHDOG_NOTICE);
     return;
   }
   $base_import_url = 'http://test.etypegoogle4.com/xml-import/';

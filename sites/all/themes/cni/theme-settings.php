@@ -140,8 +140,8 @@ function cni_form_system_theme_settings_alter(&$form, $form_state) {
 
   $form['advanced_settings']['misc_settings']['xml_import_url'] = array(
     '#type' => 'textfield',
-    '#title' => t('Import XML Url'),
-    '#description' => t('URL from which to Import XML content'),
+    '#title' => t('XML Files to Import'),
+    '#description' => t('Files names for XML import of content'),
     '#size' => 10,
     '#default_value' => theme_get_setting('xml_import_url'),
   );
