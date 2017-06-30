@@ -57,21 +57,27 @@ function etype_xml_importer_entity_create($item = array(), $values = array(), $e
 function etype_xml_importer_olive_import() {
 
   global $user;
-  $rand = md5(time());
-  $zip_file = "/tmp/" . $rand . ".zip";
   $import_files = theme_get_setting('xml_import_url');
   if (empty($import_files)) {
     watchdog('etype_xml_importer', "XML import setting empty.", $variables = array(), $severity = WATCHDOG_NOTICE);
     return;
   }
   $base_import_url = 'http://test.etypegoogle4.com/xml-import/';
-  $extract_dir = '/tmp/' . $rand . '/';
   $import_file_array = explode(',', $import_files);
+
   if (count($import_file_array > 0)) {
+
     foreach ($import_file_array as $item) {
 
+      $rand = md5(time());
+      $zip_file = "/tmp/" . $rand . ".zip";
+      $extract_dir = '/tmp/' . $rand . '/';
+
       /* Copy Zip file from url */
-      file_put_contents($zip_file, file_get_contents($base_import_url . trim($item)));
+      $import_file = $base_import_url . trim($item);
+      if (!file_put_contents($zip_file, file_get_contents($import_file))) {
+        watchdog('etype_xml_importer', "Could not import " . $import_file . ".", $variables = array(), $severity = WATCHDOG_NOTICE);
+      }
 
       /* Extract Zip Archive */
       $zip = new ZipArchive;
