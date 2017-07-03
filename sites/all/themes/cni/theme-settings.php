@@ -138,23 +138,6 @@ function cni_form_system_theme_settings_alter(&$form, $form_state) {
     '#default_value' => theme_get_setting('logo_width'),
   );
 
-  $form['advanced_settings']['misc_settings']['xml_import_url'] = array(
-    '#type' => 'textfield',
-    '#title' => t('XML Files to Import'),
-    '#description' => t('Files names for XML import of content'),
-    '#size' => 10,
-    '#default_value' => theme_get_setting('xml_import_url'),
-  );
-
-  $form['advanced_settings']['misc_settings']['xml_cron_schedule'] = array(
-    '#type' => 'textfield',
-    '#title' => t('XML Import Cron Schedule'),
-    '#description' => t('Enter a valid cron schedule'),
-    '#size' => 10,
-    '#default_value' => theme_get_setting('xml_cron_schedule'),
-  );
-
-
   // Grid Settings
   $form['advanced_settings']['grid_settings'] = array(
     '#type' => 'fieldset',
