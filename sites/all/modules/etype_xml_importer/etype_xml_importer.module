@@ -20,7 +20,7 @@ function etype_xml_importer_menu() {
   );
 
   /* admin settings page */
-  $items['admin/config/etype_wire'] = array(
+  $items['admin/config/etype_xml_importer'] = array(
     'title' => 'eType',
     'description' => 'eType Settings', // Like any other menu item
     'position' => 'right',
