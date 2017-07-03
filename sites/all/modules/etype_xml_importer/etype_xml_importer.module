@@ -31,6 +31,16 @@ function etype_xml_importer_menu() {
     'file path' => drupal_get_path('module', 'system'),
   );
 
+  $items['admin/config/etype_xml_importer/settings'] = array(
+    'title' => 'XML Import Settings',
+    'description' => 'XML content import options.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('etype_xml_importer_admin'),
+    'access arguments' => array('access wire content'),
+    'file' => 'includes/xml_importer.admin.inc',
+    'type' => MENU_NORMAL_ITEM,
+  );
+
 
   return $items;
 }
