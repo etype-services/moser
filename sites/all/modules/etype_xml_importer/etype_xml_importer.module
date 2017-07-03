@@ -19,6 +19,18 @@ function etype_xml_importer_menu() {
     'file' => 'includes/xml_importer.import.inc'
   );
 
+  /* admin settings page */
+  $items['admin/config/etype_wire'] = array(
+    'title' => 'eType',
+    'description' => 'eType Settings', // Like any other menu item
+    'position' => 'right',
+    'weight' => -15,
+    'page callback' => 'system_admin_menu_block_page',
+    'access arguments' => array('administer site configuration'), // Permission needed to view this area
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+  );
+
 
   return $items;
 }
