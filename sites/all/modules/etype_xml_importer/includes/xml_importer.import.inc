@@ -57,7 +57,7 @@ function etype_xml_importer_entity_create($item = array(), $values = array(), $e
 function etype_xml_importer_olive_import() {
 
   global $user;
-  $import_files = theme_get_setting('xml_import_url');
+  $import_files = variable_get('etype_xml_import_file');
   if (empty($import_files)) {
     watchdog('etype_xml_importer', "XML import setting empty.", $variables = array(), $severity = WATCHDOG_NOTICE);
     return;

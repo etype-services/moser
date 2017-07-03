@@ -52,7 +52,7 @@ function etype_xml_importer_menu() {
  * @return mixed
  */
 function etype_xml_importer_cronapi($op, $job = NULL) {
-  $xml_cron_schedule = theme_get_setting('xml_cron_schedule', 'cni');
+  $xml_cron_schedule = variable_get('etype_xml_cron_schedule');
   if (!empty($xml_cron_schedule)) {
     /* Classified importer */
     $items['etype_xml_importer_cron'] = array(
