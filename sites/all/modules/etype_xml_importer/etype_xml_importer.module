@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * add e-Edition link to user menu
  * @return array
