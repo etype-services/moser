@@ -89,7 +89,8 @@
 }
 
 /* header banner */
-.region-main-menu .block-simpleads > div > div > div > div > div {
+.region-main-menu .block-simpleads > div > div > div > div > div
+{
     display: flex;
     justify-content: center;
 }
@@ -104,6 +105,11 @@
     display: flex;
     /*flex-wrap: wrap;*/
     justify-content: center;
+}
+
+/* wrap for ads in sidebar to appear stacked */
+.region-sidebar-first .block-simpleads > div > div > div > div > div {
+    flex-wrap: wrap;
 }
 
 .preface-wrapper .block.block-simpleads .content {
