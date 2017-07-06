@@ -110,7 +110,7 @@ function etype_xml_importer_olive_import() {
         $values = array(
           'type' => 'article',
           'uid' => $user->uid,
-          'status' => 1,
+          'status' => 0,
           'comment' => 0,
           'promote' => 0,
           'language' => LANGUAGE_NONE,
