@@ -71,7 +71,7 @@ function etype_xml_importer_olive_import() {
     $i = 0;
     foreach ($import_file_array as $item) {
 
-      echo $item;
+      // echo $item;
       $rand = md5(time());
       $zip_file = "/tmp/" . $rand . ".zip";
       $extract_dir = '/tmp/' . $rand . '/';
@@ -232,7 +232,7 @@ function etype_xml_importer_olive_import() {
                     etype_xml_importer_entity_create($node, $values);
                     //exit;
                     $i++;
-                    echo $i . ' ';
+                    // echo $i . ' ';
                   }
                 }
               }
