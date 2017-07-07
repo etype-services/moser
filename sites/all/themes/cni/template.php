@@ -147,11 +147,6 @@ function cni_preprocess_html(&$variables) {
     );
   }
 
-  $extra_dfp_code = theme_get_setting('extra_dfp_code');
-  if ($extra_dfp_code == '1') {
-    $variables['dfp_file'] = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'templates/dfp.inc';
-  }
-
   /* add site setting css */
   $nav_color = theme_get_setting('nav_color');
   if (!empty($nav_color)) {
