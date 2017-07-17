@@ -255,3 +255,8 @@ $sites['lakecountrytalkradio.net'] = 'lakecountrytalkradio.etypegoogle4.com';
 /* q947.etypegoogle4.com */
 $sites['q947.etypegoogle4.com'] = 'q947.etypegoogle4.com';
 $sites['q947.net'] = 'q947.etypegoogle4.com';
+
+/* teaguechronicle.etypegoogle4.com */
+$sites['teaguechronicle.etypegoogle4.com'] = 'teaguechronicle.etypegoogle4.com';
+$sites['teaguechronicle.com'] = 'teaguechronicle.etypegoogle4.com';
+$sites['www.teaguechronicle.com'] = 'teaguechronicle.etypegoogle4.com';
