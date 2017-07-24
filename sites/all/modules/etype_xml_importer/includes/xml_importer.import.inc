@@ -44,7 +44,9 @@ function etype_xml_importer_entity_create($item = array(), $values = array(), $e
           break;
 
         default:
-          $wrapper->$k->set($v);
+          if (isset($wrapper->$k)) {
+            $wrapper->$k->set($v);
+          }
       }
     }
     $wrapper->save(TRUE);
