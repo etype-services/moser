@@ -44,7 +44,7 @@ function etype_xml_importer_entity_create($item = array(), $values = array(), $e
           break;
 
         default:
-          if (field_info_instance('node', '$k', 'article')) {
+          if (field_info_instance('node', "$k", 'article')) {
             $wrapper->$k->set($v);
           }
       }
