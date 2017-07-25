@@ -227,7 +227,7 @@ function etype_xml_importer_olive_import() {
                       'body' => $array['body'],
                       'field_kicker' => $array['slugline'],
                       'field_dateline' => $array['byline'],
-                      'images' => $array['images'],
+                      //'images' => $array['images'],
                     );
                     print_r($node);
 
