@@ -232,7 +232,7 @@ function etype_xml_importer_olive_import() {
                     print_r($node);
 
                     $values['created'] = strtotime($array['pub_date']);
-                    // etype_xml_importer_entity_create($node, $values);
+                    etype_xml_importer_entity_create($node, $values);
                     //exit;
                     $i++;
                     // echo $i . ' ';
