@@ -14,6 +14,10 @@ function etype_xml_importer_entity_create($item = array(), $values = array(), $e
     foreach ($item as $k => $v) {
       switch ($k) {
 
+        case 'title':
+          $wrapper->$k->set($v);
+          break;
+
         case 'body':
           $wrapper->body->set(array(
             'value' => $v,
@@ -146,7 +150,7 @@ function etype_xml_importer_olive_import() {
                     $array['section'] = $coincidencias[1];
 
                     preg_match("/<dc:title>([^<]+)/", $ar_xml, $coincidencias);
-                    echo 'title should be: ' . $coincidencias[1] . "\n";
+                    // echo 'title should be: ' . $coincidencias[1] . "\n";
                     $array['title'] = $coincidencias[1];
 
                     preg_match("/<prism:coverDate>([^<]+)/", $ar_xml, $coincidencias);
@@ -227,7 +231,7 @@ function etype_xml_importer_olive_import() {
                       'body' => $array['body'],
                       'field_kicker' => $array['slugline'],
                       'field_dateline' => $array['byline'],
-                      //'images' => $array['images'],
+                      'images' => $array['images'],
                     );
                     print_r($node);
 
