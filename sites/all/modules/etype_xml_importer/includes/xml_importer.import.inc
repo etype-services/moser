@@ -68,8 +68,8 @@ function etype_xml_importer_olive_import() {
     watchdog('etype_xml_importer', "XML import setting empty.", $variables = array(), $severity = WATCHDOG_NOTICE);
     return;
   }
-  $base_import_url = 'http://test.etypegoogle4.com/xml-import/';
-  // $base_import_url = 'http://olivexml.etypeservices.com/olivexml/';
+  // $base_import_url = 'http://test.etypegoogle4.com/xml-import/';
+  $base_import_url = 'http://olivexml.etypeservices.com/olivexml/';
   $import_file_array = explode(',', $import_files);
 
   if (count($import_file_array) > 0) {
