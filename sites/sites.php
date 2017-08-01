@@ -260,3 +260,5 @@ $sites['q947.net'] = 'q947.etypegoogle4.com';
 $sites['teaguechronicle.etypegoogle4.com'] = 'teaguechronicle.etypegoogle4.com';
 $sites['teaguechronicle.com'] = 'teaguechronicle.etypegoogle4.com';
 $sites['www.teaguechronicle.com'] = 'teaguechronicle.etypegoogle4.com';
+$sites['theteaguechronicle.com'] = 'teaguechronicle.etypegoogle4.com';
+$sites['www.theteaguechronicle.com'] = 'teaguechronicle.etypegoogle4.com';
