@@ -262,3 +262,8 @@ $sites['teaguechronicle.com'] = 'teaguechronicle.etypegoogle4.com';
 $sites['www.teaguechronicle.com'] = 'teaguechronicle.etypegoogle4.com';
 $sites['theteaguechronicle.com'] = 'teaguechronicle.etypegoogle4.com';
 $sites['www.theteaguechronicle.com'] = 'teaguechronicle.etypegoogle4.com';
+
+/* netxcrossroads.etypegoogle4.com */
+$sites['netxcrossroads.etypegoogle4.com'] = 'netxcrossroads.etypegoogle4.com';
+$sites['netxcrossroads.com'] = 'netxcrossroads.etypegoogle4.com';
+$sites['www.netxcrossroads.com'] = 'netxcrossroads.etypegoogle4.com';
