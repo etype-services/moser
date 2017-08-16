@@ -272,3 +272,8 @@ $sites['www.netxcrossroads.com'] = 'netxcrossroads.etypegoogle4.com';
 $sites['lightandchampion.etypegoogle4.com'] = 'lightandchampion.etypegoogle4.com';
 $sites['lightandchampion.com'] = 'lightandchampion.etypegoogle4.com';
 $sites['www.lightandchampion.com'] = 'lightandchampion.etypegoogle4.com';
+
+/* tribnow.etypegoogle4.com */
+$sites['tribnow.etypegoogle4.com'] = 'tribnow.etypegoogle4.com';
+$sites['tribnow.com'] = 'tribnow.etypegoogle4.com';
+$sites['www.tribnow.com'] = 'tribnow.etypegoogle4.com';
