@@ -18,11 +18,11 @@
     Drupal.behaviors.sliderad = {
         attach: function(context) {
 
-            $('#adone').mouseenter(function() {
+            $('#sliderad').mouseenter(function() {
                 $('#adtwo').slideDown();
             });
-            $('#adone').mouseleave(function() {
-                $('#adtwo').delay( 500 ).slideUp();
+            $('#sliderad').mouseleave(function() {
+                $('#adtwo').delay(500).slideUp();
             });
 
         }
