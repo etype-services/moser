@@ -22,7 +22,7 @@
                 $('#adtwo').slideDown();
             });
             $('#adone').mouseleave(function() {
-                $('#adtwo').slideUp();
+                $('#adtwo').delay( 500 ).slideUp();
             });
 
         }
