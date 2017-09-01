@@ -80,9 +80,8 @@ function etype_sliderad_content() {
 
       $output = "
 <div id=\"sliderad\">
-<div id=\"adone\">
-<a href=\"$url\" target=\"_blank\"><img src=\"$path\" alt=\"" . $image['alt'] . "\"></a></div>
-<div id=\"adtwo\" style=\"display: none;\"><img src=\"$large_path\" alt=\"" . $large_image['alt'] . "\"></div>
+<div id=\"adone\"><a href=\"$url\" target=\"_blank\"><img src=\"$path\" alt=\"" . $image['alt'] . "\"></a></div>
+<div id=\"adtwo\" style=\"display: none;\"><a href=\"$url\" target=\"_blank\"><img src=\"$large_path\" alt=\"" . $large_image['alt'] . "\"></a></div>
 </div>
 ";
       return $output;
