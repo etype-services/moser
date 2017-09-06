@@ -44,10 +44,10 @@ function cni_preprocess_page(&$variables) {
     if ($len > 0) {
       foreach (array_keys($nodes) as $nid) {
         if ($i == 1) {
-          $variables['page']['content']['system_main']['nodes'][$nid]['#node']->classes_array = array('first');
+          $variables['page']['content']['system_main']['nodes'][$nid]['#node']->classes_array = ['first'];
         }
         if ($i == $len - 1) {
-          $variables['page']['content']['system_main']['nodes'][$nid]['#node']->classes_array = array('last');
+          $variables['page']['content']['system_main']['nodes'][$nid]['#node']->classes_array = ['last'];
         }
         $i++;
         /* So I don't get "Warning: Cannot use a scalar value as an array" */
@@ -93,6 +93,7 @@ function cni_breadcrumb($variables) {
 
 /**
  * @param $variables
+ *
  * @return string
  * Span Tag on Links
  */
@@ -136,14 +137,14 @@ function cni_preprocess_html(&$variables) {
   if (file_exists($_SERVER['DOCUMENT_ROOT'] . $site_css)) {
     drupal_add_css(
       $site_css,
-      array(
+      [
         'type' => 'file',
         'media' => 'all',
         'preprocess' => FALSE,
         'every_page' => TRUE,
         'weight' => 999,
-        'group' => CSS_THEME
-      )
+        'group' => CSS_THEME,
+      ]
     );
   }
 
@@ -152,13 +153,13 @@ function cni_preprocess_html(&$variables) {
   if (!empty($nav_color)) {
     drupal_add_css(
       '#block-superfish-1, .sf-menu.sf-style-space li, .sf-menu.sf-style-space li li, .sf-menu.sf-style-space li li li, .sf-menu.sf-style-space.sf-navbar {background: ' . $nav_color . ' !important;}',
-      array(
+      [
         'group' => CSS_THEME,
         'type' => 'inline',
         'media' => 'screen',
         'preprocess' => FALSE,
         'weight' => '9999',
-      )
+      ]
     );
   }
 
@@ -167,28 +168,28 @@ function cni_preprocess_html(&$variables) {
   if (!empty($max_nav_width)) {
     drupal_add_css(
       '#main-menu ul.menu {max-width: ' . $max_nav_width . ' !important;}',
-      array(
+      [
         'group' => CSS_THEME,
         'type' => 'inline',
         'media' => 'screen',
         'preprocess' => FALSE,
         'weight' => '9999',
-      )
+      ]
     );
   }
 
   /* not using media to get smaller desktop browsers as well */
-  $max_user_nav_width  = theme_get_setting('max_user_nav_width');
+  $max_user_nav_width = theme_get_setting('max_user_nav_width');
   if (!empty($max_user_nav_width)) {
     drupal_add_css(
       '#main-menu #block-system-user-menu ul.menu {max-width: ' . $max_user_nav_width . ' !important;}',
-      array(
+      [
         'group' => CSS_THEME,
         'type' => 'inline',
         'media' => 'screen',
         'preprocess' => FALSE,
         'weight' => '9999',
-      )
+      ]
     );
   }
 
@@ -196,13 +197,13 @@ function cni_preprocess_html(&$variables) {
   if (!empty($body_background)) {
     drupal_add_css(
       'body {background: ' . $body_background . ' !important;}',
-      array(
+      [
         'group' => CSS_THEME,
         'type' => 'inline',
         'media' => 'screen',
         'preprocess' => FALSE,
         'weight' => '9999',
-      )
+      ]
     );
   }
 
@@ -210,93 +211,93 @@ function cni_preprocess_html(&$variables) {
   if (!empty($logo_width)) {
     drupal_add_css(
       '.site-logo img {max-width: ' . $logo_width . ' !important;}',
-      array(
+      [
         'group' => CSS_THEME,
         'type' => 'inline',
         'media' => 'screen',
         'preprocess' => FALSE,
         'weight' => '9999',
-      )
+      ]
     );
   }
 
   /* add favicons */
   $icon_path = $base_path . $conf_path . '/files/favicons/';
 
-  $theme_color = array(
+  $theme_color = [
     '#type' => 'html_tag',
     '#tag' => 'meta',
-    '#attributes' => array(
+    '#attributes' => [
       'name' => 'theme-color',
       'content' => '#ffffff',
-    )
-  );
+    ],
+  ];
   drupal_add_html_head($theme_color, 'theme_color');
 
   if (file_exists($_SERVER['DOCUMENT_ROOT'] . $icon_path . 'safari-pinned-tab.svg')) {
-    $mask_icon = array(
+    $mask_icon = [
       '#type' => 'html_tag',
       '#tag' => 'link',
-      '#attributes' => array(
+      '#attributes' => [
         'rel' => 'mask-icon',
         'href' => $icon_path . 'safari-pinned-tab.svg',
         'color' => '#5bbad5',
-      )
-    );
+      ],
+    ];
     drupal_add_html_head($mask_icon, 'mask_icon');
 
   }
 
   if (file_exists($_SERVER['DOCUMENT_ROOT'] . $icon_path . 'manifest.json')) {
-    $manifest = array(
+    $manifest = [
       '#type' => 'html_tag',
       '#tag' => 'link',
-      '#attributes' => array(
+      '#attributes' => [
         'rel' => 'manifest',
         'href' => $icon_path . 'manifest.json',
-      )
-    );
+      ],
+    ];
     drupal_add_html_head($manifest, 'manifest');
   }
 
   if (file_exists($_SERVER['DOCUMENT_ROOT'] . $icon_path . 'favicon-16x16.png')) {
-    $icon16 = array(
+    $icon16 = [
       '#type' => 'html_tag',
       '#tag' => 'link',
-      '#attributes' => array(
+      '#attributes' => [
         'rel' => 'icon',
         'type' => 'image/png',
         'sizes' => '16x16',
         'href' => $icon_path . 'favicon-16x16.png',
-      )
-    );
+      ],
+    ];
     drupal_add_html_head($icon16, 'icon16');
   }
 
   if (file_exists($_SERVER['DOCUMENT_ROOT'] . $icon_path . 'favicon-32x32.png')) {
-    $icon32 = array(
+    $icon32 = [
       '#type' => 'html_tag',
       '#tag' => 'link',
-      '#attributes' => array(
+      '#attributes' => [
         'rel' => 'icon',
         'type' => 'image/png',
         'sizes' => '32x32',
         'href' => $icon_path . 'favicon-32x32.png',
-      )
-    );
+      ],
+    ];
     drupal_add_html_head($icon32, 'icon32');
   }
 
   if (file_exists($_SERVER['DOCUMENT_ROOT'] . $icon_path . 'apple-touch-icon.png')) {
-    $appletouchicon = array(
+    $appletouchicon = [
       '#type' => 'html_tag',
       '#tag' => 'link',
-      '#attributes' => array(
+      '#attributes' => [
         'rel' => 'apple-touch-icon',
         'sizes' => '180x180',
         'href' => $icon_path . 'apple-touch-icon.png',
-      )
-    );
+      ],
+    ];
     drupal_add_html_head($appletouchicon, 'apple-touch-icon');
   }
 
@@ -304,7 +305,7 @@ function cni_preprocess_html(&$variables) {
 
 function get_grid_info() {
 
-  $grid_info = array();
+  $grid_info = [];
 
   $grid_info['grid_size'] = theme_get_setting('grid_size');
   $grid_info['sidebar_first_width'] = theme_get_setting('sidebar_first_width');
