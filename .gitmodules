@@ -3,4 +3,4 @@
 	url = https://github.com/etype-services/etype_xml_importer.git
 [submodule "sites/all/themes/cni"]
 	path = sites/all/themes/cni
-	url = https://github.com/etype-services/cnitheme.git
+	url = https://github.com/etype-services/cnitheme
