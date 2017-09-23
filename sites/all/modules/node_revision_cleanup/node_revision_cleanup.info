@@ -1,13 +1,15 @@
-name = "Node Revision Cleanup"
+name = Node Revision Cleanup
 description = "A set of drush commands to delete node revisions for a given content type."
 core = 7.x
+
 files[] = includes/NodeRevisionCleanupVariableCRUD.php
+
 php = 5.3
 hidden = TRUE
 
-; Information added by Drupal.org packaging script on 2014-10-09
-version = "7.x-1.0"
+; Information added by Drupal.org packaging script on 2017-07-16
+version = "7.x-1.1"
 core = "7.x"
 project = "node_revision_cleanup"
-datestamp = "1412868407"
+datestamp = "1500180547"
 

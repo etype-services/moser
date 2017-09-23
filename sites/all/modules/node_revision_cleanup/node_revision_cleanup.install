@@ -1,7 +1,8 @@
 <?php
+
 /**
  * @file
- * (Un)Install file for node_revision_cleanup module.
+ * Install and uninstall functions for the Node Revision Cleanup module.
  */
 
 /**
@@ -13,8 +14,8 @@ function node_revision_cleanup_uninstall() {
   // to create numbered job lists for varying content types, if memcache isn't
   // installed. If memcache is installed, it will expire any entries for this
   // module automatically.
-  $results = db_query('SELECT v.name FROM {variable} v WHERE v.name LIKE \'node_revision_cleanup_%\'');
-  foreach ($results as $result) {
-    variable_del($result->name);
+  $content_types = node_type_get_types();
+  foreach ($content_types as $content_type_name) {
+    node_revision_cleanup_cruft($content_type_name->type);
   }
 }

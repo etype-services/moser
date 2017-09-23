@@ -1,0 +1,16 @@
+Node Revision Cleanup 7.x-2.0, 2017-07-16
+-----------------------------------------
+Changes since 7.x-1.0:
+
+- #2895104 by adriancid: Create the CHANGELOG.txt file.
+- #2895015 by adriancid: Use the README.txt template.
+- #2891367 by adriancid: Translate all the string in the drush commands.
+- #2891365 by adriancid: Integrate the drush help --filter option with the
+  module.
+- #2891243 by adriancid: Change the mechanism to delete module variables.
+- #2890437 by adriancid: Define the memcacheExists property as private.
+- #2890412 by adriancid: Fix coding standard format.
+
+Node Revision Cleanup 7.x-1.0, 2014-10-09
+-----------------------------------------
+- Initial release.
