@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Node revision cleanup module.
@@ -26,7 +27,6 @@ function node_revision_cleanup_cruft($content_type) {
   $v->vdel('node_revision_cleanup_' . $content_type . '_total_vids');
   $v->vdel('node_revision_cleanup_' . $content_type . '_completed');
   $v->vdel('node_revision_cleanup_' . $content_type . '_jobs_available');
-  $v->vdel('node_revision_cleanup_' . $content_type . '_job_locks');
   $v->vdel('node_revision_cleanup_' . $content_type . '_lock');
   $v->vdel('node_revision_cleanup_' . $content_type . '_begin');
   $v->vdel('node_revision_cleanup_' . $content_type . '_completed');

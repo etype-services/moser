@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Abstracted cache CRUD methods.
@@ -8,6 +9,13 @@
  * A wrapper class for caching mechanisms.
  */
 class NodeRevisionCleanupVariableCRUD {
+
+  /**
+   * Variable to know if memcache module is installed.
+   *
+   * @var bool
+   */
+  private $memcacheExists;
 
   /**
    * Constructor.
@@ -49,9 +57,6 @@ class NodeRevisionCleanupVariableCRUD {
    *   value will be replaced.
    * @param mixed $value
    *   The serializable value to be stored under the $key provided.
-   *
-   * @return NULL
-   *   Returns after corresponding set functionality finishes.
    */
   public function vset($key, $value) {
     if ($this->memcacheExists) {
@@ -66,9 +71,6 @@ class NodeRevisionCleanupVariableCRUD {
    *
    * @param string $key
    *   The key that will be deleted, along with its value.
-   *
-   * @return NULL
-   *   Returns after corresponding delete functionality finishes.
    */
   public function vdel($key) {
     if ($this->memcacheExists) {

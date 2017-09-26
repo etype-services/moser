@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Drush integration for node_revision_cleanup.
@@ -11,51 +12,73 @@ function node_revision_cleanup_drush_command() {
   $items = array();
 
   $items['node-revision-cleanup-work-list'] = array(
-    'description' => 'Iterate through listst of revision vids to delete and deletes them.',
+    'description' => dt('Iterate through listst of revision vids to delete and deletes them.'),
     'arguments' => array(
-      'type' => 'Machine name of content type list to work.',
-      'group' => 'Group ID number.',
+      'type' => dt('Machine name of content type list to work.'),
+      'group' => dt('Group ID number.'),
     ),
     'required-arguments' => TRUE,
     'examples' => array(
-      'drush node-revision-cleanup-work-list blog 1' => 'Runs jobs to delete blog node revisions as group 1.',
-      'drush nrc-wl article 4' => 'Runs jobs to delete articl node revisions as group 4.',
+      'drush node-revision-cleanup-work-list blog 1' => dt('Runs jobs to delete blog node revisions as group 1.'),
+      'drush nrc-wl article 4' => dt('Runs jobs to delete articl node revisions as group 4.'),
     ),
     'aliases' => array('nrc-wl'),
     'bootstrap' => DRUSH_BOOTSTRAP_DRUPAL_FULL,
   );
   $items['node-revision-cleanup-generate-queue'] = array(
-    'description' => 'Create work lists of revisions to be deleted for the given content type.',
+    'description' => dt('Create work lists of revisions to be deleted for the given content type.'),
     'arguments' => array(
-      'type' => 'Machine name of content type.',
+      'type' => dt('Machine name of content type.'),
     ),
     'options' => array(
-      'revisions' => 'The number of revisions per node of the provided type to keep.',
-      'tp' => 'The number of revisions per node of the provided type to keep, based on revision age. Provide a time phrase that is parseable by date_modify(). Eg "-60 days" or "-1 year". All times are relative to the time the command runs. A positive number will probably DELETE ALL REVISIONS except the current. I wouldn\'t suggest doing that.',
+      'revisions' => dt('The number of revisions per node of the provided type to keep.'),
+      'tp' => dt('The number of revisions per node of the provided type to keep, based on revision age. Provide a time phrase that is parseable by date_modify(). Eg "-60 days" or "-1 year". All times are relative to the time the command runs. A positive number will probably DELETE ALL REVISIONS except the current. I wouldn\'t suggest doing that.'),
     ),
     'required-arguments' => 1,
     'examples' => array(
-      'drush nrc-gq article --revisions=10' => 'Generate work lists for article nodes, excluding the 10 most recent revisions.',
-      'drush nrc-gq article --tp="-30 days"' => 'Generate work lists for article nodes, excluding revisions from the last 30 days.',
+      'drush nrc-gq article --revisions=10' => dt('Generate work lists for article nodes, excluding the 10 most recent revisions.'),
+      'drush nrc-gq article --tp="-30 days"' => dt('Generate work lists for article nodes, excluding revisions from the last 30 days.'),
     ),
     'aliases' => array('nrc-gq'),
     'bootstrap' => DRUSH_BOOTSTRAP_DRUPAL_FULL,
   );
   $items['node-revision-cleanup-report'] = array(
-    'description' => 'Show progress report for revision deletions for the given content type.',
+    'description' => dt('Show progress report for revision deletions for the given content type.'),
     'arguments' => array(
-      'type' => 'Machine name of content type list to work.',
+      'type' => dt('Machine name of content type list to work.'),
     ),
     'required-arguments' => TRUE,
     'examples' => array(
-      'drush node-revision-cleanup-report blog' => 'Show the progress for revision deletions for blog node.',
-      'drush nrc-report article' => 'Show the progress for revision deletions for article nodes.',
+      'drush node-revision-cleanup-report blog' => dt('Show the progress for revision deletions for blog node.'),
+      'drush nrc-report article' => dt('Show the progress for revision deletions for article nodes.'),
     ),
     'aliases' => array('nrc-report'),
     'bootstrap' => DRUSH_BOOTSTRAP_DRUPAL_FULL,
   );
 
   return $items;
+}
+
+/**
+ * Implements hook_drush_help().
+ */
+function node_revision_cleanup_drush_help($section) {
+  switch ($section) {
+    case 'meta:node_revision_cleanup:title':
+      return dt('Node Revision Cleanup commands');
+
+    case 'meta:node_revision_cleanup:summary':
+      return dt("Interacts with the Node Revision Cleanup module's functionalities.");
+
+    case 'drush:node-revision-cleanup-work-list':
+      return dt('Iterate through listst of revision vids to delete and deletes them.');
+
+    case 'drush:node-revision-cleanup-generate-queue':
+      return dt('Create work lists of revisions to be deleted for the given content type.');
+
+    case 'drush:node-revision-cleanup-report':
+      return dt('Show progress report for revision deletions for the given content type.');
+  }
 }
 
 /**
@@ -128,12 +151,12 @@ function drush_node_revision_cleanup_work_list($content_type, $group) {
     // Make sure nothing's gone wrong with timekeeping.
     $elapsed_time == 0 ? $elapsed_time = 1 : $elapsed_time = $elapsed_time;
     // Print out report.
-    $message = sprintf("### Group %d" . PHP_EOL, $group);
+    $message = sprintf("###" . dt('Group') . "%d" . PHP_EOL, $group);
     $message .= sprintf("* It took %d seconds to delete %d revisions (%d revisions per second).", $elapsed_time, $revision_count, $revision_count / $elapsed_time);
     drush_log($message, 'ok');
   }
   else {
-    $message = 'No revisions deleted. Run nrc-gq before nrc-wl to ensure you have a log of versions to delete.';
+    $message = dt('No revisions deleted. Run nrc-gq before nrc-wl to ensure you have a log of versions to delete.');
     drush_log($message, 'failed');
   }
 
@@ -307,6 +330,6 @@ function drush_node_revision_cleanup_report($content_type) {
     drush_print($message);
   }
   else {
-    drush_log('No processes running.', 'failed');
+    drush_log(dt('No processes running.'), 'failed');
   }
 }
