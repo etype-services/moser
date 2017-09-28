@@ -4,7 +4,7 @@ $sites['test.etypegoogle4.com'] = 'bosquecountytoday.com';
 
 /* bosquecountyarchive.etypegoogle4.com */
 $sites['bosquecountytoday.etypegoogle4.com'] = 'bosquecountyarchive.etypegoogle4.com';
-$sites['bosquecountytoday.com'] = 'bbosquecountyarchive.etypegoogle4.com';
+$sites['bosquecountytoday.com'] = 'bosquecountyarchive.etypegoogle4.com';
 $sites['www.bosquecountytoday.com'] = 'bosquecountyarchive.etypegoogle4.com';
 
 $sites['cliftonrecord.com'] = 'bosquecountyarchive.etypegoogle4.com';
