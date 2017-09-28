@@ -2,15 +2,16 @@
 /* test.etypegoogle4.com */
 $sites['test.etypegoogle4.com'] = 'bosquecountytoday.com';
 
-$sites['bosquecountytoday.etypegoogle4.com'] = 'bosquecountytoday.com';
-$sites['bosquecountytoday.com'] = 'bosquecountytoday.com';
-$sites['www.bosquecountytoday.com'] = 'bosquecountytoday.com';
+/* bosquecountyarchive.etypegoogle4.com */
+$sites['bosquecountytoday.etypegoogle4.com'] = 'bosquecountyarchive.etypegoogle4.com';
+$sites['bosquecountytoday.com'] = 'bbosquecountyarchive.etypegoogle4.com';
+$sites['www.bosquecountytoday.com'] = 'bosquecountyarchive.etypegoogle4.com';
 
-$sites['cliftonrecord.com'] = 'bosquecountytoday.com';
-$sites['www.cliftonrecord.com'] = 'bosquecountytoday.com';
+$sites['cliftonrecord.com'] = 'bosquecountyarchive.etypegoogle4.com';
+$sites['www.cliftonrecord.com'] = 'bosquecountyarchive.etypegoogle4.com';
 
-$sites['meridiantribune.com'] = 'bosquecountytoday.com';
-$sites['www.meridiantribune.com'] = 'bosquecountytoday.com';
+$sites['meridiantribune.com'] = 'bosquecountyarchive.etypegoogle4.com';
+$sites['www.meridiantribune.com'] = 'bosquecountyarchive.etypegoogle4.com';
 
 /* dewittcountytoday.etypegoogle4.com */
 $sites['dewittcountytoday.etypegoogle4.com'] = 'dewittcountytoday.etypegoogle4.com';
