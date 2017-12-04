@@ -10,3 +10,6 @@
 [submodule "sites/all/modules/premium_content"]
 	path = sites/all/modules/premium_content
 	url = https://github.com/etype-services/premium_content.git
+[submodule "sites/all/modules/etype_smugmug"]
+	path = sites/all/modules/etype_smugmug
+	url = git@github.com:etype-services/etype_smugmug.git
