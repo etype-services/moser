@@ -1,5 +1,0 @@
-name = eType Services Smugmug Integration
-description = Smugmug integration module for EType Services.
-package = eType Services Custom Modules
-core = 7.x
-project = "etype_smugmug"
