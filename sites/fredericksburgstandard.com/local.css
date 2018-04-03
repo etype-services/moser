@@ -1,9 +1,20 @@
 body {
-    font-family: "Georgia", serif;
-    line-height: 1.2em;
+  font-family: "Georgia", serif;
+  line-height: 1.2em;
 }
-
 /* marketplace nav item */
 #main-menu ul.menu li#menu-2444-1 {
-    background-color: orange !important;
+  background-color: orange !important;
+}
+/* change title fonts */
+.preface-wrapper .block-inner .views-field-title h3, h1.title, .node-teaser h2.title {
+  font-family: "Georgia", serif;
+  text-transform: none;
+  font-weight: bold;
+}
+.preface-wrapper .block-inner .views-field-title h3 a {
+  font-weight: bold;
+}
+.field-name-field-subhead {
+  font-family: 'Lato', sans-serif;
 }
