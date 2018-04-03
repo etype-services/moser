@@ -18,3 +18,6 @@ body {
 .field-name-field-subhead {
   font-family: 'Lato', sans-serif;
 }
+.view-slideshow .views_slideshow_main .views-field-body {
+    height: 70px;
+}
