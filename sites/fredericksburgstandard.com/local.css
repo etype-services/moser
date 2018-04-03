@@ -12,7 +12,7 @@ body {
   text-transform: none;
   font-weight: bold;
 }
-.preface-wrapper .block-inner .views-field-title h3 a {
+.preface-wrapper .block-inner .views-field-title h3 a, .node-teaser h2.title a {
   font-weight: bold;
 }
 .field-name-field-subhead {
