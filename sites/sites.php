@@ -217,6 +217,9 @@ $sites['www.fredericksburgtexas.org'] = 'fredericksburgstandard.com';
 /* sanmarcosrecord archive */
 $sites['archive.sanmarcosrecord.com'] = 'archive.sanmarcosrecord.com';
 $sites['archive.sanmarcosdailyrecord.com'] = 'archive.sanmarcosrecord.com';
+$sites['sanmarcosrecordnew.etypegoogle4.com'] = 'sanmarcosrecord.etypegoogle4.com';
+$sites['sanmarcosrecordnew.com'] = 'sanmarcosrecord.etypegoogle4.com';
+$sites['www.sanmarcosrecord.com'] = 'sanmarcosrecord.etypegoogle4.com';
 
 /* highlandernews.etypegoogle4.com */
 $sites['highlandernews.etypegoogle4.com'] = 'highlandernews.com';
