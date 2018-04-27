@@ -1,0 +1,11 @@
+#block-simpleads-ad-groups-489, #block-simpleads-ad-groups-490 {
+    display: none;
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 767px) {
+    #block-simpleads-ad-groups-489, #block-simpleads-ad-groups-490 {
+        display: block;
+        visibility: visible;
+    }
+}
