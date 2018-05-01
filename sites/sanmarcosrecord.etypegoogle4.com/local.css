@@ -10,6 +10,6 @@
     }
 }
 
-.calendar {
-    width: auto;
+body.calendar {
+    width: inherit;
 }
