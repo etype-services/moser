@@ -50,6 +50,7 @@ body, #main-menu ul.menu, #user-menu {
       position: relative;
       top: 0;
       width: auto;
+      height: inherit;
       padding: 10px 20px 0;
       background: none;
       color: #000; }
@@ -81,5 +82,11 @@ body, #main-menu ul.menu, #user-menu {
 /* override module defaults */
 .views-slideshow-pager-fields > div {
   padding-left: 0; }
+
+@media only screen and (max-width: 420px) {
+  .view-slideshow .views_slideshow_main .views-field-body {
+    display: block; }
+  .view-slideshow .views-slideshow-controls-bottom {
+    margin-top: 10px; } }
 
 /*# sourceMappingURL=sanmarcosrecord.css.map */
