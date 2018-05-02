@@ -46,7 +46,7 @@ body, #main-menu ul.menu, #user-menu {
     }
     .views-field-title {
       position: relative;
-      padding: 10px 20px 0;
+      padding: 10px 10px 0;
       width: auto;
       background: none;
       color: #000;
@@ -63,7 +63,7 @@ body, #main-menu ul.menu, #user-menu {
       top: 0;
       width: auto;
       height: inherit;
-      padding: 10px 20px 0;
+      padding: 10px 10px 0;
       background: none;
       color: #000;
       a {
@@ -103,8 +103,17 @@ body, #main-menu ul.menu, #user-menu {
   padding-left: 0;
 }
 
+@media only screen and (max-width: 958px) and (min-width: 768px) {
+  .view-slideshow {
+    .views_slideshow_main {
+      .views-field-body {
+        font-size: inherit;
+      }
+    }
+  }
+}
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 767px) {
   .view-slideshow {
     .views_slideshow_main {
       .views-field-body {
