@@ -46,7 +46,7 @@ body, #main-menu ul.menu, #user-menu {
     }
     .views-field-title {
       position: relative;
-      padding: 10px;
+      padding: 10px 20px 0;
       width: auto;
       background: none;
       color: #000;
@@ -62,7 +62,7 @@ body, #main-menu ul.menu, #user-menu {
       position: relative;
       top: 0;
       width: auto;
-      padding: 10px;
+      padding: 10px 20px 0;
       background: none;
       color: #000;
       a {
@@ -72,6 +72,7 @@ body, #main-menu ul.menu, #user-menu {
   }
   /* Slideshow controls */
   .views-slideshow-controls-bottom {
+    margin-top: 30px;
     .views-field-field-image img, .views-field-field-video img {
       display: block;
       margin: 0;
