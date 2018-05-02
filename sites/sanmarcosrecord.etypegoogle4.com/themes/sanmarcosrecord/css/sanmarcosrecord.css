@@ -74,11 +74,6 @@ body, #main-menu ul.menu, #user-menu {
     .view-slideshow .views-slideshow-controls-bottom #views_slideshow_pager_field_item_bottom_slideshow-block_5 .views-field-field-video img {
       margin-right: 0; }
 
-#widget_pager_bottom_slideshow-block_1 {
-  display: flex;
-  margin: 0;
-  justify-content: space-around; }
-
 /* override module defaults */
 .views-slideshow-pager-fields > div {
   padding-left: 0; }
