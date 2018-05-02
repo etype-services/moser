@@ -26,7 +26,7 @@ body, #main-menu ul.menu, #user-menu {
   /* Slideshow controls */ }
   .view-slideshow .views_slideshow_main {
     position: relative;
-    height: 420px; }
+    height: auto; }
     .view-slideshow .views_slideshow_main .views-field-field-image {
       position: relative; }
     .view-slideshow .views_slideshow_main .views-field-field-video {
@@ -36,11 +36,11 @@ body, #main-menu ul.menu, #user-menu {
       max-width: none; }
     .view-slideshow .views_slideshow_main .views-field-title {
       position: relative;
-      padding: 20px;
-      width: 578px;
+      padding: 10px;
+      width: auto;
       background: none;
       color: #000;
-      font-family: 'Roboto', sans-serif; }
+      font-family: 'Anton', sans-serif; }
       .view-slideshow .views_slideshow_main .views-field-title a {
         color: #000;
         text-transform: uppercase;
@@ -48,8 +48,9 @@ body, #main-menu ul.menu, #user-menu {
         font-size: 18px; }
     .view-slideshow .views_slideshow_main .views-field-body {
       position: relative;
-      width: 578px;
-      padding: 20px;
+      top: 0;
+      width: auto;
+      padding: 10px;
       background: none;
       color: #000; }
       .view-slideshow .views_slideshow_main .views-field-body a {
