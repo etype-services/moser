@@ -2,6 +2,7 @@ name = San Marcos Record
 description = Custom sub-theme of the CNI Theme
 core = 7.x
 base theme = cni
+stylesheets[all][] = css/sanmarcosrecord.css
 
 regions[header] = Header
 regions[user_menu] = User Menu
