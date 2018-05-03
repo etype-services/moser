@@ -297,7 +297,7 @@ function buildOptions($cont, $slides, els, options, o) {
 	var first = opts.startingSlide;
 
 	// set position and zIndex on all the slides
-	$slides.css({position: 'absolute', top:0, left:0}).hide().each(function(i) {
+	$slides.css({position: 'relative', top:0, left:0}).hide().each(function(i) {
 		var z;
 		if (opts.backwards)
 			z = first ? i <= first ? els.length + (i-first) : first-i : els.length-i;
@@ -565,7 +565,7 @@ function exposeAddSlide(opts, els) {
 			opts.randomMap.sort(function(a,b) {return Math.random() - 0.5;});
 		}
 
-		$s.css('position','absolute');
+		$s.css('position','relative');
 		$s[prepend?'prependTo':'appendTo'](opts.$cont);
 
 		if (prepend) {
