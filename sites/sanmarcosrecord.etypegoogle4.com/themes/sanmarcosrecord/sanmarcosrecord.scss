@@ -123,6 +123,8 @@ body, #main-menu ul.menu, #user-menu {
     .views_slideshow_main {
       .views-field-body {
         width: 398px;
+        // hidden in regular theme css
+        display: block;
       }
       .views-field-title {
         width: 398px;
