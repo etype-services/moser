@@ -122,7 +122,6 @@ body, #main-menu ul.menu, #user-menu {
   .view-slideshow {
     .views_slideshow_main {
       .views-field-body {
-        display: block;
         width: 398px;
       }
       .views-field-title {
@@ -135,15 +134,29 @@ body, #main-menu ul.menu, #user-menu {
   }
 }
 
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 479px) and (min-width: 421px) {
   .view-slideshow {
     .views_slideshow_main {
       .views-field-body {
         width: 278px;
+        // hidden in regular theme css
+        display: block;
       }
       .views-field-title {
         width: 278px;
       }
     }
   }
+}
+
+@media only screen and (max-width: 420px) {
+  .view-slideshow {
+    .views_slideshow_main {
+      .views-field-body {
+        // hidden in regular theme css
+        display: block;
+      }
+    }
+  }
+
 }
