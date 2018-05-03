@@ -477,8 +477,6 @@
     }
     else if (value.toLowerCase() == 'false') {
       value = false;
-    }else if (value.toLowerCase() == 'absolute') {
-        value = 'relative';
     }
 
     return value;
