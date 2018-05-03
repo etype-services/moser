@@ -47,6 +47,7 @@ body, #main-menu ul.menu, #user-menu {
     .views-field-title {
       position: relative;
       padding: 10px 10px 0;
+      width: 598px;
       background: none;
       color: #000;
       font-family: 'Anton', sans-serif;
@@ -60,6 +61,7 @@ body, #main-menu ul.menu, #user-menu {
     .views-field-body {
       position: relative;
       top: 0;
+      width: 598px;
       height: inherit;
       padding: 10px 10px 0;
       background: none;
@@ -106,6 +108,10 @@ body, #main-menu ul.menu, #user-menu {
     .views_slideshow_main {
       .views-field-body {
         font-size: inherit;
+        width: 470px;
+      }
+      .views-field-title {
+        width: 470px;
       }
     }
   }
@@ -116,10 +122,28 @@ body, #main-menu ul.menu, #user-menu {
     .views_slideshow_main {
       .views-field-body {
         display: block;
+        width: 398px;
+      }
+      .views-field-title {
+        width: 398px;
       }
     }
     .views-slideshow-controls-bottom {
       margin-top: 10px;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 420px) {
+  .view-slideshow {
+    .views_slideshow_main {
+      .views-field-body {
+        width: 278px;
+      }
+      .views-field-title {
+        width: 278px;
+      }
     }
   }
 }

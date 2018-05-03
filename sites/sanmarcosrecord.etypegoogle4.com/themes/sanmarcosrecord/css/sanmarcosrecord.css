@@ -37,6 +37,7 @@ body, #main-menu ul.menu, #user-menu {
     .view-slideshow .views_slideshow_main .views-field-title {
       position: relative;
       padding: 10px 10px 0;
+      width: 598px;
       background: none;
       color: #000;
       font-family: 'Anton', sans-serif; }
@@ -48,6 +49,7 @@ body, #main-menu ul.menu, #user-menu {
     .view-slideshow .views_slideshow_main .views-field-body {
       position: relative;
       top: 0;
+      width: 598px;
       height: inherit;
       padding: 10px 10px 0;
       background: none;
@@ -78,11 +80,22 @@ body, #main-menu ul.menu, #user-menu {
 
 @media only screen and (max-width: 958px) and (min-width: 768px) {
   .view-slideshow .views_slideshow_main .views-field-body {
-    font-size: inherit; } }
+    font-size: inherit;
+    width: 470px; }
+  .view-slideshow .views_slideshow_main .views-field-title {
+    width: 470px; } }
 @media only screen and (max-width: 767px) {
   .view-slideshow .views_slideshow_main .views-field-body {
-    display: block; }
+    display: block;
+    width: 398px; }
+  .view-slideshow .views_slideshow_main .views-field-title {
+    width: 398px; }
   .view-slideshow .views-slideshow-controls-bottom {
     margin-top: 10px; } }
+@media only screen and (max-width: 420px) {
+  .view-slideshow .views_slideshow_main .views-field-body {
+    width: 278px; }
+  .view-slideshow .views_slideshow_main .views-field-title {
+    width: 278px; } }
 
 /*# sourceMappingURL=sanmarcosrecord.css.map */
