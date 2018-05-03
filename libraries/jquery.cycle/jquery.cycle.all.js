@@ -565,7 +565,7 @@ function exposeAddSlide(opts, els) {
 			opts.randomMap.sort(function(a,b) {return Math.random() - 0.5;});
 		}
 
-		$s.css('position','relative');
+		$s.css('position','absolute');
 		$s[prepend?'prependTo':'appendTo'](opts.$cont);
 
 		if (prepend) {
