@@ -155,8 +155,11 @@ body, #main-menu ul.menu, #user-menu {
       .views-field-body {
         // hidden in regular theme css
         display: block;
+        width: 278px;
+      }
+      .views-field-title {
+        width: 278px;
       }
     }
   }
-
 }
