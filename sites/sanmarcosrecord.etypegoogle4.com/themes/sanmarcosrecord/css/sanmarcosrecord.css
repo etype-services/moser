@@ -78,13 +78,14 @@ body, #main-menu ul.menu, #user-menu {
 .views-slideshow-pager-fields > div {
   padding-left: 0; }
 
+/* RESPONSIVE */
 @media only screen and (max-width: 958px) and (min-width: 768px) {
   .view-slideshow .views_slideshow_main .views-field-body {
     font-size: inherit;
     width: 470px; }
   .view-slideshow .views_slideshow_main .views-field-title {
     width: 470px; } }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) and (min-width: 480px) {
   .view-slideshow .views_slideshow_main .views-field-body {
     display: block;
     width: 398px; }
@@ -92,7 +93,7 @@ body, #main-menu ul.menu, #user-menu {
     width: 398px; }
   .view-slideshow .views-slideshow-controls-bottom {
     margin-top: 10px; } }
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 479px) {
   .view-slideshow .views_slideshow_main .views-field-body {
     width: 278px; }
   .view-slideshow .views_slideshow_main .views-field-title {
