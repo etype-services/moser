@@ -73,7 +73,7 @@ body, #main-menu ul.menu, #user-menu {
   }
   /* Slideshow controls */
   .views-slideshow-controls-bottom {
-    margin-top: 19px;
+    margin-top: 13vh;
     .views-field-field-image img, .views-field-field-video img {
       display: block;
       margin: 0;
@@ -134,6 +134,9 @@ body, #main-menu ul.menu, #user-menu {
       margin-top: 10px;
     }
   }
+  .views-slideshow-controls-bottom {
+    margin-top: 5vh;
+  }
 }
 
 @media only screen and (max-width: 479px) and (min-width: 421px) {
@@ -147,6 +150,9 @@ body, #main-menu ul.menu, #user-menu {
       .views-field-title {
         width: 278px;
       }
+    }
+    .views-slideshow-controls-bottom {
+      margin-top: 3vh;
     }
   }
 }
@@ -162,6 +168,9 @@ body, #main-menu ul.menu, #user-menu {
       .views-field-title {
         width: 278px;
       }
+    }
+    .views-slideshow-controls-bottom {
+      margin-top: 1vh;
     }
   }
 }

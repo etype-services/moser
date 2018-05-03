@@ -57,7 +57,7 @@ body, #main-menu ul.menu, #user-menu {
       .view-slideshow .views_slideshow_main .views-field-body a {
         color: #000; }
   .view-slideshow .views-slideshow-controls-bottom {
-    margin-top: 19px; }
+    margin-top: 13vh; }
     .view-slideshow .views-slideshow-controls-bottom .views-field-field-image img, .view-slideshow .views-slideshow-controls-bottom .views-field-field-video img {
       display: block;
       margin: 0;
@@ -92,18 +92,25 @@ body, #main-menu ul.menu, #user-menu {
   .view-slideshow .views_slideshow_main .views-field-title {
     width: 398px; }
   .view-slideshow .views-slideshow-controls-bottom {
-    margin-top: 10px; } }
+    margin-top: 10px; }
+
+  .views-slideshow-controls-bottom {
+    margin-top: 5vh; } }
 @media only screen and (max-width: 479px) and (min-width: 421px) {
   .view-slideshow .views_slideshow_main .views-field-body {
     width: 278px;
     display: block; }
   .view-slideshow .views_slideshow_main .views-field-title {
-    width: 278px; } }
+    width: 278px; }
+  .view-slideshow .views-slideshow-controls-bottom {
+    margin-top: 3vh; } }
 @media only screen and (max-width: 420px) {
   .view-slideshow .views_slideshow_main .views-field-body {
     display: block;
     width: 278px; }
   .view-slideshow .views_slideshow_main .views-field-title {
-    width: 278px; } }
+    width: 278px; }
+  .view-slideshow .views-slideshow-controls-bottom {
+    margin-top: 1vh; } }
 
 /*# sourceMappingURL=sanmarcosrecord.css.map */
