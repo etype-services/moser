@@ -84,7 +84,9 @@ body, #main-menu ul.menu, #user-menu {
     font-size: inherit;
     width: 470px; }
   .view-slideshow .views_slideshow_main .views-field-title {
-    width: 470px; } }
+    width: 470px; }
+  .view-slideshow .views-slideshow-controls-bottom {
+    margin-top: 6vh; } }
 @media only screen and (max-width: 767px) and (min-width: 480px) {
   .view-slideshow .views_slideshow_main .views-field-body {
     width: 398px;
@@ -92,10 +94,7 @@ body, #main-menu ul.menu, #user-menu {
   .view-slideshow .views_slideshow_main .views-field-title {
     width: 398px; }
   .view-slideshow .views-slideshow-controls-bottom {
-    margin-top: 10px; }
-
-  .views-slideshow-controls-bottom {
-    margin-top: 5vh; } }
+    margin-top: 6vh; } }
 @media only screen and (max-width: 479px) and (min-width: 421px) {
   .view-slideshow .views_slideshow_main .views-field-body {
     width: 278px;
@@ -111,6 +110,6 @@ body, #main-menu ul.menu, #user-menu {
   .view-slideshow .views_slideshow_main .views-field-title {
     width: 278px; }
   .view-slideshow .views-slideshow-controls-bottom {
-    margin-top: 1vh; } }
+    margin-top: 2vh; } }
 
 /*# sourceMappingURL=sanmarcosrecord.css.map */

@@ -115,6 +115,9 @@ body, #main-menu ul.menu, #user-menu {
         width: 470px;
       }
     }
+    .views-slideshow-controls-bottom {
+      margin-top: 6vh;
+    }
   }
 }
 
@@ -131,11 +134,8 @@ body, #main-menu ul.menu, #user-menu {
       }
     }
     .views-slideshow-controls-bottom {
-      margin-top: 10px;
+      margin-top: 6vh;
     }
-  }
-  .views-slideshow-controls-bottom {
-    margin-top: 5vh;
   }
 }
 
@@ -170,7 +170,7 @@ body, #main-menu ul.menu, #user-menu {
       }
     }
     .views-slideshow-controls-bottom {
-      margin-top: 1vh;
+      margin-top: 2vh;
     }
   }
 }
