@@ -1,4 +1,4 @@
-$(function(){
+(function($){
 
     var opts = {
         fx: 'scrollHorz',
@@ -15,4 +15,4 @@ $(function(){
         $("#slideshow").cycle(opts);
     });
 
-});
+})(jQuery);
