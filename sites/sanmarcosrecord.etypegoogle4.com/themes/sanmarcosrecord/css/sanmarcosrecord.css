@@ -28,9 +28,7 @@ body, #main-menu ul.menu, #user-menu {
     position: relative;
     height: auto; }
     .view-slideshow .views_slideshow_main .views_slideshow_cycle_slide {
-      /* fix height when changing browser width */
-      position: relative !important;
-      height: fit-content !important; }
+      /* fix height when changing browser width */ }
     .view-slideshow .views_slideshow_main .views-field-field-image {
       position: relative; }
     .view-slideshow .views_slideshow_main .views-field-field-video {
