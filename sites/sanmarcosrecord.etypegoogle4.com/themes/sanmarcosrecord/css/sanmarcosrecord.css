@@ -57,7 +57,7 @@ body, #main-menu ul.menu, #user-menu {
       .view-slideshow .views_slideshow_main .views-field-body a {
         color: #000; }
   .view-slideshow .views-slideshow-controls-bottom {
-    margin-top: 18vh; }
+    margin-top: 16px; }
     .view-slideshow .views-slideshow-controls-bottom .views-field-field-image img, .view-slideshow .views-slideshow-controls-bottom .views-field-field-video img {
       display: block;
       margin: 0;
@@ -86,7 +86,7 @@ body, #main-menu ul.menu, #user-menu {
   .view-slideshow .views_slideshow_main .views-field-title {
     width: 470px; }
   .view-slideshow .views-slideshow-controls-bottom {
-    margin-top: 6vh; } }
+    margin-top: 16px; } }
 @media only screen and (max-width: 767px) and (min-width: 480px) {
   .view-slideshow .views_slideshow_main .views-field-body {
     width: 398px;
@@ -94,7 +94,7 @@ body, #main-menu ul.menu, #user-menu {
   .view-slideshow .views_slideshow_main .views-field-title {
     width: 398px; }
   .view-slideshow .views-slideshow-controls-bottom {
-    margin-top: 6vh; } }
+    margin-top: 16px; } }
 @media only screen and (max-width: 479px) and (min-width: 421px) {
   .view-slideshow .views_slideshow_main .views-field-body {
     width: 278px;
@@ -102,7 +102,7 @@ body, #main-menu ul.menu, #user-menu {
   .view-slideshow .views_slideshow_main .views-field-title {
     width: 278px; }
   .view-slideshow .views-slideshow-controls-bottom {
-    margin-top: 3vh; } }
+    margin-top: 16px; } }
 @media only screen and (max-width: 420px) {
   .view-slideshow .views_slideshow_main .views-field-body {
     display: block;
@@ -110,6 +110,6 @@ body, #main-menu ul.menu, #user-menu {
   .view-slideshow .views_slideshow_main .views-field-title {
     width: 278px; }
   .view-slideshow .views-slideshow-controls-bottom {
-    margin-top: 2vh; } }
+    margin-top: 16px; } }
 
 /*# sourceMappingURL=sanmarcosrecord.css.map */
