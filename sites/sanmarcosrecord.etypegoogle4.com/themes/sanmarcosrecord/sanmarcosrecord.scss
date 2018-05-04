@@ -36,8 +36,8 @@ body, #main-menu ul.menu, #user-menu {
     height: auto;
     .views_slideshow_cycle_slide {
       /* fix height when changing browser width */
-      position: relative !important;
-      height: fit-content !important;
+      //position: relative !important;
+      //height: fit-content !important;
     }
     .views-field-field-image {
       position: relative;
