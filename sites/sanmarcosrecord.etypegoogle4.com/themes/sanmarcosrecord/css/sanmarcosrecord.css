@@ -16,6 +16,12 @@ h1, h2, h3, h4, h5 {
 body, #main-menu ul.menu, #user-menu {
   font-family: "Roboto", sans-serif; }
 
+.node h1.title {
+  text-transform: capitalize; }
+
+.block-views .views-field-title {
+  text-transform: capitalize; }
+
 /* SLIDESHOW
 --------------------------------------------------------------------------*/
 /* override #main-content .block-inner */
@@ -45,7 +51,7 @@ body, #main-menu ul.menu, #user-menu {
       font-family: 'Anton', sans-serif; }
       .view-slideshow .views_slideshow_main .views-field-title a {
         color: #000;
-        text-transform: uppercase;
+        text-transform: capitalize;
         text-decoration: none;
         font-size: 18px; }
     .view-slideshow .views_slideshow_main .views-field-body {
