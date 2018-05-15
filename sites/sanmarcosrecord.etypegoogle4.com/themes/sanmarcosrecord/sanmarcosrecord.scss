@@ -30,6 +30,12 @@ body, #main-menu ul.menu, #user-menu {
   }
 }
 
+.node-teaser {
+  h2.title {
+    text-transform: capitalize;
+  }
+}
+
 .preface-wrapper {
   .block-inner {
     .views-field-title {
