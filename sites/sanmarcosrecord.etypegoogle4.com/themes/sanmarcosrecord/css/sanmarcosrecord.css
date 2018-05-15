@@ -17,9 +17,10 @@ body, #main-menu ul.menu, #user-menu {
   font-family: "Roboto", sans-serif; }
 
 .node h1.title {
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  line-height: 1.1em; }
 
-.block-views .views-field-title {
+.preface-wrapper .block-inner .views-field-title h3 {
   text-transform: capitalize; }
 
 /* SLIDESHOW
