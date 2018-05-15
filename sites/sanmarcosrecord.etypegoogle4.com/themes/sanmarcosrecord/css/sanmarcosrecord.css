@@ -34,6 +34,8 @@ body, #main-menu ul.menu, #user-menu {
 
 .view-slideshow {
   /* Slideshow controls */ }
+  .view-slideshow .views-field-title h3 {
+    text-transform: capitalize; }
   .view-slideshow .views_slideshow_main {
     position: relative;
     height: auto; }
