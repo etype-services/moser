@@ -52,8 +52,9 @@ body, #main-menu ul.menu, #user-menu {
       width: 598px;
       background: none;
       color: #000;
-      font-family: 'Anton', sans-serif;
-      text-transform: capitalize; }
+      font-family: 'Anton', sans-serif; }
+      .view-slideshow .views_slideshow_main .views-field-title h3 {
+        text-transform: capitalize; }
       .view-slideshow .views_slideshow_main .views-field-title a {
         color: #000;
         text-decoration: none;

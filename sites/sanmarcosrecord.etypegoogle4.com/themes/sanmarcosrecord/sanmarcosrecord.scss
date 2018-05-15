@@ -79,7 +79,9 @@ body, #main-menu ul.menu, #user-menu {
       background: none;
       color: #000;
       font-family: 'Anton', sans-serif;
-      text-transform: capitalize;
+      h3 {
+        text-transform: capitalize;
+      }
       a {
         color: #000;
         text-decoration: none;
