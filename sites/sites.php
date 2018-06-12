@@ -233,11 +233,6 @@ $sites['fredericksburgtexasjobs.com'] = 'fredericksburgtexasjobs.com';
 $sites['www.gillespiejobs.com'] = 'fredericksburgtexasjobs.com';
 $sites['gillespiejobs.com'] = 'fredericksburgtexasjobs.com';
 
-/* lakecountryradio.etypegoogle4.com */
-$sites['lakecountryradio.etypegoogle4.com'] = 'lakecountryradio.net';
-$sites['www.lakecountryradio.net'] = 'lakecountryradio.net';
-$sites['lakecountryradio.net'] = 'lakecountryradio.net';
-
 /* marlindemocrat.etypegoogle4.com */
 $sites['marlindemocrat.etypegoogle4.com'] = 'marlindemocrat.etypegoogle4.com';
 $sites['marlindemocrat.com'] = 'marlindemocrat.etypegoogle4.com';
@@ -249,18 +244,6 @@ $sites['rosebudnews.net'] = 'rosebudnews.etypegoogle4.com';
 $sites['www.rosebudnews.net'] = 'rosebudnews.etypegoogle4.com';
 $sites['therosebudnews.com'] = 'rosebudnews.etypegoogle4.com';
 $sites['www.therosebudnews.com'] = 'rosebudnews.etypegoogle4.com';
-
-/* k-lakes935.etypegoogle4.com */
-$sites['k-lakes935.etypegoogle4.com'] = 'k-lakes935.etypegoogle4.com';
-$sites['k-lakes935.net'] = 'k-lakes935.etypegoogle4.com';
-
-/* lakecountrytalkradio.etypegoogle4.com */
-$sites['lakecountrytalkradio.etypegoogle4.com'] = 'lakecountrytalkradio.etypegoogle4.com';
-$sites['lakecountrytalkradio.net'] = 'lakecountrytalkradio.etypegoogle4.com';
-
-/* q947.etypegoogle4.com */
-$sites['q947.etypegoogle4.com'] = 'q947.etypegoogle4.com';
-$sites['q947.net'] = 'q947.etypegoogle4.com';
 
 /* teaguechronicle.etypegoogle4.com */
 $sites['teaguechronicle.etypegoogle4.com'] = 'teaguechronicle.etypegoogle4.com';
