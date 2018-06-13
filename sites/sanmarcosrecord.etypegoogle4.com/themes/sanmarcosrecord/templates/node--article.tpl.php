@@ -2,14 +2,17 @@
 
     <div class="node-content-wrapper">
 
-        <?php if (isset($content['field_image'])) { ?>
+        <?php if (!empty($content['field_image'])) { ?>
             <div class="field-image">
-                <?php print render($content['field_image']); ?>
+                <?php var_dump($content['field_image']); print render($content['field_image']); ?>
             </div>
         <?php } else { ?>
             <?php if (!$page): ?>
+        <div class="field-image">
             <div class="views-field views-field-field-image">
-                <div class="field-content"><a href="<?php print $node_url; ?>"><span><img typeof="foaf:Image" src="/sites/sanmarcosrecord.etypegoogle4.com/files/styles/thumbnail/public/default_images/square_r_logo.jpg" alt=""></span></a></div></div>
+                <div class="field-content"><a href="<?php print $node_url; ?>"><span><img typeof="foaf:Image" src="/sites/sanmarcosrecord.etypegoogle4.com/files/styles/thumbnail/public/default_images/square_r_logo.jpg" alt=""></span></a></div>
+            </div>
+        </div>
             <?php endif; ?>
         <?php } ?>
 
