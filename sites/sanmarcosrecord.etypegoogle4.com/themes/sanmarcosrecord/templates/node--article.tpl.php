@@ -1,20 +1,12 @@
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
     <div class="node-content-wrapper">
-        <?php var_dump($content['field_image']);?>
-        <?php if (!empty($content['field_image'])) { ?>
+
+        <?php if (isset($content['field_image'])): ?>
             <div class="field-image">
-                <?php print render($content['field_image']); echo $page; ?>
+                <?php print render($content['field_image']); ?>
             </div>
-        <?php } else { ?>
-            <?php if (!$page): ?>
-        <div class="field-image">
-            <div class="views-field views-field-field-image">
-                <div class="field-content"><a href="<?php print $node_url; ?>"><span><img typeof="foaf:Image" src="/sites/sanmarcosrecord.etypegoogle4.com/files/styles/thumbnail/public/default_images/square_r_logo.jpg" alt=""></span></a></div>
-            </div>
-        </div>
-            <?php endif; ?>
-        <?php } ?>
+        <?php endif; ?>
 
         <?php if (isset($content['field_video'])): ?>
             <div class="field-video">
