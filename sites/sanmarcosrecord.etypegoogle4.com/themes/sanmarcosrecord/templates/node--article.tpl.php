@@ -1,10 +1,10 @@
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
     <div class="node-content-wrapper">
-
+        <?php var_dump($content['field_image']);?>
         <?php if (!empty($content['field_image'])) { ?>
             <div class="field-image">
-                <?php var_dump($content['field_image']); print render($content['field_image']); ?>
+                <?php print render($content['field_image']); echo $page; ?>
             </div>
         <?php } else { ?>
             <?php if (!$page): ?>
