@@ -1,0 +1,12 @@
+; $Id$
+name = External Links
+description = Opens links to external sites in new tabs
+core = 7.x
+
+
+; Information added by Drupal.org packaging script on 2017-08-08
+version = "7.x-1.0-alpha3"
+core = "7.x"
+project = "external"
+datestamp = "1502175247"
+

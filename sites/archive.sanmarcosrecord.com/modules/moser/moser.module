@@ -1,0 +1,61 @@
+<?php
+
+/**
+ * Custom stuff for this site
+ */
+
+/**
+ * @return array
+ */
+function moser_menu() {
+
+  $items = array();
+
+  $items['admin/reset-nodes'] = array(
+    'title' => 'Moser',
+    'description' => 'Moser',
+    'page callback' => 'moser_function',
+    'access arguments' => array('access administration pages')
+  );
+
+  return $items;
+}
+
+function moser_function() {
+
+  set_time_limit(0);
+  ob_start();
+  echo 'Starting<br />';
+  ob_flush();
+  $result = db_select('node', 'n')
+    ->fields('n', array('nid'))
+    ->condition('type', 'article', '=')
+    ->condition('nid', '9869', '>')
+    ->orderBy('n.nid', 'ASC')
+    ->execute();
+
+  foreach ($result as $row) {
+    if (isset($row->nid)) {
+      $nid = $row->nid;
+      echo $nid . '<br />';
+      $node = node_load($nid);
+      if (isset($node)) {
+        node_save($node);
+        print_r("saving " . $nid . " (" . $node->title . ")" . '<br />');
+      }
+      ob_flush();
+    }
+  }
+}
+
+function moser_social_media_links_platform_info_alter(&$platforms) {
+ $platforms['e_edition'] = array(
+    'title' => t('e-Edition'),
+    'base url' => 'https://etypeservices.com/',
+    'image alt' => 'Subscribe',
+  );
+
+  return $platforms;
+}
+
+

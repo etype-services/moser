@@ -1,0 +1,52 @@
+<?php
+/**
+ * @file
+ * Node revision cleanup module.
+ *
+ * This module provides a mechanism for mass deletion of node revisions for
+ * databases of such a size that other modules may not suffice.
+ */
+
+/**
+ * Clean up after ourselves.
+ *
+ * @param string $content_type
+ *   Clean up old data after finishing and before starting, just in case.
+ */
+function node_revision_cleanup_cruft($content_type) {
+  $v = new NodeRevisionCleanupVariableCRUD();
+  $jobs_available = $v->vget('node_revision_cleanup_' . $content_type . '_jobs_available', array());
+  $count_jobs_available = count($jobs_available);
+  if ($count_jobs_available > 0) {
+    foreach ($jobs_available as $job) {
+      $v->vdel('node_revision_cleanup_' . $content_type . '_job_number_' . $job);
+    }
+  }
+  $v->vdel('node_revision_cleanup_' . $content_type . '_processes_running');
+  $v->vdel('node_revision_cleanup_' . $content_type . '_total_vids');
+  $v->vdel('node_revision_cleanup_' . $content_type . '_completed');
+  $v->vdel('node_revision_cleanup_' . $content_type . '_jobs_available');
+  $v->vdel('node_revision_cleanup_' . $content_type . '_job_locks');
+  $v->vdel('node_revision_cleanup_' . $content_type . '_lock');
+  $v->vdel('node_revision_cleanup_' . $content_type . '_begin');
+  $v->vdel('node_revision_cleanup_' . $content_type . '_completed');
+}
+
+/**
+ * Convert seconds into something more meaningful.
+ *
+ * @param int $secs
+ *   A UNIX timestamp.
+ *
+ * @return array
+ *   An array broken into hours, minutes and seconds.
+ */
+function _node_revision_cleanup_seconds_to_time($secs) {
+  $dt = new DateTime('@' . $secs, new DateTimeZone('UTC'));
+  return array(
+    'days' => (int) $dt->format('z'),
+    'hours' => (int) $dt->format('G'),
+    'minutes' => (int) $dt->format('i'),
+    'seconds' => (int) $dt->format('s'),
+  );
+}
