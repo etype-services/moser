@@ -9,10 +9,10 @@ $sites['archive.drippingspringsnews.com'] = 'archive.drippingspringsnews.etypego
 $sites['archive.campcountynow.com'] = 'archive.campcountynow.etypegoogle4.com';
 
 /* archive.wimberleyview.etypegoogle4.com */
-$sites['wimberleyview.etypegoogle4.com'] = 'archive.wimberleyview.etypegoogle4.com';
+$sites['archive.wimberleyview.com'] = 'archive.wimberleyview.etypegoogle4.com';
 
 /* archive.steelcountrybee.etypegoogle4.com */
-$sites['steelcountrybee.etypegoogle4.com'] = 'archive.steelcountrybee.etypegoogle4.com';
+$sites['archive.steelcountrybee.com'] = 'archive.steelcountrybee.etypegoogle4.com';
 
 /* bosquecountytoday.etypegoogle4.com */
 $sites['bosquecountytoday.etypegoogle4.com'] = 'bosquecountytoday.etypegoogle4.com';
