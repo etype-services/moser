@@ -2,6 +2,18 @@
 /* test.etypegoogle4.com */
 $sites['test.etypegoogle4.com'] = 'bosquecountytoday.com';
 
+/* archive.drippingspringsnews.etypegoogle4.com */
+$sites['archive.drippingspringsnews.com'] = 'archive.drippingspringsnews.etypegoogle4.com';
+
+/* archive.campcountynow.etypegoogle4.com */
+$sites['archive.campcountynow.com'] = 'archive.campcountynow.etypegoogle4.com';
+
+/* archive.wimberleyview.etypegoogle4.com */
+$sites['wimberleyview.etypegoogle4.com'] = 'archive.wimberleyview.etypegoogle4.com';
+
+/* archive.steelcountrybee.etypegoogle4.com */
+$sites['steelcountrybee.etypegoogle4.com'] = 'archive.steelcountrybee.etypegoogle4.com';
+
 /* bosquecountytoday.etypegoogle4.com */
 $sites['bosquecountytoday.etypegoogle4.com'] = 'bosquecountytoday.etypegoogle4.com';
 $sites['bosquecountytoday.com'] = 'bosquecountytoday.etypegoogle4.com';
@@ -24,9 +36,6 @@ $sites['yorktownnewsview.com'] = 'dewittcountytoday.etypegoogle4.com';
 $sites['www.yorktownnewsview.com'] = 'dewittcountytoday.etypegoogle4.com';
 $sites['cuerorecord.com'] = 'dewittcountytoday.etypegoogle4.com';
 $sites['www.cuerorecord.com'] = 'dewittcountytoday.etypegoogle4.com';
-
-/* drippingspringsnews.etypegoogle4.com */
-$sites['archive.drippingspringsnews.com'] = 'archive.drippingspringsnews.etypegoogle4.com';
 
 $sites['franklin-advocate.etypegoogle4.com'] = 'franklin-advocate.etypegoogle4.com';
 $sites['franklin-advocate.com'] = 'franklin-advocate.etypegoogle4.com';
@@ -67,14 +76,6 @@ $sites['www.thefairfieldrecorder.net'] = 'fairfield-recorder.com';
 
 $sites['fairfieldrecorder.com'] = 'fairfield-recorder.com';
 $sites['www.fairfieldrecorder.com'] = 'fairfield-recorder.com';
-
-/* wimberleyview.etypegoogle4.com */
-$sites['wimberleyview.etypegoogle4.com'] = 'wimberleyview.com';
-$sites['wimberleyview.com'] = 'wimberleyview.com';
-$sites['www.wimberleyview.com'] = 'wimberleyview.com';
-$sites['archive.wimberleyview.com'] = 'wimberleyview.com';
-$sites['century-news.com'] = 'wimberleyview.com';
-$sites['www.century-news.com'] = 'wimberleyview.com';
 
 /* olneyenterprise.etypegoogle4.com */
 $sites['olneyenterprise.etypegoogle4.com'] = 'olneyenterprise.com';
@@ -127,33 +128,11 @@ $sites['www.jacksonconews.com'] = 'jacksonconews.etypegoogle4.com';
 $sites['jacksonconews.com'] = 'jacksonconews.etypegoogle4.com';
 $sites['archive.jacksonconews.com'] = 'archive.jacksonconews.com';
 
-/* cacccountynow.etypegoogle4.com */
-$sites['atlantacitizensjournal.etypegoogle4.com'] = 'casscountynow.etypegoogle4.com';
-$sites['www.atlantacitizensjournal.com'] = 'casscountynow.etypegoogle4.com';
-$sites['atlantacitizensjournal.com'] = 'casscountynow.etypegoogle4.com';
-
+/* casscountynow.etypegoogle4.com */
 $sites['www.casscountynow.com'] = 'casscountynow.etypegoogle4.com';
 $sites['casscountynow.com'] = 'casscountynow.etypegoogle4.com';
 $sites['archive.casscountynow.com'] = 'archive.casscountynow.com';
-
-$sites['www.casscountysun.com'] = 'casscountynow.etypegoogle4.com';
-$sites['casscountysun.com'] = 'casscountynow.etypegoogle4.com';
-
-$sites['www.theatlantacitizensjournal.com'] = 'casscountynow.etypegoogle4.com';
-$sites['theatlantacitizensjournal.com'] = 'casscountynow.etypegoogle4.com';
-
-$sites['www.lindensun.com'] = 'casscountynow.etypegoogle4.com';
-$sites['lindensun.com'] = 'casscountynow.etypegoogle4.com';
-
 $sites['casscountycni.etypegoogle4.com'] = 'casscountynow.etypegoogle4.com';
-
-/* campcountynow.etypegoogle4.com */
-$sites['campcountynow.etypegoogle4.com'] = 'campcountynow.com';
-$sites['www.campcountynow.com'] = 'campcountynow.com';
-$sites['campcountynow.com'] = 'campcountynow.com';
-
-$sites['www.thepittsburggazette.com'] = 'campcountynow.com';
-$sites['thepittsburggazette.com'] = 'campcountynow.com';
 
 /* bowiecountynow.etypegoogle4.com*/
 $sites['bowiecountynow.etypegoogle4.com'] = 'bowiecountynow.com';
@@ -171,14 +150,6 @@ $sites['bowiecountycitizen.com'] = 'bowiecountynow.com';
 
 $sites['www.newbostonnews.com'] = 'bowiecountynow.com';
 $sites['newbostonnews.com'] = 'bowiecountynow.com';
-
-/* steelcountrybee.etypegoogle4.com */
-$sites['steelcountrybee.etypegoogle4.com'] = 'steelcountrybee.com';
-$sites['www.steelcountrybee.com'] = 'steelcountrybee.com';
-$sites['steelcountrybee.com'] = 'steelcountrybee.com';
-
-$sites['www.thedaingerfieldbee.com'] = 'steelcountrybee.com';
-$sites['thedaingerfieldbee.com'] = 'steelcountrybee.com';
 
 /* mexiadailynews.etypegoogle4.com */
 $sites['themexianews.etypegoogle4.com'] = 'mexiadailynews.etypegoogle4.com';
