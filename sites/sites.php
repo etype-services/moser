@@ -180,7 +180,7 @@ $sites['steelcountrybee.com'] = 'steelcountrybee.com';
 $sites['www.thedaingerfieldbee.com'] = 'steelcountrybee.com';
 $sites['thedaingerfieldbee.com'] = 'steelcountrybee.com';
 
-/* themexianews.etypegoogle4.com */
+/* mexiadailynews.etypegoogle4.com */
 $sites['themexianews.etypegoogle4.com'] = 'mexiadailynews.etypegoogle4.com';
 $sites['www.themexianews.com'] = 'mexiadailynews.etypegoogle4.com';
 $sites['themexianews.com'] = 'mexiadailynews.etypegoogle4.com';
