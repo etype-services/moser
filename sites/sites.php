@@ -27,8 +27,6 @@ $sites['www.cuerorecord.com'] = 'dewittcountytoday.etypegoogle4.com';
 
 /* drippingspringsnews.etypegoogle4.com */
 $sites['drippingspringsnews.etypegoogle4.com'] = 'drippingspringsnews.com';
-$sites['drippingspringsnews.com'] = 'drippingspringsnews.com';
-$sites['www.drippingspringsnews.com'] = 'drippingspringsnews.com';
 
 $sites['franklin-advocate.etypegoogle4.com'] = 'franklin-advocate.etypegoogle4.com';
 $sites['franklin-advocate.com'] = 'franklin-advocate.etypegoogle4.com';
@@ -74,7 +72,7 @@ $sites['www.fairfieldrecorder.com'] = 'fairfield-recorder.com';
 $sites['wimberleyview.etypegoogle4.com'] = 'wimberleyview.com';
 $sites['wimberleyview.com'] = 'wimberleyview.com';
 $sites['www.wimberleyview.com'] = 'wimberleyview.com';
-
+$sites['archive.wimberleyview.com'] = 'wimberleyview.com';
 $sites['century-news.com'] = 'wimberleyview.com';
 $sites['www.century-news.com'] = 'wimberleyview.com';
 
@@ -186,11 +184,9 @@ $sites['thedaingerfieldbee.com'] = 'steelcountrybee.com';
 $sites['themexianews.etypegoogle4.com'] = 'themexianews.com';
 $sites['www.themexianews.com'] = 'themexianews.com';
 $sites['themexianews.com'] = 'themexianews.com';
-
-$sites['mexiadailynews.etypegoogle4.com'] = 'mexiadailynews.etypegoogle4.com';
-
 $sites['www.mexiadailynews.com'] = 'themexianews.com';
 $sites['mexiadailynews.com'] = 'themexianews.com';
+$sites['archive.mexiadailynews.com'] = 'themexianews.com';
 
 /* inglesideindex.etypegoogle4.com */
 $sites['inglesideindex.etypegoogle4.com'] = 'inglesideindex.com';
