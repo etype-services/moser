@@ -26,7 +26,7 @@ $sites['cuerorecord.com'] = 'dewittcountytoday.etypegoogle4.com';
 $sites['www.cuerorecord.com'] = 'dewittcountytoday.etypegoogle4.com';
 
 /* drippingspringsnews.etypegoogle4.com */
-$sites['drippingspringsnews.etypegoogle4.com'] = 'drippingspringsnews.com';
+$sites['archive.drippingspringsnews.com'] = 'archive.drippingspringsnews.etypegoogle4.com';
 
 $sites['franklin-advocate.etypegoogle4.com'] = 'franklin-advocate.etypegoogle4.com';
 $sites['franklin-advocate.com'] = 'franklin-advocate.etypegoogle4.com';
