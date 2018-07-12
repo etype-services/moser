@@ -183,8 +183,7 @@ $sites['fredericksburgtexas.org']  = 'fredericksburgstandard.com';
 $sites['www.fredericksburgtexas.org'] = 'fredericksburgstandard.com';
 
 /* sanmarcosrecord archive */
-$sites['archive.sanmarcosrecord.com'] = 'archive.sanmarcosrecord.com';
-$sites['archive.sanmarcosdailyrecord.com'] = 'archive.sanmarcosrecord.com';
+$sites['archive.sanmarcosrecord.com'] = 'archive.sanmarcosrecord.etypegoogle4.com';
 $sites['sanmarcosrecord.com'] = 'sanmarcosrecord.etypegoogle4.com';
 $sites['www.sanmarcosrecord.com'] = 'sanmarcosrecord.etypegoogle4.com';
 
