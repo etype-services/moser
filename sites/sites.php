@@ -183,14 +183,13 @@ $sites['www.thedaingerfieldbee.com'] = 'steelcountrybee.com';
 $sites['thedaingerfieldbee.com'] = 'steelcountrybee.com';
 
 /* themexianews.etypegoogle4.com */
-$sites['themexianews.etypegoogle4.com'] = 'themexianews.com';
-$sites['www.themexianews.com'] = 'themexianews.com';
-$sites['themexianews.com'] = 'themexianews.com';
-
+$sites['themexianews.etypegoogle4.com'] = 'mexiadailynews.etypegoogle4.com';
+$sites['www.themexianews.com'] = 'mexiadailynews.etypegoogle4.com';
+$sites['themexianews.com'] = 'mexiadailynews.etypegoogle4.com';
 $sites['mexiadailynews.etypegoogle4.com'] = 'mexiadailynews.etypegoogle4.com';
-
-$sites['www.mexiadailynews.com'] = 'themexianews.com';
-$sites['mexiadailynews.com'] = 'themexianews.com';
+$sites['www.mexiadailynews.com'] = 'mexiadailynews.etypegoogle4.com';
+$sites['mexiadailynews.com'] = 'mexiadailynews.etypegoogle4.com';
+$sites['archive.mexiadailynews.com'] = 'archive.mexiadailynews.etypegoogle4.com';
 
 /* inglesideindex.etypegoogle4.com */
 $sites['inglesideindex.etypegoogle4.com'] = 'inglesideindex.com';
