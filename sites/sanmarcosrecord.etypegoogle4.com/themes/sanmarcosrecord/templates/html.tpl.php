@@ -12,6 +12,7 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <?php print $head_script; ?>
 </head>
 <body class="<?php print $classes; ?>"<?php print $attributes; ?>>
 <div id="fb-root"></div>
@@ -30,6 +31,6 @@
 <?php print $page_top; ?>
 <?php print $page; ?>
 <?php print $page_bottom; ?>
-<?php print $adscript; ?>
+<?php print $body_script; ?>
 </body>
 </html>
