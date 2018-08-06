@@ -136,13 +136,18 @@ body, #main-menu ul.menu, #user-menu {
 /* photo galleries block */
 #block-views-business-top-stories-block-5 {
   .view-business-top-stories {
-    width: 60%;
-    margin-right: 2em;
-    .views-field-field-image {
-      img {
-        width: 100%;
-        height: auto;
+    .view-content {
+      width: 60%;
+      margin-right: 2em;
+      .views-field-field-image {
+        img {
+          width: 100%;
+          height: auto;
+        }
       }
+    }
+    .attachment {
+      float: right;
     }
     .views-field-title {
       h3 {
