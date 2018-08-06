@@ -143,7 +143,10 @@ body, #main-menu ul.menu, #user-menu {
       margin-right: 2em;
     }
     .attachment {
-
+      .view-content {
+        flex-basis: 38%;
+        margin-right: 0;
+      }
     }
     .views-field-title {
       h3 {

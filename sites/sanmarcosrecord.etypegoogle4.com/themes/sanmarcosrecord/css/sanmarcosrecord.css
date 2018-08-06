@@ -78,6 +78,9 @@ body, #main-menu ul.menu, #user-menu {
   #block-views-business-top-stories-block-5 .view-business-top-stories .view-content {
     flex-basis: 62%;
     margin-right: 2em; }
+  #block-views-business-top-stories-block-5 .view-business-top-stories .attachment .view-content {
+    flex-basis: 38%;
+    margin-right: 0; }
   #block-views-business-top-stories-block-5 .view-business-top-stories .views-field-title h3 {
     text-transform: none; }
   #block-views-business-top-stories-block-5 .view-business-top-stories .views-field-field-image img {
