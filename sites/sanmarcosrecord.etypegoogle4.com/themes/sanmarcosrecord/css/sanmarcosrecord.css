@@ -2,21 +2,6 @@
   display: none;
   visibility: hidden; }
 
-@media only screen and (max-width: 767px) {
-  #block-simpleads-ad-groups-489, #block-simpleads-ad-groups-490 {
-    display: block;
-    visibility: visible; }
-
-  /* photo galleries block */
-  #block-views-business-top-stories-block-5 .view-business-top-stories {
-    display: flex;
-    flex-wrap: wrap; }
-    #block-views-business-top-stories-block-5 .view-business-top-stories .view-content {
-      flex-basis: 100%;
-      margin-right: 0; }
-    #block-views-business-top-stories-block-5 .view-business-top-stories .attachment .view-content {
-      flex-basis: 100%;
-      margin-right: 0; } }
 /* override silly calendar module defaults */
 body.calendar {
   width: inherit; }
@@ -57,6 +42,22 @@ body, #main-menu ul.menu, #user-menu {
 .views-slideshow-pager-fields > div {
   padding-left: 0; }
 
+/* photo galleries block */
+#block-views-business-top-stories-block-5 .view-business-top-stories {
+  display: flex;
+  flex-wrap: nowrap; }
+  #block-views-business-top-stories-block-5 .view-business-top-stories .view-content {
+    flex-basis: 80%;
+    margin-right: 2em; }
+  #block-views-business-top-stories-block-5 .view-business-top-stories .attachment .view-content {
+    flex-basis: 100%;
+    margin-right: 0; }
+  #block-views-business-top-stories-block-5 .view-business-top-stories .views-field-title h3 {
+    text-transform: none; }
+  #block-views-business-top-stories-block-5 .view-business-top-stories .views-field-field-image img {
+    width: 100%;
+    height: auto; }
+
 /* RESPONSIVE */
 @media only screen and (max-width: 958px) and (min-width: 768px) {
   .view-slideshow .views_slideshow_main .views-field-body {
@@ -64,6 +65,21 @@ body, #main-menu ul.menu, #user-menu {
     width: 470px; }
   .view-slideshow .views_slideshow_main .views-field-title {
     width: 470px; } }
+@media only screen and (max-width: 767px) {
+  #block-simpleads-ad-groups-489, #block-simpleads-ad-groups-490 {
+    display: block;
+    visibility: visible; }
+
+  /* photo galleries block */
+  #block-views-business-top-stories-block-5 .view-business-top-stories {
+    display: flex;
+    flex-wrap: wrap; }
+    #block-views-business-top-stories-block-5 .view-business-top-stories .view-content {
+      flex-basis: 100%;
+      margin-right: 0; }
+    #block-views-business-top-stories-block-5 .view-business-top-stories .attachment .view-content {
+      flex-basis: 100%;
+      margin-right: 0; } }
 @media only screen and (max-width: 767px) and (min-width: 480px) {
   .view-slideshow .views_slideshow_main .views-field-body {
     width: 398px;
@@ -82,20 +98,5 @@ body, #main-menu ul.menu, #user-menu {
     width: 278px; }
   .view-slideshow .views_slideshow_main .views-field-title {
     width: 278px; } }
-/* photo galleries block */
-#block-views-business-top-stories-block-5 .view-business-top-stories {
-  display: flex;
-  flex-wrap: nowrap; }
-  #block-views-business-top-stories-block-5 .view-business-top-stories .view-content {
-    flex-basis: 80%;
-    margin-right: 2em; }
-  #block-views-business-top-stories-block-5 .view-business-top-stories .attachment .view-content {
-    flex-basis: 100%;
-    margin-right: 0; }
-  #block-views-business-top-stories-block-5 .view-business-top-stories .views-field-title h3 {
-    text-transform: none; }
-  #block-views-business-top-stories-block-5 .view-business-top-stories .views-field-field-image img {
-    width: 100%;
-    height: auto; }
 
 /*# sourceMappingURL=sanmarcosrecord.css.map */

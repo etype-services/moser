@@ -3,31 +3,6 @@
   visibility: hidden;
 }
 
-@media only screen and (max-width: 767px) {
-  #block-simpleads-ad-groups-489, #block-simpleads-ad-groups-490 {
-    display: block;
-    visibility: visible;
-  }
-
-  /* photo galleries block */
-  #block-views-business-top-stories-block-5 {
-    .view-business-top-stories {
-      display: flex;
-      flex-wrap: wrap;
-      .view-content {
-        flex-basis: 100%;
-        margin-right: 0;
-      }
-      .attachment {
-        .view-content {
-          flex-basis: 100%;
-          margin-right: 0;
-        }
-      }
-    }
-  }
-}
-
 /* override silly calendar module defaults */
 body.calendar {
   width: inherit;
@@ -91,6 +66,35 @@ body, #main-menu ul.menu, #user-menu {
   padding-left: 0;
 }
 
+/* photo galleries block */
+#block-views-business-top-stories-block-5 {
+  .view-business-top-stories {
+    display: flex;
+    flex-wrap: nowrap;
+    .view-content {
+      flex-basis: 80%;
+      margin-right: 2em;
+    }
+    .attachment {
+      .view-content {
+        flex-basis: 100%;
+        margin-right: 0;
+      }
+    }
+    .views-field-title {
+      h3 {
+        text-transform: none;
+      }
+    }
+    .views-field-field-image {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
 /* RESPONSIVE */
 @media only screen and (max-width: 958px) and (min-width: 768px) {
   .view-slideshow {
@@ -101,6 +105,31 @@ body, #main-menu ul.menu, #user-menu {
       }
       .views-field-title {
         width: 470px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #block-simpleads-ad-groups-489, #block-simpleads-ad-groups-490 {
+    display: block;
+    visibility: visible;
+  }
+
+  /* photo galleries block */
+  #block-views-business-top-stories-block-5 {
+    .view-business-top-stories {
+      display: flex;
+      flex-wrap: wrap;
+      .view-content {
+        flex-basis: 100%;
+        margin-right: 0;
+      }
+      .attachment {
+        .view-content {
+          flex-basis: 100%;
+          margin-right: 0;
+        }
       }
     }
   }
@@ -146,35 +175,6 @@ body, #main-menu ul.menu, #user-menu {
       }
       .views-field-title {
         width: 278px;
-      }
-    }
-  }
-}
-
-/* photo galleries block */
-#block-views-business-top-stories-block-5 {
-  .view-business-top-stories {
-    display: flex;
-    flex-wrap: nowrap;
-    .view-content {
-      flex-basis: 80%;
-      margin-right: 2em;
-    }
-    .attachment {
-      .view-content {
-        flex-basis: 100%;
-        margin-right: 0;
-      }
-    }
-    .views-field-title {
-      h3 {
-        text-transform: none;
-      }
-    }
-    .views-field-field-image {
-      img {
-        width: 100%;
-        height: auto;
       }
     }
   }
