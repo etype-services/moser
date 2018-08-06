@@ -8,6 +8,24 @@
     display: block;
     visibility: visible;
   }
+
+  /* photo galleries block */
+  #block-views-business-top-stories-block-5 {
+    .view-business-top-stories {
+      display: flex;
+      flex-wrap: wrap;
+      .view-content {
+        flex-basis: 100%;
+        margin-right: 0;
+      }
+      .attachment {
+        .view-content {
+          flex-basis: 100%;
+          margin-right: 0;
+        }
+      }
+    }
+  }
 }
 
 /* override silly calendar module defaults */
@@ -128,26 +146,6 @@ body, #main-menu ul.menu, #user-menu {
       }
       .views-field-title {
         width: 278px;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  /* photo galleries block */
-  #block-views-business-top-stories-block-5 {
-    .view-business-top-stories {
-      display: flex;
-      flex-wrap: wrap;
-      .view-content {
-        flex-basis: 100%;
-        margin-right: 0;
-      }
-      .attachment {
-        .view-content {
-          flex-basis: 100%;
-          margin-right: 0;
-        }
       }
     }
   }
