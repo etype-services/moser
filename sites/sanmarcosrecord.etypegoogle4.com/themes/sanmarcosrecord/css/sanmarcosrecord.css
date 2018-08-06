@@ -72,15 +72,16 @@ body, #main-menu ul.menu, #user-menu {
   .view-slideshow .views_slideshow_main .views-field-title {
     width: 278px; } }
 /* photo galleries block */
-#block-views-business-top-stories-block-5 .view-business-top-stories .view-content {
-  width: 60%;
-  margin-right: 2em; }
-  #block-views-business-top-stories-block-5 .view-business-top-stories .view-content .views-field-field-image img {
+#block-views-business-top-stories-block-5 .view-business-top-stories {
+  display: flex;
+  flex-wrap: nowrap; }
+  #block-views-business-top-stories-block-5 .view-business-top-stories .view-content {
+    flex-basis: 62%;
+    margin-right: 2em; }
+  #block-views-business-top-stories-block-5 .view-business-top-stories .views-field-title h3 {
+    text-transform: none; }
+  #block-views-business-top-stories-block-5 .view-business-top-stories .views-field-field-image img {
     width: 100%;
     height: auto; }
-#block-views-business-top-stories-block-5 .view-business-top-stories .attachment {
-  float: right; }
-#block-views-business-top-stories-block-5 .view-business-top-stories .views-field-title h3 {
-  text-transform: none; }
 
 /*# sourceMappingURL=sanmarcosrecord.css.map */
