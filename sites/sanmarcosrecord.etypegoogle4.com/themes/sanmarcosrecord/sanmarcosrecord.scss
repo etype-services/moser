@@ -72,12 +72,13 @@ body, #main-menu ul.menu, #user-menu {
     display: flex;
     flex-wrap: nowrap;
     .view-content {
-      flex-basis: 80%;
+      flex-basis: 70%;
       margin-right: 2em;
     }
     .attachment {
+      flex-basis: 30%;
       .view-content {
-        flex-basis: 100%;
+        flex-basis: 100%; /* override .view-content above */
         margin-right: 0;
       }
     }
@@ -127,6 +128,7 @@ body, #main-menu ul.menu, #user-menu {
       }
       .attachment {
         margin-top: 1em;
+        flex-basis: 100%;
         .view-content {
           flex-basis: 100%;
           margin-right: 0;
