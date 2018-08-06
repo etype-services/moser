@@ -145,7 +145,9 @@ body, #main-menu ul.menu, #user-menu {
       }
     }
     .views-field-title {
-      text-transform: none;
+      h3 {
+        text-transform: none;
+      }
     }
   }
 }

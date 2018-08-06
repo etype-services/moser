@@ -12,7 +12,7 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <?php print $head_script; ?>g
+    <?php print $head_script; ?>
 </head>
 <body class="<?php print $classes; ?>"<?php print $attributes; ?>>
 <div id="fb-root"></div>
