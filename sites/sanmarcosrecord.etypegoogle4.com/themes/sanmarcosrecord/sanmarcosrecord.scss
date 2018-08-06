@@ -133,18 +133,38 @@ body, #main-menu ul.menu, #user-menu {
   }
 }
 
+@media only screen and (max-width: 767px) {
+  /* photo galleries block */
+  #block-views-business-top-stories-block-5 {
+    .view-business-top-stories {
+      display: flex;
+      flex-wrap: wrap;
+      .view-content {
+        flex-basis: 100%;
+        margin-right: 0;
+      }
+      .attachment {
+        .view-content {
+          flex-basis: 100%;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
 /* photo galleries block */
 #block-views-business-top-stories-block-5 {
   .view-business-top-stories {
     display: flex;
     flex-wrap: nowrap;
     .view-content {
-      flex-basis: 62%;
+      flex-basis: 80%;
       margin-right: 2em;
     }
     .attachment {
       .view-content {
-        flex-basis: 38%;
+        flex-basis: 100%;
         margin-right: 0;
       }
     }
