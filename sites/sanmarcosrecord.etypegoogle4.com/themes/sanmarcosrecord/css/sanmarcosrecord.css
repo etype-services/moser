@@ -71,5 +71,14 @@ body, #main-menu ul.menu, #user-menu {
     width: 278px; }
   .view-slideshow .views_slideshow_main .views-field-title {
     width: 278px; } }
+/* photo galleries block */
+#block-views-business-top-stories-block-5 .view-business-top-stories {
+  width: 60%;
+  margin-right: 2em; }
+  #block-views-business-top-stories-block-5 .view-business-top-stories .views-field-field-image img {
+    width: 100%;
+    height: auto; }
+  #block-views-business-top-stories-block-5 .view-business-top-stories .views-field-title {
+    text-transform: none; }
 
 /*# sourceMappingURL=sanmarcosrecord.css.map */

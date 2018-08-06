@@ -132,3 +132,20 @@ body, #main-menu ul.menu, #user-menu {
     }
   }
 }
+
+/* photo galleries block */
+#block-views-business-top-stories-block-5 {
+  .view-business-top-stories {
+    width: 60%;
+    margin-right: 2em;
+    .views-field-field-image {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .views-field-title {
+      text-transform: none;
+    }
+  }
+}
