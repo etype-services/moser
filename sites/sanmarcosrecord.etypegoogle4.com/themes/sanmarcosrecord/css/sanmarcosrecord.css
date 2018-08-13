@@ -50,7 +50,8 @@ body, #main-menu ul.menu, #user-menu {
     flex-basis: 70%;
     margin-right: 2em; }
   #block-views-business-top-stories-block-5 .view-business-top-stories .attachment {
-    flex-basis: 30%; }
+    flex-basis: 30%;
+    background-color: #f3f1f1; }
     #block-views-business-top-stories-block-5 .view-business-top-stories .attachment .view-business-top-stories {
       display: block; }
       #block-views-business-top-stories-block-5 .view-business-top-stories .attachment .view-business-top-stories .view-footer {
