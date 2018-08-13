@@ -85,7 +85,12 @@ body, #main-menu ul.menu, #user-menu {
       flex-basis: 100%; }
       #block-views-business-top-stories-block-5 .view-business-top-stories .attachment .view-content {
         flex-basis: 100%;
-        margin-right: 0; } }
+        margin-right: 0; }
+      #block-views-business-top-stories-block-5 .view-business-top-stories .attachment .view-business-top-stories {
+        display: block; }
+        #block-views-business-top-stories-block-5 .view-business-top-stories .attachment .view-business-top-stories .view-footer {
+          margin: 0;
+          float: right; } }
 @media only screen and (max-width: 767px) and (min-width: 480px) {
   .view-slideshow .views_slideshow_main .views-field-body {
     width: 398px;
