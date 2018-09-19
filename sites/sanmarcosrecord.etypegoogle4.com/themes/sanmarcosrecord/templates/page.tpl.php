@@ -42,16 +42,6 @@
     </div>
 <?php endif; ?>
 
-<?php if ($page['main_menu']): ?>
-    <div class="main-menu-wrapper clearfix">
-        <div class="main-menu-wrapper-inner">
-            <nav id="main-menu">
-                <?php print render($page['main_menu']); ?>
-            </nav>
-        </div>
-    </div>
-<?php endif; ?>
-
 <?php if ($page['main_menu_second_level']): ?>
     <div class="main-menu-second-level-wrapper clearfix">
         <div class="main-menu-second-level-wrapper-inner">
