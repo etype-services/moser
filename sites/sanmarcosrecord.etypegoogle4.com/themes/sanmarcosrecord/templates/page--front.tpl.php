@@ -32,6 +32,12 @@
     </div>
 </div>
 
+<?php if ($page['ad_above_main_menu']): ?>
+<div class="page-inner <?php echo $grid_size ?>">
+    <?php print render($page['ad_above_main_menu']); ?>
+</div>
+<?php endif; ?>
+
 <?php if ($page['main_menu']): ?>
     <div class="main-menu-wrapper clearfix">
         <div class="main-menu-wrapper-inner">
