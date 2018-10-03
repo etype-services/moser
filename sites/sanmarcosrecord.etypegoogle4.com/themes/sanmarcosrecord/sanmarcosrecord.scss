@@ -3,7 +3,7 @@
   visibility: hidden;
 }
 
-/* override silly calendar module defaults */
+/* override calendar module defaults */
 body.calendar {
   width: inherit;
 }
@@ -37,33 +37,6 @@ body, #main-menu ul.menu, #user-menu {
       }
     }
   }
-}
-
-/* SLIDESHOW
---------------------------------------------------------------------------*/
-/* override #main-content .block-inner */
-#main-content #block-views-slideshow-block .block-inner {
-  padding: 0 0 20px 0;
-}
-
-.flexslider {
-  margin: 0 0 2em 0;
-  font: 0.8em/1.4 "Roboto", sans-serif;
-}
-
-.view-slideshow {
-  .views-field-title {
-    margin-top: 0.5em;
-    h3 {
-      text-transform: capitalize;
-      font-size: 1.4em;
-    }
-  }
-}
-
-/* override module defaults */
-.views-slideshow-pager-fields > div {
-  padding-left: 0;
 }
 
 /* photo galleries block */
@@ -104,21 +77,6 @@ body, #main-menu ul.menu, #user-menu {
   }
 }
 
-/* RESPONSIVE */
-@media only screen and (max-width: 958px) and (min-width: 768px) {
-  .view-slideshow {
-    .views_slideshow_main {
-      .views-field-body {
-        font-size: inherit;
-        width: 470px;
-      }
-      .views-field-title {
-        width: 470px;
-      }
-    }
-  }
-}
-
 @media only screen and (max-width: 767px) {
   #block-simpleads-ad-groups-489, #block-simpleads-ad-groups-490 {
     display: block;
@@ -141,51 +99,6 @@ body, #main-menu ul.menu, #user-menu {
           flex-basis: 100%;
           margin-right: 0;
         }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 767px) and (min-width: 480px) {
-  .view-slideshow {
-    .views_slideshow_main {
-      .views-field-body {
-        width: 398px;
-        // hidden in regular theme css
-        display: block;
-      }
-      .views-field-title {
-        width: 398px;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 479px) and (min-width: 421px) {
-  .view-slideshow {
-    .views_slideshow_main {
-      .views-field-body {
-        width: 278px;
-        // hidden in regular theme css
-        display: block;
-      }
-      .views-field-title {
-        width: 278px;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 420px) {
-  .view-slideshow {
-    .views_slideshow_main {
-      .views-field-body {
-        // hidden in regular theme css
-        display: block;
-        width: 278px;
-      }
-      .views-field-title {
-        width: 278px;
       }
     }
   }
