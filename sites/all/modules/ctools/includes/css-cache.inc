@@ -9,6 +9,12 @@ class CToolsCssCache implements DrupalCacheInterface {
 
   /**
    * {@inheritdoc}
+   * added to avoid Drupal 7.6 error
+   */
+  function __construct() {}
+
+  /**
+   * {@inheritdoc}
    */
   public function clear($cid = NULL, $wildcard = FALSE) {
     // Only clear the caches if the wildcard is set, this ensures that the cache
