@@ -15,24 +15,21 @@
         <?php print render($page['above_main_menu']); ?>
     <?php endif; ?>
 
-    <div class="page-inner <?php echo $grid_size ?>">
-        <div class="header-wrapper clearfix">
-            <div class="header-wrapper-inner <?php echo $grid_full_width ?>">
-                <header>
+    <div class="header-wrapper clearfix">
+        <div class="header-wrapper-inner <?php echo $grid_full_width ?>">
+            <header>
 
-                  <?php if ($logo): ?>
-                      <div class="site-logo">
-                      <a href="<?php print check_url($front_page); ?>"><img
-                                  src="<?php print $logo ?>"
-                                  alt="<?php print $site_name; ?>"/></a>
-                      </div><?php print render($page['header']) ?>
-                  <?php endif; ?>
+                <?php if ($logo): ?>
+                    <div class="site-logo">
+                    <a href="<?php print check_url($front_page); ?>"><img
+                                src="<?php print $logo ?>"
+                                alt="<?php print $site_name; ?>"/></a>
+                    </div><?php print render($page['header']) ?>
+                <?php endif; ?>
 
-                </header>
+            </header>
 
-            </div>
         </div>
-
     </div>
 </div>
 
