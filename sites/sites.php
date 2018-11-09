@@ -135,29 +135,16 @@ $sites['archive.casscountynow.com'] = 'archive.casscountynow.com';
 $sites['casscountycni.etypegoogle4.com'] = 'casscountynow.etypegoogle4.com';
 
 /* bowiecountynow.etypegoogle4.com*/
-$sites['bowiecountynow.etypegoogle4.com'] = 'bowiecountynow.com';
-$sites['www.bowiecountynow.com'] = 'bowiecountynow.com';
-$sites['bowiecountynow.com'] = 'bowiecountynow.com';
-
-$sites['www.bowiecountycitizenstribune.com'] = 'bowiecountynow.com';
-$sites['bowiecountycitizenstribune.com'] = 'bowiecountynow.com';
-
-$sites['www.bowiecountycitizens.com'] = 'bowiecountynow.com';
-$sites['bowiecountycitizens.com'] = 'bowiecountynow.com';
-
-$sites['www.bowiecountycitizen.com'] = 'bowiecountynow.com';
-$sites['bowiecountycitizen.com'] = 'bowiecountynow.com';
-
-$sites['www.newbostonnews.com'] = 'bowiecountynow.com';
-$sites['newbostonnews.com'] = 'bowiecountynow.com';
+$sites['www.bowiecountynow.com'] = 'archive.bowiecountynow.etypegoogle4.com';
+$sites['www.bowiecountycitizenstribune.com'] = 'archive.bowiecountynow.etypegoogle4.com';
+$sites['www.bowiecountycitizens.com'] = 'archive.bowiecountynow.etypegoogle4.com';
+$sites['www.bowiecountycitizen.com'] = 'archive.bowiecountynow.etypegoogle4.com';
+$sites['www.newbostonnews.com'] = 'archive.bowiecountynow.etypegoogle4.com';
 
 /* mexiadailynews.etypegoogle4.com */
 $sites['themexianews.etypegoogle4.com'] = 'mexiadailynews.etypegoogle4.com';
 $sites['www.themexianews.com'] = 'mexiadailynews.etypegoogle4.com';
-$sites['themexianews.com'] = 'mexiadailynews.etypegoogle4.com';
-$sites['mexiadailynews.etypegoogle4.com'] = 'mexiadailynews.etypegoogle4.com';
 $sites['www.mexiadailynews.com'] = 'mexiadailynews.etypegoogle4.com';
-$sites['mexiadailynews.com'] = 'mexiadailynews.etypegoogle4.com';
 $sites['archive.mexiadailynews.com'] = 'archive.mexiadailynews.etypegoogle4.com';
 
 /* inglesideindex.etypegoogle4.com */
@@ -227,7 +214,6 @@ $sites['www.netxcrossroads.com'] = 'netxcrossroads.etypegoogle4.com';
 
 /* lightandchampion.etypegoogle4.com */
 $sites['lightandchampion.etypegoogle4.com'] = 'lightandchampion.etypegoogle4.com';
-$sites['lightandchampion.com'] = 'lightandchampion.etypegoogle4.com';
 $sites['www.lightandchampion.com'] = 'lightandchampion.etypegoogle4.com';
 
 /* tribnow.etypegoogle4.com */
