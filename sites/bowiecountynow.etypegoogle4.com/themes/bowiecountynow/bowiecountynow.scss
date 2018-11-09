@@ -1,4 +1,7 @@
 .header-wrapper {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  .header-wrapper-inner {
+    padding: 0.5em 0 0;
+  }
 }
