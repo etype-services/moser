@@ -63,5 +63,7 @@ body, #main-menu ul.menu, #user-menu {
         margin-right: 0; } }
 #menu-3321-1 {
   background: #19B049 !important; }
+  #menu-3321-1 a.active {
+    background: #19B049 !important; }
 
 /*# sourceMappingURL=sanmarcosrecord.css.map */
