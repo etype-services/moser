@@ -135,11 +135,12 @@ $sites['archive.casscountynow.com'] = 'archive.casscountynow.com';
 $sites['casscountycni.etypegoogle4.com'] = 'casscountynow.etypegoogle4.com';
 
 /* bowiecountynow.etypegoogle4.com*/
-$sites['www.bowiecountynow.com'] = 'archive.bowiecountynow.etypegoogle4.com';
-$sites['www.bowiecountycitizenstribune.com'] = 'archive.bowiecountynow.etypegoogle4.com';
-$sites['www.bowiecountycitizens.com'] = 'archive.bowiecountynow.etypegoogle4.com';
-$sites['www.bowiecountycitizen.com'] = 'archive.bowiecountynow.etypegoogle4.com';
-$sites['www.newbostonnews.com'] = 'archive.bowiecountynow.etypegoogle4.com';
+$sites['www.bowiecountynow.com'] = 'bowiecountynow.etypegoogle4.com';
+$sites['archive.bowiecountynow.com'] = 'archive.bowiecountynow.etypegoogle4.com';
+$sites['www.bowiecountycitizenstribune.com'] = 'bowiecountynow.etypegoogle4.com';
+$sites['www.bowiecountycitizens.com'] = 'bowiecountynow.etypegoogle4.com';
+$sites['www.bowiecountycitizen.com'] = 'bowiecountynow.etypegoogle4.com';
+$sites['www.newbostonnews.com'] = 'bowiecountynow.etypegoogle4.com';
 
 /* mexiadailynews.etypegoogle4.com */
 $sites['themexianews.etypegoogle4.com'] = 'mexiadailynews.etypegoogle4.com';
