@@ -113,9 +113,7 @@ $sites['marlindemocrat.etypegoogle4.com'] = 'marlindemocrat.com';
 $sites['marlindemocrat.com'] = 'marlindemocrat.com';
 $sites['www.marlindemocrat.com'] = 'marlindemocrat.com';
 
-$sites['cameronherald.etypegoogle4.com'] = 'cameronherald.com';
-$sites['cameronherald.com'] = 'cameronherald.com';
-$sites['www.cameronherald.com'] = 'cameronherald.com';
+$sites['www.cameronherald.com'] = 'archive.cameronherald.com';
 
 $sites['aransaspassprogress.etypegoogle4.com'] = 'aransaspassprogress.com';
 $sites['aransaspassprogress.com'] = 'aransaspassprogress.com';
