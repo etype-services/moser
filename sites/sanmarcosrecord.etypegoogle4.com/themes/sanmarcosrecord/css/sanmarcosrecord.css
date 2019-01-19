@@ -66,4 +66,7 @@ body, #main-menu ul.menu, #user-menu {
   #menu-3321-1 a.active {
     background: #19B049 !important; }
 
+/* make hyperlinks in the content area blue */	
+.content .field-items a {color:#0066FF;}
+
 /*# sourceMappingURL=sanmarcosrecord.css.map */
