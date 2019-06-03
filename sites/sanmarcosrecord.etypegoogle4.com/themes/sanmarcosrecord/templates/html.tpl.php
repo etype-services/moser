@@ -33,4 +33,5 @@
 <?php print $page_bottom; ?>
 <?php print $body_script; ?>
 </body>
+<?php if (isset($mailchimp_js)) print $mailchimp_js; ?>
 </html>
