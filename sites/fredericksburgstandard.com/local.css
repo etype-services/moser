@@ -21,3 +21,19 @@ body {
 .view-slideshow .views_slideshow_main .views-field-body {
     height: 70px;
 }
+
+/* preface ad */
+#block-block-54 .block-inner,
+#block-block-55 .block-inner {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
+
+#block-block-54 .block-inner .content,
+#block-block-55 .block-inner .content {
+  background: none;
+  justify-content: center;
+  display: flex;
+}
