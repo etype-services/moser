@@ -25,5 +25,7 @@
 
 #block-block-44 .block-inner .content {
   background: none;
+  justify-content: center;
+  display: flex;
 }
 
