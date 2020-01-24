@@ -34,6 +34,9 @@ body, #main-menu ul.menu, #user-menu {
   }
 }
 
+/* make article hyperlinks blue */
+.node-article .content a {color: blue;}
+
 /* photo galleries block */
 #block-views-business-top-stories-block-5 {
   .view-business-top-stories {
