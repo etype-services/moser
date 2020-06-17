@@ -177,9 +177,8 @@ $sites['sanmarcosdailyrecord.com'] = 'sanmarcosrecord.etypegoogle4.com';
 $sites['www.sanmarcosdailyrecord.com'] = 'sanmarcosrecord.etypegoogle4.com';
 
 /* highlandernews.etypegoogle4.com */
-$sites['highlandernews.etypegoogle4.com'] = 'highlandernews.com';
-$sites['www.highlandernews.com'] = 'highlandernews.com';
-$sites['highlandernews.com'] = 'highlandernews.com';
+$sites['www.highlandernews.com'] = 'archive.highlandernews.com';
+$sites['archive.highlandernews.com'] = 'archive.highlandernews.com';
 
 /* fredericksburgtexasjobs.etypegoogle4.com */
 $sites['fredericksburgtexasjobs.etypegoogle4.com'] = 'fredericksburgtexasjobs.com';
