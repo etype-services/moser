@@ -51,9 +51,8 @@ $sites['www.groesbeckjournal.com'] = 'groesbeckjournal.etypegoogle4.com';
 $sites['photos.etypegoogle4.com'] = 'groesbeckjournal.etypegoogle4.com';
 $sites['archive.groesbeckjournal.com'] = 'archive.groesbeckjournal.com';
 
-$sites['burnetbulletin.etypegoogle4.com'] = 'burnetbulletin.com';
-$sites['burnetbulletin.com'] = 'burnetbulletin.com';
-$sites['www.burnetbulletin.com'] = 'burnetbulletin.com';
+$sites['burnetbulletin.etypegoogle4.com'] = 'archive.burnetbulletin.com';
+$sites['archive.burnetbulletin.com'] = 'burnetbulletin.com';
 
 /* grahamleader.etypegoogle4.com */
 $sites['grahamleader.etypegoogle4.com'] = 'grahamleader.com';
