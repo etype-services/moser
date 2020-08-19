@@ -42,11 +42,9 @@
     process: function() {
       if (this.naturalWidth > Drupal.settings.copyprevention.images_min_dimension || this.naturalHeight > Drupal.settings.copyprevention.images_min_dimension) {
         $(this).bind('mouseover touchstart', function(event) {
-          //var pos = $(this).offset();
           var pos = $(this).position();
           var html = '<div class="copyprevention-transparent-gif" style="position: absolute; left: ' + pos.left + 'px; top: ' + pos.top + 'px">' +
-            '<img src="' + Drupal.settings.copyprevention.transparentgif + '" style="width: ' + this.clientWidth + 'px !important; height: ' + this.clientHeight + 'px !important;"></div>';
-          //var $overlay = $(html).appendTo('body')
+            '<img title="' + this.title + '" alt="' + this.alt + '" src="' + Drupal.settings.copyprevention.transparentgif + '" style="width: ' + this.clientWidth + 'px !important; height: ' + this.clientHeight + 'px !important;"></div>';
           var $overlay = $(html).insertAfter(this)
             .bind('mouseout', function(e) {
               $overlay.remove();

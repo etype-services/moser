@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Main file for Copy Prevention module.
@@ -11,10 +12,12 @@ function copyprevention_permission() {
   return array(
     'bypass copy prevention' => array(
       'title' => t('Bypass Copy prevention'),
-      'description' => t('Bypass copy prevention methods.')),
+      'description' => t('Bypass copy prevention methods.'),
+    ),
     'administer copy prevention' => array(
       'title' => t('Administer Copy prevention'),
-      'description' => t('Administer copy prevention settings.')),
+      'description' => t('Administer copy prevention settings.'),
+    ),
   );
 }
 
@@ -60,8 +63,11 @@ function copyprevention_page_build(&$page) {
 
   $copyprevention_images_search = array_filter(variable_get('copyprevention_images_search', array()));
   if (array_key_exists('httpheader', $copyprevention_images_search)) {
-    $page[$region]['#attached']['drupal_add_http_header'][] = array('X-Robots-Tag', 'noimageindex', TRUE);
-    // drupal_add_http_header('X-Robots-Tag', 'noimageindex', TRUE);
+    $page[$region]['#attached']['drupal_add_http_header'][] = array(
+      'X-Robots-Tag',
+      'noimageindex',
+      TRUE,
+    );
   }
   if (array_key_exists('pagehead', $copyprevention_images_search)) {
     $data = array(

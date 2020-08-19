@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Administration pages for the Copy Prevention module.
@@ -38,7 +39,17 @@ function copyprevention_settings_form() {
     '#type' => 'select',
     '#title' => t('Minimal image dimension'),
     '#description' => t('Minimal image height or width to activate Copy Prevention.'),
-    '#options' => array(10 => 10, 20 => 20, 30 => 30, 50 => 50, 100 => 100, 150 => 150, 200 => 200, 300 => 300, 500 => 500),
+    '#options' => array(
+      10 => 10,
+      20 => 20,
+      30 => 30,
+      50 => 50,
+      100 => 100,
+      150 => 150,
+      200 => 200,
+      300 => 300,
+      500 => 500,
+    ),
     '#default_value' => variable_get('copyprevention_images_min_dimension', 150),
   );
   $form['copyprevention_images_search'] = array(
