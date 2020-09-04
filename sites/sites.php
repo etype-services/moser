@@ -179,13 +179,6 @@ $sites['www.sanmarcosdailyrecord.com'] = 'sanmarcosrecord.etypegoogle4.com';
 $sites['www.highlandernews.com'] = 'archive.highlandernews.com';
 $sites['archive.highlandernews.com'] = 'archive.highlandernews.com';
 
-/* fredericksburgtexasjobs.etypegoogle4.com */
-$sites['fredericksburgtexasjobs.etypegoogle4.com'] = 'fredericksburgtexasjobs.com';
-$sites['www.fredericksburgtexasjobs.com'] = 'fredericksburgtexasjobs.com';
-$sites['fredericksburgtexasjobs.com'] = 'fredericksburgtexasjobs.com';
-$sites['www.gillespiejobs.com'] = 'fredericksburgtexasjobs.com';
-$sites['gillespiejobs.com'] = 'fredericksburgtexasjobs.com';
-
 /* marlindemocrat.etypegoogle4.com */
 $sites['marlindemocrat.etypegoogle4.com'] = 'marlindemocrat.etypegoogle4.com';
 $sites['marlindemocrat.com'] = 'marlindemocrat.etypegoogle4.com';
