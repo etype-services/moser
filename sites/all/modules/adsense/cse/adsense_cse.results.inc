@@ -15,7 +15,7 @@ function _adsense_cse_results() {
   global $base_url;
 
   // Log the search keys:
-  watchdog('AdSense search', 'Search keywords: ' . urldecode(check_plain($_GET['as_q'])));
+  watchdog('AdSense search', 'Search keywords: %keywords', array('%keywords' => urldecode(check_plain($_GET['as_q']))));
 
   $script = $base_url . '/' . drupal_get_path('module', 'adsense_cse') . '/adsense_cse.results.js';
 
@@ -43,6 +43,9 @@ function _adsense_cse_results() {
 </script>
 <script type="text/javascript" src="$script"></script>
 CSE_RESULTS_TXT;
+// @codingStandardsIgnoreStart Drupal.WhiteSpace.ScopeIndent.IncorrectExact
+// <script type="text/javascript" src="http://www.google.com/afsonline/show_afs_search.js"></script>
+// @codingStandardsIgnoreEnd
 
     // Remove empty lines.
     $output = str_replace("\n\n", "\n", $output);

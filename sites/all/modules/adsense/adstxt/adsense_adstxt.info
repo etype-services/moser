@@ -1,10 +1,8 @@
-name = Managed ads
-description = Ad unit generator module using the new managed ads feature available in the Google AdSense site.
+name = AdSense ads.txt
+description = Generates an ads.txt file suitable for use with Google AdSense.
 dependencies[] = adsense:adsense
 package = AdSense
 core = 7.x
-
-configure = admin/config/services/adsense/managed
 
 ; Information added by Drupal.org packaging script on 2020-11-21
 version = "7.x-1.14"
