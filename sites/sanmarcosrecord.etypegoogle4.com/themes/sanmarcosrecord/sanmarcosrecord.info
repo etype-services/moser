@@ -6,6 +6,7 @@ stylesheets[all][] = css/sanmarcosrecord.css
 scripts[] = js/sanmarcosrecord.js
 
 regions[top_frame] = Top Frame
+regions[above_logo] = Above Logo
 regions[header] = Header
 regions[user_menu] = User Menu
 regions[above_main_menu] = Above Main Menu
