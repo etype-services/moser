@@ -75,6 +75,11 @@ body, #main-menu ul.menu, #user-menu {
   }
 }
 
+/* Bark pop-up */
+#block-block-69 {
+  display: none;
+}
+
 @media only screen and (max-width: 767px) {
   #block-simpleads-ad-groups-489, #block-simpleads-ad-groups-490 {
     display: block;
