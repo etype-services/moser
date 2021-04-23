@@ -36,11 +36,6 @@ $sites['yorktownnewsview.com'] = 'dewittcountytoday.etypegoogle4.com';
 $sites['www.yorktownnewsview.com'] = 'dewittcountytoday.etypegoogle4.com';
 $sites['cuerorecord.com'] = 'dewittcountytoday.etypegoogle4.com';
 $sites['www.cuerorecord.com'] = 'dewittcountytoday.etypegoogle4.com';
-
-$sites['franklin-advocate.etypegoogle4.com'] = 'franklin-advocate.etypegoogle4.com';
-$sites['franklin-advocate.com'] = 'franklin-advocate.etypegoogle4.com';
-$sites['www.franklin-advocate.com'] = 'franklin-advocate.etypegoogle4.com';
-
 $sites['groesbeckjournal.etypegoogle4.com'] = 'groesbeckjournal.etypegoogle4.com';
 $sites['groesbeckjournal.com'] = 'groesbeckjournal.etypegoogle4.com';
 $sites['www.groesbeckjournal.com'] = 'groesbeckjournal.etypegoogle4.com';
